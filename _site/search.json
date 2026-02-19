@@ -1,0 +1,79 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Núcleo MAPA",
+    "section": "",
+    "text": "Iniciativa acadêmica criada por dois economistas do mestrado para produzir conteúdo sobre políticas públicas, dados públicos e economia aplicada — com rigor quantitativo e comunicação clara."
+  },
+  {
+    "objectID": "index.html#artigos-recentes",
+    "href": "index.html#artigos-recentes",
+    "title": "Núcleo MAPA",
+    "section": "Artigos recentes",
+    "text": "Artigos recentes\n\n(em breve) Diagnóstico municipal com dados públicos\n\n(em breve) Boas práticas de reprodutibilidade em análises\n\n(em breve) Indicadores e causalidade: limites da descrição"
+  },
+  {
+    "objectID": "index.html#áreas-de-atuação",
+    "href": "index.html#áreas-de-atuação",
+    "title": "Núcleo MAPA",
+    "section": "Áreas de atuação",
+    "text": "Áreas de atuação\n\nPolíticas públicas\n\nDados públicos\n\nEconomia aplicada\n\nComunicação de evidências"
+  },
+  {
+    "objectID": "artigos.html",
+    "href": "artigos.html",
+    "title": "Artigos",
+    "section": "",
+    "text": "Esta seção vai reunir artigos, notas técnicas e análises replicáveis.\n\n\n\nDiagnóstico municipal com dados públicos\nTransparência e reprodutibilidade\nIndicadores e inferência causal"
+  },
+  {
+    "objectID": "artigos.html#notas-técnicas-e-análises",
+    "href": "artigos.html#notas-técnicas-e-análises",
+    "title": "Artigos",
+    "section": "",
+    "text": "Esta seção vai reunir artigos, notas técnicas e análises replicáveis.\n\n\n\nDiagnóstico municipal com dados públicos\nTransparência e reprodutibilidade\nIndicadores e inferência causal"
+  },
+  {
+    "objectID": "sobre.html",
+    "href": "sobre.html",
+    "title": "Sobre",
+    "section": "",
+    "text": "O Núcleo MAPA é uma iniciativa acadêmica voltada à produção de conteúdo sobre políticas públicas, dados públicos e economia aplicada.\n\n\n\n\nRigor: método explícito e interpretação responsável\n\nTransparência: fontes, limitações e replicabilidade quando possível\n\nUtilidade pública: foco em problemas concretos e evidências relevantes\n\n\n\n\n\nFabio Rocha é economista com trajetória em políticas públicas, avaliação e produção de evidências para tomada de decisão, articulando mensuração de resultados, construção de indicadores e qualificação metodológica de intervenções, com agenda de pesquisa centrada em estudos sobre educação. Ele mantém o canal RochaDatainR no YouTube, com cerca de 3 mil seguidores, no qual ensina R aplicado à análise de dados e à produção de diagnósticos. No setor público, foi Diretor de Estudos Econômicos da Prefeitura Municipal de Ouro Preto. Atualmente, atua como Analista de Monitoramento e Avaliação no Instituto Unibanco. É economista e filósofo pela Universidade Federal de Ouro Preto e mestrando em economia aplicada pela Universidade Federal do ABC., Lattes, Scholar, GitHub\nCaio Sousa é pesquisador, e atua em avaliação de políticas públicas, com produção na agenda de insegurança alimentar e atuação técnica em diagnóstico e mensuração. No instituto Pacto Contra a Fome, foi analista sênior de dados e contribuiu para criar o boletim de acompanhamento da inflação de alimentos e apoiou governos estaduais na construção de diagnósticos de insegurança alimentar. Também desenvolve pesquisa em economia política sobre emendas parlamentares. Tem experiência no mercado financeiro, com análise de risco e acompanhamento macroeconômico. Atualmente é pesquisador no Cebrap e bolsista do Ipea em estudos com a Pesquisa de Orçamentos Familiares. Formado em engenharia de produção pela Universidade Federal do Rio de Janeiro e mestrando em economia aplicada pela Universidade Federal do ABC., Lattes, Scholar, GitHub\nAndrei Santos é estatístico e cientista de dados com experiência aplicada em análise e modelagem de dados, combinando estatística, machine learning e inteligência analítica para apoiar decisões estratégicas. Atua em todo o ciclo analítico, da coleta e tratamento à modelagem e comunicação de resultados, com foco em soluções práticas e orientadas a evidências. Possui domínio em inferência estatística, séries temporais, modelagem preditiva, amostragem e automação de processos, além de experiência na criação de dashboards interativos. Trabalha com R, Python, SQL, Power BI e Excel avançado (VBA), desenvolvendo projetos socioeconômicos e soluções orientadas por dados para o setor público e privado."
+  },
+  {
+    "objectID": "sobre.html#o-núcleo-mapa",
+    "href": "sobre.html#o-núcleo-mapa",
+    "title": "Sobre",
+    "section": "",
+    "text": "O Núcleo MAPA é uma iniciativa acadêmica voltada à produção de conteúdo sobre políticas públicas, dados públicos e economia aplicada."
+  },
+  {
+    "objectID": "sobre.html#princípios",
+    "href": "sobre.html#princípios",
+    "title": "Sobre",
+    "section": "",
+    "text": "Rigor: método explícito e interpretação responsável\n\nTransparência: fontes, limitações e replicabilidade quando possível\n\nUtilidade pública: foco em problemas concretos e evidências relevantes"
+  },
+  {
+    "objectID": "sobre.html#autores",
+    "href": "sobre.html#autores",
+    "title": "Sobre",
+    "section": "",
+    "text": "Fabio Rocha é economista com trajetória em políticas públicas, avaliação e produção de evidências para tomada de decisão, articulando mensuração de resultados, construção de indicadores e qualificação metodológica de intervenções, com agenda de pesquisa centrada em estudos sobre educação. Ele mantém o canal RochaDatainR no YouTube, com cerca de 3 mil seguidores, no qual ensina R aplicado à análise de dados e à produção de diagnósticos. No setor público, foi Diretor de Estudos Econômicos da Prefeitura Municipal de Ouro Preto. Atualmente, atua como Analista de Monitoramento e Avaliação no Instituto Unibanco. É economista e filósofo pela Universidade Federal de Ouro Preto e mestrando em economia aplicada pela Universidade Federal do ABC., Lattes, Scholar, GitHub\nCaio Sousa é pesquisador, e atua em avaliação de políticas públicas, com produção na agenda de insegurança alimentar e atuação técnica em diagnóstico e mensuração. No instituto Pacto Contra a Fome, foi analista sênior de dados e contribuiu para criar o boletim de acompanhamento da inflação de alimentos e apoiou governos estaduais na construção de diagnósticos de insegurança alimentar. Também desenvolve pesquisa em economia política sobre emendas parlamentares. Tem experiência no mercado financeiro, com análise de risco e acompanhamento macroeconômico. Atualmente é pesquisador no Cebrap e bolsista do Ipea em estudos com a Pesquisa de Orçamentos Familiares. Formado em engenharia de produção pela Universidade Federal do Rio de Janeiro e mestrando em economia aplicada pela Universidade Federal do ABC., Lattes, Scholar, GitHub\nAndrei Santos é estatístico e cientista de dados com experiência aplicada em análise e modelagem de dados, combinando estatística, machine learning e inteligência analítica para apoiar decisões estratégicas. Atua em todo o ciclo analítico, da coleta e tratamento à modelagem e comunicação de resultados, com foco em soluções práticas e orientadas a evidências. Possui domínio em inferência estatística, séries temporais, modelagem preditiva, amostragem e automação de processos, além de experiência na criação de dashboards interativos. Trabalha com R, Python, SQL, Power BI e Excel avançado (VBA), desenvolvendo projetos socioeconômicos e soluções orientadas por dados para o setor público e privado."
+  },
+  {
+    "objectID": "sobre.html#microeconometria-aplicada-a-políticas-e-avaliação",
+    "href": "sobre.html#microeconometria-aplicada-a-políticas-e-avaliação",
+    "title": "Sobre",
+    "section": "",
+    "text": "O Núcleo MAPA é uma iniciativa acadêmica voltada à produção de conteúdo sobre políticas públicas, dados públicos e economia aplicada."
+  },
+  {
+    "objectID": "index.html#microeconometria-aplicada-a-políticas-e-avaliação",
+    "href": "index.html#microeconometria-aplicada-a-políticas-e-avaliação",
+    "title": "Núcleo MAPA",
+    "section": "",
+    "text": "Iniciativa acadêmica criada por dois economistas do mestrado para produzir conteúdo sobre políticas públicas, dados públicos e economia aplicada — com rigor quantitativo e comunicação clara."
+  }
+]

@@ -1,0 +1,21 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Núcleo MAPA"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Início
+      - href: artigos.qmd
+        text: Artigos
+      - href: sobre.qmd
+        text: Sobre
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    lang: pt-BR

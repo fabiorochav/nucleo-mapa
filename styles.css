@@ -1,0 +1,35 @@
+/* Núcleo MAPA — estilos mínimos e institucionais */
+
+:root{
+  --navy: #0B1220;
+  --blue: #2B5FA8;
+  --green: #1F8A70;
+  --text: #101828;
+  --muted: #475467;
+  --bg: #F7F8FA;
+}
+
+body{
+  background: var(--bg);
+  color: var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Arial;
+}
+
+a{ color: var(--green); }
+a:hover{ color: var(--blue); }
+
+.navbar{
+  background: var(--navy) !important;
+}
+
+.navbar a, .navbar-brand{
+  color: #fff !important;
+}
+
+.quarto-title-banner{
+  background: linear-gradient(90deg, var(--navy), var(--green));
+  color: #fff;
+}
+
+p{ color: var(--muted); }
+h1,h2,h3{ color: var(--text); }
