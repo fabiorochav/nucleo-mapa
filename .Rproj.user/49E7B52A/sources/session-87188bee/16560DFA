@@ -3,7 +3,7 @@
     "path": "C:/Users/Usuario/Desktop/nucleo-mapa/sobre.qmd",
     "project_path": "sobre.qmd",
     "type": "quarto_markdown",
-    "hash": "976023763",
+    "hash": "4287673232",
     "contents": "",
     "dirty": false,
     "created": 1771542877973.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "22,19",
-        "scrollLine": "1"
+        "cursorPosition": "22,771",
+        "scrollLine": "19"
     },
     "folds": "",
-    "lastKnownWriteTime": 1771543538,
+    "lastKnownWriteTime": 1771547677,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1771543538247,
+    "last_content_update": 1771547677885,
     "read_only": false,
     "read_only_alternatives": []
 }
