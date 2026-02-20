@@ -1,4 +1,4 @@
-name: Publish Quarto Site
+name: Publish Quarto Website
 
 on:
   push:
@@ -24,10 +24,10 @@ jobs:
       - name: Setup Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
-      - name: Render website
+      - name: Render Website
         run: quarto render
 
-      - name: Upload artifact
+      - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: _site

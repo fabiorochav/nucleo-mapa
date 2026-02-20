@@ -1,23 +1,98 @@
 ---
 title: "Sobre"
+subtitle: "Núcleo MAPA - Microeconometria Aplicada a Políticas e Avaliação"
 ---
 
-# O Núcleo MAPA
+O Núcleo MAPA é uma iniciativa dedicada à análise quantitativa de políticas públicas no Brasil, combinando o uso intensivo de microdados, métodos de econometria aplicada e comunicação acessável de evidências para apoiar diagnósticos, avaliações e tomada de decisão no setor público e privado.
 
-## Microeconometria Aplicada a Políticas e Avaliação
+O projeto nasce da convergência entre pesquisa acadêmica e prática aplicada, buscando produzir análises rigorosas, transparentes e úteis para o debate público.
 
-O Núcleo MAPA é uma iniciativa acadêmica voltada à produção de conteúdo sobre políticas públicas, dados públicos e economia aplicada.
+---
+
+## Missão
+
+Produzir análises baseadas em evidências que contribuam para o aprimoramento de políticas públicas, fortalecendo a capacidade analítica de gestores, pesquisadores e organizações.
+
+---
 
 ## Princípios
 
-- **Rigor**: método explícito e interpretação responsável  
-- **Transparência**: fontes, limitações e replicabilidade quando possível  
-- **Utilidade pública**: foco em problemas concretos e evidências relevantes  
+- **Rigor metodológico:** explicitação de hipóteses, métodos e limitações analíticas.  
+- **Transparência:** uso responsável de dados públicos, documentação de fontes e incentivo à replicabilidade.  
+- **Utilidade pública:** foco em problemas concretos e na comunicação clara de resultados.  
 
-## Autores
+---
 
-- Caio Sousa é pesquisador, e atua em avaliação de políticas públicas, com produção na agenda de insegurança alimentar e atuação técnica em diagnóstico e mensuração. No instituto Pacto Contra a Fome, foi analista sênior de dados e contribuiu para criar o boletim de acompanhamento da inflação de alimentos e apoiou governos estaduais na construção de diagnósticos de insegurança alimentar. Também desenvolve pesquisa em economia política sobre emendas parlamentares. Tem experiência no mercado financeiro, com análise de risco e acompanhamento macroeconômico. Atualmente é pesquisador no Cebrap e bolsista do Ipea em estudos com a Pesquisa de Orçamentos Familiares. Formado em engenharia de produção pela Universidade Federal do Rio de Janeiro e mestrando em economia aplicada pela Universidade Federal do ABC., Lattes, Scholar, GitHub
+## Áreas de atuação
 
-- Andrei Santos é estatístico e cientista de dados com experiência aplicada em análise e modelagem de dados, combinando estatística, machine learning e inteligência analítica para apoiar decisões estratégicas. Atua em todo o ciclo analítico, da coleta e tratamento à modelagem e comunicação de resultados, com foco em soluções práticas e orientadas a evidências. Possui domínio em inferência estatística, séries temporais, modelagem preditiva, amostragem e automação de processos, além de experiência na criação de dashboards interativos. Trabalha com R, Python, SQL, Power BI e Excel avançado (VBA), desenvolvendo projetos socioeconômicos e soluções orientadas por dados para o setor público e privado.
+- Avaliação de políticas públicas  
+- Análise de microdados administrativos e pesquisas amostrais  
+- Economia aplicada à educação, trabalho e desenvolvimento social  
+- Diagnóstico territorial e indicadores socioeconômicos  
+- Comunicação de evidências e visualização de dados  
 
-- Fabio Rocha é economista com trajetória em políticas públicas, avaliação e produção de evidências para tomada de decisão, articulando mensuração de resultados, construção de indicadores e qualificação metodológica de intervenções, com agenda de pesquisa centrada em estudos sobre educação. Ele mantém o canal RochaDatainR no YouTube, com cerca de 3 mil seguidores, no qual ensina R aplicado à análise de dados e à produção de diagnósticos. No setor público, foi Diretor de Estudos Econômicos da Prefeitura Municipal de Ouro Preto. Atualmente, atua como Analista de Monitoramento e Avaliação no Instituto Unibanco. É economista e filósofo pela Universidade Federal de Ouro Preto e mestrando em economia aplicada pela Universidade Federal do ABC., Lattes, Scholar, GitHub
+---
+
+## Pesquisadores
+
+### Caio Sousa
+
+Caio Sousa é pesquisador com atuação em avaliação de políticas públicas, com produção voltada à agenda de insegurança alimentar e diagnóstico socioeconômico.
+
+No Instituto Pacto Contra a Fome, atuou como analista sênior de dados, contribuindo para a criação do boletim de acompanhamento da inflação de alimentos e apoiando governos estaduais na construção de diagnósticos sobre insegurança alimentar.
+
+Também desenvolve pesquisa em economia política, com foco em emendas parlamentares. Possui experiência anterior no mercado financeiro, atuando em análise de risco e acompanhamento macroeconômico.
+
+Atualmente é pesquisador no Cebrap e bolsista do Ipea em estudos baseados na Pesquisa de Orçamentos Familiares (POF).
+
+É engenheiro de produção pela Universidade Federal do Rio de Janeiro e mestrando em Economia Aplicada pela Universidade Federal do ABC.
+
+**Redes e perfis acadêmicos**
+
+- [Lattes]() 
+- [GitHub](https://github.com/caiosousareis) 
+- [LinkedIn](https://www.linkedin.com/in/caiosousareis/)
+
+---
+
+### Andrei Santos
+
+Andrei Santos é estatístico e cientista de dados com experiência aplicada em análise e modelagem de dados, combinando estatística, machine learning e inteligência analítica para apoiar decisões estratégicas.
+
+Atua em todas as etapas do ciclo analítico — da coleta e tratamento de dados à modelagem, visualização e comunicação de resultados — com foco em soluções práticas orientadas por evidências.
+
+Possui experiência em inferência estatística, séries temporais, modelagem preditiva, amostragem e automação de processos, além da criação de dashboards interativos.
+
+Trabalha com R, Python, SQL, Power BI e Excel avançado (VBA), desenvolvendo projetos socioeconômicos e soluções analíticas para o setor público e privado.
+
+**Redes e perfis acadêmicos**
+
+- [LinkedIn](https://www.linkedin.com/in/andrei0118-santos/)
+
+---
+
+### Fábio Rocha
+
+Fábio Rocha é economista com trajetória em monitoramento, avaliação e produção de evidências para políticas públicas, atuando na construção de indicadores, mensuração de resultados e qualificação metodológica de intervenções, com agenda de pesquisa centrada em educação.
+
+Mantém o canal RochaDataInR no YouTube, dedicado ao ensino de R aplicado à análise de dados públicos e à produção de diagnósticos socioeconômicos.
+
+No setor público, foi Diretor de Estudos Econômicos da Prefeitura Municipal de Ouro Preto. Atualmente atua como Analista de Monitoramento e Avaliação no Instituto Unibanco.
+
+É economista e filósofo pela Universidade Federal de Ouro Preto e mestrando em Economia Aplicada pela Universidade Federal do ABC.
+
+**Redes e perfis acadêmicos**
+
+- [Lattes](http://lattes.cnpq.br/1956089489809622) 
+- [GitHub](https://github.com/fabiorochav) 
+- [LinkedIn](linkedin.com/in/fábio-rocha)
+- [YouTube](https://www.youtube.com/@RochaDatainR)
+
+---
+
+## Colaborações
+
+O Núcleo MAPA está aberto a parcerias acadêmicas, institucionais e projetos colaborativos voltados à produção de diagnósticos, avaliação de políticas públicas e comunicação de evidências.
+
+
+---

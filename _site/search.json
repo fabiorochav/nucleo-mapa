@@ -39,7 +39,7 @@
     "href": "sobre.html",
     "title": "Sobre",
     "section": "",
-    "text": "O Núcleo MAPA é uma iniciativa acadêmica voltada à produção de conteúdo sobre políticas públicas, dados públicos e economia aplicada.\n\n\n\n\nRigor: método explícito e interpretação responsável\n\nTransparência: fontes, limitações e replicabilidade quando possível\n\nUtilidade pública: foco em problemas concretos e evidências relevantes\n\n\n\n\n\nCaio Sousa é pesquisador, e atua em avaliação de políticas públicas, com produção na agenda de insegurança alimentar e atuação técnica em diagnóstico e mensuração. No instituto Pacto Contra a Fome, foi analista sênior de dados e contribuiu para criar o boletim de acompanhamento da inflação de alimentos e apoiou governos estaduais na construção de diagnósticos de insegurança alimentar. Também desenvolve pesquisa em economia política sobre emendas parlamentares. Tem experiência no mercado financeiro, com análise de risco e acompanhamento macroeconômico. Atualmente é pesquisador no Cebrap e bolsista do Ipea em estudos com a Pesquisa de Orçamentos Familiares. Formado em engenharia de produção pela Universidade Federal do Rio de Janeiro e mestrando em economia aplicada pela Universidade Federal do ABC., Lattes, Scholar, GitHub\nAndrei Santos é estatístico e cientista de dados com experiência aplicada em análise e modelagem de dados, combinando estatística, machine learning e inteligência analítica para apoiar decisões estratégicas. Atua em todo o ciclo analítico, da coleta e tratamento à modelagem e comunicação de resultados, com foco em soluções práticas e orientadas a evidências. Possui domínio em inferência estatística, séries temporais, modelagem preditiva, amostragem e automação de processos, além de experiência na criação de dashboards interativos. Trabalha com R, Python, SQL, Power BI e Excel avançado (VBA), desenvolvendo projetos socioeconômicos e soluções orientadas por dados para o setor público e privado.\nFabio Rocha é economista com trajetória em políticas públicas, avaliação e produção de evidências para tomada de decisão, articulando mensuração de resultados, construção de indicadores e qualificação metodológica de intervenções, com agenda de pesquisa centrada em estudos sobre educação. Ele mantém o canal RochaDatainR no YouTube, com cerca de 3 mil seguidores, no qual ensina R aplicado à análise de dados e à produção de diagnósticos. No setor público, foi Diretor de Estudos Econômicos da Prefeitura Municipal de Ouro Preto. Atualmente, atua como Analista de Monitoramento e Avaliação no Instituto Unibanco. É economista e filósofo pela Universidade Federal de Ouro Preto e mestrando em economia aplicada pela Universidade Federal do ABC., Lattes, Scholar, GitHub"
+    "text": "O Núcleo MAPA é uma iniciativa dedicada à análise quantitativa de políticas públicas no Brasil, combinando o uso intensivo de microdados, métodos de econometria aplicada e comunicação acessável de evidências para apoiar diagnósticos, avaliações e tomada de decisão no setor público e privado.\nO projeto nasce da convergência entre pesquisa acadêmica e prática aplicada, buscando produzir análises rigorosas, transparentes e úteis para o debate público."
   },
   {
     "objectID": "sobre.html#o-núcleo-mapa",
@@ -52,8 +52,8 @@
     "objectID": "sobre.html#princípios",
     "href": "sobre.html#princípios",
     "title": "Sobre",
-    "section": "",
-    "text": "Rigor: método explícito e interpretação responsável\n\nTransparência: fontes, limitações e replicabilidade quando possível\n\nUtilidade pública: foco em problemas concretos e evidências relevantes"
+    "section": "Princípios",
+    "text": "Princípios\n\nRigor metodológico: explicitação de hipóteses, métodos e limitações analíticas.\n\nTransparência: uso responsável de dados públicos, documentação de fontes e incentivo à replicabilidade.\n\nUtilidade pública: foco em problemas concretos e na comunicação clara de resultados."
   },
   {
     "objectID": "sobre.html#autores",
@@ -67,7 +67,7 @@
     "href": "sobre.html#microeconometria-aplicada-a-políticas-e-avaliação",
     "title": "Sobre",
     "section": "",
-    "text": "O Núcleo MAPA é uma iniciativa acadêmica voltada à produção de conteúdo sobre políticas públicas, dados públicos e economia aplicada."
+    "text": "O Núcleo MAPA é uma iniciativa dedicada à análise quantitativa de políticas públicas no Brasil, combinando o uso intensivo de microdados, métodos de econometria aplicada e comunicação acessável de evidências para apoiar diagnósticos, avaliações e tomada de decisão no setor público e privado.\nO projeto nasce da convergência entre pesquisa acadêmica e prática aplicada, buscando produzir análises rigorosas, transparentes e úteis para o debate público."
   },
   {
     "objectID": "index.html#microeconometria-aplicada-a-políticas-e-avaliação",
@@ -75,5 +75,33 @@
     "title": "Núcleo MAPA",
     "section": "",
     "text": "Iniciativa acadêmica criada por dois economistas do mestrado para produzir conteúdo sobre políticas públicas, dados públicos e economia aplicada — com rigor quantitativo e comunicação clara."
+  },
+  {
+    "objectID": "sobre.html#missão",
+    "href": "sobre.html#missão",
+    "title": "Sobre",
+    "section": "Missão",
+    "text": "Missão\nProduzir análises baseadas em evidências que contribuam para o aprimoramento de políticas públicas, fortalecendo a capacidade analítica de gestores, pesquisadores e organizações."
+  },
+  {
+    "objectID": "sobre.html#áreas-de-atuação",
+    "href": "sobre.html#áreas-de-atuação",
+    "title": "Sobre",
+    "section": "Áreas de atuação",
+    "text": "Áreas de atuação\n\nAvaliação de políticas públicas\n\nAnálise de microdados administrativos e pesquisas amostrais\n\nEconomia aplicada à educação, trabalho e desenvolvimento social\n\nDiagnóstico territorial e indicadores socioeconômicos\n\nComunicação de evidências e visualização de dados"
+  },
+  {
+    "objectID": "sobre.html#pesquisadores",
+    "href": "sobre.html#pesquisadores",
+    "title": "Sobre",
+    "section": "Pesquisadores",
+    "text": "Pesquisadores\n\nCaio Sousa\nCaio Sousa é pesquisador com atuação em avaliação de políticas públicas, com produção voltada à agenda de insegurança alimentar e diagnóstico socioeconômico.\nNo Instituto Pacto Contra a Fome, atuou como analista sênior de dados, contribuindo para a criação do boletim de acompanhamento da inflação de alimentos e apoiando governos estaduais na construção de diagnósticos sobre insegurança alimentar.\nTambém desenvolve pesquisa em economia política, com foco em emendas parlamentares. Possui experiência anterior no mercado financeiro, atuando em análise de risco e acompanhamento macroeconômico.\nAtualmente é pesquisador no Cebrap e bolsista do Ipea em estudos baseados na Pesquisa de Orçamentos Familiares (POF).\nÉ engenheiro de produção pela Universidade Federal do Rio de Janeiro e mestrando em Economia Aplicada pela Universidade Federal do ABC.\nRedes e perfis acadêmicos\n\nLattes\nGitHub\nLinkedIn\n\n\n\n\nAndrei Santos\nAndrei Santos é estatístico e cientista de dados com experiência aplicada em análise e modelagem de dados, combinando estatística, machine learning e inteligência analítica para apoiar decisões estratégicas.\nAtua em todas as etapas do ciclo analítico — da coleta e tratamento de dados à modelagem, visualização e comunicação de resultados — com foco em soluções práticas orientadas por evidências.\nPossui experiência em inferência estatística, séries temporais, modelagem preditiva, amostragem e automação de processos, além da criação de dashboards interativos.\nTrabalha com R, Python, SQL, Power BI e Excel avançado (VBA), desenvolvendo projetos socioeconômicos e soluções analíticas para o setor público e privado.\nRedes e perfis acadêmicos\n\nLinkedIn\n\n\n\n\nFábio Rocha\nFábio Rocha é economista com trajetória em monitoramento, avaliação e produção de evidências para políticas públicas, atuando na construção de indicadores, mensuração de resultados e qualificação metodológica de intervenções, com agenda de pesquisa centrada em educação.\nMantém o canal RochaDataInR no YouTube, dedicado ao ensino de R aplicado à análise de dados públicos e à produção de diagnósticos socioeconômicos.\nNo setor público, foi Diretor de Estudos Econômicos da Prefeitura Municipal de Ouro Preto. Atualmente atua como Analista de Monitoramento e Avaliação no Instituto Unibanco.\nÉ economista e filósofo pela Universidade Federal de Ouro Preto e mestrando em Economia Aplicada pela Universidade Federal do ABC.\nRedes e perfis acadêmicos\n\nLattes\nGitHub\nLinkedIn\nYouTube"
+  },
+  {
+    "objectID": "sobre.html#colaborações",
+    "href": "sobre.html#colaborações",
+    "title": "Sobre",
+    "section": "Colaborações",
+    "text": "Colaborações\nO Núcleo MAPA está aberto a parcerias acadêmicas, institucionais e projetos colaborativos voltados à produção de diagnósticos, avaliação de políticas públicas e comunicação de evidências."
   }
 ]
