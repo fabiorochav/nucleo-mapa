@@ -1,35 +1,262 @@
-/* Núcleo MAPA — estilos mínimos e institucionais */
+/* ======================================================
+   Núcleo MAPA — Identidade Visual Institucional
+   Microeconometria Aplicada a Políticas e Avaliação
+====================================================== */
 
-:root{
-  --navy: #0B1220;
-  --blue: #2B5FA8;
-  --green: #1F8A70;
-  --text: #101828;
-  --muted: #475467;
-  --bg: #F7F8FA;
+
+/* ===============================
+   PALETA DE CORES
+================================= */
+
+:root {
+
+  --mapa-green: #2C9C3B;      /* verde principal */
+  --mapa-green-dark: #1f6e2a;
+
+  --mapa-dark: #0F1E2E;       /* navbar */
+  --mapa-gray: #5f6b7a;
+
+  --mapa-light-bg: #F6F8F6;   /* fundo geral */
+
 }
 
-body{
-  background: var(--bg);
-  color: var(--text);
-  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Arial;
+
+/* ===============================
+   BASE DO SITE
+================================= */
+
+body {
+
+  font-family:
+
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Ubuntu,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+
+  background-color: var(--mapa-light-bg);
+
+  color: #1f2933;
+
+  line-height: 1.7;
+
 }
 
-a{ color: var(--green); }
-a:hover{ color: var(--blue); }
 
-.navbar{
-  background: var(--navy) !important;
+/* ===============================
+   NAVBAR (MENU SUPERIOR)
+================================= */
+
+.navbar {
+
+  background-color: var(--mapa-dark);
+
+  box-shadow: 0px 2px 6px rgba(0,0,0,.08);
+
 }
 
-.navbar a, .navbar-brand{
-  color: #fff !important;
+
+.navbar-brand {
+
+  font-weight: 700;
+
+  letter-spacing: .4px;
+
+  color: white !important;
+
 }
 
-.quarto-title-banner{
-  background: linear-gradient(90deg, var(--navy), var(--green));
-  color: #fff;
+
+.nav-link {
+
+  color: white !important;
+
+  font-weight: 500;
+
 }
 
-p{ color: var(--muted); }
-h1,h2,h3{ color: var(--text); }
+
+.nav-link:hover {
+
+  color: var(--mapa-green) !important;
+
+}
+
+
+/* ===============================
+   TÍTULOS
+================================= */
+
+h1, h2, h3 {
+
+  color: var(--mapa-green);
+
+  font-weight: 700;
+
+}
+
+
+h1 {
+
+  margin-top: 1rem;
+
+}
+
+
+h2 {
+
+  border-bottom: 1px solid #e5e7eb;
+
+  padding-bottom: .3rem;
+
+  margin-top: 2rem;
+
+}
+
+
+
+/* ===============================
+   TEXTO
+================================= */
+
+p {
+
+  color: #374151;
+
+  font-size: 1.05rem;
+
+}
+
+
+/* ===============================
+   LINKS
+================================= */
+
+a {
+
+  color: var(--mapa-green);
+
+  text-decoration: none;
+
+  font-weight: 500;
+
+}
+
+a:hover {
+
+  color: var(--mapa-green-dark);
+
+  text-decoration: underline;
+
+}
+
+
+
+/* ===============================
+   LISTAS
+================================= */
+
+ul {
+
+  margin-bottom: 1.5rem;
+
+}
+
+
+li {
+
+  margin-bottom: .4rem;
+
+}
+
+
+
+/* ===============================
+   LINHAS DIVISORAS
+================================= */
+
+hr {
+
+  margin-top: 2rem;
+
+  margin-bottom: 2rem;
+
+  border-color: #e5e7eb;
+
+}
+
+
+
+/* ===============================
+   CARDS (útil para pesquisadores)
+================================= */
+
+.card {
+
+  border-radius: 10px;
+
+  border: none;
+
+  box-shadow:
+
+    0 4px 10px rgba(0,0,0,.05);
+
+}
+
+
+
+/* ===============================
+   FOOTER
+================================= */
+
+footer {
+
+  margin-top: 4rem;
+
+  padding-top: 2rem;
+
+  padding-bottom: 2rem;
+
+  font-size: .9rem;
+
+  color: var(--mapa-gray);
+
+  border-top: 1px solid #e5e7eb;
+
+}
+
+
+
+/* ===============================
+   IMAGENS
+================================= */
+
+img {
+
+  max-width: 100%;
+
+  border-radius: 6px;
+
+}
+
+
+
+/* ===============================
+   RESPONSIVO
+================================= */
+
+@media (max-width: 768px){
+
+  body {
+
+    padding-left: 10px;
+
+    padding-right: 10px;
+
+  }
+
+}
