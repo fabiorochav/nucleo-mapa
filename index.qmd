@@ -3,7 +3,7 @@ title: "Núcleo MAPA"
 subtitle: "Microeconometria Aplicada a Políticas e Avaliação"
 ---
 
-Iniciativa acadêmica criada por dois economistas do mestrado para produzir conteúdo sobre políticas públicas, dados públicos e economia aplicada — com rigor quantitativo e comunicação clara.
+Iniciativa acadêmica criada para produzir conteúdo sobre políticas públicas, dados públicos e economia aplicada — com rigor quantitativo e comunicação clara.
 
 ## Artigos recentes
 

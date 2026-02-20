@@ -8,6 +8,7 @@ subtitle: "Microeconometria Aplicada a Políticas e Avaliação"
 Esta seção vai reunir artigos, notas técnicas e análises replicáveis.
 
 ### Em breve
+
 - Diagnóstico municipal com dados públicos
 - Transparência e reprodutibilidade
 - Indicadores e inferência causal

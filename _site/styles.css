@@ -13,7 +13,7 @@
   --mapa-green: #2C9C3B;      /* verde principal */
   --mapa-green-dark: #1f6e2a;
 
-  --mapa-dark: #0F1E2E;       /* navbar */
+  --mapa-dark: #374151;       /* navbar */
   --mapa-gray: #5f6b7a;
 
   --mapa-light-bg: #F6F8F6;   /* fundo geral */
@@ -24,7 +24,6 @@
 /* ===============================
    BASE DO SITE
 ================================= */
-
 body {
 
   font-family:
@@ -40,7 +39,7 @@ body {
 
   background-color: var(--mapa-light-bg);
 
-  color: #1f2933;
+  color: #2C9C3B;
 
   line-height: 1.7;
 
@@ -51,38 +50,15 @@ body {
    NAVBAR (MENU SUPERIOR)
 ================================= */
 
+/* ===============================
+   NAVBAR
+================================= */
+
 .navbar {
 
-  background-color: var(--mapa-dark);
+  background-color: var(--mapa-navbar) !important;
 
-  box-shadow: 0px 2px 6px rgba(0,0,0,.08);
-
-}
-
-
-.navbar-brand {
-
-  font-weight: 700;
-
-  letter-spacing: .4px;
-
-  color: white !important;
-
-}
-
-
-.nav-link {
-
-  color: white !important;
-
-  font-weight: 500;
-
-}
-
-
-.nav-link:hover {
-
-  color: var(--mapa-green) !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,.08);
 
 }
 
@@ -173,6 +149,24 @@ li {
 
 }
 
+/* ===============================
+   LISTAS EDITORIAIS (PRINCÍPIOS)
+================================= */
+
+li {
+
+  color: #374151;   /* texto neutro profissional */
+
+}
+
+/* apenas o marcador continua verde */
+
+li::marker {
+
+  color: var(--mapa-green);
+
+}
+
 
 
 /* ===============================
@@ -258,5 +252,60 @@ img {
     padding-right: 10px;
 
   }
+
+}
+
+/* ===============================
+   LARGURA EDITORIAL
+================================= */
+
+.quarto-container,
+.page-columns,
+main.content {
+
+  max-width: 900px;
+
+  margin-left: auto;
+
+  margin-right: auto;
+
+}
+
+
+/* ===============================
+   HERO
+================================= */
+
+.hero {
+
+  padding:
+
+    60px 40px;
+
+  background:
+
+    linear-gradient(
+      135deg,
+      #F6F8F6,
+      #ffffff
+    );
+
+  border-radius: 12px;
+
+  margin-bottom: 40px;
+
+}
+
+.hero h1 {
+
+  font-size: 3rem;
+
+}
+
+.hero h2 {
+
+  border-bottom: none;
+
+  color: #5f6b7a;
 
 }
