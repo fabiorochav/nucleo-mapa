@@ -1,0 +1,214 @@
+---
+title: "Todo mundo ganhou mais — mas não do mesmo jeito"
+date: 2026-02-11
+description: "Distribuição de renda no Brasil entre 2023 e 2025 com microdados da PNAD Contínua."
+categories: [renda, PNAD, distribuição, mercado de trabalho]
+author: Fábio Rocha
+image: preview.png
+---
+
+A renda média do trabalho cresceu no Brasil entre 2023 e 2025 — e isso é, sim, motivo de comemoração. Mas médias escondem realidades muito distintas ao longo da distribuição. Quem ganhou mais? Quem ficou para trás?
+
+Para responder, fomos aos microdados da PNAD Contínua e comparamos o rendimento real de todos os trabalhos entre o 1º trimestre de 2023 e o 3º trimestre de 2025. A análise foi feita por quantis da distribuição: p25, p50, p75, p90 e p99.
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+library(tidyverse)
+library(showtext)
+
+font_add_google("Ubuntu", "ubuntu")
+showtext_auto()
+
+dist_var  <- readRDS("../../data/dist_var.rds")
+dist_long <- readRDS("../../data/dist_long.rds")
+dist_wide <- readRDS("../../data/dist_wide.rds")
+
+cor_2023 <- "#1F4E79"
+cor_2025 <- "#2E86C1"
+cor_abs  <- "#E74C3C"
+cor_pct  <- "#E74C3C"
+```
+
+### A curva da desigualdade
+
+O primeiro gráfico já entrega o recado antes dos números: a distância entre os períodos cresce conforme subimos na distribuição. Nos quantis mais baixos, as duas curvas caminham juntas. No topo, elas se separam com clareza.
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| fig-width: 9
+#| fig-height: 5
+
+plot_niveis <- dist_wide %>%
+  pivot_longer(
+    cols = c(`2023_T1`, `2025_T4`),
+    names_to = "periodo",
+    values_to = "rendimento"
+  )
+
+ggplot(plot_niveis,
+       aes(x = quantil, y = rendimento,
+           group = periodo, color = periodo)) +
+  geom_line(size = 1.4) +
+  geom_point(size = 3.5) +
+  scale_color_manual(values = c("2023_T1" = cor_2023,
+                                "2025_T4" = cor_2025)) +
+  scale_y_continuous(
+    labels = scales::label_dollar(
+      prefix = "R$ ", big.mark = ".", decimal.mark = ","
+    )
+  ) +
+  labs(
+    title = "Rendimento por quantil — PNAD Contínua",
+    subtitle = "Valores reais — comparação 2023 T1 vs 2025 T4",
+    x = "Quantil", y = "Rendimento", color = "Período",
+    caption = "Microdados PNAD Contínua — elaboração: Fábio Rocha"
+  ) +
+  theme_minimal(base_family = "ubuntu", base_size = 16) +
+  theme(
+    plot.title = element_text(face = "bold"),
+    plot.subtitle = element_text(size = 12),
+    panel.grid.minor = element_blank(),
+    panel.grid.major.x = element_blank(),
+    legend.position = "right"
+  )
+```
+
+### Quem cresceu mais — em termos relativos?
+
+Quando abrimos a distribuição por quantis, a heterogeneidade fica evidente:
+
+- **p25** (25% mais pobres): +5,2% real
+- **p50** (mediana): praticamente estável (+0,5%)
+- **p75**: +8%
+- **p90** (topo intermediário): **+23,3%**
+- **p99** (topo extremo): +11,3%
+
+O crescimento foi real — mas fortemente concentrado no topo intermediário da distribuição. A mediana, que representa o trabalhador típico, praticamente não se moveu.
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| fig-width: 9
+#| fig-height: 5
+
+ggplot(dist_var,
+       aes(x = quantil, y = variacao_pct)) +
+  geom_col(width = .65, fill = cor_pct) +
+  geom_hline(yintercept = 0, linetype = 2, linewidth = 0.8) +
+  geom_text(
+    aes(label = paste0(round(variacao_pct, 1), "%")),
+    vjust = -0.4, size = 5, family = "ubuntu"
+  ) +
+  scale_y_continuous(labels = function(x) paste0(x, "%")) +
+  labs(
+    title = "Variação percentual do rendimento por quantil",
+    subtitle = "Crescimento relativo da distribuição — 2023 T1 vs 2025 T4 (valores reais)",
+    x = "Quantil", y = "Variação (%)",
+    caption = "Microdados PNAD Contínua — elaboração: Fábio Rocha"
+  ) +
+  theme_minimal(base_family = "ubuntu", base_size = 16) +
+  theme(
+    plot.title = element_text(face = "bold"),
+    panel.grid.minor = element_blank(),
+    panel.grid.major.x = element_blank()
+  )
+```
+
+### E em reais?
+
+Em valores monetários, a concentração fica ainda mais evidente. O trabalhador no topo da distribuição (p99) ganhou, em média, **R$ 2.538 a mais por mês** do que ganhava em 2023. O trabalhador na base (p25) ganhou **R$ 74**. A mediana, **R$ 9**.
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| fig-width: 9
+#| fig-height: 5
+
+ggplot(dist_var,
+       aes(x = quantil, y = variacao_abs)) +
+  geom_col(width = .65, fill = cor_abs) +
+  geom_text(
+    aes(label = scales::label_dollar(
+      prefix = "R$ ", big.mark = ".", decimal.mark = ","
+    )(variacao_abs)),
+    vjust = -0.4, size = 5, family = "ubuntu"
+  ) +
+  scale_y_continuous(
+    labels = scales::label_dollar(
+      prefix = "R$ ", big.mark = ".", decimal.mark = ","
+    )
+  ) +
+  labs(
+    title = "Variação absoluta do rendimento por quantil",
+    subtitle = "2023 T1 vs 2025 T4 (valores reais)",
+    x = "Quantil", y = "Variação",
+    caption = "Microdados PNAD Contínua — elaboração: Fábio Rocha"
+  ) +
+  theme_minimal(base_family = "ubuntu", base_size = 16) +
+  theme(
+    plot.title = element_text(face = "bold"),
+    panel.grid.minor = element_blank(),
+    panel.grid.major.x = element_blank()
+  )
+```
+
+### O retrato completo
+
+O gráfico abaixo reúne os níveis de rendimento nos dois períodos para cada quantil, permitindo uma leitura direta da evolução da distribuição.
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| fig-width: 9
+#| fig-height: 5
+
+ggplot(dist_long,
+       aes(x = quantil, y = valor, fill = periodo)) +
+  geom_col(width = .65, position = position_dodge(width = .7)) +
+  geom_text(
+    aes(label = scales::label_dollar(
+      prefix = "R$ ", big.mark = ".", decimal.mark = ","
+    )(round(valor, 0))),
+    position = position_dodge(width = .7),
+    vjust = 0.4, hjust = -0.1,
+    size = 4, family = "ubuntu"
+  ) +
+  ylim(0, 27000) +
+  scale_fill_manual(values = c(
+    "2023_T1" = cor_2023,
+    "2025_T4" = cor_2025
+  )) +
+  labs(
+    title = "Renda média por quantil da distribuição",
+    subtitle = "Valor real — 2023 T1 vs 2025 T4",
+    x = "Quantil", y = "R$", fill = "Período",
+    caption = "Microdados PNAD Contínua — elaboração: Fábio Rocha"
+  ) +
+  theme_minimal(base_family = "ubuntu", base_size = 16) +
+  theme(
+    plot.title = element_text(face = "bold"),
+    panel.grid.minor = element_blank(),
+    panel.grid.major.y = element_blank()
+  ) +
+  coord_flip()
+```
+
+### O que os dados dizem
+
+Houve crescimento real da renda no Brasil entre 2023 e 2025 — e isso importa. Mas o padrão é heterogêneo: a base avançou pouco, a mediana praticamente estacionou, e o topo acelerou de forma expressiva.
+
+Esse tipo de análise distributiva é essencial para avaliar políticas de renda com mais precisão. Dizer que "a renda cresceu" sem abrir a distribuição é, no mínimo, incompleto.
+
+---
+
+::: {.callout-note}
+**Nota metodológica:** os rendimentos foram deflacionados pelo índice `Habitual` disponível nos microdados da PNAD Contínua. A comparação utiliza o 1º trimestre de 2023 e o 4º trimestre de 2025. O código completo está disponível no repositório do Núcleo MAPA.
+:::
