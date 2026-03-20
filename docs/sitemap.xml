@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://fabiorochav.github.io/nucleo-mapa/sobre.html</loc>
+    <lastmod>2026-03-20T16:58:58.450Z</lastmod>
+  </url>
+  <url>
     <loc>https://fabiorochav.github.io/nucleo-mapa/artigos.html</loc>
     <lastmod>2026-03-20T18:35:49.252Z</lastmod>
   </url>
   <url>
     <loc>https://fabiorochav.github.io/nucleo-mapa/artigos/2026-02-distribuicao-renda/index.html</loc>
     <lastmod>2026-03-20T18:56:54.867Z</lastmod>
+  </url>
+  <url>
+    <loc>https://fabiorochav.github.io/nucleo-mapa/index.html</loc>
+    <lastmod>2026-03-20T16:58:58.433Z</lastmod>
   </url>
 </urlset>
