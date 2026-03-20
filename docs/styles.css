@@ -1,0 +1,342 @@
+/* ======================================================
+   Núcleo MAPA — Identidade Visual Institucional
+   Microeconometria Aplicada a Políticas e Avaliação
+====================================================== */
+
+
+/* ===============================
+   PALETA DE CORES
+================================= */
+
+:root {
+
+  --mapa-green: #2C9C3B;      /* verde principal */
+  --mapa-green-dark: #1f6e2a;
+
+  --mapa-dark: #20B320;       /* navbar */
+  --mapa-gray: #5f6b7a;
+
+  --mapa-light-bg: #F6F8F6;   /* fundo geral */
+
+}
+
+
+/* ===============================
+   BASE DO SITE
+================================= */
+body {
+
+  font-family:
+
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Ubuntu,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+
+  background-color: var(--mapa-light-bg);
+
+  color: #2C9C3B;
+
+  line-height: 1.7;
+
+}
+
+
+/* ===============================
+   NAVBAR (MENU SUPERIOR)
+================================= */
+
+/* ===============================
+   NAVBAR
+================================= */
+
+.navbar {
+
+  background-color: var(--mapa-dark) !important;
+
+}
+
+
+/* ===============================
+   TÍTULOS
+================================= */
+
+h1, h2, h3 {
+
+  color: var(--mapa-green);
+
+  font-weight: 700;
+
+}
+
+
+h1 {
+
+  margin-top: 1rem;
+
+}
+
+
+h2 {
+
+  border-bottom: 1px solid #e5e7eb;
+
+  padding-bottom: .3rem;
+
+  margin-top: 2rem;
+
+}
+
+
+
+/* ===============================
+   TEXTO
+================================= */
+
+p {
+
+  color: #374151;
+
+  font-size: 1.05rem;
+
+}
+
+
+/* ===============================
+   LINKS
+================================= */
+
+a {
+
+  color: var(--mapa-green);
+
+  text-decoration: none;
+
+  font-weight: 500;
+
+}
+
+a:hover {
+
+  color: var(--mapa-green-dark);
+
+  text-decoration: underline;
+
+}
+
+
+
+/* ===============================
+   LISTAS
+================================= */
+
+ul {
+
+  margin-bottom: 1.5rem;
+
+}
+
+
+li {
+
+  margin-bottom: .4rem;
+
+}
+
+/* ===============================
+   LISTAS EDITORIAIS (PRINCÍPIOS)
+================================= */
+
+li {
+
+  color: #374151;   /* texto neutro profissional */
+
+}
+
+/* apenas o marcador continua verde */
+
+li::marker {
+
+  color: var(--mapa-green);
+
+}
+
+
+
+/* ===============================
+   LINHAS DIVISORAS
+================================= */
+
+hr {
+
+  margin-top: 2rem;
+
+  margin-bottom: 2rem;
+
+  border-color: #e5e7eb;
+
+}
+
+
+
+/* ===============================
+   CARDS (útil para pesquisadores)
+================================= */
+
+.card {
+
+  border-radius: 10px;
+
+  border: none;
+
+  box-shadow:
+
+    0 4px 10px rgba(0,0,0,.05);
+
+}
+
+
+
+/* ===============================
+   FOOTER
+================================= */
+
+footer {
+
+  margin-top: 4rem;
+
+  padding-top: 2rem;
+
+  padding-bottom: 2rem;
+
+  font-size: .9rem;
+
+  color: var(--mapa-gray);
+
+  border-top: 1px solid #e5e7eb;
+
+}
+
+
+
+/* ===============================
+   IMAGENS
+================================= */
+
+img {
+
+  max-width: 100%;
+
+  border-radius: 6px;
+
+}
+
+
+
+/* ===============================
+   RESPONSIVO
+================================= */
+
+@media (max-width: 768px){
+
+  body {
+
+    padding-left: 10px;
+
+    padding-right: 10px;
+
+  }
+
+}
+
+/* ===============================
+   LARGURA EDITORIAL
+================================= */
+
+.quarto-container,
+.page-columns,
+main.content {
+
+  max-width: 900px;
+
+  margin-left: auto;
+
+  margin-right: auto;
+
+}
+
+
+/* ===============================
+   HERO
+================================= */
+
+.hero {
+
+  padding:
+
+    60px 40px;
+
+  background:
+
+    linear-gradient(
+      135deg,
+      #F6F8F6,
+      #ffffff
+    );
+
+  border-radius: 12px;
+
+  margin-bottom: 40px;
+
+}
+
+.hero h1 {
+
+  font-size: 3rem;
+
+}
+
+.hero h2 {
+
+  border-bottom: none;
+
+  color: #5f6b7a;
+
+}
+
+/* ===============================
+   NAVBAR TEXTO BRANCO
+================================= */
+
+.navbar-brand,
+.navbar .nav-link {
+
+  color: white !important;
+
+  font-weight: 600;
+
+}
+
+
+/* hover */
+
+.navbar .nav-link:hover {
+
+  color: #E8FFE8 !important;
+
+}
+
+
+/* link ativo (ex: Sobre selecionado) */
+
+.navbar .nav-link.active {
+
+  color: white !important;
+
+  border-bottom: 2px solid white;
+
+}
