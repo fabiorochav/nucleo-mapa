@@ -1,40 +1,5 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Núcleo MAPA",
-    "section": "",
-    "text": "Iniciativa acadêmica criada para produzir conteúdo sobre políticas públicas, dados públicos e economia aplicada — com rigor quantitativo e comunicação clara."
-  },
-  {
-    "objectID": "index.html#artigos-recentes",
-    "href": "index.html#artigos-recentes",
-    "title": "Núcleo MAPA",
-    "section": "Artigos recentes",
-    "text": "Artigos recentes\n\n(em breve) Diagnóstico municipal com dados públicos\n\n(em breve) Boas práticas de reprodutibilidade em análises\n\n(em breve) Indicadores e causalidade: limites da descrição"
-  },
-  {
-    "objectID": "index.html#áreas-de-atuação",
-    "href": "index.html#áreas-de-atuação",
-    "title": "Núcleo MAPA",
-    "section": "Áreas de atuação",
-    "text": "Áreas de atuação\n\nPolíticas públicas\n\nDados públicos\n\nEconomia aplicada\n\nComunicação de evidências"
-  },
-  {
-    "objectID": "artigos.html",
-    "href": "artigos.html",
-    "title": "Artigos",
-    "section": "",
-    "text": "Esta seção vai reunir artigos, notas técnicas e análises replicáveis.\n\n\n\nDiagnóstico municipal com dados públicos\nTransparência e reprodutibilidade\nIndicadores e inferência causal"
-  },
-  {
-    "objectID": "artigos.html#notas-técnicas-e-análises",
-    "href": "artigos.html#notas-técnicas-e-análises",
-    "title": "Artigos",
-    "section": "",
-    "text": "Esta seção vai reunir artigos, notas técnicas e análises replicáveis.\n\n\n\nDiagnóstico municipal com dados públicos\nTransparência e reprodutibilidade\nIndicadores e inferência causal"
-  },
-  {
     "objectID": "sobre.html",
     "href": "sobre.html",
     "title": "Sobre",
@@ -42,11 +7,11 @@
     "text": "O Núcleo MAPA é uma iniciativa dedicada à análise quantitativa de políticas públicas no Brasil, combinando o uso intensivo de microdados, métodos de econometria aplicada e comunicação acessável de evidências para apoiar diagnósticos, avaliações e tomada de decisão no setor público e privado.\nO projeto nasce da convergência entre pesquisa acadêmica e prática aplicada, buscando produzir análises rigorosas, transparentes e úteis para o debate público."
   },
   {
-    "objectID": "sobre.html#o-núcleo-mapa",
-    "href": "sobre.html#o-núcleo-mapa",
+    "objectID": "sobre.html#missão",
+    "href": "sobre.html#missão",
     "title": "Sobre",
-    "section": "",
-    "text": "O Núcleo MAPA é uma iniciativa acadêmica voltada à produção de conteúdo sobre políticas públicas, dados públicos e economia aplicada."
+    "section": "Missão",
+    "text": "Missão\nProduzir análises baseadas em evidências que contribuam para o aprimoramento de políticas públicas, fortalecendo a capacidade analítica de gestores, pesquisadores e organizações."
   },
   {
     "objectID": "sobre.html#princípios",
@@ -54,34 +19,6 @@
     "title": "Sobre",
     "section": "Princípios",
     "text": "Princípios\n\nRigor metodológico: explicitação de hipóteses, métodos e limitações analíticas.\n\nTransparência: uso responsável de dados públicos, documentação de fontes e incentivo à replicabilidade.\n\nUtilidade pública: foco em problemas concretos e na comunicação clara de resultados."
-  },
-  {
-    "objectID": "sobre.html#autores",
-    "href": "sobre.html#autores",
-    "title": "Sobre",
-    "section": "",
-    "text": "Caio Sousa é pesquisador, e atua em avaliação de políticas públicas, com produção na agenda de insegurança alimentar e atuação técnica em diagnóstico e mensuração. No instituto Pacto Contra a Fome, foi analista sênior de dados e contribuiu para criar o boletim de acompanhamento da inflação de alimentos e apoiou governos estaduais na construção de diagnósticos de insegurança alimentar. Também desenvolve pesquisa em economia política sobre emendas parlamentares. Tem experiência no mercado financeiro, com análise de risco e acompanhamento macroeconômico. Atualmente é pesquisador no Cebrap e bolsista do Ipea em estudos com a Pesquisa de Orçamentos Familiares. Formado em engenharia de produção pela Universidade Federal do Rio de Janeiro e mestrando em economia aplicada pela Universidade Federal do ABC., Lattes, Scholar, GitHub\nAndrei Santos é estatístico e cientista de dados com experiência aplicada em análise e modelagem de dados, combinando estatística, machine learning e inteligência analítica para apoiar decisões estratégicas. Atua em todo o ciclo analítico, da coleta e tratamento à modelagem e comunicação de resultados, com foco em soluções práticas e orientadas a evidências. Possui domínio em inferência estatística, séries temporais, modelagem preditiva, amostragem e automação de processos, além de experiência na criação de dashboards interativos. Trabalha com R, Python, SQL, Power BI e Excel avançado (VBA), desenvolvendo projetos socioeconômicos e soluções orientadas por dados para o setor público e privado.\nFabio Rocha é economista com trajetória em políticas públicas, avaliação e produção de evidências para tomada de decisão, articulando mensuração de resultados, construção de indicadores e qualificação metodológica de intervenções, com agenda de pesquisa centrada em estudos sobre educação. Ele mantém o canal RochaDatainR no YouTube, com cerca de 3 mil seguidores, no qual ensina R aplicado à análise de dados e à produção de diagnósticos. No setor público, foi Diretor de Estudos Econômicos da Prefeitura Municipal de Ouro Preto. Atualmente, atua como Analista de Monitoramento e Avaliação no Instituto Unibanco. É economista e filósofo pela Universidade Federal de Ouro Preto e mestrando em economia aplicada pela Universidade Federal do ABC., Lattes, Scholar, GitHub"
-  },
-  {
-    "objectID": "sobre.html#microeconometria-aplicada-a-políticas-e-avaliação",
-    "href": "sobre.html#microeconometria-aplicada-a-políticas-e-avaliação",
-    "title": "Sobre",
-    "section": "",
-    "text": "O Núcleo MAPA é uma iniciativa dedicada à análise quantitativa de políticas públicas no Brasil, combinando o uso intensivo de microdados, métodos de econometria aplicada e comunicação acessável de evidências para apoiar diagnósticos, avaliações e tomada de decisão no setor público e privado.\nO projeto nasce da convergência entre pesquisa acadêmica e prática aplicada, buscando produzir análises rigorosas, transparentes e úteis para o debate público."
-  },
-  {
-    "objectID": "index.html#microeconometria-aplicada-a-políticas-e-avaliação",
-    "href": "index.html#microeconometria-aplicada-a-políticas-e-avaliação",
-    "title": "Núcleo MAPA",
-    "section": "",
-    "text": "Produzimos evidências quantitativas para apoiar decisões públicas baseadas em dados."
-  },
-  {
-    "objectID": "sobre.html#missão",
-    "href": "sobre.html#missão",
-    "title": "Sobre",
-    "section": "Missão",
-    "text": "Missão\nProduzir análises baseadas em evidências que contribuam para o aprimoramento de políticas públicas, fortalecendo a capacidade analítica de gestores, pesquisadores e organizações."
   },
   {
     "objectID": "sobre.html#áreas-de-atuação",
@@ -103,5 +40,47 @@
     "title": "Sobre",
     "section": "Colaborações",
     "text": "Colaborações\nO Núcleo MAPA está aberto a parcerias acadêmicas, institucionais e projetos colaborativos voltados à produção de diagnósticos, avaliação de políticas públicas e comunicação de evidências."
+  },
+  {
+    "objectID": "artigos.html",
+    "href": "artigos.html",
+    "title": "Artigos",
+    "section": "",
+    "text": "Esta seção reúne artigos, notas técnicas e análises replicáveis produzidas pelo Núcleo MAPA."
+  },
+  {
+    "objectID": "artigos.html#notas-técnicas-e-análises",
+    "href": "artigos.html#notas-técnicas-e-análises",
+    "title": "Artigos",
+    "section": "",
+    "text": "Esta seção reúne artigos, notas técnicas e análises replicáveis produzidas pelo Núcleo MAPA."
+  },
+  {
+    "objectID": "artigos.html#todo-mundo-ganhou-mais-mas-não-do-mesmo-jeito",
+    "href": "artigos.html#todo-mundo-ganhou-mais-mas-não-do-mesmo-jeito",
+    "title": "Artigos",
+    "section": "Todo mundo ganhou mais — mas não do mesmo jeito",
+    "text": "Todo mundo ganhou mais — mas não do mesmo jeito\nDistribuição de renda no Brasil entre 2023 e 2025 com microdados da PNAD Contínua\nFábio Rocha — 20 de março de 2026\n\nA renda média do trabalho cresceu no Brasil entre 2023 e 2025 — e isso é, sim, motivo de comemoração. Mas médias escondem realidades muito distintas ao longo da distribuição. Quem ganhou mais? Quem ficou para trás?\nPara responder, fomos aos microdados da PNAD Contínua e comparamos o rendimento real de todos os trabalhos entre o 1º trimestre de 2023 e o 3º trimestre de 2025. A análise foi feita por quantis da distribuição: p25, p50, p75, p90 e p99.\n\nA curva da desigualdade\nO primeiro gráfico já entrega o recado antes dos números: a distância entre os períodos cresce conforme subimos na distribuição. Nos quantis mais baixos, as duas curvas caminham juntas. No topo, elas se separam com clareza.\n\n\n\n\n\n\n\n\n\n\n\nQuem cresceu mais - em termos relativos?\nQuando abrimos a distribuição por quantis, a heterogeneidade fica evidente:\n\np25 (25% mais pobres): +4,7%\np50 (mediana): +5%\np75: +19,3%\np90 (topo intermediário): +23,1%\np99 (topo extremo): +10,5%\n\nO crescimento foi real — mas fortemente concentrado no topo intermediário da distribuição. A mediana, que representa o trabalhador típico, praticamente não se moveu.\n\n\n\n\n\n\n\n\n\n\n\nE em reais?\nEm valores monetários, a concentração fica ainda mais evidente. O trabalhador no topo da distribuição (p99) ganhou, em média, R$ 2.370 a mais por mês do que ganhava em 2023. O trabalhador na base (p25) ganhou R$ 69. A mediana, R$ 100.\n\n\n\n\n\n\n\n\n\n\n\nO retrato completo\nO gráfico abaixo reúne os níveis de rendimento nos dois períodos para cada quantil, permitindo uma leitura direta da evolução da distribuição.\n\n\n\n\n\n\n\n\n\n\n\nEm resumo\nHouve crescimento real da renda no Brasil entre 2023 e 2025 — e isso importa. Mas o padrão é heterogêneo: a base avançou pouco, a mediana praticamente estacionou, e o topo acelerou de forma expressiva.\nEsse tipo de análise distributiva é essencial para avaliar políticas de renda com mais precisão. Dizer que “a renda cresceu” sem abrir a distribuição é, no mínimo, incompleto.\n\n\n\n\n\n\n\nNota\n\n\n\nNota metodológica: os rendimentos foram deflacionados pelo índice Habitual disponível nos microdados da PNAD Contínua. A comparação utiliza o 1º trimestre de 2023 e o 4º trimestre de 2025. O código completo está disponível no repositório do Núcleo MAPA."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Núcleo MAPA",
+    "section": "",
+    "text": "Iniciativa acadêmica criada para produzir conteúdo sobre políticas públicas, dados públicos e economia aplicada — com rigor quantitativo e comunicação clara."
+  },
+  {
+    "objectID": "index.html#artigos-recentes",
+    "href": "index.html#artigos-recentes",
+    "title": "Núcleo MAPA",
+    "section": "Artigos recentes",
+    "text": "Artigos recentes\n\n(em breve) Diagnóstico municipal com dados públicos\n\n(em breve) Boas práticas de reprodutibilidade em análises\n\n(em breve) Indicadores e causalidade: limites da descrição"
+  },
+  {
+    "objectID": "index.html#áreas-de-atuação",
+    "href": "index.html#áreas-de-atuação",
+    "title": "Núcleo MAPA",
+    "section": "Áreas de atuação",
+    "text": "Áreas de atuação\n\nPolíticas públicas\n\nDados públicos\n\nEconomia aplicada\n\nComunicação de evidências"
   }
 ]
