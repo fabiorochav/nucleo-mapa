@@ -3,6 +3,7 @@ project:
   output-dir: docs
 
 website:
+  site-url: https://fabiorochav.github.io/nucleo-mapa
   title: "Núcleo MAPA"
   navbar:
     left:

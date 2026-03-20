@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Núcleo MAPA</title>
+<link>https://fabiorochav.github.io/nucleo-mapa/artigos.html</link>
+<atom:link href="https://fabiorochav.github.io/nucleo-mapa/artigos.xml" rel="self" type="application/rss+xml"/>
+<description></description>
+<generator>quarto-1.7.32</generator>
+<lastBuildDate>Wed, 11 Feb 2026 03:00:00 GMT</lastBuildDate>
+<item>
+  <title>Todo mundo ganhou mais — mas não do mesmo jeito</title>
+  <dc:creator>Fábio Rocha</dc:creator>
+  <link>https://fabiorochav.github.io/nucleo-mapa/artigos/2026-02-distribuicao-renda/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>A renda média do trabalho cresceu no Brasil entre 2023 e 2025 — e isso é, sim, motivo de comemoração. Mas médias escondem realidades muito distintas ao longo da distribuição. Quem ganhou mais? Quem ficou para trás?</p>
+<p>Para responder, fomos aos microdados da PNAD Contínua e comparamos o rendimento real de todos os trabalhos entre o 1º trimestre de 2023 e o 3º trimestre de 2025. A análise foi feita por quantis da distribuição: p25, p50, p75, p90 e p99.</p>
+<section id="a-curva-da-desigualdade" class="level3">
+<h3 class="anchored" data-anchor-id="a-curva-da-desigualdade">A curva da desigualdade</h3>
+<p>O primeiro gráfico já entrega o recado antes dos números: a distância entre os períodos cresce conforme subimos na distribuição. Nos quantis mais baixos, as duas curvas caminham juntas. No topo, elas se separam com clareza.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://fabiorochav.github.io/nucleo-mapa/artigos/2026-02-distribuicao-renda/index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="864"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="quem-cresceu-mais---em-termos-relativos" class="level3">
+<h3 class="anchored" data-anchor-id="quem-cresceu-mais---em-termos-relativos">Quem cresceu mais - em termos relativos?</h3>
+<p>Quando abrimos a distribuição por quantis, a heterogeneidade fica evidente:</p>
+<ul>
+<li><strong>p25</strong> (25% mais pobres): +4,7%</li>
+<li><strong>p50</strong> (mediana): +5%</li>
+<li><strong>p75</strong>: +19,3%</li>
+<li><strong>p90</strong> (topo intermediário): <strong>+23,1%</strong></li>
+<li><strong>p99</strong> (topo extremo): +10,5%</li>
+</ul>
+<p>O crescimento foi real — mas fortemente concentrado no topo intermediário da distribuição. A mediana, que representa o trabalhador típico, praticamente não se moveu.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://fabiorochav.github.io/nucleo-mapa/artigos/2026-02-distribuicao-renda/index_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="864"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="e-em-reais" class="level3">
+<h3 class="anchored" data-anchor-id="e-em-reais">E em reais?</h3>
+<p>Em valores monetários, a concentração fica ainda mais evidente. O trabalhador no topo da distribuição (p99) ganhou, em média, <strong>R$ 2.370 a mais por mês</strong> do que ganhava em 2023. O trabalhador na base (p25) ganhou <strong>R$ 69</strong>. A mediana, <strong>R$ 100</strong>.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://fabiorochav.github.io/nucleo-mapa/artigos/2026-02-distribuicao-renda/index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="864"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="o-retrato-completo" class="level3">
+<h3 class="anchored" data-anchor-id="o-retrato-completo">O retrato completo</h3>
+<p>O gráfico abaixo reúne os níveis de rendimento nos dois períodos para cada quantil, permitindo uma leitura direta da evolução da distribuição.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://fabiorochav.github.io/nucleo-mapa/artigos/2026-02-distribuicao-renda/index_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="864"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="em-resumo" class="level3">
+<h3 class="anchored" data-anchor-id="em-resumo">Em resumo</h3>
+<p>Houve crescimento real da renda no Brasil entre 2023 e 2025 — e isso importa. Mas o padrão é heterogêneo: a base avançou pouco, a mediana praticamente estacionou, e o topo acelerou de forma expressiva.</p>
+<p>Esse tipo de análise distributiva é essencial para avaliar políticas de renda com mais precisão. Dizer que “a renda cresceu” sem abrir a distribuição é, no mínimo, incompleto.</p>
+<hr>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Nota
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Nota metodológica:</strong> os rendimentos foram deflacionados pelo índice <code>Habitual</code> disponível nos microdados da PNAD Contínua. A comparação utiliza o 1º trimestre de 2023 e o 4º trimestre de 2025. O código completo está disponível no repositório do Núcleo MAPA.</p>
+</div>
+</div>
+<hr>
+
+
+</section>
+
+ ]]></description>
+  <category>renda</category>
+  <category>PNAD</category>
+  <category>distribuição</category>
+  <category>mercado de trabalho</category>
+  <guid>https://fabiorochav.github.io/nucleo-mapa/artigos/2026-02-distribuicao-renda/</guid>
+  <pubDate>Wed, 11 Feb 2026 03:00:00 GMT</pubDate>
+  <media:content url="https://fabiorochav.github.io/nucleo-mapa/artigos/2026-02-distribuicao-renda/preview.png" medium="image" type="image/png" height="90" width="144"/>
+</item>
+</channel>
+</rss>

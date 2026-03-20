@@ -22,9 +22,9 @@ library(showtext)
 font_add_google("Ubuntu", "ubuntu")
 showtext_auto()
 
-dist_var  <- readRDS("../../data/dist_var.rds")
-dist_long <- readRDS("../../data/dist_long.rds")
-dist_wide <- readRDS("../../data/dist_wide.rds")
+dist_var  <- readRDS("data/dist_var.rds")   # ✅
+dist_long <- readRDS("data/dist_long.rds")  # ✅
+dist_wide <- readRDS("data/dist_wide.rds")  # ✅
 
 cor_2023 <- "#1F4E79"
 cor_2025 <- "#2E86C1"
@@ -68,25 +68,24 @@ ggplot(plot_niveis,
     x = "Quantil", y = "Rendimento", color = "Período",
     caption = "Microdados PNAD Contínua — elaboração: Fábio Rocha"
   ) +
-  theme_minimal(base_family = "ubuntu", base_size = 16) +
+  theme_minimal(base_family = "ubuntu", base_size = 28) +
   theme(
     plot.title = element_text(face = "bold"),
-    plot.subtitle = element_text(size = 12),
     panel.grid.minor = element_blank(),
-    panel.grid.major.x = element_blank(),
+    panel.grid.major.x = element_blank(), #remove linhas horizontais
     legend.position = "right"
   )
 ```
 
-### Quem cresceu mais — em termos relativos?
+### Quem cresceu mais - em termos relativos?
 
 Quando abrimos a distribuição por quantis, a heterogeneidade fica evidente:
 
-- **p25** (25% mais pobres): +5,2% real
-- **p50** (mediana): praticamente estável (+0,5%)
-- **p75**: +8%
-- **p90** (topo intermediário): **+23,3%**
-- **p99** (topo extremo): +11,3%
+- **p25** (25% mais pobres): +4,7%
+- **p50** (mediana): +5%
+- **p75**: +19,3%
+- **p90** (topo intermediário): **+23,1%**
+- **p99** (topo extremo): +10,5%
 
 O crescimento foi real — mas fortemente concentrado no topo intermediário da distribuição. A mediana, que representa o trabalhador típico, praticamente não se moveu.
 
@@ -103,7 +102,7 @@ ggplot(dist_var,
   geom_hline(yintercept = 0, linetype = 2, linewidth = 0.8) +
   geom_text(
     aes(label = paste0(round(variacao_pct, 1), "%")),
-    vjust = -0.4, size = 5, family = "ubuntu"
+    vjust = -0.4, size = 8, family = "ubuntu"
   ) +
   scale_y_continuous(labels = function(x) paste0(x, "%")) +
   labs(
@@ -112,17 +111,18 @@ ggplot(dist_var,
     x = "Quantil", y = "Variação (%)",
     caption = "Microdados PNAD Contínua — elaboração: Fábio Rocha"
   ) +
-  theme_minimal(base_family = "ubuntu", base_size = 16) +
+  ylim(0,35)+
+  theme_minimal(base_family = "ubuntu", base_size = 28) +
   theme(
     plot.title = element_text(face = "bold"),
     panel.grid.minor = element_blank(),
-    panel.grid.major.x = element_blank()
+    panel.grid.major.x = element_blank()   # remove linhas horizontais
   )
 ```
 
 ### E em reais?
 
-Em valores monetários, a concentração fica ainda mais evidente. O trabalhador no topo da distribuição (p99) ganhou, em média, **R$ 2.538 a mais por mês** do que ganhava em 2023. O trabalhador na base (p25) ganhou **R$ 74**. A mediana, **R$ 9**.
+Em valores monetários, a concentração fica ainda mais evidente. O trabalhador no topo da distribuição (p99) ganhou, em média, **R$ 2.370 a mais por mês** do que ganhava em 2023. O trabalhador na base (p25) ganhou **R$ 69**. A mediana, **R$ 100**.
 
 ```{r}
 #| echo: false
@@ -138,7 +138,7 @@ ggplot(dist_var,
     aes(label = scales::label_dollar(
       prefix = "R$ ", big.mark = ".", decimal.mark = ","
     )(variacao_abs)),
-    vjust = -0.4, size = 5, family = "ubuntu"
+    vjust = -0.4, size = 8, family = "ubuntu"
   ) +
   scale_y_continuous(
     labels = scales::label_dollar(
@@ -151,11 +151,12 @@ ggplot(dist_var,
     x = "Quantil", y = "Variação",
     caption = "Microdados PNAD Contínua — elaboração: Fábio Rocha"
   ) +
-  theme_minimal(base_family = "ubuntu", base_size = 16) +
+  ylim(0,2800)+
+  theme_minimal(base_family = "ubuntu", base_size = 28) +
   theme(
     plot.title = element_text(face = "bold"),
     panel.grid.minor = element_blank(),
-    panel.grid.major.x = element_blank()
+    panel.grid.major.x = element_blank()   # remove linhas horizontais
   )
 ```
 
@@ -179,7 +180,7 @@ ggplot(dist_long,
     )(round(valor, 0))),
     position = position_dodge(width = .7),
     vjust = 0.4, hjust = -0.1,
-    size = 4, family = "ubuntu"
+    size = 8, family = "ubuntu"
   ) +
   ylim(0, 27000) +
   scale_fill_manual(values = c(
@@ -192,16 +193,17 @@ ggplot(dist_long,
     x = "Quantil", y = "R$", fill = "Período",
     caption = "Microdados PNAD Contínua — elaboração: Fábio Rocha"
   ) +
-  theme_minimal(base_family = "ubuntu", base_size = 16) +
+  ylim(0,30000)+
+  theme_minimal(base_family = "ubuntu", base_size = 28) +
   theme(
     plot.title = element_text(face = "bold"),
     panel.grid.minor = element_blank(),
-    panel.grid.major.y = element_blank()
+    panel.grid.major.y = element_blank()# remove linhas horizontais
   ) +
   coord_flip()
 ```
 
-### O que os dados dizem
+### Em resumo
 
 Houve crescimento real da renda no Brasil entre 2023 e 2025 — e isso importa. Mas o padrão é heterogêneo: a base avançou pouco, a mediana praticamente estacionou, e o topo acelerou de forma expressiva.
 
@@ -212,3 +214,5 @@ Esse tipo de análise distributiva é essencial para avaliar políticas de renda
 ::: {.callout-note}
 **Nota metodológica:** os rendimentos foram deflacionados pelo índice `Habitual` disponível nos microdados da PNAD Contínua. A comparação utiliza o 1º trimestre de 2023 e o 4º trimestre de 2025. O código completo está disponível no repositório do Núcleo MAPA.
 :::
+
+---
