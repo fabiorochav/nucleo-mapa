@@ -1,6 +1,6 @@
 ---
-title: "Todo mundo ganhou mais — mas não do mesmo jeito"
-date: 2026-02-11
+title: "Todo mundo ganhou mais - mas não do mesmo jeito"
+date: 2026-03-22
 description: "Distribuição de renda no Brasil entre 2023 e 2025 com microdados da PNAD Contínua."
 categories: [renda, PNAD, distribuição, mercado de trabalho]
 author: Fábio Rocha
