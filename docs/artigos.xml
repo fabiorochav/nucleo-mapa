@@ -6,15 +6,15 @@
       version="2.0">
 <channel>
 <title>Núcleo MAPA</title>
-<link>https://www.nucleomapa.org/artigos.html</link>
-<atom:link href="https://www.nucleomapa.org/artigos.xml" rel="self" type="application/rss+xml"/>
+<link>www.nucleomapa.org/artigos.html</link>
+<atom:link href="www.nucleomapa.org/artigos.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.8.25</generator>
 <lastBuildDate>Sun, 22 Mar 2026 03:00:00 GMT</lastBuildDate>
 <item>
   <title>Todo mundo ganhou mais - mas não do mesmo jeito</title>
   <dc:creator>Fábio Rocha</dc:creator>
-  <link>https://www.nucleomapa.org/artigos/2026-02-distribuicao-renda/</link>
+  <link>www.nucleomapa.org/artigos/2026-02-distribuicao-renda/</link>
   <description><![CDATA[ 
 
 
@@ -29,7 +29,7 @@
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://www.nucleomapa.org/artigos/2026-02-distribuicao-renda/index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="864"></p>
+<p><img src="www.nucleomapa.org/artigos/2026-02-distribuicao-renda/index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="864"></p>
 </figure>
 </div>
 </div>
@@ -50,7 +50,7 @@
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://www.nucleomapa.org/artigos/2026-02-distribuicao-renda/index_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="864"></p>
+<p><img src="www.nucleomapa.org/artigos/2026-02-distribuicao-renda/index_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="864"></p>
 </figure>
 </div>
 </div>
@@ -63,7 +63,7 @@
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://www.nucleomapa.org/artigos/2026-02-distribuicao-renda/index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="864"></p>
+<p><img src="www.nucleomapa.org/artigos/2026-02-distribuicao-renda/index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="864"></p>
 </figure>
 </div>
 </div>
@@ -76,7 +76,7 @@
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://www.nucleomapa.org/artigos/2026-02-distribuicao-renda/index_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="864"></p>
+<p><img src="www.nucleomapa.org/artigos/2026-02-distribuicao-renda/index_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="864"></p>
 </figure>
 </div>
 </div>
@@ -110,9 +110,9 @@ Nota
   <category>PNAD</category>
   <category>distribuição</category>
   <category>mercado de trabalho</category>
-  <guid>https://www.nucleomapa.org/artigos/2026-02-distribuicao-renda/</guid>
+  <guid>www.nucleomapa.org/artigos/2026-02-distribuicao-renda/</guid>
   <pubDate>Sun, 22 Mar 2026 03:00:00 GMT</pubDate>
-  <media:content url="https://www.nucleomapa.org/artigos/2026-02-distribuicao-renda/preview.png" medium="image" type="image/png" height="90" width="144"/>
+  <media:content url="www.nucleomapa.org/artigos/2026-02-distribuicao-renda/preview.png" medium="image" type="image/png" height="90" width="144"/>
 </item>
 </channel>
 </rss>
