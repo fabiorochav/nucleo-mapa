@@ -3,6 +3,7 @@ title: "Jovens estão abandonando a CLT? O que dizem os dados da PNAD"
 description: "Nos últimos dez anos, o emprego formal no setor privado perdeu participação entre os jovens ocupados. Mas o que isso significa de fato?"
 date: "2026-04-12"
 categories: [PNAD, Mercado de Trabalho, Juventude]
+author: Fábio Rocha
 format: html
 execute:
   echo: false
@@ -76,7 +77,7 @@ ggplot(foco, aes(periodo, prop, fill = vinculo)) +
     expand = expansion(mult = c(0, .08))
   ) +
 
-  theme_bw(base_family = "Ubuntu", base_size = 15) +
+  theme_minimal(base_family = "ubuntu", base_size = 28) +
 
   theme(
     legend.position    = "right",
@@ -175,7 +176,7 @@ ggplot(wide, aes(y = VD4009_short)) +
     caption  = "Fonte: Microdados PNAD Contínua/IBGE — Elaboração: Fábio Rocha"
   ) +
 
-  theme_bw(base_family = "Ubuntu", base_size = 16) +
+  theme_minimal(base_family = "ubuntu", base_size = 28) +
 
   theme(
     legend.position  = c(.9, .87),
