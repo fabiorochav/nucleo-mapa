@@ -1,5 +1,5 @@
 ---
-title: "Jovens estão abandonando a CLT? O que dizem os dados da PNAD"
+title: "Jovens, CLT e conta própria: uma década de mudança no mercado de trabalho"
 description: "Nos últimos dez anos, o emprego formal no setor privado perdeu participação entre os jovens ocupados. Mas o que isso significa de fato?"
 date: "2026-04-12"
 categories: [PNAD, Mercado de Trabalho, Juventude]
