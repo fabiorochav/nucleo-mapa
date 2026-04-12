@@ -46,7 +46,7 @@
     "href": "artigos.html",
     "title": "Artigos",
     "section": "",
-    "text": "Todo mundo ganhou mais - mas não do mesmo jeito\n\n\n\nrenda\n\nPNAD\n\ndistribuição\n\nmercado de trabalho\n\n\n\nDistribuição de renda no Brasil entre 2023 e 2025 com microdados da PNAD Contínua.\n\n\n\n22 de mar. de 2026\n\n\n\n\n\n\nSem itens correspondentes"
+    "text": "Jovens estão abandonando a CLT? O que dizem os dados da PNAD\n\n\n\nPNAD\n\nMercado de Trabalho\n\nJuventude\n\n\n\nNos últimos dez anos, o emprego formal no setor privado perdeu participação entre os jovens ocupados. Mas o que isso significa de fato?\n\n\n\n12 de abr. de 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nTodo mundo ganhou mais - mas não do mesmo jeito\n\n\n\nrenda\n\nPNAD\n\ndistribuição\n\nmercado de trabalho\n\n\n\nDistribuição de renda no Brasil entre 2023 e 2025 com microdados da PNAD Contínua.\n\n\n\n22 de mar. de 2026\n\n\n\n\n\n\nSem itens correspondentes"
   },
   {
     "objectID": "artigos/2026-02-distribuicao-renda/index.html",
@@ -54,6 +54,34 @@
     "title": "Todo mundo ganhou mais - mas não do mesmo jeito",
     "section": "",
     "text": "A renda média do trabalho cresceu no Brasil entre 2023 e 2025 — e isso é, sim, motivo de comemoração. Mas médias escondem realidades muito distintas ao longo da distribuição. Quem ganhou mais? Quem ficou para trás?\nPara responder, fomos aos microdados da PNAD Contínua e comparamos o rendimento real de todos os trabalhos entre o 1º trimestre de 2023 e o 3º trimestre de 2025. A análise foi feita por quantis da distribuição: p25, p50, p75, p90 e p99.\n\nA curva da desigualdade\nO primeiro gráfico já entrega o recado antes dos números: a distância entre os períodos cresce conforme subimos na distribuição. Nos quantis mais baixos, as duas curvas caminham juntas. No topo, elas se separam com clareza.\n\n\n\n\n\n\n\n\n\n\n\nQuem cresceu mais - em termos relativos?\nQuando abrimos a distribuição por quantis, a heterogeneidade fica evidente:\n\np25 (25% mais pobres): +4,7%\np50 (mediana): +5%\np75: +19,3%\np90 (topo intermediário): +23,1%\np99 (topo extremo): +10,5%\n\nO crescimento foi real — mas fortemente concentrado no topo intermediário da distribuição. A mediana, que representa o trabalhador típico, praticamente não se moveu.\n\n\n\n\n\n\n\n\n\n\n\nE em reais?\nEm valores monetários, a concentração fica ainda mais evidente. O trabalhador no topo da distribuição (p99) ganhou, em média, R$ 2.370 a mais por mês do que ganhava em 2023. O trabalhador na base (p25) ganhou R$ 69. A mediana, R$ 100.\n\n\n\n\n\n\n\n\n\n\n\nO retrato completo\nO gráfico abaixo reúne os níveis de rendimento nos dois períodos para cada quantil, permitindo uma leitura direta da evolução da distribuição.\n\n\n\n\n\n\n\n\n\n\n\nEm resumo\nHouve crescimento real da renda no Brasil entre 2023 e 2025 — e isso importa. Mas o padrão é heterogêneo: a base avançou pouco, a mediana praticamente estacionou, e o topo acelerou de forma expressiva.\nEsse tipo de análise distributiva é essencial para avaliar políticas de renda com mais precisão. Dizer que “a renda cresceu” sem abrir a distribuição é, no mínimo, incompleto.\n\n\n\n\n\n\n\nNota\n\n\n\nNota metodológica: os rendimentos foram deflacionados pelo índice Habitual disponível nos microdados da PNAD Contínua. A comparação utiliza o 1º trimestre de 2023 e o 4º trimestre de 2025. O código completo está disponível no repositório do Núcleo MAPA."
+  },
+  {
+    "objectID": "artigos/2026-04-ocupacao-jovens/index.html",
+    "href": "artigos/2026-04-ocupacao-jovens/index.html",
+    "title": "Jovens estão abandonando a CLT? O que dizem os dados da PNAD",
+    "section": "",
+    "text": "Nos últimos dez anos, a forma de inserção dos jovens no mercado de trabalho brasileiro passou por mudanças relevantes. Dados da PNAD Contínua indicam que, entre o 1º trimestre de 2015 e o 4º trimestre de 2025, houve redução na participação do emprego formal no setor privado entre os jovens ocupados — ao mesmo tempo em que cresceram o trabalho sem carteira e o trabalho por conta própria."
+  },
+  {
+    "objectID": "artigos/2026-04-ocupacao-jovens/index.html#os-três-vínculos-mais-representativos",
+    "href": "artigos/2026-04-ocupacao-jovens/index.html#os-três-vínculos-mais-representativos",
+    "title": "Jovens estão abandonando a CLT? O que dizem os dados da PNAD",
+    "section": "Os três vínculos mais representativos",
+    "text": "Os três vínculos mais representativos\nO gráfico abaixo compara, nos dois períodos, a participação de três posições ocupacionais que concentram a maior parte dos jovens empregados: emprego privado com carteira assinada, emprego privado sem carteira e trabalho por conta própria.\n\n\n\n\n\n\n\n\nFigura 1: Fonte: Microdados PNAD Contínua/IBGE — Elaboração: Fábio Rocha\n\n\n\n\n\nO emprego privado com carteira assinada passou de 51,5% para 48,1% — uma queda de 3,4 pontos percentuais. Já o trabalho por conta própria subiu de 13,6% para 17,2%, e o emprego sem carteira avançou de 18,0% para 21,3%."
+  },
+  {
+    "objectID": "artigos/2026-04-ocupacao-jovens/index.html#o-panorama-completo-das-posições-ocupacionais",
+    "href": "artigos/2026-04-ocupacao-jovens/index.html#o-panorama-completo-das-posições-ocupacionais",
+    "title": "Jovens estão abandonando a CLT? O que dizem os dados da PNAD",
+    "section": "O panorama completo das posições ocupacionais",
+    "text": "O panorama completo das posições ocupacionais\nPara além dos três vínculos principais, o gráfico a seguir exibe todas as posições ocupacionais, ordenadas pela magnitude da variação entre os dois períodos.\n\n\n\n\n\n\n\n\nFigura 2: Fonte: Microdados PNAD Contínua/IBGE — Elaboração: Fábio Rocha"
+  },
+  {
+    "objectID": "artigos/2026-04-ocupacao-jovens/index.html#o-que-isso-significa",
+    "href": "artigos/2026-04-ocupacao-jovens/index.html#o-que-isso-significa",
+    "title": "Jovens estão abandonando a CLT? O que dizem os dados da PNAD",
+    "section": "O que isso significa?",
+    "text": "O que isso significa?\nEsses números não significam necessariamente que os jovens estejam “escolhendo” sair da CLT. Parte desse movimento pode refletir mudanças na estrutura do mercado de trabalho, dificuldades de acesso ao emprego formal ou a expansão de novas formas de inserção produtiva.\nUma hipótese plausível é que essa recomposição não seja homogênea entre os jovens. O avanço do trabalho por conta própria pode estar associado a jovens com maior capital educacional e familiar, que encontram nesse tipo de ocupação oportunidades ligadas à economia digital ou ao empreendedorismo. Por outro lado, o crescimento do emprego sem carteira pode refletir a permanência — ou mesmo a ampliação — da inserção precária entre jovens em situação de maior vulnerabilidade socioeconômica.\nDesagregar esses movimentos por escolaridade, raça e renda familiar é o próximo passo para entender o que, de fato, está por trás dessa reconfiguração.\n\nDados: PNAD Contínua (IBGE), 1º trimestre de 2015 e 4º trimestre de 2025. Universo: jovens de 15 a 29 anos em situação de ocupação."
   },
   {
     "objectID": "index.html",

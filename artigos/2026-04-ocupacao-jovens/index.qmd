@@ -1,0 +1,201 @@
+---
+title: "Jovens estão abandonando a CLT? O que dizem os dados da PNAD"
+description: "Nos últimos dez anos, o emprego formal no setor privado perdeu participação entre os jovens ocupados. Mas o que isso significa de fato?"
+date: "2026-04-12"
+categories: [PNAD, Mercado de Trabalho, Juventude]
+format: html
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r}
+#| label: setup
+#| include: false
+
+library(tidyverse)
+library(showtext)
+library(scales)
+
+font_add_google("Ubuntu", "Ubuntu")
+showtext_auto()
+
+dist_all <- readRDS("dist_all.rds")
+```
+
+Nos últimos dez anos, a forma de inserção dos jovens no mercado de trabalho brasileiro passou por mudanças relevantes. Dados da PNAD Contínua indicam que, entre o 1º trimestre de 2015 e o 4º trimestre de 2025, houve redução na participação do emprego formal no setor privado entre os jovens ocupados — ao mesmo tempo em que cresceram o trabalho sem carteira e o trabalho por conta própria.
+
+## Os três vínculos mais representativos
+
+O gráfico abaixo compara, nos dois períodos, a participação de três posições ocupacionais que concentram a maior parte dos jovens empregados: emprego privado com carteira assinada, emprego privado sem carteira e trabalho por conta própria.
+
+```{r}
+#| label: fig-foco
+#| fig-cap: "Fonte: Microdados PNAD Contínua/IBGE — Elaboração: Fábio Rocha"
+#| fig-width: 9
+#| fig-height: 5.5
+
+foco <- dist_all %>%
+  filter(jovem) %>%
+  filter(VD4009 %in% c(
+    "Empregado no setor privado com carteira de trabalho assinada",
+    "Empregado no setor privado sem carteira de trabalho assinada",
+    "Conta-própria"
+  )) %>%
+  mutate(
+    vinculo = case_when(
+      VD4009 == "Empregado no setor privado com carteira de trabalho assinada" ~ "Privado — com carteira",
+      VD4009 == "Empregado no setor privado sem carteira de trabalho assinada" ~ "Privado — sem carteira",
+      VD4009 == "Conta-própria" ~ "Conta própria"
+    )
+  )
+
+ggplot(foco, aes(periodo, prop, fill = vinculo)) +
+
+  geom_col(position = position_dodge(.65), width = .55) +
+
+  geom_text(
+    aes(label = scales::percent(prop, accuracy = .1)),
+    position = position_dodge(.65),
+    vjust = -0.35,
+    size = 4.3,
+    family = "Ubuntu"
+  ) +
+
+  scale_fill_manual(
+    values = c(
+      "Privado — com carteira" = "#E76F51",
+      "Privado — sem carteira" = "#2A9D8F",
+      "Conta própria"          = "#5C88DA"
+    )
+  ) +
+
+  scale_y_continuous(
+    labels = scales::percent,
+    expand = expansion(mult = c(0, .08))
+  ) +
+
+  theme_bw(base_family = "Ubuntu", base_size = 15) +
+
+  theme(
+    legend.position    = "right",
+    legend.title       = element_blank(),
+    legend.text        = element_text(size = 12),
+    plot.title         = element_text(face = "bold", size = 18),
+    plot.subtitle      = element_text(size = 13),
+    panel.grid.major   = element_line(color = "#D9D9D9", linetype = "dotted"),
+    panel.grid.minor   = element_blank(),
+    axis.title.x       = element_text(face = "bold"),
+    plot.caption       = element_text(size = 10)
+  ) +
+
+  labs(
+    title    = "Mudança na posição ocupacional de jovens",
+    subtitle = "Participação por tipo de vínculo — Jovens (15 a 29 anos)",
+    x        = "Trimestre",
+    y        = NULL,
+    caption  = "Fonte: Microdados PNAD Contínua/IBGE — Elaboração: Fábio Rocha"
+  )
+```
+
+O emprego privado com carteira assinada passou de **51,5%** para **48,1%** — uma queda de 3,4 pontos percentuais. Já o trabalho por conta própria subiu de 13,6% para 17,2%, e o emprego sem carteira avançou de 18,0% para 21,3%.
+
+## O panorama completo das posições ocupacionais
+
+Para além dos três vínculos principais, o gráfico a seguir exibe todas as posições ocupacionais, ordenadas pela magnitude da variação entre os dois períodos.
+
+```{r}
+#| label: fig-dumbbell
+#| fig-cap: "Fonte: Microdados PNAD Contínua/IBGE — Elaboração: Fábio Rocha"
+#| fig-width: 9
+#| fig-height: 6.5
+
+wide <- dist_all %>%
+  filter(jovem, periodo %in% c("2015-T1", "2025-T4")) %>%
+  select(periodo, VD4009, prop) %>%
+  pivot_wider(names_from = periodo, values_from = prop) %>%
+  mutate(
+    VD4009_short = case_when(
+      VD4009 == "Empregado no setor privado com carteira de trabalho assinada"    ~ "Privado — com carteira",
+      VD4009 == "Empregado no setor privado sem carteira de trabalho assinada"    ~ "Privado — sem carteira",
+      VD4009 == "Trabalhador doméstico com carteira de trabalho assinada"         ~ "Doméstico — com carteira",
+      VD4009 == "Trabalhador doméstico sem carteira de trabalho assinada"         ~ "Doméstico — sem carteira",
+      VD4009 == "Empregado no setor público com carteira de trabalho assinada"    ~ "Público — com carteira",
+      VD4009 == "Empregado no setor público sem carteira de trabalho assinada"    ~ "Público — sem carteira",
+      VD4009 == "Militar e servidor estatutário"                                  ~ "Militar / estatutário",
+      VD4009 == "Conta-própria"                                                   ~ "Conta própria",
+      VD4009 == "Trabalhador familiar auxiliar"                                   ~ "Familiar auxiliar",
+      VD4009 == "Empregador"                                                      ~ "Empregador",
+      TRUE ~ VD4009
+    ),
+    delta     = `2025-T4` - `2015-T1`,
+    delta_abs = abs(delta)
+  ) %>%
+  arrange(desc(delta_abs)) %>%
+  mutate(VD4009_short = factor(VD4009_short, levels = VD4009_short))
+
+plot_long <- wide %>%
+  pivot_longer(
+    cols      = c(`2015-T1`, `2025-T4`),
+    names_to  = "periodo",
+    values_to = "prop"
+  ) %>%
+  mutate(VD4009_short = factor(VD4009_short, levels = levels(wide$VD4009_short)))
+
+ggplot(wide, aes(y = VD4009_short)) +
+
+  geom_segment(
+    aes(x = `2015-T1`, xend = `2025-T4`, yend = VD4009_short),
+    linewidth = 0.6,
+    color     = "#B8B8B8"
+  ) +
+
+  geom_point(
+    data = plot_long,
+    aes(x = prop, color = periodo),
+    size = 3.8
+  ) +
+
+  scale_color_manual(
+    name   = "Período",
+    values = c("2015-T1" = "#E76F51", "2025-T4" = "#2A9D8F")
+  ) +
+
+  scale_x_continuous(
+    labels = scales::percent,
+    expand = expansion(mult = c(.02, .08))
+  ) +
+
+  labs(
+    title    = "Mudança na posição ocupacional de jovens",
+    subtitle = "Participação por tipo de vínculo — Jovens (15 a 29 anos)",
+    x        = "Participação no total de ocupados jovens",
+    y        = NULL,
+    caption  = "Fonte: Microdados PNAD Contínua/IBGE — Elaboração: Fábio Rocha"
+  ) +
+
+  theme_bw(base_family = "Ubuntu", base_size = 16) +
+
+  theme(
+    legend.position  = c(.9, .87),
+    legend.title     = element_text(face = "bold"),
+    plot.title       = element_text(face = "bold"),
+    plot.caption     = element_text(size = 10),
+    plot.margin      = margin(15, 50, 10, 50),
+    panel.grid.major = element_line(color = "#D9D9D9", linetype = "dotted"),
+    panel.grid.minor = element_blank()
+  )
+```
+
+## O que isso significa?
+
+Esses números não significam necessariamente que os jovens estejam "escolhendo" sair da CLT. Parte desse movimento pode refletir mudanças na estrutura do mercado de trabalho, dificuldades de acesso ao emprego formal ou a expansão de novas formas de inserção produtiva.
+
+Uma hipótese plausível é que essa recomposição não seja homogênea entre os jovens. O avanço do trabalho por conta própria pode estar associado a jovens com maior capital educacional e familiar, que encontram nesse tipo de ocupação oportunidades ligadas à economia digital ou ao empreendedorismo. Por outro lado, o crescimento do emprego sem carteira pode refletir a permanência — ou mesmo a ampliação — da inserção precária entre jovens em situação de maior vulnerabilidade socioeconômica.
+
+Desagregar esses movimentos por escolaridade, raça e renda familiar é o próximo passo para entender o que, de fato, está por trás dessa reconfiguração.
+
+---
+
+*Dados: PNAD Contínua (IBGE), 1º trimestre de 2015 e 4º trimestre de 2025. Universo: jovens de 15 a 29 anos em situação de ocupação.*
