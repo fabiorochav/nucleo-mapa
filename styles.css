@@ -1,342 +1,104 @@
-/* ======================================================
-   Núcleo MAPA — Identidade Visual Institucional
-   Microeconometria Aplicada a Políticas e Avaliação
-====================================================== */
-
-
-/* ===============================
-   PALETA DE CORES
-================================= */
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600&family=League+Spartan:wght@500;600;700&display=swap");
 
 :root {
-
-  --mapa-green: #2C9C3B;      /* verde principal */
-  --mapa-green-dark: #1f6e2a;
-
-  --mapa-dark: #20B320;       /* navbar */
-  --mapa-gray: #5f6b7a;
-
-  --mapa-light-bg: #F6F8F6;   /* fundo geral */
-
+  --mapa-green: #046A38;
+  --mapa-green-dark: #034c29;
+  --mapa-green-soft: #dfeee6;
+  --mapa-ink: #173126;
+  --mapa-muted: #5b6d64;
+  --mapa-border: rgba(23, 49, 38, 0.12);
+  --mapa-light-bg: #f6f3ea;
+  --mapa-surface: rgba(255, 252, 247, 0.94);
+  --mapa-dark-surface: #0d3f24;
+  --mapa-dark-surface-2: #0a311c;
+  --mapa-shadow: 0 18px 45px rgba(15, 40, 28, 0.1);
+  --mapa-radius-lg: 28px;
+  --mapa-radius-md: 20px;
+  --mapa-radius-sm: 14px;
 }
 
+html { scroll-behavior: smooth; }
+body { font-family: "Crimson Text", "Times New Roman", serif; background: radial-gradient(circle at top left, rgba(4, 106, 56, 0.08), transparent 26%), var(--mapa-light-bg); color: var(--mapa-ink); line-height: 1.72; }
+body.nav-fixed { padding-top: 5.2rem; }
+h1, h2, h3, h4, .quarto-title-block .title, .navbar .nav-link, .navbar-email, .artigo-cat, .artigo-link, .researcher-role { font-family: "Crimson Text", "Times New Roman", serif; }
+h1, h2, h3, h4, .quarto-title-block .title { font-weight: 400; letter-spacing: -0.02em; line-height: 1; color: var(--mapa-green); }
+h1, .quarto-title-block .title { font-size: clamp(1.9rem, 4.2vw, 3.45rem); }
+h2 { font-size: clamp(1.45rem, 3vw, 2.1rem); border-bottom: none; padding-bottom: 0; margin-top: 3rem; margin-bottom: 0.55rem; }
+h3 { font-size: clamp(1.2rem, 2vw, 1.6rem); margin-top: 0; }
+.subtitle, .quarto-title-block .subtitle { color: var(--mapa-muted); font-size: 1.08rem; font-weight: 400; }
+p, li, dd, dt, .menu-text, .nav-link { color: var(--mapa-ink); font-weight: 400; }
+p { font-size: 1.08rem; }
+a { color: var(--mapa-green); text-decoration: none; font-weight: 400; }
+a:hover { color: var(--mapa-green-dark); }
+strong { color: inherit; font-weight: 400; }
+hr { margin: 2.3rem 0; border: 0; border-top: 1px solid var(--mapa-border); }
+img { max-width: 100%; border-radius: var(--mapa-radius-sm); }
 
-/* ===============================
-   BASE DO SITE
-================================= */
-body {
+.navbar { background: rgba(255, 255, 255, 0.97) !important; border-bottom: 1px solid var(--mapa-border); box-shadow: 0 10px 26px rgba(4, 106, 56, 0.08); }
+.navbar > .navbar-container, .navbar .container-fluid { max-width: 1320px; padding-left: 1.2rem; padding-right: 1.2rem; }
+.navbar-brand, .navbar .nav-link, .navbar .menu-text, .navbar-email { color: var(--mapa-green) !important; }
+.navbar-brand { font-family: "League Spartan", "Arial Narrow", sans-serif; font-size: 1.7rem; font-weight: 700; letter-spacing: -0.03em; line-height: 0.92; }
+.navbar .nav-link { position: relative; margin-right: 0.65rem; font-weight: 400; }
+.navbar .nav-link::after { content: ""; position: absolute; left: 0.5rem; right: 0.5rem; bottom: 0.15rem; height: 2px; border-radius: 999px; background: var(--mapa-green); transform: scaleX(0); transform-origin: left; transition: transform 180ms ease; }
+.navbar .nav-link:hover::after, .navbar .nav-link.active::after { transform: scaleX(1); }
+.navbar .nav-link.active { border-bottom: none; }
+.navbar-right { margin-left: auto; display: flex; align-items: center; gap: 1rem; }
+.navbar-email { font-size: 0.82rem; font-weight: 400; letter-spacing: 0.01em; opacity: 0.9; white-space: nowrap; }
 
-  font-family:
+#quarto-content { width: min(calc(100% - 2rem), 1220px); margin-inline: auto; }
+.quarto-container .content, main.content, .page-columns, .column-page, .column-page-left { max-width: 1100px; }
+main.content { padding-bottom: 4rem; }
 
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    Ubuntu,
-    "Helvetica Neue",
-    Arial,
-    sans-serif;
-
-  background-color: var(--mapa-light-bg);
-
-  color: #2C9C3B;
-
-  line-height: 1.7;
-
+.hero, .intro-panel, .artigo-card, .researcher-card, #TOC { box-shadow: var(--mapa-shadow); }
+.hero, .intro-panel {
+  border-radius: var(--mapa-radius-lg);
+  display: inline-block;
+  width: fit-content;
+  max-width: min(100%, 54rem);
+  padding: 1.2rem 1.5rem;
+  margin-bottom: 0.85rem;
+  background: linear-gradient(180deg, var(--mapa-dark-surface), var(--mapa-dark-surface-2));
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
-
-
-/* ===============================
-   NAVBAR (MENU SUPERIOR)
-================================= */
-
-/* ===============================
-   NAVBAR
-================================= */
-
-.navbar {
-
-  background-color: var(--mapa-dark) !important;
-
-}
-
-
-/* ===============================
-   TÍTULOS
-================================= */
-
-h1, h2, h3 {
-
-  color: var(--mapa-green);
-
-  font-weight: 700;
-
-}
-
-
-h1 {
-
-  margin-top: 1rem;
-
-}
-
-
-h2 {
-
-  border-bottom: 1px solid #e5e7eb;
-
-  padding-bottom: .3rem;
-
-  margin-top: 2rem;
-
-}
-
-
-
-/* ===============================
-   TEXTO
-================================= */
-
-p {
-
-  color: #374151;
-
-  font-size: 1.05rem;
-
-}
-
-
-/* ===============================
-   LINKS
-================================= */
-
-a {
-
-  color: var(--mapa-green);
-
-  text-decoration: none;
-
-  font-weight: 500;
-
-}
-
-a:hover {
-
-  color: var(--mapa-green-dark);
-
-  text-decoration: underline;
-
-}
-
-
-
-/* ===============================
-   LISTAS
-================================= */
-
-ul {
-
-  margin-bottom: 1.5rem;
-
-}
-
-
-li {
-
-  margin-bottom: .4rem;
-
-}
-
-/* ===============================
-   LISTAS EDITORIAIS (PRINCÍPIOS)
-================================= */
-
-li {
-
-  color: #374151;   /* texto neutro profissional */
-
-}
-
-/* apenas o marcador continua verde */
-
-li::marker {
-
-  color: var(--mapa-green);
-
-}
-
-
-
-/* ===============================
-   LINHAS DIVISORAS
-================================= */
-
-hr {
-
-  margin-top: 2rem;
-
-  margin-bottom: 2rem;
-
-  border-color: #e5e7eb;
-
-}
-
-
-
-/* ===============================
-   CARDS (útil para pesquisadores)
-================================= */
-
-.card {
-
-  border-radius: 10px;
-
-  border: none;
-
-  box-shadow:
-
-    0 4px 10px rgba(0,0,0,.05);
-
-}
-
-
-
-/* ===============================
-   FOOTER
-================================= */
-
-footer {
-
-  margin-top: 4rem;
-
-  padding-top: 2rem;
-
-  padding-bottom: 2rem;
-
-  font-size: .9rem;
-
-  color: var(--mapa-gray);
-
-  border-top: 1px solid #e5e7eb;
-
-}
-
-
-
-/* ===============================
-   IMAGENS
-================================= */
-
-img {
-
-  max-width: 100%;
-
-  border-radius: 6px;
-
-}
-
-
-
-/* ===============================
-   RESPONSIVO
-================================= */
-
-@media (max-width: 768px){
-
-  body {
-
-    padding-left: 10px;
-
-    padding-right: 10px;
-
-  }
-
-}
-
-/* ===============================
-   LARGURA EDITORIAL
-================================= */
-
-.quarto-container,
-.page-columns,
-main.content {
-
-  max-width: 900px;
-
-  margin-left: auto;
-
-  margin-right: auto;
-
-}
-
-
-/* ===============================
-   HERO
-================================= */
-
-.hero {
-
-  padding:
-
-    60px 40px;
-
-  background:
-
-    linear-gradient(
-      135deg,
-      #F6F8F6,
-      #ffffff
-    );
-
-  border-radius: 12px;
-
-  margin-bottom: 40px;
-
-}
-
-.hero h1 {
-
-  font-size: 3rem;
-
-}
-
-.hero h2 {
-
-  border-bottom: none;
-
-  color: #5f6b7a;
-
-}
-
-/* ===============================
-   NAVBAR TEXTO BRANCO
-================================= */
-
-.navbar-brand,
-.navbar .nav-link {
-
-  color: white !important;
-
-  font-weight: 600;
-
-}
-
-
-/* hover */
-
-.navbar .nav-link:hover {
-
-  color: #E8FFE8 !important;
-
-}
-
-
-/* link ativo (ex: Sobre selecionado) */
-
-.navbar .nav-link.active {
-
-  color: white !important;
-
-  border-bottom: 2px solid white;
-
+.hero h1, .intro-panel h1, .hero h2, .intro-panel h2, .hero p, .intro-panel p, .hero strong, .intro-panel strong { color: #ffffff !important; }
+.hero h1 { margin: 0; font-size: clamp(2.2rem, 5vw, 3.9rem); max-width: 8ch; }
+.hero h2, .intro-panel h2 { font-size: clamp(1.45rem, 3vw, 2.1rem); line-height: 0.98; margin-bottom: 0.5rem; margin-top: 0; }
+.hero p, .intro-panel p { max-width: 45rem; color: rgba(255, 255, 255, 0.86) !important; margin-bottom: 0; }
+.section-kicker, .researcher-role, .section-kicker-light { font-size: 0.82rem; font-weight: 400; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.25rem; color: rgba(255,255,255,0.78) !important; }
+
+.btn-mapa { display: inline-flex; align-items: center; justify-content: center; margin-top: 0.85rem; padding: 0.85rem 1.3rem; border-radius: 999px; background-color: #ffffff; color: var(--mapa-green) !important; font-weight: 400; font-size: 1rem; box-shadow: 0 12px 24px rgba(4, 106, 56, 0.16); }
+.btn-mapa:hover { background-color: var(--mapa-green-soft); }
+
+.artigos-grid, .researchers-grid { display: grid; gap: 1.4rem; }
+.artigos-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 1.2rem; margin-bottom: 2.5rem; }
+.artigo-card, .researcher-card { background: var(--mapa-surface); border-radius: var(--mapa-radius-md); border: 1px solid var(--mapa-border); }
+.artigo-card { padding: 1.6rem; display: flex; flex-direction: column; gap: 0.65rem; }
+.artigo-cat { color: var(--mapa-green) !important; font-size: 0.82rem; font-weight: 400; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0; }
+.artigo-card h3 { margin: 0; font-size: 1.3rem; }
+.artigo-card h3 a { color: var(--mapa-green) !important; }
+.artigo-desc, .researcher-bio { color: var(--mapa-muted) !important; }
+.artigo-link { font-size: 0.93rem; }
+
+.researchers-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 1.2rem; }
+.researcher-card { overflow: hidden; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 1.45rem 1.2rem 1.3rem; }
+.researcher-photo { width: 8rem; height: 8rem; overflow: hidden; background: var(--mapa-green-soft); border-radius: 50%; margin: 0 auto 1rem; border: 4px solid rgba(4, 106, 56, 0.12); }
+.researcher-photo img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+.researcher-body { padding: 0; display: flex; flex-direction: column; gap: 0.75rem; align-items: center; }
+.researcher-name { margin: 0; font-size: 1.4rem; }
+.researcher-role { color: var(--mapa-green) !important; }
+.researcher-links { display: flex; flex-wrap: wrap; gap: 0.65rem; margin-top: auto; justify-content: center; }
+.researcher-links a { display: inline-flex; align-items: center; padding: 0.42rem 0.72rem; border-radius: 999px; background: var(--mapa-green-soft); color: var(--mapa-green) !important; font-size: 0.95rem; font-weight: 400; }
+
+#TOC { border-radius: var(--mapa-radius-md); padding: 1rem 1rem 0.85rem; background: var(--mapa-surface); border: 1px solid var(--mapa-border); }
+ul { margin-bottom: 1.5rem; }
+li::marker { color: var(--mapa-green); }
+.quarto-listing-category .category, .listing-category { border-radius: 999px; font-weight: 400; }
+.quarto-grid-item.card { border-radius: var(--mapa-radius-md); overflow: hidden; border: 1px solid var(--mapa-border); box-shadow: var(--mapa-shadow); }
+.quarto-grid-item .card-title { color: var(--mapa-green); font-family: "Crimson Text", "Times New Roman", serif; font-weight: 400; letter-spacing: -0.02em; }
+
+@media (max-width: 991px) {
+  body.nav-fixed { padding-top: 4.6rem; }
+  .artigos-grid, .researchers-grid { grid-template-columns: 1fr; }
+  .hero h1 { max-width: none; }
+  .navbar-right { width: 100%; justify-content: flex-start; padding-top: 0.5rem; }
 }

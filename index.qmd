@@ -1,121 +1,16 @@
 ---
-title: "Núcleo MAPA"
-subtitle: "Microeconometria Aplicada a Políticas e Avaliação"
+title: "NÃºcleo MAPA"
+subtitle: "Microeconometria Aplicada a PolÃ­ticas e AvaliaÃ§Ã£o"
 page-layout: full
 toc: false
 ---
 
 ```{=html}
-<div class="hero">
-  <h1>Núcleo MAPA</h1>
-  <h2>Microeconometria Aplicada a Políticas e Avaliação</h2>
-  <p style="font-size:1.15rem; color:#374151; max-width:620px; margin-top:1rem;">
-    Produzimos análises sobre políticas públicas, mercado de trabalho e educação
-    com rigor metodológico e comunicação acessível — usando dados públicos brasileiros.
-  </p>
-  <a href="artigos.html" class="btn-mapa">Ver artigos →</a>
+<meta http-equiv="refresh" content="0; url=artigos.html">
+<div class="intro-panel">
+  <p class="section-kicker">Redirecionando</p>
+  <h2>Esta página foi incorporada à seção Artigos.</h2>
+  <p>Se o redirecionamento não acontecer automaticamente, use o botão abaixo.</p>
+  <a href="artigos.html" class="btn-mapa">Ir para Artigos →</a>
 </div>
-```
-
-## Artigos recentes
-
-```{=html}
-<div class="artigos-grid">
-
-  <div class="artigo-card">
-    <p class="artigo-cat">PNAD · Mercado de Trabalho · Juventude</p>
-    <h3><a href="artigos/2026-04-ocupacao-jovens/index.html">Jovens, CLT e conta própria: uma década de mudança no mercado de trabalho</a></h3>
-    <p class="artigo-desc">O emprego formal no setor privado perdeu participação entre jovens ocupados entre 2015 e 2025. Precarização ou reconfiguração?</p>
-    <a href="artigos/2026-04-ocupacao-jovens/index.html" class="artigo-link">Ler artigo →</a>
-  </div>
-
-  <div class="artigo-card">
-    <p class="artigo-cat">PNAD · Renda · Distribuição</p>
-    <h3><a href="artigos/2026-02-distribuicao-renda/index.html">Todo mundo ganhou mais — mas não do mesmo jeito</a></h3>
-    <p class="artigo-desc">Distribuição de renda no Brasil entre 2023 e 2025 com microdados da PNAD Contínua.</p>
-    <a href="artigos/2026-02-distribuicao-renda/index.html" class="artigo-link">Ler artigo →</a>
-  </div>
-
-</div>
-```
-
-## Princípios editoriais
-
-Toda análise publicada aqui segue três compromissos: uso exclusivo de **dados públicos e reproduzíveis**, aplicação de **métodos apropriados à pergunta** e comunicação que separa com clareza o que os dados mostram do que ainda é hipótese.
-
-## Áreas de atuação
-
-Mercado de trabalho · Educação · Políticas públicas · Distribuição de renda · Métodos quantitativos
-
-```{=html}
-<style>
-.btn-mapa {
-  display: inline-block;
-  margin-top: 1.2rem;
-  padding: .6rem 1.4rem;
-  background-color: var(--mapa-green);
-  color: white !important;
-  border-radius: 6px;
-  font-weight: 600;
-  font-size: 1rem;
-  text-decoration: none !important;
-  transition: background .2s;
-}
-.btn-mapa:hover {
-  background-color: var(--mapa-green-dark);
-}
-
-.artigos-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-}
-
-.artigo-card {
-  background: white;
-  border-radius: 10px;
-  padding: 1.4rem 1.6rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,.06);
-  display: flex;
-  flex-direction: column;
-  gap: .5rem;
-}
-
-.artigo-cat {
-  font-size: .78rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: .05em;
-  color: var(--mapa-gray) !important;
-  margin-bottom: 0;
-}
-
-.artigo-card h3 {
-  font-size: 1.05rem;
-  margin: 0;
-  border-bottom: none;
-  padding-bottom: 0;
-}
-
-.artigo-card h3 a {
-  color: var(--mapa-green) !important;
-  font-weight: 700;
-}
-
-.artigo-desc {
-  font-size: .93rem;
-  color: #4b5563 !important;
-  margin: 0;
-  flex-grow: 1;
-}
-
-.artigo-link {
-  font-size: .9rem;
-  font-weight: 600;
-  color: var(--mapa-green) !important;
-  margin-top: .4rem;
-}
-</style>
 ```

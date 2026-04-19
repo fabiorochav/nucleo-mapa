@@ -1,0 +1,65 @@
+---
+title: "Pesquisadores"
+subtitle: "Equipe de pesquisa do Núcleo MAPA"
+page-layout: full
+toc: false
+---
+
+```{=html}
+<div class="intro-panel">
+  <h2>Nossa pesquisa combina economia aplicada, avaliação de políticas públicas e ciência de dados.</h2>
+  <p>Os pesquisadores do Núcleo MAPA atuam em projetos voltados à produção de diagnósticos, avaliação de políticas públicas e comunicação de evidências com rigor metodológico e linguagem acessível.</p>
+</div>
+```
+
+## Pesquisadores
+
+```{=html}
+<div class="researchers-grid">
+  <article class="researcher-card">
+    <div class="researcher-photo">
+      <img src="assests/researchers/fabio.jpg" alt="Fabio Rocha">
+    </div>
+    <div class="researcher-body">
+      <p class="researcher-role">Pesquisador</p>
+      <h3 class="researcher-name">Fábio Rocha</h3>
+      <p class="researcher-bio">Economista e filósofo com trajetória em monitoramento, avaliação e produção de evidências para políticas públicas de educação.</p>
+      <div class="researcher-links">
+        <a href="http://lattes.cnpq.br/1956089489809622">Lattes</a>
+        <a href="https://github.com/fabiorochav">GitHub</a>
+        <a href="https://www.linkedin.com/in/fábio-rocha">LinkedIn</a>
+        <a href="https://www.youtube.com/@RochaDatainR">YouTube</a>
+      </div>
+    </div>
+  </article>
+
+  <article class="researcher-card">
+    <div class="researcher-photo">
+      <img src="assests/researchers/caio.jpg" alt="Caio Sousa">
+    </div>
+    <div class="researcher-body">
+      <p class="researcher-role">Pesquisador</p>
+      <h3 class="researcher-name">Caio Sousa</h3>
+      <p class="researcher-bio">Pesquisador em avaliação de políticas públicas com foco em insegurança alimentar e diagnóstico socioeconômico.</p>
+      <div class="researcher-links">
+        <a href="https://github.com/caiosousareis">GitHub</a>
+        <a href="https://www.linkedin.com/in/caiosousareis/">LinkedIn</a>
+      </div>
+    </div>
+  </article>
+
+  <article class="researcher-card">
+    <div class="researcher-photo">
+      <img src="assests/researchers/andrei.jpg" alt="Andrei Santos">
+    </div>
+    <div class="researcher-body">
+      <p class="researcher-role">Pesquisador</p>
+      <h3 class="researcher-name">Andrei Santos</h3>
+      <p class="researcher-bio">Estatístico e cientista de dados com expertise em modelagem e análise aplicadas, combinando estatística clássica e inteligência analítica.</p>
+      <div class="researcher-links">
+        <a href="https://www.linkedin.com/in/andrei0118-santos/">LinkedIn</a>
+      </div>
+    </div>
+  </article>
+</div>
+```

@@ -1,80 +1,63 @@
 ---
 title: "Sobre"
-subtitle: "Núcleo MAPA - Microeconometria Aplicada a Políticas Públicas e Avaliação"
+subtitle: "NÃºcleo MAPA - Microeconometria Aplicada a PolÃ­ticas PÃºblicas e AvaliaÃ§Ã£o"
 ---
 
-O Núcleo MAPA é uma iniciativa de pesquisa aplicada dedicada à análise quantitativa de políticas públicas no Brasil. Combinamos microdados rigorosos, métodos econométricos avançados e comunicação acessível para gerar evidências que apoiem diagnósticos, avaliações e decisões no setor público e privado.
+```{=html}
+<div class="intro-panel">
+```
 
-Nascemos da convergência entre pesquisa acadêmica e prática aplicada, comprometidos com análises que são, simultaneamente, metodologicamente rigorosas e socialmente úteis.
+O NÃºcleo MAPA Ã© uma iniciativa de pesquisa aplicada dedicada Ã  anÃ¡lise quantitativa de polÃ­ticas pÃºblicas no Brasil. Combinamos microdados rigorosos, mÃ©todos economÃ©tricos avanÃ§ados e comunicaÃ§Ã£o acessÃ­vel para gerar evidÃªncias que apoiem diagnÃ³sticos, avaliaÃ§Ãµes e decisÃµes no setor pÃºblico e privado.
 
----
+Nascemos da convergÃªncia entre pesquisa acadÃªmica e prÃ¡tica aplicada, comprometidos com anÃ¡lises que sÃ£o, simultaneamente, metodologicamente rigorosas e socialmente Ãºteis.
 
-## Missão
-
-Produzir análises baseadas em evidências que contribuam para o aprimoramento de políticas públicas, fortalecendo a capacidade analítica de gestores, pesquisadores e organizações.
-
----
-
-## Princípios fundamentais
-
-**Rigor metodológico**  
-Explicitamos hipóteses, métodos e limitações. Cada análise documenta suas premissas e vieses potenciais.
-
-**Transparência**  
-Usamos dados públicos responsavelmente. Documentamos fontes, código e procedimentos para permitir replicação e crítica.
-
-**Utilidade pública**  
-Focamos em problemas concretos. Comunicamos resultados em linguagem clara, acessível a decisores e cidadãos.
+```{=html}
+</div>
+```
 
 ---
 
-## Áreas de trabalho
+## MissÃ£o
 
-- **Avaliação de políticas públicas** — diagnóstico de impacto, desenho de estudos quase-experimentais
-- **Análise de microdados** — administrativos, pesquisas amostrais, registros públicos
-- **Economia aplicada** — educação, trabalho, desenvolvimento social, segurança alimentar
-- **Diagnóstico territorial** — indicadores socioeconômicos, desigualdades regionais
-- **Comunicação de evidências** — visualização, relatórios, narrativas baseadas em dados
+Produzir anÃ¡lises baseadas em evidÃªncias que contribuam para o aprimoramento de polÃ­ticas pÃºblicas, fortalecendo a capacidade analÃ­tica de gestores, pesquisadores e organizaÃ§Ãµes.
+
+---
+
+## PrincÃ­pios fundamentais
+
+**Rigor metodolÃ³gico**  
+Explicitamos hipÃ³teses, mÃ©todos e limitaÃ§Ãµes. Cada anÃ¡lise documenta suas premissas e vieses potenciais.
+
+**TransparÃªncia**  
+Usamos dados pÃºblicos responsavelmente. Documentamos fontes, cÃ³digo e procedimentos para permitir replicaÃ§Ã£o e crÃ­tica.
+
+**Utilidade pÃºblica**  
+Focamos em problemas concretos. Comunicamos resultados em linguagem clara, acessÃ­vel a decisores e cidadÃ£os.
+
+---
+
+## Ãreas de trabalho
+
+- **AvaliaÃ§Ã£o de polÃ­ticas pÃºblicas** â€” diagnÃ³stico de impacto, desenho de estudos quase-experimentais
+- **AnÃ¡lise de microdados** â€” administrativos, pesquisas amostrais, registros pÃºblicos
+- **Economia aplicada** â€” educaÃ§Ã£o, trabalho, desenvolvimento social, seguranÃ§a alimentar
+- **DiagnÃ³stico territorial** â€” indicadores socioeconÃ´micos, desigualdades regionais
+- **ComunicaÃ§Ã£o de evidÃªncias** â€” visualizaÃ§Ã£o, relatÃ³rios, narrativas baseadas em dados
 
 ---
 
 ## Pesquisadores
 
-### Fábio Rocha
+Os perfis dos pesquisadores estão agora em uma página própria para facilitar a navegação e destacar melhor a equipe do Núcleo MAPA.
 
-Economista e filósofo com trajetória em monitoramento, avaliação e produção de evidências para políticas públicas de educação. 
-
-Atua na construção de indicadores, mensuração de resultados e qualificação metodológica de intervenções. Mantém o canal **RochaDataInR** no YouTube, dedicado ao ensino de R para análise de dados públicos. No setor público, foi Diretor de Estudos Econômicos da Prefeitura de Ouro Preto; atualmente é Analista de Monitoramento e Avaliação no Instituto Unibanco. Mestrando em Economia Aplicada (UFABC).
-
-**Contatos**
-- [Lattes](http://lattes.cnpq.br/1956089489809622) | [GitHub](https://github.com/fabiorochav) | [LinkedIn](https://www.linkedin.com/in/fábio-rocha) | [YouTube](https://www.youtube.com/@RochaDatainR)
+```{=html}
+<a href="pesquisadores.html" class="btn-mapa">Conhecer a equipe →</a>
+```
 
 ---
 
-### Caio Sousa
+## ColaboraÃ§Ãµes
 
-Pesquisador em avaliação de políticas públicas com foco em insegurança alimentar e diagnóstico socioeconômico.
+O NÃºcleo MAPA estÃ¡ aberto a parcerias acadÃªmicas, institucionais e projetos colaborativos voltados Ã  produÃ§Ã£o de diagnÃ³sticos, avaliaÃ§Ã£o de polÃ­ticas pÃºblicas e comunicaÃ§Ã£o de evidÃªncias.
 
-No Instituto Pacto Contra a Fome, atuou como analista sênior de dados, criando boletins de acompanhamento de inflação de alimentos e apoiando governos estaduais em diagnósticos de segurança alimentar. Desenvolve pesquisa em economia política (emendas parlamentares) usando microdados de orçamento familiar. Experiência anterior em mercado financeiro (análise de risco, acompanhamento macroeconômico). Pesquisador no Cebrap e bolsista do Ipea. Engenheiro de Produção (UFRJ); mestrando em Economia Aplicada (UFABC).
-
-**Contatos**
-- [GitHub](https://github.com/caiosousareis) | [LinkedIn](https://www.linkedin.com/in/caiosousareis/)
-
----
-
-### Andrei Santos
-
-Estatístico e cientista de dados com expertise em modelagem e análise aplicadas, combinando estatística clássica, machine learning e inteligência analítica para apoiar decisões estratégicas.
-
-Atua em todas as etapas do ciclo analítico — coleta, tratamento, modelagem, visualização e comunicação — com foco em soluções práticas. Especialista em inferência estatística, séries temporais, modelagem preditiva, amostragem e automação de processos. Desenvolve dashboards interativos em R, Python, SQL, Power BI e Excel avançado (VBA) para projetos socioeconômicos no setor público e privado.
-
-**Contatos**
-- [LinkedIn](https://www.linkedin.com/in/andrei0118-santos/)
-
----
-
-## Colaborações
-
-O Núcleo MAPA está aberto a parcerias acadêmicas, institucionais e projetos colaborativos voltados à produção de diagnósticos, avaliação de políticas públicas e comunicação de evidências.
-
-Para propor colaborações ou conversar sobre possíveis projetos, entre em contato.
+Para propor colaboraÃ§Ãµes ou conversar sobre possÃ­veis projetos, entre em contato.

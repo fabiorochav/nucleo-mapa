@@ -10,3 +10,10 @@ listing:
   feed: true
 page-layout: full
 ---
+
+```{=html}
+<div class="intro-panel intro-panel-dark">
+  <h2>Toda análise publicada aqui segue três compromissos.</h2>
+  <p>Uso exclusivo de <strong>dados públicos e reproduzíveis</strong>, aplicação de <strong>métodos apropriados à pergunta</strong> e comunicação que separa com clareza o que os dados mostram do que ainda é hipótese.</p>
+</div>
+```
