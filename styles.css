@@ -15,6 +15,8 @@
   --mapa-radius-lg: 28px;
   --mapa-radius-md: 20px;
   --mapa-radius-sm: 14px;
+  --mapa-shell-max: 1320px;
+  --mapa-shell-gutter: 1.2rem;
 }
 
 html { scroll-behavior: smooth; }
@@ -35,7 +37,7 @@ hr { margin: 2.3rem 0; border: 0; border-top: 1px solid var(--mapa-border); }
 img { max-width: 100%; border-radius: var(--mapa-radius-sm); }
 
 .navbar { background: rgba(255, 255, 255, 0.97) !important; border-bottom: 1px solid var(--mapa-border); box-shadow: 0 10px 26px rgba(4, 106, 56, 0.08); }
-.navbar > .navbar-container, .navbar .container-fluid { max-width: 1320px; padding-left: 1.2rem; padding-right: 1.2rem; }
+.navbar > .navbar-container, .navbar .container-fluid { max-width: var(--mapa-shell-max); padding-left: var(--mapa-shell-gutter); padding-right: var(--mapa-shell-gutter); }
 .navbar-brand, .navbar .nav-link, .navbar .menu-text, .navbar-email { color: var(--mapa-green) !important; }
 .navbar-brand { font-family: "League Spartan", "Arial Narrow", sans-serif; font-size: 1.7rem; font-weight: 700; letter-spacing: -0.03em; line-height: 0.92; }
 .navbar .nav-link { position: relative; margin-right: 0.65rem; font-weight: 400; }
@@ -45,19 +47,19 @@ img { max-width: 100%; border-radius: var(--mapa-radius-sm); }
 .navbar-right { margin-left: auto; display: flex; align-items: center; gap: 1rem; }
 .navbar-email { font-size: 0.82rem; font-weight: 400; letter-spacing: 0.01em; opacity: 0.9; white-space: nowrap; }
 
-#quarto-content { width: min(calc(100% - 2.4rem), 1320px); margin-inline: auto; }
+#quarto-content { width: min(calc(100% - (2 * var(--mapa-shell-gutter))), var(--mapa-shell-max)); margin-inline: auto; }
 .quarto-container .content, main.content, .page-columns, .column-page, .column-page-left { max-width: none; }
-main.content, .column-page, .column-page-left { width: 100%; max-width: 1320px; margin-inline: auto; padding-bottom: 4rem; }
+main.content, .column-page, .column-page-left { width: 100%; max-width: var(--mapa-shell-max); margin-inline: auto; padding-bottom: 4rem; }
 
 .hero, .intro-panel, .artigo-card, .researcher-card, #TOC { box-shadow: var(--mapa-shadow); }
 .hero, .intro-panel {
   border-radius: var(--mapa-radius-lg);
   display: block;
-  width: 100%;
-  max-width: 100%;
+  width: calc(100% - (2 * var(--mapa-shell-gutter)));
+  max-width: calc(100% - (2 * var(--mapa-shell-gutter)));
   padding: 1.2rem 1.5rem;
   margin-bottom: 0.85rem;
-  margin-left: 0;
+  margin-left: var(--mapa-shell-gutter);
   background: linear-gradient(180deg, var(--mapa-dark-surface), var(--mapa-dark-surface-2));
   border: 1px solid rgba(255, 255, 255, 0.08);
   box-sizing: border-box;
