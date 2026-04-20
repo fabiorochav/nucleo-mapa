@@ -1,15 +1,17 @@
 ---
 title: "Sobre"
-subtitle: "NÃºcleo MAPA - Microeconometria Aplicada a PolÃ­ticas PÃºblicas e AvaliaÃ§Ã£o"
+subtitle: "Núcleo MAPA - Microeconometria Aplicada a Políticas Públicas e Avaliação"
 ---
 
 ```{=html}
 <div class="intro-panel">
 ```
 
-O NÃºcleo MAPA Ã© uma iniciativa de pesquisa aplicada dedicada Ã  anÃ¡lise quantitativa de polÃ­ticas pÃºblicas no Brasil. Combinamos microdados rigorosos, mÃ©todos economÃ©tricos avanÃ§ados e comunicaÃ§Ã£o acessÃ­vel para gerar evidÃªncias que apoiem diagnÃ³sticos, avaliaÃ§Ãµes e decisÃµes no setor pÃºblico e privado.
+O Núcleo MAPA nasce do encontro entre trajetórias forjadas no trabalho, na universidade pública e na pesquisa aplicada. Essa origem não é acessória: ela estrutura a forma como lemos o país. Para nós, dados públicos não são apenas matéria-prima técnica, mas uma forma de investigar o funcionamento real das políticas, das instituições e das desigualdades brasileiras.
 
-Nascemos da convergÃªncia entre pesquisa acadÃªmica e prÃ¡tica aplicada, comprometidos com anÃ¡lises que sÃ£o, simultaneamente, metodologicamente rigorosas e socialmente Ãºteis.
+O Núcleo faz uma aposta simples, mas exigente: discutir políticas públicas com menos achismo e mais evidência, sem abrir mão de densidade analítica, interpretação substantiva e leitura crítica do país. Somos um núcleo de pesquisa aplicada e consultoria que trabalha na interseção entre microeconometria, ciência de dados, avaliação e economia aplicada. Nosso interesse não está apenas em medir efeitos, mas em compreender padrões, testar mecanismos e produzir diagnósticos que façam sentido para quem formula, implementa, financia ou acompanha políticas públicas.
+
+O MAPA também carrega uma posição intelectual. Acreditamos que rigor metodológico e utilidade pública não são objetivos concorrentes. Boa análise não é a que impressiona pelo jargão, mas a que sustenta inferências plausíveis, explicita limites e melhora a qualidade da decisão. Queremos produzir conhecimento tecnicamente sólido, socialmente relevante e publicamente legível sobre o Brasil que os dados revelam e, muitas vezes, o debate insiste em simplificar.
 
 ```{=html}
 </div>
@@ -17,32 +19,32 @@ Nascemos da convergÃªncia entre pesquisa acadÃªmica e prÃ¡tica aplicada, c
 
 ---
 
-## MissÃ£o
+## Missão
 
-Produzir anÃ¡lises baseadas em evidÃªncias que contribuam para o aprimoramento de polÃ­ticas pÃºblicas, fortalecendo a capacidade analÃ­tica de gestores, pesquisadores e organizaÃ§Ãµes.
-
----
-
-## PrincÃ­pios fundamentais
-
-**Rigor metodolÃ³gico**  
-Explicitamos hipÃ³teses, mÃ©todos e limitaÃ§Ãµes. Cada anÃ¡lise documenta suas premissas e vieses potenciais.
-
-**TransparÃªncia**  
-Usamos dados pÃºblicos responsavelmente. Documentamos fontes, cÃ³digo e procedimentos para permitir replicaÃ§Ã£o e crÃ­tica.
-
-**Utilidade pÃºblica**  
-Focamos em problemas concretos. Comunicamos resultados em linguagem clara, acessÃ­vel a decisores e cidadÃ£os.
+Produzir análises baseadas em evidências que contribuam para o aprimoramento de políticas públicas, fortalecendo a capacidade analítica de gestores, pesquisadores e organizações.
 
 ---
 
-## Ãreas de trabalho
+## Princípios fundamentais
 
-- **AvaliaÃ§Ã£o de polÃ­ticas pÃºblicas** â€” diagnÃ³stico de impacto, desenho de estudos quase-experimentais
-- **AnÃ¡lise de microdados** â€” administrativos, pesquisas amostrais, registros pÃºblicos
-- **Economia aplicada** â€” educaÃ§Ã£o, trabalho, desenvolvimento social, seguranÃ§a alimentar
-- **DiagnÃ³stico territorial** â€” indicadores socioeconÃ´micos, desigualdades regionais
-- **ComunicaÃ§Ã£o de evidÃªncias** â€” visualizaÃ§Ã£o, relatÃ³rios, narrativas baseadas em dados
+**Rigor metodológico**  
+Explicitamos hipóteses, métodos e limitações. Cada análise documenta suas premissas e vieses potenciais.
+
+**Transparência**  
+Usamos dados públicos responsavelmente. Documentamos fontes, código e procedimentos para permitir replicação e crítica.
+
+**Utilidade pública**  
+Focamos em problemas concretos. Comunicamos resultados em linguagem clara, acessível a decisores e cidadãos.
+
+---
+
+## Áreas de trabalho
+
+- **Avaliação de políticas públicas** — diagnóstico de impacto, desenho de estudos quase-experimentais
+- **Análise de microdados** — administrativos, pesquisas amostrais, registros públicos
+- **Economia aplicada** — educação, trabalho, desenvolvimento social, segurança alimentar
+- **Diagnóstico territorial** — indicadores socioeconômicos, desigualdades regionais
+- **Comunicação de evidências** — visualização, relatórios, narrativas baseadas em dados
 
 ---
 
@@ -56,8 +58,8 @@ Os perfis dos pesquisadores estão agora em uma página própria para facilitar 
 
 ---
 
-## ColaboraÃ§Ãµes
+## Colaborações
 
-O NÃºcleo MAPA estÃ¡ aberto a parcerias acadÃªmicas, institucionais e projetos colaborativos voltados Ã  produÃ§Ã£o de diagnÃ³sticos, avaliaÃ§Ã£o de polÃ­ticas pÃºblicas e comunicaÃ§Ã£o de evidÃªncias.
+O Núcleo MAPA está aberto a parcerias acadêmicas, institucionais e projetos colaborativos voltados à produção de diagnósticos, avaliação de políticas públicas e comunicação de evidências.
 
-Para propor colaboraÃ§Ãµes ou conversar sobre possÃ­veis projetos, entre em contato.
+Para propor colaborações ou conversar sobre possíveis projetos, entre em contato.
