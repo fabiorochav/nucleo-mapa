@@ -19,32 +19,23 @@ O MAPA também carrega uma posição intelectual. Acreditamos que rigor metodol�
 
 ---
 
-## Missão
+## O que o Núcleo MAPA entrega
 
-Produzir análises baseadas em evidências que contribuam para o aprimoramento de políticas públicas, fortalecendo a capacidade analítica de gestores, pesquisadores e organizações.
-
----
-
-## Princípios fundamentais
-
-**Rigor metodológico**  
-Explicitamos hipóteses, métodos e limitações. Cada análise documenta suas premissas e vieses potenciais.
-
-**Transparência**  
-Usamos dados públicos responsavelmente. Documentamos fontes, código e procedimentos para permitir replicação e crítica.
-
-**Utilidade pública**  
-Focamos em problemas concretos. Comunicamos resultados em linguagem clara, acessível a decisores e cidadãos.
+O Núcleo MAPA produz diagnósticos, avaliações e estudos aplicados para organizações que precisam compreender problemas públicos com mais precisão empírica. Trabalhamos com microdados, bases administrativas, estatística aplicada e desenho de avaliação para transformar informação dispersa em evidência utilizável. Nosso foco não está apenas em medir resultados, mas em qualificar decisões, identificar mecanismos plausíveis e estruturar perguntas que resistam ao teste dos dados.
 
 ---
 
-## Áreas de trabalho
+## Como o MAPA trabalha
 
-- **Avaliação de políticas públicas** — diagnóstico de impacto, desenho de estudos quase-experimentais
-- **Análise de microdados** — administrativos, pesquisas amostrais, registros públicos
-- **Economia aplicada** — educação, trabalho, desenvolvimento social, segurança alimentar
-- **Diagnóstico territorial** — indicadores socioeconômicos, desigualdades regionais
-- **Comunicação de evidências** — visualização, relatórios, narrativas baseadas em dados
+O rigor, para nós, não é um atributo retórico. É um procedimento. Cada projeto parte de uma pergunta bem formulada, de uma estratégia analítica coerente e de explicitação das hipóteses, limites inferenciais e fontes de viés. Trabalhamos com transparência metodológica, documentação das bases e reprodutibilidade dos processos sempre que o desenho e a natureza dos dados permitem. Ao mesmo tempo, recusamos a ideia de que sofisticação técnica deva produzir opacidade. Evidência relevante precisa ser metodologicamente consistente e intelectualmente legível.
+
+---
+
+## Onde geramos valor
+
+O Núcleo MAPA produz diagnósticos, avaliações e estudos aplicados para organizações que precisam compreender problemas públicos com mais precisão empírica. Trabalhamos com microdados, bases administrativas, estatística aplicada e desenho de avaliação para transformar informação dispersa em evidência utilizável. Nosso foco não está apenas em medir resultados, mas em qualificar decisões, identificar mecanismos plausíveis e estruturar perguntas que resistam ao teste dos dados.
+
+Atuamos em avaliação de políticas públicas, desenho de estratégias de monitoramento, análise de microdados e construção de indicadores para problemas econômicos e sociais complexos. Desenvolvemos estudos em educação, mercado de trabalho, desigualdade, desenvolvimento territorial, segurança alimentar e políticas sociais, combinando leitura substantiva do problema com técnica quantitativa. Também produzimos relatórios, painéis, visualizações e narrativas analíticas voltadas a gestores, financiadores, pesquisadores e organizações que precisam comunicar evidências com clareza e precisão.
 
 ---
 
