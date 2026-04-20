@@ -5,8 +5,8 @@ subtitle: "Núcleo MAPA - Microeconometria Aplicada a Políticas Públicas e Ava
 
 ```{=html}
 <div class="intro-panel">
-  <h2>O Núcleo MAPA nasce do encontro entre trajetórias de jovens com origens nas grandes políticas públicas dos últimos anos no Brasil</h2>
-  <p>Com caminhos forjados no trabalho, na universidade pública e na pesquisa aplicada. Essa origem não é acessória: ela estrutura a forma como lemos o país. Para nós, dados públicos não são apenas matéria-prima técnica, mas uma forma de investigar o funcionamento real das políticas, das instituições e das desigualdades brasileiras.</p>
+  <h2>Chegamos pela política pública. Hoje, medimos o que nela funciona.</h2>
+  <p>O Núcleo nasce com caminhos forjados no trabalho, na universidade pública e na pesquisa aplicada. Essa origem não é acessória: ela estrutura a forma como lemos o país. Para nós, dados públicos não são apenas matéria-prima técnica, mas uma forma de investigar o funcionamento real das políticas, das instituições e das desigualdades brasileiras.</p>
   <p>O Núcleo faz uma aposta simples, mas exigente: discutir políticas públicas com menos achismo e mais evidência, sem abrir mão de densidade analítica, interpretação substantiva e leitura crítica do país. Somos um núcleo de pesquisa aplicada e consultoria que trabalha na interseção entre microeconometria, ciência de dados, avaliação e economia aplicada. Nosso interesse não está apenas em medir efeitos, mas em compreender padrões, testar mecanismos e produzir diagnósticos que façam sentido para quem formula, implementa, financia ou acompanha políticas públicas.</p>
   <p>O MAPA também carrega uma posição intelectual. Acreditamos que rigor metodológico e utilidade pública não são objetivos concorrentes. Boa análise não é a que impressiona pelo jargão, mas a que sustenta inferências plausíveis, explicita limites e melhora a qualidade da decisão. Queremos produzir conhecimento tecnicamente sólido, socialmente relevante e publicamente legível sobre o Brasil que os dados revelam e, muitas vezes, o debate insiste em simplificar.</p>
 </div>
@@ -29,8 +29,6 @@ O rigor, para nós, não é um atributo retórico. É um procedimento. Cada proj
 ## Onde geramos valor
 
 O Núcleo MAPA produz diagnósticos, avaliações e estudos aplicados para organizações que precisam compreender problemas públicos com mais precisão empírica. Trabalhamos com microdados, bases administrativas, estatística aplicada e desenho de avaliação para transformar informação dispersa em evidência utilizável. Nosso foco não está apenas em medir resultados, mas em qualificar decisões, identificar mecanismos plausíveis e estruturar perguntas que resistam ao teste dos dados.
-
-Atuamos em avaliação de políticas públicas, desenho de estratégias de monitoramento, análise de microdados e construção de indicadores para problemas econômicos e sociais complexos. Desenvolvemos estudos em educação, mercado de trabalho, desigualdade, desenvolvimento territorial, segurança alimentar e políticas sociais, combinando leitura substantiva do problema com técnica quantitativa. Também produzimos relatórios, painéis, visualizações e narrativas analíticas voltadas a gestores, financiadores, pesquisadores e organizações que precisam comunicar evidências com clareza e precisão.
 
 ---
 
