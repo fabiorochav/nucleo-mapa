@@ -3,10 +3,12 @@ project:
   output-dir: docs
   resources:
     - CNAME
+    - assests/favicon/favicon.svg
 
 website:
   site-url: www.nucleomapa.org
   title: "Núcleo MAPA"
+  favicon: assests/favicon/favicon.svg
   navbar:
     left:
       - href: sobre.qmd
