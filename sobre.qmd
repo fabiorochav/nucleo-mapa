@@ -6,8 +6,7 @@ subtitle: "Núcleo MAPA - Microeconometria Aplicada a Políticas Públicas e Ava
 ```{=html}
 <div class="intro-panel">
 ```
-
-O Núcleo MAPA nasce do encontro entre trajetórias forjadas no trabalho, na universidade pública e na pesquisa aplicada. Essa origem não é acessória: ela estrutura a forma como lemos o país. Para nós, dados públicos não são apenas matéria-prima técnica, mas uma forma de investigar o funcionamento real das políticas, das instituições e das desigualdades brasileiras.
+<h2>O Núcleo MAPA nasce do encontro entre trajetórias de jovens com origens nas grandes politicas publicas dos ultimos ano no Brasil</h2>com caminhos forjados no trabalho, na universidade pública e na pesquisa aplicada. Essa origem não é acessória: ela estrutura a forma como lemos o país. Para nós, dados públicos não são apenas matéria-prima técnica, mas uma forma de investigar o funcionamento real das políticas, das instituições e das desigualdades brasileiras.
 
 O Núcleo faz uma aposta simples, mas exigente: discutir políticas públicas com menos achismo e mais evidência, sem abrir mão de densidade analítica, interpretação substantiva e leitura crítica do país. Somos um núcleo de pesquisa aplicada e consultoria que trabalha na interseção entre microeconometria, ciência de dados, avaliação e economia aplicada. Nosso interesse não está apenas em medir efeitos, mas em compreender padrões, testar mecanismos e produzir diagnósticos que façam sentido para quem formula, implementa, financia ou acompanha políticas públicas.
 
@@ -41,7 +40,7 @@ Atuamos em avaliação de políticas públicas, desenho de estratégias de monit
 
 ## Pesquisadores
 
-Os perfis dos pesquisadores estão agora em uma página própria para facilitar a navegação e destacar melhor a equipe do Núcleo MAPA.
+Para acessar os perfis dos pesquisadores do Núcleo MAPA.
 
 ```{=html}
 <a href="pesquisadores.html" class="btn-mapa">Conhecer a equipe →</a>
@@ -53,4 +52,4 @@ Os perfis dos pesquisadores estão agora em uma página própria para facilitar 
 
 O Núcleo MAPA está aberto a parcerias acadêmicas, institucionais e projetos colaborativos voltados à produção de diagnósticos, avaliação de políticas públicas e comunicação de evidências.
 
-Para propor colaborações ou conversar sobre possíveis projetos, entre em contato.
+Para propor colaborações ou conversar sobre possíveis projetos, entre em contato através do email nucleomapa@nucleomapa.org.
