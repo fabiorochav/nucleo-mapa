@@ -60,7 +60,6 @@ ggplot(foco, aes(periodo, prop, fill = vinculo)) +
     aes(label = scales::percent(prop, accuracy = .1)),
     position = position_dodge(.65),
     vjust = -0.35,
-    size = 4.3,
     family = "Ubuntu"
   ) +
 
@@ -77,7 +76,7 @@ ggplot(foco, aes(periodo, prop, fill = vinculo)) +
     expand = expansion(mult = c(0, .08))
   ) +
 
-  theme_minimal(base_family = "ubuntu", base_size = 28) +
+  theme_minimal(base_family = "Ubuntu", base_size = 28) +
 
   theme(
     legend.position    = "right",
@@ -152,7 +151,6 @@ ggplot(wide, aes(y = VD4009_short)) +
   geom_point(
     data = plot_long,
     aes(x = prop, color = periodo),
-    size = 3.8
   ) +
 
   scale_color_manual(
@@ -173,13 +171,13 @@ ggplot(wide, aes(y = VD4009_short)) +
     caption  = "Fonte: Microdados PNAD Contínua/IBGE — Elaboração: Fábio Rocha"
   ) +
 
-  theme_minimal(base_family = "ubuntu", base_size = 28) +
+  theme_minimal(base_family = "Ubuntu", base_size = 28) +
 
   theme(
     legend.position  = c(.9, .87),
     legend.title     = element_text(face = "bold"),
     plot.title       = element_text(face = "bold"),
-    plot.caption     = element_text(size = 10),
+    plot.caption     = element_text(),
     plot.margin      = margin(15, 50, 10, 50),
     panel.grid.major = element_line(color = "#D9D9D9", linetype = "dotted"),
     panel.grid.minor = element_blank()

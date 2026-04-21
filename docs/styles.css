@@ -57,12 +57,25 @@ img { max-width: 100%; border-radius: var(--mapa-radius-sm); }
 main.content, .column-page, .column-page-left { width: 100%; max-width: var(--mapa-shell-max); margin-inline: auto; padding-bottom: 4rem; }
 
 .hero, .intro-panel, .artigo-card, .researcher-card, #TOC { box-shadow: var(--mapa-shadow); }
-.hero, .intro-panel { border-radius: var(--mapa-radius-lg); display: block; width: calc(100% - (2 * var(--mapa-shell-gutter))); max-width: calc(100% - (2 * var(--mapa-shell-gutter))); padding: 1.2rem 1.5rem; margin-bottom: 0.85rem; margin-left: var(--mapa-shell-gutter); transform: none; background: linear-gradient(180deg, var(--mapa-dark-surface), var(--mapa-dark-surface-2)); border: 1px solid rgba(255, 255, 255, 0.08); box-sizing: border-box; }
+.hero, .intro-panel {
+  border-radius: var(--mapa-radius-lg);
+  display: block;
+  width: calc(100% - (2 * var(--mapa-shell-gutter)));
+  max-width: calc(100% - (2 * var(--mapa-shell-gutter)));
+  padding: 1.2rem 1.5rem;
+  margin-bottom: 0.85rem;
+  margin-left: var(--mapa-shell-gutter);
+  background: linear-gradient(180deg, var(--mapa-dark-surface), var(--mapa-dark-surface-2));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-sizing: border-box;
+  transform: none;
+}
 .hero h1, .intro-panel h1, .hero h2, .intro-panel h2, .hero p, .intro-panel p, .hero strong, .intro-panel strong { color: #ffffff !important; }
 .hero h1 { margin: 0; font-size: clamp(2.2rem, 5vw, 3.9rem); max-width: 8ch; }
 .hero h2, .intro-panel h2 { font-size: clamp(1.45rem, 3vw, 2.1rem); line-height: 0.98; margin-bottom: 0.5rem; margin-top: 0; }
 .hero p, .intro-panel p { max-width: 100%; color: rgba(255, 255, 255, 0.86) !important; margin-bottom: 0; }
 .section-kicker, .researcher-role, .section-kicker-light { font-size: 0.82rem; font-weight: 400; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.25rem; color: rgba(255,255,255,0.78) !important; }
+
 .btn-mapa { display: inline-flex; align-items: center; justify-content: center; margin-top: 0.85rem; padding: 0.85rem 1.3rem; border-radius: 999px; background-color: #fff8df; color: var(--mapa-green) !important; font-weight: 400; font-size: 1rem; box-shadow: 0 12px 24px rgba(41, 61, 48, 0.12); }
 .btn-mapa:hover { background-color: #f6eed0; }
 

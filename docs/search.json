@@ -4,56 +4,49 @@
     "href": "sobre.html",
     "title": "Sobre",
     "section": "",
-    "text": "O Núcleo MAPA é uma iniciativa de pesquisa aplicada dedicada à análise quantitativa de políticas públicas no Brasil. Combinamos microdados rigorosos, métodos econométricos avançados e comunicação acessível para gerar evidências que apoiem diagnósticos, avaliações e decisões no setor público e privado.\nNascemos da convergência entre pesquisa acadêmica e prática aplicada, comprometidos com análises que são, simultaneamente, metodologicamente rigorosas e socialmente úteis."
+    "text": "O Núcleo nasce com caminhos forjados no trabalho, na universidade pública e na pesquisa aplicada. Essa origem não é acessória: ela estrutura a forma como lemos o país. Para nós, dados públicos não são apenas matéria-prima técnica, mas uma forma de investigar o funcionamento real das políticas, das instituições e das desigualdades brasileiras.\n  O Núcleo faz uma aposta simples, mas exigente: discutir políticas públicas com menos achismo e mais evidência, sem abrir mão de densidade analítica, interpretação substantiva e leitura crítica do país. Somos um núcleo de pesquisa aplicada e consultoria que trabalha na interseção entre microeconometria, ciência de dados, avaliação e economia aplicada. Nosso interesse não está apenas em medir efeitos, mas em compreender padrões, testar mecanismos e produzir diagnósticos que façam sentido para quem formula, implementa, financia ou acompanha políticas públicas.\n  O MAPA também carrega uma posição intelectual. Acreditamos que rigor metodológico e utilidade pública não são objetivos concorrentes. Boa análise não é a que impressiona pelo jargão, mas a que sustenta inferências plausíveis, explicita limites e melhora a qualidade da decisão. Queremos produzir conhecimento tecnicamente sólido, socialmente relevante e publicamente legível sobre o Brasil que os dados revelam e, muitas vezes, o debate insiste em simplificar."
   },
   {
-    "objectID": "sobre.html#missão",
-    "href": "sobre.html#missão",
+    "objectID": "sobre.html#o-que-o-núcleo-mapa-entrega",
+    "href": "sobre.html#o-que-o-núcleo-mapa-entrega",
     "title": "Sobre",
-    "section": "Missão",
-    "text": "Missão\nProduzir análises baseadas em evidências que contribuam para o aprimoramento de políticas públicas, fortalecendo a capacidade analítica de gestores, pesquisadores e organizações."
+    "section": "O que o Núcleo MAPA entrega",
+    "text": "O que o Núcleo MAPA entrega\nO Núcleo MAPA produz diagnósticos, avaliações e estudos aplicados para organizações que precisam compreender problemas públicos com mais precisão empírica. Trabalhamos com microdados, bases administrativas, estatística aplicada e desenho de avaliação para transformar informação dispersa em evidência utilizável. Nosso foco não está apenas em medir resultados, mas em qualificar decisões, identificar mecanismos plausíveis e estruturar perguntas que resistam ao teste dos dados."
   },
   {
-    "objectID": "sobre.html#princípios-fundamentais",
-    "href": "sobre.html#princípios-fundamentais",
+    "objectID": "sobre.html#como-o-mapa-trabalha",
+    "href": "sobre.html#como-o-mapa-trabalha",
     "title": "Sobre",
-    "section": "Princípios fundamentais",
-    "text": "Princípios fundamentais\nRigor metodológico\nExplicitamos hipóteses, métodos e limitações. Cada análise documenta suas premissas e vieses potenciais.\nTransparência\nUsamos dados públicos responsavelmente. Documentamos fontes, código e procedimentos para permitir replicação e crítica.\nUtilidade pública\nFocamos em problemas concretos. Comunicamos resultados em linguagem clara, acessível a decisores e cidadãos."
+    "section": "Como o MAPA trabalha",
+    "text": "Como o MAPA trabalha\nO rigor, para nós, não é um atributo retórico. É um procedimento. Cada projeto parte de uma pergunta bem formulada, de uma estratégia analítica coerente e de explicitação das hipóteses, limites inferenciais e fontes de viés. Trabalhamos com transparência metodológica, documentação das bases e reprodutibilidade dos processos sempre que o desenho e a natureza dos dados permitem. Ao mesmo tempo, recusamos a ideia de que sofisticação técnica deva produzir opacidade. Evidência relevante precisa ser metodologicamente consistente e intelectualmente legível."
   },
   {
-    "objectID": "sobre.html#áreas-de-trabalho",
-    "href": "sobre.html#áreas-de-trabalho",
+    "objectID": "sobre.html#onde-geramos-valor",
+    "href": "sobre.html#onde-geramos-valor",
     "title": "Sobre",
-    "section": "Áreas de trabalho",
-    "text": "Áreas de trabalho\n\nAvaliação de políticas públicas — diagnóstico de impacto, desenho de estudos quase-experimentais\nAnálise de microdados — administrativos, pesquisas amostrais, registros públicos\nEconomia aplicada — educação, trabalho, desenvolvimento social, segurança alimentar\nDiagnóstico territorial — indicadores socioeconômicos, desigualdades regionais\nComunicação de evidências — visualização, relatórios, narrativas baseadas em dados"
+    "section": "Onde geramos valor",
+    "text": "Onde geramos valor\nO Núcleo MAPA produz diagnósticos, avaliações e estudos aplicados para organizações que precisam compreender problemas públicos com mais precisão empírica. Trabalhamos com microdados, bases administrativas, estatística aplicada e desenho de avaliação para transformar informação dispersa em evidência utilizável. Nosso foco não está apenas em medir resultados, mas em qualificar decisões, identificar mecanismos plausíveis e estruturar perguntas que resistam ao teste dos dados."
   },
   {
     "objectID": "sobre.html#pesquisadores",
     "href": "sobre.html#pesquisadores",
     "title": "Sobre",
     "section": "Pesquisadores",
-    "text": "Pesquisadores\n\nFábio Rocha\nEconomista e filósofo com trajetória em monitoramento, avaliação e produção de evidências para políticas públicas de educação.\nAtua na construção de indicadores, mensuração de resultados e qualificação metodológica de intervenções. Mantém o canal RochaDataInR no YouTube, dedicado ao ensino de R para análise de dados públicos. No setor público, foi Diretor de Estudos Econômicos da Prefeitura de Ouro Preto; atualmente é Analista de Monitoramento e Avaliação no Instituto Unibanco. Mestrando em Economia Aplicada (UFABC).\nContatos - Lattes | GitHub | LinkedIn | YouTube\n\n\n\nCaio Sousa\nPesquisador em avaliação de políticas públicas com foco em insegurança alimentar e diagnóstico socioeconômico.\nNo Instituto Pacto Contra a Fome, atuou como analista sênior de dados, criando boletins de acompanhamento de inflação de alimentos e apoiando governos estaduais em diagnósticos de segurança alimentar. Desenvolve pesquisa em economia política (emendas parlamentares) usando microdados de orçamento familiar. Experiência anterior em mercado financeiro (análise de risco, acompanhamento macroeconômico). Pesquisador no Cebrap e bolsista do Ipea. Engenheiro de Produção (UFRJ); mestrando em Economia Aplicada (UFABC).\nContatos - GitHub | LinkedIn\n\n\n\nAndrei Santos\nEstatístico e cientista de dados com expertise em modelagem e análise aplicadas, combinando estatística clássica, machine learning e inteligência analítica para apoiar decisões estratégicas.\nAtua em todas as etapas do ciclo analítico — coleta, tratamento, modelagem, visualização e comunicação — com foco em soluções práticas. Especialista em inferência estatística, séries temporais, modelagem preditiva, amostragem e automação de processos. Desenvolve dashboards interativos em R, Python, SQL, Power BI e Excel avançado (VBA) para projetos socioeconômicos no setor público e privado.\nContatos - LinkedIn"
+    "text": "Pesquisadores\nPara acessar os perfis dos pesquisadores do Núcleo MAPA.\nConhecer a equipe →"
   },
   {
     "objectID": "sobre.html#colaborações",
     "href": "sobre.html#colaborações",
     "title": "Sobre",
     "section": "Colaborações",
-    "text": "Colaborações\nO Núcleo MAPA está aberto a parcerias acadêmicas, institucionais e projetos colaborativos voltados à produção de diagnósticos, avaliação de políticas públicas e comunicação de evidências.\nPara propor colaborações ou conversar sobre possíveis projetos, entre em contato."
+    "text": "Colaborações\nO Núcleo MAPA está aberto a parcerias acadêmicas, institucionais e projetos colaborativos voltados à produção de diagnósticos, avaliação de políticas públicas e comunicação de evidências.\nPara propor colaborações ou conversar sobre possíveis projetos, entre em contato através do email nucleomapa@nucleomapa.org."
   },
   {
-    "objectID": "artigos.html",
-    "href": "artigos.html",
-    "title": "Artigos",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "NÃºcleo MAPA",
     "section": "",
-    "text": "Jovens, CLT e conta própria: uma década de mudança no mercado de trabalho\n\n\n\nPNAD\n\nMercado de Trabalho\n\nJuventude\n\n\n\nNos últimos dez anos, o emprego formal no setor privado perdeu participação entre os jovens ocupados. Mas o que isso significa de fato?\n\n\n\n12 de abr. de 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nTodo mundo ganhou mais - mas não do mesmo jeito\n\n\n\nrenda\n\nPNAD\n\ndistribuição\n\nmercado de trabalho\n\n\n\nDistribuição de renda no Brasil entre 2023 e 2025 com microdados da PNAD Contínua.\n\n\n\n22 de mar. de 2026\n\n\n\n\n\n\nSem itens correspondentes"
-  },
-  {
-    "objectID": "artigos/2026-02-distribuicao-renda/index.html",
-    "href": "artigos/2026-02-distribuicao-renda/index.html",
-    "title": "Todo mundo ganhou mais - mas não do mesmo jeito",
-    "section": "",
-    "text": "A renda média do trabalho cresceu no Brasil entre 2023 e 2025 — e isso é, sim, motivo de comemoração. Mas médias escondem realidades muito distintas ao longo da distribuição. Quem ganhou mais? Quem ficou para trás?\nPara responder, fomos aos microdados da PNAD Contínua e comparamos o rendimento real de todos os trabalhos entre o 1º trimestre de 2023 e o 3º trimestre de 2025. A análise foi feita por quantis da distribuição: p25, p50, p75, p90 e p99.\n\nA curva da desigualdade\nO primeiro gráfico já entrega o recado antes dos números: a distância entre os períodos cresce conforme subimos na distribuição. Nos quantis mais baixos, as duas curvas caminham juntas. No topo, elas se separam com clareza.\n\n\n\n\n\n\n\n\n\n\n\nQuem cresceu mais - em termos relativos?\nQuando abrimos a distribuição por quantis, a heterogeneidade fica evidente:\n\np25 (25% mais pobres): +4,7%\np50 (mediana): +5%\np75: +19,3%\np90 (topo intermediário): +23,1%\np99 (topo extremo): +10,5%\n\nO crescimento foi real — mas fortemente concentrado no topo intermediário da distribuição. A mediana, que representa o trabalhador típico, praticamente não se moveu.\n\n\n\n\n\n\n\n\n\n\n\nE em reais?\nEm valores monetários, a concentração fica ainda mais evidente. O trabalhador no topo da distribuição (p99) ganhou, em média, R$ 2.370 a mais por mês do que ganhava em 2023. O trabalhador na base (p25) ganhou R$ 69. A mediana, R$ 100.\n\n\n\n\n\n\n\n\n\n\n\nO retrato completo\nO gráfico abaixo reúne os níveis de rendimento nos dois períodos para cada quantil, permitindo uma leitura direta da evolução da distribuição.\n\n\n\n\n\n\n\n\n\n\n\nEm resumo\nHouve crescimento real da renda no Brasil entre 2023 e 2025 — e isso importa. Mas o padrão é heterogêneo: a base avançou pouco, a mediana praticamente estacionou, e o topo acelerou de forma expressiva.\nEsse tipo de análise distributiva é essencial para avaliar políticas de renda com mais precisão. Dizer que “a renda cresceu” sem abrir a distribuição é, no mínimo, incompleto.\n\n\n\n\n\n\n\nNota\n\n\n\nNota metodológica: os rendimentos foram deflacionados pelo índice Habitual disponível nos microdados da PNAD Contínua. A comparação utiliza o 1º trimestre de 2023 e o 4º trimestre de 2025. O código completo está disponível no repositório do Núcleo MAPA."
+    "text": "Redirecionando\n  Esta página foi incorporada à seção Artigos.\n  Se o redirecionamento não acontecer automaticamente, use o botão abaixo.\n  Ir para Artigos →"
   },
   {
     "objectID": "artigos/2026-04-ocupacao-jovens/index.html",
@@ -84,31 +77,38 @@
     "text": "O que isso significa?\nEsses números não significam necessariamente que os jovens estejam “escolhendo” sair da CLT. Parte desse movimento pode refletir mudanças na estrutura do mercado de trabalho, dificuldades de acesso ao emprego formal ou a expansão de novas formas de inserção produtiva.\nUma hipótese plausível é que essa recomposição não seja homogênea entre os jovens. O avanço do trabalho por conta própria pode estar associado a jovens com maior capital educacional e familiar, que encontram nesse tipo de ocupação oportunidades ligadas à economia digital ou ao empreendedorismo. Por outro lado, o crescimento do emprego sem carteira pode refletir a permanência, quiçá ampliação, da inserção precária entre jovens em situação de maior vulnerabilidade socioeconômica.\nDesagregar esses movimentos por escolaridade, raça e renda familiar é o próximo passo para entender o que, de fato, está por trás dessa reconfiguração.\n\nDados: PNAD Contínua (IBGE), 1º trimestre de 2015 e 4º trimestre de 2025. Universo: jovens de 15 a 29 anos em situação de ocupação."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Núcleo MAPA",
+    "objectID": "artigos/2026-02-distribuicao-renda/index.html",
+    "href": "artigos/2026-02-distribuicao-renda/index.html",
+    "title": "Todo mundo ganhou mais - mas não do mesmo jeito",
     "section": "",
-    "text": "Produzimos análises sobre políticas públicas, mercado de trabalho e educação\n    com rigor metodológico e comunicação acessível — usando dados públicos brasileiros.\n  \n  Ver artigos →"
+    "text": "A renda média do trabalho cresceu no Brasil entre 2023 e 2025 — e isso é, sim, motivo de comemoração. Mas médias escondem realidades muito distintas ao longo da distribuição. Quem ganhou mais? Quem ficou para trás?\nPara responder, fomos aos microdados da PNAD Contínua e comparamos o rendimento real de todos os trabalhos entre o 1º trimestre de 2023 e o 3º trimestre de 2025. A análise foi feita por quantis da distribuição: p25, p50, p75, p90 e p99.\n\nA curva da desigualdade\nO primeiro gráfico já entrega o recado antes dos números: a distância entre os períodos cresce conforme subimos na distribuição. Nos quantis mais baixos, as duas curvas caminham juntas. No topo, elas se separam com clareza.\n\n\n\n\n\n\n\n\n\n\n\nQuem cresceu mais - em termos relativos?\nQuando abrimos a distribuição por quantis, a heterogeneidade fica evidente:\n\np25 (25% mais pobres): +4,7%\np50 (mediana): +5%\np75: +19,3%\np90 (topo intermediário): +23,1%\np99 (topo extremo): +10,5%\n\nO crescimento foi real — mas fortemente concentrado no topo intermediário da distribuição. A mediana, que representa o trabalhador típico, praticamente não se moveu.\n\n\n\n\n\n\n\n\n\n\n\nE em reais?\nEm valores monetários, a concentração fica ainda mais evidente. O trabalhador no topo da distribuição (p99) ganhou, em média, R$ 2.370 a mais por mês do que ganhava em 2023. O trabalhador na base (p25) ganhou R$ 69. A mediana, R$ 100.\n\n\n\n\n\n\n\n\n\n\n\nO retrato completo\nO gráfico abaixo reúne os níveis de rendimento nos dois períodos para cada quantil, permitindo uma leitura direta da evolução da distribuição.\n\n\n\n\n\n\n\n\n\n\n\nEm resumo\nHouve crescimento real da renda no Brasil entre 2023 e 2025 — e isso importa. Mas o padrão é heterogêneo: a base avançou pouco, a mediana praticamente estacionou, e o topo acelerou de forma expressiva.\nEsse tipo de análise distributiva é essencial para avaliar políticas de renda com mais precisão. Dizer que “a renda cresceu” sem abrir a distribuição é, no mínimo, incompleto.\n\n\n\n\n\n\n\nNota\n\n\n\nNota metodológica: os rendimentos foram deflacionados pelo índice Habitual disponível nos microdados da PNAD Contínua. A comparação utiliza o 1º trimestre de 2023 e o 4º trimestre de 2025. O código completo está disponível no repositório do Núcleo MAPA."
   },
   {
-    "objectID": "index.html#artigos-recentes",
-    "href": "index.html#artigos-recentes",
-    "title": "Núcleo MAPA",
-    "section": "Artigos recentes",
-    "text": "Artigos recentes\n\n\n  \n    PNAD · Mercado de Trabalho · Juventude\n    Jovens, CLT e conta própria: uma década de mudança no mercado de trabalho\n    O emprego formal no setor privado perdeu participação entre jovens ocupados entre 2015 e 2025. Precarização ou reconfiguração?\n    Ler artigo →\n  \n\n  \n    PNAD · Renda · Distribuição\n    Todo mundo ganhou mais — mas não do mesmo jeito\n    Distribuição de renda no Brasil entre 2023 e 2025 com microdados da PNAD Contínua.\n    Ler artigo →"
+    "objectID": "artigos/2026-04-saeb-matematica-em/index.html",
+    "href": "artigos/2026-04-saeb-matematica-em/index.html",
+    "title": "Desempenho no Saeb 2023: um retrato do ensino médio público",
+    "section": "",
+    "text": "Em 2023, estudantes do ensino médio da rede pública brasileira participaram mais uma vez da Prova Saeb, uma das principais avaliações nacionais de desempenho educacional. Para analisar esses resultados, utilizei a proposta metodológica do pesquisador e professor Francisco Soares, a mesma que embasa o cálculo do Índice de Desenvolvimento da Educação de São Paulo (IDESP). Essa classificação divide os estudantes em quatro níveis de proficiência: Abaixo do Básico (menos de 275 pontos), Básico (entre 275 e 350), Adequado (entre 350 e 400) e Avançado (acima de 400).\nA partir dos microdados do Saeb, elaborei as visualizações abaixo, que mostram a distribuição dos estudantes por estado, de acordo com esses níveis de desempenho.\n\nMatemática\n\n\n\n\n\n\n\n\n\nO que os dados revelam é preocupante: em todos os estados do Brasil, a maior parte dos estudantes está concentrada nos níveis mais baixos. Em muitos casos, mais da metade dos alunos não alcança sequer o nível básico de aprendizado. Em estados como Amazonas, Maranhão, Roraima e Bahia, por exemplo, mais de 70% dos estudantes terminaram o ensino médio com desempenho classificado como “Abaixo do Básico”.\n\n\nLíngua Portuguesa\n\n\n\n\n\n\n\n\n\nEm Língua Portuguesa, o padrão se repete. Maranhão, Amazonas e Roraima voltam a figurar entre os mais críticos, com mais de 60% dos alunos classificados como “Abaixo do Básico”. Chama atenção também a quase ausência de estudantes no nível Avançado - a escala SAEB de LP para o ensino médio raramente ultrapassa os 400 pontos, o que reflete os limites da proficiência alcançada.\n\n\nO que isso significa?\nEsse retrato evidencia o tamanho do desafio que enquanto sociedade enfrentamos para garantir o direito à aprendizagem. O fato de tantos jovens concluírem a educação básica sem domínio dos conteúdos fundamentais de Matemática e Língua Portuguesa compromete não só suas trajetórias acadêmicas futuras, como também sua inserção no mundo do trabalho e sua capacidade de participação cidadã. Ao mesmo tempo, a análise por estado permite enxergar desigualdades regionais marcantes, que precisam ser levadas em conta na formulação de políticas públicas eficazes e equitativas.\n\n\n\n\n\n\n\nNota\n\n\n\nNota: Pelo fato de o Inep não divulgar a dependência administrativa (em cumprimento à LGPD), não foi possível separar as redes em estaduais, federais ou municipais. Os cortes de proficiência adotados seguem a metodologia de Francisco Soares, utilizada no cálculo do IDESP."
   },
   {
-    "objectID": "index.html#princípios-editoriais",
-    "href": "index.html#princípios-editoriais",
-    "title": "Núcleo MAPA",
-    "section": "Princípios editoriais",
-    "text": "Princípios editoriais\nToda análise publicada aqui segue três compromissos: uso exclusivo de dados públicos e reproduzíveis, aplicação de métodos apropriados à pergunta e comunicação que separa com clareza o que os dados mostram do que ainda é hipótese."
+    "objectID": "artigos.html",
+    "href": "artigos.html",
+    "title": "Artigos",
+    "section": "",
+    "text": "Toda análise publicada aqui segue três compromissos.\n  Uso exclusivo de dados públicos e reproduzíveis, aplicação de métodos apropriados à pergunta e comunicação que separa com clareza o que os dados mostram do que ainda é hipótese.\n\n\n\n\n\n\n\n\n\n\n\n\n\nDesempenho no Saeb 2023: um retrato do ensino médio público\n\n\n\nSaeb\n\nEducação\n\nEnsino Médio\n\n\n\nEm todos os estados, a maior parte dos estudantes do ensino médio da rede pública encerra a educação básica com desempenho Abaixo do Básico em Matemática. Em Língua…\n\n\n\n21 de abr. de 2026\n\n\n\n\n\n\n\n\n\n\n\nJovens, CLT e conta própria: uma década de mudança no mercado de trabalho\n\n\n\nPNAD\n\nMercado de Trabalho\n\nJuventude\n\n\n\nNos últimos dez anos, o emprego formal no setor privado perdeu participação entre os jovens ocupados. Mas o que isso significa de fato?\n\n\n\n12 de abr. de 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nTodo mundo ganhou mais - mas não do mesmo jeito\n\n\n\nrenda\n\nPNAD\n\ndistribuição\n\nmercado de trabalho\n\n\n\nDistribuição de renda no Brasil entre 2023 e 2025 com microdados da PNAD Contínua.\n\n\n\n22 de mar. de 2026\n\n\n\n\n\n\nSem itens correspondentes"
   },
   {
-    "objectID": "index.html#áreas-de-atuação",
-    "href": "index.html#áreas-de-atuação",
-    "title": "Núcleo MAPA",
-    "section": "Áreas de atuação",
-    "text": "Áreas de atuação\nMercado de trabalho · Educação · Políticas públicas · Distribuição de renda · Métodos quantitativos"
+    "objectID": "pesquisadores.html",
+    "href": "pesquisadores.html",
+    "title": "Pesquisadores",
+    "section": "",
+    "text": "Os pesquisadores do Núcleo MAPA atuam em projetos voltados à produção de diagnósticos, avaliação de políticas públicas e comunicação de evidências com rigor metodológico e linguagem acessível."
+  },
+  {
+    "objectID": "pesquisadores.html#pesquisadores",
+    "href": "pesquisadores.html#pesquisadores",
+    "title": "Pesquisadores",
+    "section": "Pesquisadores",
+    "text": "Pesquisadores\n\n  \n    \n      \n    \n    \n      Fábio Rocha\n      Economista (UFOP), Mestre em Economia (UFABC) e filósofo (UFOP) com trajetória no setor público e em monitoramento, avaliação e produção de evidências para políticas públicas.\n      \n        Lattes\n        GitHub\n        LinkedIn\n        YouTube\n      \n    \n  \n\n  \n    \n      \n    \n    \n      Caio Sousa\n      Engenheiro de Produção (UFRJ) e Mestre em Economia (UFABC), com experiência no mercado financeiro, possui trajetória em análise de dados, macroeconomia, microeconometria e avaliação de políticas públicas.\n      \n        Lattes\n        GitHub\n        LinkedIn\n      \n    \n  \n\n  \n    \n      \n    \n    \n      Andrei Santos\n      Estatístico (UFOP) e cientista de dados com expertise em modelagem e análise aplicadas, combinando ferramental estatístico com programação.\n      \n        LinkedIn"
   }
 ]

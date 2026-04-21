@@ -9,8 +9,73 @@
 <link>www.nucleomapa.org/artigos.html</link>
 <atom:link href="www.nucleomapa.org/artigos.xml" rel="self" type="application/rss+xml"/>
 <description></description>
-<generator>quarto-1.7.32</generator>
-<lastBuildDate>Sun, 12 Apr 2026 03:00:00 GMT</lastBuildDate>
+<generator>quarto-1.8.25</generator>
+<lastBuildDate>Tue, 21 Apr 2026 03:00:00 GMT</lastBuildDate>
+<item>
+  <title>Desempenho no Saeb 2023: um retrato do ensino médio público</title>
+  <dc:creator>Fábio Rocha</dc:creator>
+  <link>www.nucleomapa.org/artigos/2026-04-saeb-matematica-em/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Em 2023, estudantes do ensino médio da rede pública brasileira participaram mais uma vez da Prova Saeb, uma das principais avaliações nacionais de desempenho educacional. Para analisar esses resultados, utilizei a proposta metodológica do pesquisador e professor Francisco Soares, a mesma que embasa o cálculo do Índice de Desenvolvimento da Educação de São Paulo (IDESP). Essa classificação divide os estudantes em quatro níveis de proficiência: <strong>Abaixo do Básico</strong> (menos de 275 pontos), <strong>Básico</strong> (entre 275 e 350), <strong>Adequado</strong> (entre 350 e 400) e <strong>Avançado</strong> (acima de 400).</p>
+<p>A partir dos microdados do Saeb, elaborei as visualizações abaixo, que mostram a distribuição dos estudantes por estado, de acordo com esses níveis de desempenho.</p>
+<section id="matemática" class="level3">
+<h3 class="anchored" data-anchor-id="matemática">Matemática</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="www.nucleomapa.org/artigos/2026-04-saeb-matematica-em/index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="1344"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>O que os dados revelam é preocupante: em todos os estados do Brasil, a maior parte dos estudantes está concentrada nos níveis mais baixos. Em muitos casos, mais da metade dos alunos não alcança sequer o nível básico de aprendizado. Em estados como Amazonas, Maranhão, Roraima e Bahia, por exemplo, mais de 70% dos estudantes terminaram o ensino médio com desempenho classificado como “Abaixo do Básico”.</p>
+</section>
+<section id="língua-portuguesa" class="level3">
+<h3 class="anchored" data-anchor-id="língua-portuguesa">Língua Portuguesa</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="www.nucleomapa.org/artigos/2026-04-saeb-matematica-em/index_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="1344"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Em Língua Portuguesa, o padrão se repete. Maranhão, Amazonas e Roraima voltam a figurar entre os mais críticos, com mais de 60% dos alunos classificados como “Abaixo do Básico”. Chama atenção também a quase ausência de estudantes no nível Avançado - a escala SAEB de LP para o ensino médio raramente ultrapassa os 400 pontos, o que reflete os limites da proficiência alcançada.</p>
+</section>
+<section id="o-que-isso-significa" class="level3">
+<h3 class="anchored" data-anchor-id="o-que-isso-significa">O que isso significa?</h3>
+<p>Esse retrato evidencia o tamanho do desafio que enquanto sociedade enfrentamos para garantir o direito à aprendizagem. O fato de tantos jovens concluírem a educação básica sem domínio dos conteúdos fundamentais de Matemática e Língua Portuguesa compromete não só suas trajetórias acadêmicas futuras, como também sua inserção no mundo do trabalho e sua capacidade de participação cidadã. Ao mesmo tempo, a análise por estado permite enxergar desigualdades regionais marcantes, que precisam ser levadas em conta na formulação de políticas públicas eficazes e equitativas.</p>
+<hr>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Nota
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Nota:</strong> Pelo fato de o Inep não divulgar a dependência administrativa (em cumprimento à LGPD), não foi possível separar as redes em estaduais, federais ou municipais. Os cortes de proficiência adotados seguem a metodologia de Francisco Soares, utilizada no cálculo do IDESP.</p>
+</div>
+</div>
+
+
+</section>
+
+ ]]></description>
+  <category>Saeb</category>
+  <category>Educação</category>
+  <category>Ensino Médio</category>
+  <guid>www.nucleomapa.org/artigos/2026-04-saeb-matematica-em/</guid>
+  <pubDate>Tue, 21 Apr 2026 03:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Jovens, CLT e conta própria: uma década de mudança no mercado de trabalho</title>
   <dc:creator>Fábio Rocha</dc:creator>

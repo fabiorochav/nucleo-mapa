@@ -2,22 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>www.nucleomapa.org/sobre.html</loc>
-    <lastmod>2026-04-13T13:01:51.830Z</lastmod>
-  </url>
-  <url>
-    <loc>www.nucleomapa.org/artigos.html</loc>
-    <lastmod>2026-03-20T18:35:49.252Z</lastmod>
-  </url>
-  <url>
-    <loc>www.nucleomapa.org/artigos/2026-02-distribuicao-renda/index.html</loc>
-    <lastmod>2026-04-12T15:29:04.993Z</lastmod>
-  </url>
-  <url>
-    <loc>www.nucleomapa.org/artigos/2026-04-ocupacao-jovens/index.html</loc>
-    <lastmod>2026-04-12T21:43:59.360Z</lastmod>
+    <lastmod>2026-04-20T23:21:19.573Z</lastmod>
   </url>
   <url>
     <loc>www.nucleomapa.org/index.html</loc>
-    <lastmod>2026-04-12T21:29:25.242Z</lastmod>
+    <lastmod>2026-04-20T23:21:19.571Z</lastmod>
+  </url>
+  <url>
+    <loc>www.nucleomapa.org/artigos/2026-04-ocupacao-jovens/index.html</loc>
+    <lastmod>2026-04-21T16:14:58.278Z</lastmod>
+  </url>
+  <url>
+    <loc>www.nucleomapa.org/artigos/2026-02-distribuicao-renda/index.html</loc>
+    <lastmod>2026-04-20T22:22:28.000Z</lastmod>
+  </url>
+  <url>
+    <loc>www.nucleomapa.org/artigos/2026-04-saeb-matematica-em/index.html</loc>
+    <lastmod>2026-04-21T15:36:42.394Z</lastmod>
+  </url>
+  <url>
+    <loc>www.nucleomapa.org/artigos.html</loc>
+    <lastmod>2026-04-20T23:21:19.524Z</lastmod>
+  </url>
+  <url>
+    <loc>www.nucleomapa.org/pesquisadores.html</loc>
+    <lastmod>2026-04-21T16:24:33.056Z</lastmod>
   </url>
 </urlset>
