@@ -1,6 +1,7 @@
 ---
 title: "Sobre"
 subtitle: "Núcleo MAPA - Microeconometria Aplicada a Políticas Públicas e Avaliação"
+toc: false
 ---
 
 ```{=html}

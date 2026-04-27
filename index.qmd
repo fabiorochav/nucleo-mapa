@@ -1,16 +1,16 @@
 ---
-title: "NÃºcleo MAPA"
-subtitle: "Microeconometria Aplicada a PolÃ­ticas e AvaliaÃ§Ã£o"
+title: "Núcleo MAPA"
+subtitle: "Microeconometria Aplicada a Políticas e Avaliação"
 page-layout: full
 toc: false
 ---
 
 ```{=html}
-<meta http-equiv="refresh" content="0; url=artigos.html">
+<meta http-equiv="refresh" content="0; url=sobre.html">
 <div class="intro-panel">
   <p class="section-kicker">Redirecionando</p>
-  <h2>Esta página foi incorporada à seção Artigos.</h2>
+  <h2>Esta página direciona para a seção Sobre.</h2>
   <p>Se o redirecionamento não acontecer automaticamente, use o botão abaixo.</p>
-  <a href="artigos.html" class="btn-mapa">Ir para Artigos →</a>
+  <a href="sobre.html" class="btn-mapa">Ir para Sobre →</a>
 </div>
 ```
