@@ -18,7 +18,7 @@ toc: false
 <div class="researchers-grid">
   <article class="researcher-card">
     <div class="researcher-photo">
-      <img src="assests/researchers/fabio.png" alt="Fabio Rocha">
+      <img class="researcher-photo-contained" src="assests/researchers/fabio.png" alt="Fabio Rocha">
     </div>
     <div class="researcher-body">
       <h3 class="researcher-name">Fábio Rocha</h3>
@@ -34,7 +34,7 @@ toc: false
 
   <article class="researcher-card">
     <div class="researcher-photo">
-      <img src="assests/researchers/caio.png" alt="Caio Sousa">
+      <img class="researcher-photo-contained" src="assests/researchers/caio.png" alt="Caio Sousa">
     </div>
     <div class="researcher-body">
       <h3 class="researcher-name">Caio Sousa</h3>
