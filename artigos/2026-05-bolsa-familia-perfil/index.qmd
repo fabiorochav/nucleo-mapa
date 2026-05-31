@@ -1,0 +1,226 @@
+---
+title: "Mais velho, mais sozinho, mais escolarizado: o novo beneficiário do Bolsa Família"
+description: "Uma década separa dois perfis distintos de beneficiários. Os dados da PNAD Contínua de 2015 e 2025 mostram que o programa alcança hoje um público diferente."
+date: "2026-05-31"
+categories: [PNAD, Bolsa Família, Proteção Social, Pobreza]
+author: Fábio Rocha
+format: html
+lang: pt-BR
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r}
+#| label: setup
+#| include: false
+
+library(tidyverse)
+library(showtext)
+library(scales)
+
+font_add_google("Lato", "Lato")
+showtext_auto()
+
+dados_bf     <- readRDS("dados_bf.rds")
+perfil_total <- dados_bf$perfil
+cob_total    <- dados_bf$cobertura
+
+cores_ano <- c("2015" = "#9e2d4a", "2025" = "#c5b89f")
+caption_padrao <- "Fonte: PNAD Contínua – 1ª visita (2015 e 2025), IBGE.\nNota: Barras de erro representam intervalos de confiança de 95%."
+
+tema_bf <- function() {
+  theme_minimal(base_size = 20, base_family = "Lato") +
+    theme(
+      plot.title    = element_text(face = "bold", hjust = 0, color = "#1a1a2e"),
+      plot.subtitle = element_text(hjust = 0, color = "#444466",
+                                   margin = margin(t = 3, b = 10)),
+      plot.caption  = element_text(color = "#777777", hjust = 0,
+                                   margin = margin(t = 10)),
+      axis.title.y  = element_text(color = "#555555"),
+      axis.text     = element_text(color = "#333333"),
+      axis.ticks    = element_blank(),
+      panel.grid.major.x = element_blank(),
+      panel.grid.minor   = element_blank(),
+      panel.grid.major.y = element_line(color = "#e8e8e8", linewidth = 0.4),
+      legend.position    = "top",
+      legend.title       = element_blank(),
+      legend.text        = element_text(),
+      legend.key.size    = unit(0.45, "cm"),
+      plot.margin = margin(12, 16, 10, 12)
+    )
+}
+
+grafico_comp <- function(df, var_nome, titulo, subtitulo,
+                         ordenar = FALSE, flip = FALSE, nivel_order = NULL) {
+  d <- df |> filter(variavel == var_nome, !is.na(categoria))
+  if (!is.null(nivel_order)) {
+    d <- d |> mutate(categoria = factor(categoria, levels = nivel_order))
+  } else if (ordenar) {
+    ord <- d |> filter(ano == "2025") |> arrange(desc(prop)) |>
+      pull(categoria) |> as.character()
+    d <- d |> mutate(categoria = factor(categoria, levels = ord))
+  }
+  p <- ggplot(d, aes(x = categoria, y = prop, fill = ano)) +
+    geom_col(position = position_dodge(0.65), width = 0.6,
+             color = "white", linewidth = 0.3) +
+    geom_errorbar(aes(ymin = prop_low, ymax = prop_upp),
+                  position = position_dodge(0.65), width = 0.18,
+                  linewidth = 0.45, color = "#444444") +
+    geom_text(aes(label = scales::percent(prop, accuracy = 0.1), y = prop_upp),
+              position = position_dodge(0.65), vjust = -0.4,
+              color = "#333333") +
+    scale_y_continuous(labels = scales::percent_format(accuracy = 1),
+                       expand = expansion(mult = c(0, 0.12))) +
+    scale_fill_manual(values = cores_ano,
+                      labels = c("2015" = "2015 (1ª visita)",
+                                 "2025" = "2025 (1ª visita)")) +
+    labs(title = titulo, subtitle = subtitulo,
+         x = NULL, y = "Proporção dos beneficiários (%)",
+         caption = caption_padrao) +
+    tema_bf()
+
+  if (flip) {
+    p + coord_flip() +
+      theme(panel.grid.major.x = element_line(color = "#e8e8e8", linewidth = 0.4),
+            panel.grid.major.y = element_blank())
+  } else {
+    p + theme(axis.text.x = element_text())
+  }
+}
+
+grafico_cob <- function(df, var_nome, titulo, subtitulo, flip = FALSE) {
+  d <- df |> filter(variavel == var_nome, !is.na(categoria))
+  p <- ggplot(d, aes(x = reorder(categoria, taxa_bf), y = taxa_bf, fill = ano)) +
+    geom_col(position = position_dodge(0.65), width = 0.6,
+             color = "white", linewidth = 0.3) +
+    geom_errorbar(aes(ymin = taxa_bf_low, ymax = taxa_bf_upp),
+                  position = position_dodge(0.65), width = 0.18,
+                  linewidth = 0.45, color = "#444444") +
+    geom_text(aes(label = scales::percent(taxa_bf, accuracy = 0.1), y = taxa_bf_upp),
+              position = position_dodge(0.65), vjust = -0.4,
+              color = "#333333") +
+    scale_y_continuous(labels = scales::percent_format(accuracy = 1),
+                       expand = expansion(mult = c(0, 0.12))) +
+    scale_fill_manual(values = cores_ano,
+                      labels = c("2015" = "2015 (1ª visita)",
+                                 "2025" = "2025 (1ª visita)")) +
+    labs(title = titulo, subtitle = subtitulo,
+         x = NULL, y = "% do grupo que recebe BF",
+         caption = caption_padrao) +
+    tema_bf()
+
+  if (flip) {
+    p + coord_flip() +
+      theme(panel.grid.major.x = element_line(color = "#e8e8e8", linewidth = 0.4),
+            panel.grid.major.y = element_blank())
+  } else {
+    p + theme(axis.text.x = element_text())
+  }
+}
+```
+
+Entre 2015 e 2025, o número de beneficiários do Bolsa Família cresceu expressivamente. Mas não apenas o tamanho do programa mudou: o perfil de quem recebe o benefício também se transformou de forma relevante. A comparação dos microdados da PNAD Contínua revela três movimentos estruturais que merecem atenção.
+
+## O programa envelheceu
+
+Em 2015, quase metade dos beneficiários (48,4%) tinha entre 30 e 44 anos. Em 2025, essa faixa recuou para 43,3%. No mesmo período, a faixa de 45 a 59 anos passou de 20,7% para 26,2% da composição dos beneficiários.
+
+```{r}
+#| label: fig-faixa-etaria
+#| fig-cap: "Fonte: PNAD Contínua – 1ª visita (2015 e 2025), IBGE."
+#| fig-width: 8
+#| fig-height: 5
+
+grafico_comp(
+  perfil_total, "faixa_etaria",
+  titulo    = "Composição dos beneficiários do Bolsa Família por faixa etária",
+  subtitulo = "Distribuição percentual por grupos de idade"
+)
+```
+
+Esse envelhecimento não é apenas demográfico. A taxa de cobertura do programa entre pessoas desocupadas saltou de 7,3% para 16,3% entre os dois períodos. Entre os fora da força de trabalho — adultos que não estão nem empregados nem procurando emprego — a taxa passou de 8,2% para 10,7%.
+
+```{r}
+#| label: fig-cobertura-trabalho
+#| fig-cap: "Fonte: PNAD Contínua – 1ª visita (2015 e 2025), IBGE."
+#| fig-width: 8
+#| fig-height: 5
+
+grafico_cob(
+  cob_total, "sit_trab",
+  titulo    = "Taxa de cobertura do Bolsa Família por situação no trabalho",
+  subtitulo = "Percentual que recebe o benefício dentro de cada categoria"
+)
+```
+
+Uma hipótese consistente com os dados é que o programa passou a alcançar com mais intensidade adultos numa faixa etária que o mercado informal absorve com menos facilidade, mas que ainda não alcança o BPC-LOAS. Os dados não permitem confirmar esse mecanismo diretamente; seria necessário desagregar a cobertura por faixa etária e situação no trabalho simultaneamente. Mas o padrão observado é compatível com essa leitura, e ela tem implicações práticas: esse público exige condicionalidades e serviços complementares distintos dos que foram pensados para famílias com crianças em idade escolar.
+
+## Os domicílios ficaram menores
+
+A imagem clássica do beneficiário do Bolsa Família — uma família numerosa — não descreve bem o programa em 2025. A proporção de beneficiários em domicílios com cinco pessoas ou mais despencou de 35,1% para 19,9%. Ao mesmo tempo, domicílios de uma pessoa saltaram de 2,0% para 8,1%, e domicílios de duas pessoas passaram de 9,8% para 19,4%.
+
+```{r}
+#| label: fig-tamanho-domicilio
+#| fig-cap: "Fonte: PNAD Contínua – 1ª visita (2015 e 2025), IBGE."
+#| fig-width: 8
+#| fig-height: 5
+
+grafico_comp(
+  perfil_total, "tam_dom",
+  titulo    = "Composição dos beneficiários do Bolsa Família por tamanho do domicílio",
+  subtitulo = "Número de moradores no domicílio"
+)
+```
+
+Combinado com a feminização persistente do programa, dado que cerca de 89% dos beneficiários são mulheres em 2025, e com o envelhecimento observado acima, esse movimento sugere um crescimento relevante de um perfil específico: mulheres adultas, sozinhas ou em domicílios pequenos, fora do mercado de trabalho formal. Verificar essa hipótese com desagregações adicionais é um passo natural e promissor.
+
+## A pobreza escolarizou-se, mas não desapareceu
+
+Essa talvez seja a mudança mais estrutural e contra-intuitiva dos últimos dez anos. Em 2015, 59,5% dos beneficiários tinham fundamental incompleto ou menos. Em 2025, essa proporção caiu para 38,9%. O ensino médio, que representava 28% da composição em 2015, passou a representar 45,9%.
+
+```{r}
+#| label: fig-instrucao-comp
+#| fig-cap: "Fonte: PNAD Contínua – 1ª visita (2015 e 2025), IBGE."
+#| fig-width: 8
+#| fig-height: 5
+
+grafico_comp(
+  perfil_total, "instrucao",
+  titulo      = "Composição dos beneficiários do Bolsa Família por nível de instrução",
+  subtitulo   = "Do menor ao maior nível educacional",
+  flip        = TRUE,
+  nivel_order = c("Superior", "Médio", "Fund. completo", "Fund. incompleto ou menos")
+)
+```
+
+À primeira vista, isso poderia parecer um sinal positivo: o programa estaria alcançando pessoas com mais escolaridade porque o país ficou mais educado. Mas a taxa de cobertura por nível de instrução oferece uma leitura mais incômoda. Em 2025, pessoas com ensino médio completo têm taxa de cobertura do Bolsa Família (9,0%) superior à de pessoas com fundamental incompleto ou menos (7,0%).
+
+```{r}
+#| label: fig-instrucao-cob
+#| fig-cap: "Fonte: PNAD Contínua – 1ª visita (2015 e 2025), IBGE."
+#| fig-width: 8
+#| fig-height: 5
+
+grafico_cob(
+  cob_total, "instrucao",
+  titulo    = "Taxa de cobertura do Bolsa Família por nível de instrução",
+  subtitulo = "Percentual que recebe o benefício dentro de cada nível educacional",
+  flip      = TRUE
+)
+```
+
+Isso não significa que o programa está mal focalizado. Significa que escolaridade, por si só, não garante saída da pobreza no Brasil atual. O diploma de ensino médio deixou de ser, para uma parcela crescente da população, um passaporte para o mercado formal de trabalho com renda suficiente.
+
+Vale notar que o próprio programa evoluiu para acomodar parte dessa complexidade. A chamada Regra de Proteção prevista na Lei nº 14.601/2023 e atualizada em maio de 2025 permite que beneficiários que passam a ter renda acima do limite de entrada (R$ 218 per capita) continuem recebendo 50% do benefício por até 12 meses. Na prática, isso significa que um beneficiário que consegue emprego formal não perde o auxílio imediatamente: os dois rendimentos coexistem durante um período de transição. Nos dois primeiros meses de 2025, 273 mil beneficiários do Bolsa Família ingressaram no mercado formal de trabalho — um sinal de que essa porta de saída está sendo usada. O programa, portanto, já não opera na lógica binária de dentro ou fora: reconhece que a superação da pobreza é gradual e que renda de trabalho e transferência pública podem coexistir por um tempo.
+
+## O que esses três movimentos têm em comum
+
+Envelhecimento, fragmentação domiciliar e escolarização da pobreza apontam na mesma direção: o Bolsa Família de 2025 não é mais, principalmente, um programa para famílias jovens e numerosas com baixíssima escolaridade. O público do programa se diversificou e, em alguns aspectos, se tornou mais complexo de atender com as condicionalidades tradicionais — centradas em frequência escolar de crianças e acompanhamento pré-natal.
+
+Compreender quem é o beneficiário de hoje é condição necessária para avaliar se o desenho atual do programa ainda é adequado — e onde ele pode estar deixando lacunas.
+
+---
+
+*Notas metodológicas: Estimativas expandidas a partir dos microdados. Barras de erro nos gráficos representam intervalos de confiança de 95%. Universo: indivíduos que declararam receber o Bolsa Família / Auxílio Brasil na 1ª visita da PNAD Contínua de 2015 e 2025.*

@@ -9,8 +9,124 @@
 <link>www.nucleomapa.org/artigos.html</link>
 <atom:link href="www.nucleomapa.org/artigos.xml" rel="self" type="application/rss+xml"/>
 <description></description>
-<generator>quarto-1.8.25</generator>
-<lastBuildDate>Tue, 21 Apr 2026 03:00:00 GMT</lastBuildDate>
+<generator>quarto-1.9.37</generator>
+<lastBuildDate>Sun, 31 May 2026 03:00:00 GMT</lastBuildDate>
+<item>
+  <title>Mais velho, mais sozinho, mais escolarizado: o novo beneficiário do Bolsa Família</title>
+  <dc:creator>Fábio Rocha</dc:creator>
+  <link>www.nucleomapa.org/artigos/2026-05-bolsa-familia-perfil/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Entre 2015 e 2025, o número de beneficiários do Bolsa Família cresceu expressivamente. Mas não apenas o tamanho do programa mudou: o perfil de quem recebe o benefício também se transformou de forma relevante. A comparação dos microdados da PNAD Contínua revela três movimentos estruturais que merecem atenção.</p>
+<section id="o-programa-envelheceu" class="level2">
+<h2 class="anchored" data-anchor-id="o-programa-envelheceu">O programa envelheceu</h2>
+<p>Em 2015, quase metade dos beneficiários (48,4%) tinha entre 30 e 44 anos. Em 2025, essa faixa recuou para 43,3%. No mesmo período, a faixa de 45 a 59 anos passou de 20,7% para 26,2% da composição dos beneficiários.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-faixa-etaria" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-faixa-etaria-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="www.nucleomapa.org/artigos/2026-05-bolsa-familia-perfil/index_files/figure-html/fig-faixa-etaria-1.png" class="img-fluid figure-img" width="768">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-faixa-etaria-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1: Fonte: PNAD Contínua – 1ª visita (2015 e 2025), IBGE.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Esse envelhecimento não é apenas demográfico. A taxa de cobertura do programa entre pessoas desocupadas saltou de 7,3% para 16,3% entre os dois períodos. Entre os fora da força de trabalho — adultos que não estão nem empregados nem procurando emprego — a taxa passou de 8,2% para 10,7%.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-cobertura-trabalho" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-cobertura-trabalho-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="www.nucleomapa.org/artigos/2026-05-bolsa-familia-perfil/index_files/figure-html/fig-cobertura-trabalho-1.png" class="img-fluid figure-img" width="768">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cobertura-trabalho-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;2: Fonte: PNAD Contínua – 1ª visita (2015 e 2025), IBGE.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Uma hipótese consistente com os dados é que o programa passou a alcançar com mais intensidade adultos numa faixa etária que o mercado informal absorve com menos facilidade, mas que ainda não alcança o BPC-LOAS. Os dados não permitem confirmar esse mecanismo diretamente; seria necessário desagregar a cobertura por faixa etária e situação no trabalho simultaneamente. Mas o padrão observado é compatível com essa leitura, e ela tem implicações práticas: esse público exige condicionalidades e serviços complementares distintos dos que foram pensados para famílias com crianças em idade escolar.</p>
+</section>
+<section id="os-domicílios-ficaram-menores" class="level2">
+<h2 class="anchored" data-anchor-id="os-domicílios-ficaram-menores">Os domicílios ficaram menores</h2>
+<p>A imagem clássica do beneficiário do Bolsa Família — uma família numerosa — não descreve bem o programa em 2025. A proporção de beneficiários em domicílios com cinco pessoas ou mais despencou de 35,1% para 19,9%. Ao mesmo tempo, domicílios de uma pessoa saltaram de 2,0% para 8,1%, e domicílios de duas pessoas passaram de 9,8% para 19,4%.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-tamanho-domicilio" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-tamanho-domicilio-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="www.nucleomapa.org/artigos/2026-05-bolsa-familia-perfil/index_files/figure-html/fig-tamanho-domicilio-1.png" class="img-fluid figure-img" width="768">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-tamanho-domicilio-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;3: Fonte: PNAD Contínua – 1ª visita (2015 e 2025), IBGE.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Combinado com a feminização persistente do programa, dado que cerca de 89% dos beneficiários são mulheres em 2025, e com o envelhecimento observado acima, esse movimento sugere um crescimento relevante de um perfil específico: mulheres adultas, sozinhas ou em domicílios pequenos, fora do mercado de trabalho formal. Verificar essa hipótese com desagregações adicionais é um passo natural e promissor.</p>
+</section>
+<section id="a-pobreza-escolarizou-se-mas-não-desapareceu" class="level2">
+<h2 class="anchored" data-anchor-id="a-pobreza-escolarizou-se-mas-não-desapareceu">A pobreza escolarizou-se, mas não desapareceu</h2>
+<p>Essa talvez seja a mudança mais estrutural e contra-intuitiva dos últimos dez anos. Em 2015, 59,5% dos beneficiários tinham fundamental incompleto ou menos. Em 2025, essa proporção caiu para 38,9%. O ensino médio, que representava 28% da composição em 2015, passou a representar 45,9%.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-instrucao-comp" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-instrucao-comp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="www.nucleomapa.org/artigos/2026-05-bolsa-familia-perfil/index_files/figure-html/fig-instrucao-comp-1.png" class="img-fluid figure-img" width="768">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-instrucao-comp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;4: Fonte: PNAD Contínua – 1ª visita (2015 e 2025), IBGE.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>À primeira vista, isso poderia parecer um sinal positivo: o programa estaria alcançando pessoas com mais escolaridade porque o país ficou mais educado. Mas a taxa de cobertura por nível de instrução oferece uma leitura mais incômoda. Em 2025, pessoas com ensino médio completo têm taxa de cobertura do Bolsa Família (9,0%) superior à de pessoas com fundamental incompleto ou menos (7,0%).</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-instrucao-cob" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-instrucao-cob-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="www.nucleomapa.org/artigos/2026-05-bolsa-familia-perfil/index_files/figure-html/fig-instrucao-cob-1.png" class="img-fluid figure-img" width="768">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-instrucao-cob-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;5: Fonte: PNAD Contínua – 1ª visita (2015 e 2025), IBGE.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Isso não significa que o programa está mal focalizado. Significa que escolaridade, por si só, não garante saída da pobreza no Brasil atual. O diploma de ensino médio deixou de ser, para uma parcela crescente da população, um passaporte para o mercado formal de trabalho com renda suficiente.</p>
+<p>Vale notar que o próprio programa evoluiu para acomodar parte dessa complexidade. A chamada Regra de Proteção prevista na Lei nº 14.601/2023 e atualizada em maio de 2025 permite que beneficiários que passam a ter renda acima do limite de entrada (R$ 218 per capita) continuem recebendo 50% do benefício por até 12 meses. Na prática, isso significa que um beneficiário que consegue emprego formal não perde o auxílio imediatamente: os dois rendimentos coexistem durante um período de transição. Nos dois primeiros meses de 2025, 273 mil beneficiários do Bolsa Família ingressaram no mercado formal de trabalho — um sinal de que essa porta de saída está sendo usada. O programa, portanto, já não opera na lógica binária de dentro ou fora: reconhece que a superação da pobreza é gradual e que renda de trabalho e transferência pública podem coexistir por um tempo.</p>
+</section>
+<section id="o-que-esses-três-movimentos-têm-em-comum" class="level2">
+<h2 class="anchored" data-anchor-id="o-que-esses-três-movimentos-têm-em-comum">O que esses três movimentos têm em comum</h2>
+<p>Envelhecimento, fragmentação domiciliar e escolarização da pobreza apontam na mesma direção: o Bolsa Família de 2025 não é mais, principalmente, um programa para famílias jovens e numerosas com baixíssima escolaridade. O público do programa se diversificou e, em alguns aspectos, se tornou mais complexo de atender com as condicionalidades tradicionais — centradas em frequência escolar de crianças e acompanhamento pré-natal.</p>
+<p>Compreender quem é o beneficiário de hoje é condição necessária para avaliar se o desenho atual do programa ainda é adequado — e onde ele pode estar deixando lacunas.</p>
+<hr>
+<p><em>Notas metodológicas: Estimativas expandidas a partir dos microdados. Barras de erro nos gráficos representam intervalos de confiança de 95%. Universo: indivíduos que declararam receber o Bolsa Família / Auxílio Brasil na 1ª visita da PNAD Contínua de 2015 e 2025.</em></p>
+
+
+</section>
+
+ ]]></description>
+  <category>PNAD</category>
+  <category>Bolsa Família</category>
+  <category>Proteção Social</category>
+  <category>Pobreza</category>
+  <guid>www.nucleomapa.org/artigos/2026-05-bolsa-familia-perfil/</guid>
+  <pubDate>Sun, 31 May 2026 03:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Desempenho no Saeb 2023: um retrato do ensino médio público</title>
   <dc:creator>Fábio Rocha</dc:creator>
