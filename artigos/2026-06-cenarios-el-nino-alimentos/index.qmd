@@ -101,6 +101,8 @@ No IPCA observado de janeiro a abril de 2026, alguns desses itens já vinham pre
 
 Isso sugere que o risco de 2026 deve ser acompanhado por grupos específicos, e não como um choque uniforme sobre todos os alimentos.
 
+Trabalho completo pode ser acessado em https://drive.google.com/file/d/1hXLQMfVBm3yJsA0jxvL0f6s7ebMCSkHH/view?usp=sharing
+
 ## Limitações
 
 Este é um exercício de cenários, não uma previsão fechada de inflação. O VAR do Banco Central não foi reestimado. As probabilidades da NOAA/CPC medem chance de regime El Niño, não intensidade local de chuva ou temperatura. O fator climático usa o observado de janeiro a maio de 2026, mas não projeta mês a mês chuva e temperatura até dezembro.
