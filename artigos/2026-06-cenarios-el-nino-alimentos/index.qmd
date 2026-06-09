@@ -1,0 +1,111 @@
+---
+title: "Quanto o El Niño pode pressionar os alimentos em 2026?"
+description: "Um exercício de cenários para o IPCA Alimentação no domicílio, usando o estudo do Banco Central sobre clima e inflação de alimentos como referência."
+date: 2026-06-09
+categories: [inflação, alimentos, clima, El Niño, IPCA]
+author: "Caio Sousa e Fabio Rocha"
+---
+
+O risco climático voltou para o centro da discussão sobre inflação de alimentos em 2026. A pergunta relevante não é apenas se haverá El Niño, mas qual magnitude de pressão adicional esse fenômeno pode trazer para a inflação de **Alimentação no domicílio**.
+
+O recorte importa. O grupo amplo **Alimentação e bebidas** mistura alimentos consumidos em casa e alimentação fora do domicílio. Esta segunda parte tem uma dinâmica mais próxima de serviços: custo de mão de obra, aluguel, margem, demanda local e custo de menu pesam mais do que choques diretos de safra. Por isso, o exercício olha para **IPCA Alimentação no domicílio**, onde os canais de clima, oferta agrícola, preços ao produtor, câmbio e commodities aparecem com mais clareza.
+
+## A referência: o estudo do Banco Central
+
+A base quantitativa vem do Estudo Especial nº 57/2019 do Banco Central, ["Impactos do clima na inflação de alimentos"](https://www.bcb.gov.br/conteudo/relatorioinflacao/EstudosEspeciais/EE057_Impactos_do_clima_na_inflacao_de_alimentos.pdf). O estudo estimou um modelo VAR trimestral para medir como El Niño e precipitação afetavam a inflação de Alimentação no domicílio.
+
+Há três janelas diferentes no trabalho do BCB, e elas precisam ser separadas.
+
+| Janela | Papel no estudo |
+|---|---|
+| 2001T3 a 2019T1 | Amostra usada para estimar o modelo VAR. |
+| 2019T1 | Episódio que motivou o estudo: Alimentação no domicílio subiu 4,34%, e cerca de 1,50 p.p. foi atribuído à precipitação atípica. |
+| 2015T3 a 2016T2 | Episódio de El Niño forte. O BCB estimou contribuição de cerca de **11,34 p.p.** para Alimentação no domicílio. |
+
+O número de **11,34 p.p.** é, portanto, uma âncora de um episódio forte. Ele não deve ser lido como previsão automática para 2026.
+
+## O que a probabilidade da NOAA/CPC significa
+
+A NOAA/CPC divulga probabilidades de regime climático: El Niño, neutralidade ou La Niña. Essa probabilidade informa a chance de um trimestre móvel ser classificado como El Niño. Ela **não** informa diretamente a intensidade física do fenômeno.
+
+Em termos simples: uma probabilidade de 82% não significa que o El Niño terá 82% da força de um evento forte. Significa que há 82% de chance de aquele trimestre estar em regime El Niño.
+
+Por isso, o exercício separa três coisas:
+
+1. a âncora histórica do BCB;
+2. a exposição probabilística ao regime El Niño em 2026;
+3. a intensidade de repasse em cada cenário.
+
+## Como o prêmio foi calculado
+
+O exercício não reestima o VAR do BCB. A proposta é mais simples e transparente: pegar a âncora histórica do episódio forte e recalibrá-la para 2026.
+
+A fórmula geral é:
+
+$$
+P_{\lambda} =
+11{,}34
+\times
+\frac{6{,}62}{12}
+\times
+1{,}0845
+\times
+\lambda
+$$
+
+Onde:
+
+- **11,34 p.p.** é a contribuição estimada pelo BCB no episódio forte de 2015-2016;
+- **6,62** é a soma das probabilidades NOAA/CPC de El Niño associadas aos meses de junho a dezembro de 2026;
+- **12** anualiza a exposição, porque a âncora histórica se refere a uma janela de aproximadamente doze meses;
+- **1,0845** é o fator de chuva e temperatura observado em janeiro-maio de 2026, comparado com a média dos mesmos meses de 2019 a 2025;
+- **λ** é a intensidade de repasse em relação ao episódio forte.
+
+O fator climático de 1,0845 não é uma inflação adicional. Ele é um multiplicador de severidade local: no início de 2026, chuva e temperatura apareceram 8,45% mais pressionadas do que a média recente, na métrica construída com dados NASA POWER/agrobr.
+
+## Resultados
+
+O resultado deve ser lido como **prêmio climático adicional**, não como previsão fechada do IPCA.
+
+| Cenário | Intensidade relativa | Prêmio estimado |
+|---|---:|---:|
+| Baixo | 15% do episódio forte | **1,02 p.p.** |
+| Moderado | 30% do episódio forte | **2,04 p.p.** |
+| Alto | 50% do episódio forte | **3,39 p.p.** |
+| Equivalente cheio | 100% do episódio forte reescalado | **6,78 p.p.** |
+
+O cenário baixo representa um El Niño com transmissão limitada para oferta e preços. O moderado admite pressão em itens sensíveis, sem repetir a força de 2015-2016. O alto é um stress plausível em que clima afeta FLV, leite, feijão, trigo e parte das proteínas.
+
+O equivalente cheio é apenas uma referência mecânica: aplica integralmente a âncora do BCB ao período probabilístico de 2026. Não é cenário central.
+
+## Comparação com Focus
+
+O Focus foi usado apenas como comparação de mercado. A mediana anual para IPCA Alimentação no domicílio em 2026 passou de 4,44% em 30 de janeiro para 6,35% em 5 de junho.
+
+Essa revisão não deve ser atribuída integralmente ao El Niño. Ela resume também dados já realizados, câmbio, commodities, safra, dispersão entre analistas e outros choques. Ainda assim, a comparação ajuda a dimensionar a ordem de grandeza: o cenário moderado de prêmio climático, de 2,04 p.p., é próximo da revisão da mediana Focus entre janeiro e junho.
+
+## Quais alimentos merecem mais atenção?
+
+O risco não é homogêneo entre alimentos. Ele tende a aparecer primeiro em itens com baixa capacidade de estoque, alta perecibilidade e forte dependência de janela de colheita.
+
+| Grupo | Canal principal | Risco |
+|---|---|---|
+| Tomate, batata, cebola e cenoura | Chuva, calor, perdas e logística em FLV | Alto |
+| Leite e derivados | Pastagem, calor, qualidade do leite e ração | Alto |
+| Feijão, com arroz monitorado | Safra, regime de chuvas e sensibilidade social | Médio-alto |
+| Trigo, massas e panificados | Clima no Sul, importação, câmbio e farinha | Médio-alto |
+| Ovos, frango e aves | Milho/soja para ração e estresse térmico | Médio |
+
+No IPCA observado de janeiro a abril de 2026, alguns desses itens já vinham pressionados: tomate, cenoura, batata, cebola, leite longa vida e feijão carioca. Nos sinais recentes do CEPEA, porém, a pressão não era generalizada: boi gordo e trigo subiram, enquanto milho, arroz, açúcar, frango e suíno recuaram na janela analisada.
+
+Isso sugere que o risco de 2026 deve ser acompanhado por grupos específicos, e não como um choque uniforme sobre todos os alimentos.
+
+## Limitações
+
+Este é um exercício de cenários, não uma previsão fechada de inflação. O VAR do Banco Central não foi reestimado. As probabilidades da NOAA/CPC medem chance de regime El Niño, não intensidade local de chuva ou temperatura. O fator climático usa o observado de janeiro a maio de 2026, mas não projeta mês a mês chuva e temperatura até dezembro.
+
+Também não entram no cálculo estoques privados, importações, margens de varejo, frete, política comercial, choques sanitários ou substituição de consumo. Por isso, os resultados devem ser lidos como uma régua de magnitude: quanto o El Niño poderia adicionar à inflação de Alimentação no domicílio sob diferentes intensidades de repasse.
+
+::: {.callout-note}
+**Fontes:** Banco Central do Brasil, Estudo Especial nº 57/2019; NOAA/CPC, probabilidades ENSO de maio de 2026; Sistema Expectativas de Mercado do BCB; IBGE/SIDRA; NASA POWER; agrobr; CEPEA/ESALQ; CONAB/PROHORT-CEASA.
+:::
