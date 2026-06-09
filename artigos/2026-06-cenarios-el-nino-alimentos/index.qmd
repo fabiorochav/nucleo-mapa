@@ -4,6 +4,7 @@ description: "Um exercício de cenários para o IPCA Alimentação no domicílio
 date: 2026-06-09
 categories: [inflação, alimentos, clima, El Niño, IPCA]
 author: "Caio Sousa e Fabio Rocha"
+image: premio-el-nino-2026.png
 ---
 
 O risco climático voltou para o centro da discussão sobre inflação de alimentos em 2026. A pergunta relevante não é apenas se haverá El Niño, mas qual magnitude de pressão adicional esse fenômeno pode trazer para a inflação de **Alimentação no domicílio**.
