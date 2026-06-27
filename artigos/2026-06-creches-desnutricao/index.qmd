@@ -2,6 +2,7 @@
 title: "Abertura de novas creches municipais reduz a desnutrição infantil?"
 description: "Ausência de evidência não é evidência de ausência. Testamos se a abertura de creches municipais em São Paulo reduz a magreza infantil — e o que aprendemos quando não encontramos efeito."
 date: "2026-06-28"
+image: cover.png
 categories: [Educação Infantil, Saúde, Inferência Causal, SISVAN, Dados Públicos]
 author: Fábio Rocha e Caio Sousa
 format:
@@ -294,6 +295,8 @@ ggplot(df_es, aes(x = e, y = att, color = periodo, fill = periodo)) +
     color    = NULL
   ) +
   tema_artigo
+
+ggsave("cover.png", width = 9, height = 5, dpi = 150, bg = "white")
 ```
 
 Os pontos cinzas (à esquerda da linha pontilhada) são os coeficientes pré-abertura: todos próximos de zero e dentro dos intervalos de confiança. Isso valida empiricamente o pressuposto de tendências paralelas — tratados e controles se comportavam de forma semelhante *antes* da creche chegar.
