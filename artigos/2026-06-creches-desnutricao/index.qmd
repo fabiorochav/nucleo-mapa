@@ -1,7 +1,7 @@
 ---
 title: "Abertura de novas creches municipais reduz a desnutrição infantil?"
 description: "Ausência de evidência não é evidência de ausência. Testamos se a abertura de creches municipais em São Paulo reduz a magreza infantil — e o que aprendemos quando não encontramos efeito."
-date: "2026-06-20"
+date: "2026-06-28"
 categories: [Educação Infantil, Saúde, Inferência Causal, SISVAN, Dados Públicos]
 author: Fábio Rocha e Caio Sousa
 format:
