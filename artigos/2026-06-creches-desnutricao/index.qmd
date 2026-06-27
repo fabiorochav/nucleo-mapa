@@ -1,0 +1,333 @@
+---
+title: "Abertura de novas creches municipais reduz a desnutrição infantil?"
+description: "Ausência de evidência não é evidência de ausência. Testamos se a abertura de creches municipais em São Paulo reduz a magreza infantil — e o que aprendemos quando não encontramos efeito."
+date: "2026-06-20"
+categories: [Educação Infantil, Saúde, Inferência Causal, SISVAN, Dados Públicos]
+author: Fábio Rocha e Caio Sousa
+format:
+  html:
+    toc: true
+    code-fold: true
+lang: pt-BR
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r}
+#| include: false
+
+library(dplyr)
+library(ggplot2)
+library(did)
+library(knitr)
+library(kableExtra)
+library(leaflet)
+library(scales)
+library(showtext)
+
+# ── Verifica dependências ──────────────────────────────────────
+arquivos_necessarios <- c("cs_desnut.rds", "desc_artigo.rds", "geo_mapa.rds")
+faltando <- arquivos_necessarios[!file.exists(arquivos_necessarios)]
+
+if (length(faltando) > 0) {
+  stop(
+    "Arquivos não encontrados: ", paste(faltando, collapse = ", "), "\n",
+    "Execute preparar_dados.R primeiro."
+  )
+}
+
+# ── Objetos pré-computados ─────────────────────────────────────
+cs_obj      <- readRDS("cs_desnut.rds")
+desc_obj    <- readRDS("desc_artigo.rds")
+
+es_desnut   <- cs_obj$es
+att_simples <- cs_obj$att
+desc        <- desc_obj$desc
+total_acomp <- desc_obj$total_acomp
+total_acomp_fmt <- format(round(total_acomp / 1e6, 1), decimal.mark = ",")
+
+# ── Painel ────────────────────────────────────────────────────
+PAINEL_PATH <- "C:/Users/rocha/Documents/Acessados/Pessoal/exercicios-papers/analise_desnutricao/painel_did_sisvan_sp.rds"
+painel_did  <- readRDS(PAINEL_PATH)
+
+# ── Tema visual padronizado ────────────────────────────────────
+COR_TRATADO  <- "#2166ac"
+COR_CONTROLE <- "#888888"
+COR_DEST     <- "#d73027"
+
+# ── Carregar fonte Lato do Google Fonts ───────────────────────
+font_add_google("Lato", "Lato")
+showtext_auto()
+
+tema_artigo <- theme_minimal(base_size = 20, base_family="Lato") +
+  theme(
+    plot.title       = element_text(face = "bold", margin = margin(b = 4)),
+    plot.subtitle    = element_text(color = "grey40", margin = margin(b = 10)),
+    plot.caption     = element_text(color = "grey50", margin = margin(t = 8)),
+    axis.title       = element_text(),
+    legend.position  = "bottom",
+    panel.grid.minor = element_blank(),
+    panel.grid.major = element_line(color = "grey93")
+  )
+
+# ── Event study: extrai manualmente para controlar a estética ──
+df_es <- data.frame(
+  e    = es_desnut$egt,
+  att  = es_desnut$att.egt,
+  se   = es_desnut$se.egt,
+  crit = es_desnut$crit.val.egt
+) |>
+  mutate(
+    ci_lo   = att - crit * se,
+    ci_hi   = att + crit * se,
+    periodo = if_else(e < 0, "Pré-tratamento", "Pós-tratamento")
+  )
+
+# ── ATT agregado para o texto ──────────────────────────────────
+att_val  <- round(att_simples$overall.att, 3)
+att_se   <- round(att_simples$overall.se, 3)
+att_p    <- round(2 * pnorm(-abs(att_simples$overall.att / att_simples$overall.se)), 3)
+att_sign <- if (att_p < 0.05) {
+  "estatisticamente significativo (p < 0,05)"
+} else {
+  paste0("não significativo (p = ", att_p, ")")
+}
+```
+
+Desnutrição infantil é um problema que o Brasil reduziu muito nas últimas décadas — mas que ainda persiste em parcelas vulneráveis da população. Quando falamos em crianças de até 5 anos, a magreza excessiva e o crescimento comprometido são marcadores que se acumulam cedo e deixam sequelas duradouras no desenvolvimento cognitivo e físico.
+
+Creches e pré-escolas municipais são uma candidata natural a intervir nesse problema. Não porque foram criadas para isso — não foram. Elas existem para expandir o acesso à educação infantil. Mas têm um canal plausível: a **merenda escolar** atinge diariamente crianças que, de outra forma, poderiam não ter acesso a uma refeição balanceada. E o contato sistemático com educadores e agentes de saúde facilita o encaminhamento de casos de risco.
+
+Quando uma política produz efeitos em resultados que não eram seu objetivo declarado, chamamos isso de **efeito indireto** (*spillover*). É o que esse exercício testa. E o resultado nulo que encontramos nos ensina tanto quanto um efeito positivo teria ensinado — talvez mais.
+
+## A pergunta
+
+> A abertura de uma nova creche ou pré-escola municipal em um município de São Paulo está associada a uma redução na prevalência de magreza entre crianças de até 5 anos?
+
+Responder isso de forma rigorosa exige lidar com um problema de comparação: municípios que abrem novas creches não são sorteados. Tendem a ser maiores, mais dinâmicos, com mais recursos administrativos — o que poderia fazê-los melhorar indicadores de saúde infantil de qualquer forma, independentemente das creches.
+
+## A estratégia de identificação
+
+Para isolar o efeito causal, precisamos de um contrafactual plausível: como teriam evoluído os indicadores nutricionais nos municípios que abriram creches, se essa abertura não tivesse ocorrido?
+
+Usamos o estimador de **Callaway & Sant'Anna (2021)** (*staggered DiD*), adequado para quando unidades recebem o tratamento em momentos distintos. A lógica central é uma diferença em diferenças "limpa" para cada coorte $g$ (o ano em que o município abriu a primeira creche nova). Para um período $t$ qualquer, estimamos:
+
+$$\hat{\delta}(g,t) = \underbrace{\bigl(\bar{Y}_{g,t} - \bar{Y}_{g,\,g-1}\bigr)}_{\text{variação dos tratados}} \;-\; \underbrace{\bigl(\bar{Y}_{\text{NYT},t} - \bar{Y}_{\text{NYT},\,g-1}\bigr)}_{\text{variação dos ainda não tratados}}$$
+
+onde $\bar{Y}_{g,t}$ é a taxa média de magreza dos municípios da coorte $g$ no ano $t$, $g-1$ é o ano anterior ao tratamento (linha de base de cada coorte), e NYT (*not yet treated*) são os municípios que ainda não abriram creche em $t$. Essa escolha de controle evita o problema documentado por Goodman-Bacon (2021): estimadores TWFE tradicionais podem usar períodos pós-tratamento de outras coortes como controle, contaminando a estimativa.
+
+Os $\hat{\delta}(g,t)$ de cada coorte são então agregados em um **event study** pelo tempo relativo ao tratamento $e = t - g$, produzindo os coeficientes $\hat{\beta}_e$ que vemos no gráfico:
+
+$$\hat{\beta}_e = \sum_g w_{g,e} \cdot \hat{\delta}(g,\; g+e)$$
+
+com pesos $w_{g,e}$ proporcionais ao tamanho de cada coorte. O coeficiente $\hat{\beta}_{-1}$ é normalizado a zero (período de referência); os $\hat{\beta}_e$ com $e < -1$ testam o pressuposto de tendências paralelas — devem ser próximos de zero se o pressuposto for válido; os $\hat{\beta}_e$ com $e \geq 0$ estimam o efeito causal acumulado da abertura da creche.
+
+## Os dados
+
+Combinamos três fontes públicas via [Base dos Dados](https://basedosdados.org):
+
+- **Censo Escolar (INEP)**: identificamos o primeiro ano em que cada município de SP teve uma escola de educação infantil municipal nova ativa, com turmas funcionando. Esse é nosso evento de tratamento.
+- **SISVAN (Ministério da Saúde)**: registros individuais de acompanhamento nutricional de crianças de 0 a 5 anos em SP, 2015–2023, agregados por município e ano.
+- **IBGE**: estimativas populacionais para o denominador.
+
+O desfecho é a **proporção de crianças com magreza** (índice peso-para-idade com escore-z abaixo de −2), o indicador padrão de desnutrição aguda para essa faixa etária.
+
+```{r}
+#| label: tbl-desc
+#| tbl-cap: "Painel final após filtros de qualidade (mínimo 30 acompanhamentos SISVAN por município-ano). Estatísticas de 2015, linha de base."
+
+desc |>
+  arrange(desc(n_munis)) |>
+  rename(
+    "Grupo"                       = grupo,
+    "Municípios"                  = n_munis,
+    "% magreza (2015)"            = pct_desnut_2015,
+    "Mediana acompanhamentos/ano" = n_acomp_median
+  ) |>
+  kable(align = c("l", "r", "r", "r")) |>
+  kable_styling(bootstrap_options = c("striped", "hover"), full_width = FALSE)
+```
+
+No total, o painel reúne cerca de **`r total_acomp_fmt` milhões de acompanhamentos nutricionais** ao longo do período. Municípios que eventualmente abriram creches partem de uma prevalência de magreza ligeiramente maior (2,65% vs. 2,33%), o que reforça a importância de não usar comparações brutas.
+
+## Quando e onde as creches foram abertas?
+
+Os municípios tratados não abriram suas creches no mesmo ano — daí vem a variação que permite identificar o efeito. A maior onda de aberturas ocorreu em 2016, seguida por 2017 e 2018.
+
+```{r}
+#| label: fig-hist
+#| fig-cap: "Fonte: Censo Escolar/INEP. Elaboração: Núcleo MAPA."
+#| fig-align: center
+#| fig-width: 8
+#| fig-height: 5
+
+coortes <- painel_did |>
+  filter(n_acompanhamentos >= 30, ano_tratamento > 0) |>
+  distinct(id_muni, ano_tratamento)
+
+ggplot(coortes, aes(x = factor(ano_tratamento))) +
+  geom_bar(fill = COR_TRATADO, alpha = 0.85) +
+  geom_text(stat = "count", aes(label = after_stat(count)),
+            vjust = -0.5, color = "grey30", fontface = "bold") +
+  labs(
+    title    = "Distribuição de municípios por coorte de abertura",
+    subtitle = "Primeiro ano com escola de educação infantil municipal nova ativa em SP",
+    x        = "Ano de abertura",
+    y        = "Municípios"
+  ) +
+  tema_artigo +
+  theme(panel.grid.major.x = element_blank())
+```
+
+O mapa abaixo permite explorar a distribuição geográfica. Passe o cursor sobre um município para ver o ano de abertura.
+
+```{r}
+geo_mapa <- readRDS("geo_mapa.rds")
+
+niveis <- c("2015","2016","2017","2018","2019","2020","2021","2022","2023","Nunca tratado")
+cores  <- c("#d73027","#f46d43","#fdae61","#fee08b","#abd9e9",
+            "#74add1","#4575b4","#313695","#1a1a6c","#cccccc")
+
+pal <- colorFactor(palette = cores, levels = niveis, ordered = TRUE)
+
+leaflet(geo_mapa, width = "100%", height = 480) |>
+  addProviderTiles("CartoDB.Positron") |>
+  addPolygons(
+    fillColor   = ~pal(Coorte),
+    fillOpacity = 0.75,
+    color       = "white",
+    weight      = 0.5,
+    label       = ~paste0(name_muni, " — ", Coorte),
+    highlightOptions = highlightOptions(
+      weight = 2, fillOpacity = 0.95, bringToFront = TRUE
+    )
+  ) |>
+  addLegend(
+    position = "bottomright",
+    pal      = pal,
+    values   = ~Coorte,
+    title    = "Ano de abertura"
+  )
+```
+
+## Tendências antes e depois
+
+Antes de olhar para os resultados do estimador, é útil observar as trajetórias brutas dos dois grupos.
+
+```{r}
+#| label: fig-evolucao
+#| fig-cap: "Médias ponderadas pelo número de acompanhamentos. Fonte: SISVAN/MS e Censo Escolar/INEP. Elaboração: Núcleo MAPA."
+#| fig-align: center
+#| fig-width: 9
+#| fig-height: 4.5
+
+evolucao <- painel_did |>
+  filter(n_acompanhamentos >= 30, !is.na(pct_desnutricao)) |>
+  mutate(grupo = if_else(ano_tratamento == 0,
+                         "Nunca abriu creche nova",
+                         "Abriu creche nova (algum ano)")) |>
+  group_by(grupo, ano) |>
+  summarise(
+    media_pct = weighted.mean(pct_desnutricao, n_acompanhamentos, na.rm = TRUE),
+    .groups = "drop"
+  )
+
+ggplot(evolucao, aes(x = ano, y = media_pct, color = grupo)) +
+  geom_line(linewidth = 1.2) +
+  geom_point(size = 2.5) +
+  scale_color_manual(
+    values = c(
+      "Abriu creche nova (algum ano)" = COR_TRATADO,
+      "Nunca abriu creche nova"       = COR_CONTROLE
+    ),
+    labels = c(
+      "Abriu creche nova (algum ano)" = "Tratados (abriram creche)",
+      "Nunca abriu creche nova"       = "Controles (nunca abriram)"
+    )
+  ) +
+  scale_y_continuous(labels = percent_format(scale = 1, accuracy = 0.1)) +
+  scale_x_continuous(breaks = 2015:2023) +
+  labs(
+    title    = "Evolução da prevalência de magreza por grupo",
+    subtitle = "Crianças de 0–5 anos em municípios de SP com ≥ 30 acompanhamentos/ano",
+    x        = NULL,
+    y        = "% magreza (peso/idade)",
+    color    = NULL
+  ) +
+  tema_artigo
+```
+
+As trajetórias seguem caminhos paralelos ao longo de quase todo o período — evidência informal de que o pressuposto de tendências paralelas é razoável. A convergência gradual entre os grupos poderia sugerir algum efeito de longo prazo, mas o estimador abaixo vai qualificar essa impressão.
+
+## O resultado
+
+```{r}
+#| label: fig-event-study
+#| fig-cap: "ICs simultâneos de 95% obtidos por bootstrap (999 repetições). Período de referência: t = −1. Fonte: SISVAN/MS, Censo Escolar/INEP. Elaboração: Núcleo MAPA."
+#| fig-align: center
+#| fig-width: 9
+#| fig-height: 5
+
+ggplot(df_es, aes(x = e, y = att, color = periodo, fill = periodo)) +
+  geom_hline(yintercept = 0, linetype = "dashed", color = "grey50", linewidth = 0.7) +
+  geom_vline(xintercept = -0.5, linetype = "dotted", color = "grey60", linewidth = 0.7) +
+  geom_ribbon(aes(ymin = ci_lo, ymax = ci_hi), alpha = 0.12, color = NA) +
+  geom_errorbar(aes(ymin = ci_lo, ymax = ci_hi), width = 0.2, linewidth = 0.7) +
+  geom_point(size = 2.5) +
+  scale_color_manual(
+    values = c("Pré-tratamento" = COR_CONTROLE, "Pós-tratamento" = COR_TRATADO),
+    labels = c("Pré-tratamento" = "Pré-abertura (teste de paralelas)",
+               "Pós-tratamento" = "Pós-abertura (efeito estimado)")
+  ) +
+  scale_fill_manual(
+    values = c("Pré-tratamento" = COR_CONTROLE, "Pós-tratamento" = COR_TRATADO),
+    guide  = "none"
+  ) +
+  scale_x_continuous(breaks = df_es$e) +
+  labs(
+    title    = "Event study: efeito da abertura de creche sobre a magreza infantil",
+    subtitle = "Callaway & Sant'Anna (2021) — controles: municípios ainda não tratados",
+    x        = "Anos em relação à abertura da creche (t = 0)",
+    y        = "ATT estimado (p.p. de magreza)",
+    color    = NULL
+  ) +
+  tema_artigo
+```
+
+Os pontos cinzas (à esquerda da linha pontilhada) são os coeficientes pré-abertura: todos próximos de zero e dentro dos intervalos de confiança. Isso valida empiricamente o pressuposto de tendências paralelas — tratados e controles se comportavam de forma semelhante *antes* da creche chegar.
+
+No pós-abertura (pontos azuis), o padrão que emerge é inconclusivo: leve alta em t = 0 e t = 1, queda em t = 2, depois oscilação. Nenhum coeficiente alcança significância estatística. O efeito médio agregado é de **`r att_val` p.p.** (EP = `r att_se`), `r att_sign`.
+
+**Em síntese: não encontramos evidência estatisticamente robusta de que a abertura de creches municipais reduza a prevalência de magreza infantil nos municípios de São Paulo no horizonte analisado.**
+
+## Por que pode ser que não apareça?
+
+Resultado nulo não é resultado ruim — mas exige interpretação cuidadosa. Há pelo menos quatro razões pelas quais um efeito real poderia não aparecer aqui:
+
+**Poder estatístico limitado.** Com ~187 municípios nunca tratados como controles, a amostra tem dificuldade de detectar efeitos pequenos. E o efeito da merenda escolar sobre indicadores *agregados* de um município inteiro — diluídos entre crianças matriculadas e não matriculadas — provavelmente é pequeno.
+
+**Viés de triagem no curto prazo.** Municípios que abrem creches tendem a expandir a cobertura de atenção básica simultaneamente. Isso aumenta a *detecção* de casos de magreza nos primeiros anos, empurrando o coeficiente para cima em t = 0 e t = 1 antes de qualquer efeito real aparecer.
+
+**Defasagem temporal.** O benefício nutricional da merenda se acumula ao longo do tempo. Crianças precisam de meses ou anos de frequência sistemática para que o efeito apareça em dados de monitoramento. A queda em t = 2 é consistente com esse mecanismo — mas não é robusta o suficiente para afirmarmos isso.
+
+**Qualidade do dado de desfecho.** O SISVAN captura as crianças que foram ao posto de saúde — não todas as crianças. Em municípios menores ou com cobertura de atenção básica mais fraca, o monitoramento é menos completo e mais ruidoso.
+
+**Medida imperfeita do tratamento.** Identificamos o evento de tratamento como o primeiro ano em que um município aparece com uma escola de educação infantil municipal *nova* no Censo Escolar. Isso assume que uma entrada nova na base do INEP corresponde a uma creche efetivamente inaugurada e em funcionamento. Na prática, novos registros podem refletir reclassificações administrativas, transferências de dependência (privada para pública), ou atualizações cadastrais de escolas já existentes. Se uma parcela relevante dos "tratamentos" identificados não corresponde a uma abertura real, estamos subestimando o efeito verdadeiro — ou estimando o efeito de um evento que nunca ocorreu.
+
+## O que fica: ausência de evidência não é evidência de ausência
+
+Há uma distinção importante entre *não encontrar evidência de efeito* e *encontrar evidência de que não há efeito*. Nosso resultado é o primeiro caso.
+
+As limitações de poder, dados e janela temporal nos impedem de concluir que creches *não funcionam* para reduzir a desnutrição. O que podemos dizer é que, com os dados disponíveis, o efeito — se existe — é pequeno demais, tardio demais, ou ruidoso demais para ser detectado nessa escala de análise.
+
+Há também uma segunda reflexão que vale explicitar: **esse exercício testa um efeito que a política nunca foi desenhada para produzir**. Creches municipais existem para expandir o acesso à educação infantil. Testamos se elas, como subproduto, melhoram a nutrição. Quando políticas são avaliadas por objetivos que não eram os seus, o padrão de evidência necessário para concluir que "funcionou" é naturalmente mais alto — e o padrão para concluir que "não funcionou" deveria ser mais cauteloso.
+
+O que esse estudo faz, e o que consideramos valioso independentemente do resultado, é demonstrar que é possível formular uma pergunta causal clara, construir um painel a partir de dados públicos e aplicar um método moderno com rigor suficiente para que os resultados sejam interpretáveis.
+
+O efeito indireto das creches sobre a nutrição infantil merece investigação com amostras maiores — idealmente cobrindo outros estados do Sudeste —, janelas de tempo mais longas e desfechos complementares como crescimento e anemia. Até lá, o resultado que temos diz algo importante: a abertura de uma creche isolada não parece ser suficiente para mover indicadores nutricionais de forma detectável em dois ou três anos. Políticas de saúde infantil precisam de mais do que um equipamento novo — precisam de cobertura, continuidade e integração com a atenção básica.
+
+---
+
+*Dados: Censo Escolar (INEP), SISVAN (Ministério da Saúde), Base dos Dados. Período: 2015–2023. Universo: municípios de SP com ao menos 30 acompanhamentos SISVAN/ano. Código disponível mediante solicitação.*
