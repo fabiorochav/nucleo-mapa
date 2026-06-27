@@ -26,7 +26,12 @@
   "artigos/2026-05-bolsa-familia-perfil/index.qmd": {
     "index.html": "6deb4be2"
   },
+<<<<<<< HEAD
   "artigos/2026-06-creches-desnutricao/index.qmd": {
     "index.html": "06d3d118"
+=======
+  "artigos/2026-06-cenarios-el-nino-alimentos/index.qmd": {
+    "index.html": "d6205c30"
+>>>>>>> f42589040dca76c388fd2eb6197b53423615b3c7
   }
 }
