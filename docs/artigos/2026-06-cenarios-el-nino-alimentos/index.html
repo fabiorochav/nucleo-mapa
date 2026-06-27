@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Caio Sousa e Fabio Rocha">
+<meta name="description" content="Um exercício de cenários para o IPCA Alimentação no domicílio, usando o estudo do Banco Central sobre clima e inflação de alimentos como referência.">
+
+<title>Quanto o El Niño pode pressionar os alimentos em 2026? – Núcleo MAPA</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../assests/favicon/favicon.svg" rel="icon" type="image/svg+xml">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-a0f9fd0d421825b736dc1bbcbcba2219.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Nenhum resultado",
+    "search-matching-documents-text": "documentos correspondentes",
+    "search-copy-link-title": "Copiar link para a busca",
+    "search-hide-matches-text": "Esconder correspondências adicionais",
+    "search-more-match-text": "mais correspondência neste documento",
+    "search-more-matches-text": "mais correspondências neste documento",
+    "search-clear-button-title": "Limpar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Procurar"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Núcleo MAPA</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Procurar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Alternar de navegação" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../sobre.html"> 
+<span class="menu-text">Sobre</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../artigos.html"> 
+<span class="menu-text">Artigos</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../pesquisadores.html"> 
+<span class="menu-text">Pesquisadores</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Nesta página</h2>
+   
+  <ul>
+  <li><a href="#a-referência-o-estudo-do-banco-central" id="toc-a-referência-o-estudo-do-banco-central" class="nav-link active" data-scroll-target="#a-referência-o-estudo-do-banco-central">A referência: o estudo do Banco Central</a></li>
+  <li><a href="#o-que-a-probabilidade-da-noaacpc-significa" id="toc-o-que-a-probabilidade-da-noaacpc-significa" class="nav-link" data-scroll-target="#o-que-a-probabilidade-da-noaacpc-significa">O que a probabilidade da NOAA/CPC significa</a></li>
+  <li><a href="#como-o-prêmio-foi-calculado" id="toc-como-o-prêmio-foi-calculado" class="nav-link" data-scroll-target="#como-o-prêmio-foi-calculado">Como o prêmio foi calculado</a></li>
+  <li><a href="#resultados" id="toc-resultados" class="nav-link" data-scroll-target="#resultados">Resultados</a></li>
+  <li><a href="#comparação-com-focus" id="toc-comparação-com-focus" class="nav-link" data-scroll-target="#comparação-com-focus">Comparação com Focus</a></li>
+  <li><a href="#quais-alimentos-merecem-mais-atenção" id="toc-quais-alimentos-merecem-mais-atenção" class="nav-link" data-scroll-target="#quais-alimentos-merecem-mais-atenção">Quais alimentos merecem mais atenção?</a></li>
+  <li><a href="#limitações" id="toc-limitações" class="nav-link" data-scroll-target="#limitações">Limitações</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Quanto o El Niño pode pressionar os alimentos em 2026?</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">inflação</div>
+    <div class="quarto-category">alimentos</div>
+    <div class="quarto-category">clima</div>
+    <div class="quarto-category">El Niño</div>
+    <div class="quarto-category">IPCA</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Um exercício de cenários para o IPCA Alimentação no domicílio, usando o estudo do Banco Central sobre clima e inflação de alimentos como referência.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Autor</div>
+    <div class="quarto-title-meta-contents">
+             <p>Caio Sousa e Fabio Rocha </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Data de Publicação</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">9 de junho de 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>O risco climático voltou para o centro da discussão sobre inflação de alimentos em 2026. A pergunta relevante não é apenas se haverá El Niño, mas qual magnitude de pressão adicional esse fenômeno pode trazer para a inflação de <strong>Alimentação no domicílio</strong>.</p>
+<p>O recorte importa. O grupo amplo <strong>Alimentação e bebidas</strong> mistura alimentos consumidos em casa e alimentação fora do domicílio. Esta segunda parte tem uma dinâmica mais próxima de serviços: custo de mão de obra, aluguel, margem, demanda local e custo de menu pesam mais do que choques diretos de safra. Por isso, o exercício olha para <strong>IPCA Alimentação no domicílio</strong>, onde os canais de clima, oferta agrícola, preços ao produtor, câmbio e commodities aparecem com mais clareza.</p>
+<section id="a-referência-o-estudo-do-banco-central" class="level2">
+<h2 class="anchored" data-anchor-id="a-referência-o-estudo-do-banco-central">A referência: o estudo do Banco Central</h2>
+<p>A base quantitativa vem do Estudo Especial nº 57/2019 do Banco Central, <a href="https://www.bcb.gov.br/conteudo/relatorioinflacao/EstudosEspeciais/EE057_Impactos_do_clima_na_inflacao_de_alimentos.pdf">“Impactos do clima na inflação de alimentos”</a>. O estudo estimou um modelo VAR trimestral para medir como El Niño e precipitação afetavam a inflação de Alimentação no domicílio.</p>
+<p>Há três janelas diferentes no trabalho do BCB, e elas precisam ser separadas.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Janela</th>
+<th>Papel no estudo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2001T3 a 2019T1</td>
+<td>Amostra usada para estimar o modelo VAR.</td>
+</tr>
+<tr class="even">
+<td>2019T1</td>
+<td>Episódio que motivou o estudo: Alimentação no domicílio subiu 4,34%, e cerca de 1,50 p.p. foi atribuído à precipitação atípica.</td>
+</tr>
+<tr class="odd">
+<td>2015T3 a 2016T2</td>
+<td>Episódio de El Niño forte. O BCB estimou contribuição de cerca de <strong>11,34 p.p.</strong> para Alimentação no domicílio.</td>
+</tr>
+</tbody>
+</table>
+<p>O número de <strong>11,34 p.p.</strong> é, portanto, uma âncora de um episódio forte. Ele não deve ser lido como previsão automática para 2026.</p>
+</section>
+<section id="o-que-a-probabilidade-da-noaacpc-significa" class="level2">
+<h2 class="anchored" data-anchor-id="o-que-a-probabilidade-da-noaacpc-significa">O que a probabilidade da NOAA/CPC significa</h2>
+<p>A NOAA/CPC divulga probabilidades de regime climático: El Niño, neutralidade ou La Niña. Essa probabilidade informa a chance de um trimestre móvel ser classificado como El Niño. Ela <strong>não</strong> informa diretamente a intensidade física do fenômeno.</p>
+<p>Em termos simples: uma probabilidade de 82% não significa que o El Niño terá 82% da força de um evento forte. Significa que há 82% de chance de aquele trimestre estar em regime El Niño.</p>
+<p>Por isso, o exercício separa três coisas:</p>
+<ol type="1">
+<li>a âncora histórica do BCB;</li>
+<li>a exposição probabilística ao regime El Niño em 2026;</li>
+<li>a intensidade de repasse em cada cenário.</li>
+</ol>
+</section>
+<section id="como-o-prêmio-foi-calculado" class="level2">
+<h2 class="anchored" data-anchor-id="como-o-prêmio-foi-calculado">Como o prêmio foi calculado</h2>
+<p>O exercício não reestima o VAR do BCB. A proposta é mais simples e transparente: pegar a âncora histórica do episódio forte e recalibrá-la para 2026.</p>
+<p>A fórmula geral é:</p>
+<p><span class="math display">\[
+P_{\lambda} =
+11{,}34
+\times
+\frac{6{,}62}{12}
+\times
+1{,}0845
+\times
+\lambda
+\]</span></p>
+<p>Onde:</p>
+<ul>
+<li><strong>11,34 p.p.</strong> é a contribuição estimada pelo BCB no episódio forte de 2015-2016;</li>
+<li><strong>6,62</strong> é a soma das probabilidades NOAA/CPC de El Niño associadas aos meses de junho a dezembro de 2026;</li>
+<li><strong>12</strong> anualiza a exposição, porque a âncora histórica se refere a uma janela de aproximadamente doze meses;</li>
+<li><strong>1,0845</strong> é o fator de chuva e temperatura observado em janeiro-maio de 2026, comparado com a média dos mesmos meses de 2019 a 2025;</li>
+<li><strong>λ</strong> é a intensidade de repasse em relação ao episódio forte.</li>
+</ul>
+<p>O fator climático de 1,0845 não é uma inflação adicional. Ele é um multiplicador de severidade local: no início de 2026, chuva e temperatura apareceram 8,45% mais pressionadas do que a média recente, na métrica construída com dados NASA POWER/agrobr.</p>
+</section>
+<section id="resultados" class="level2">
+<h2 class="anchored" data-anchor-id="resultados">Resultados</h2>
+<p>O resultado deve ser lido como <strong>prêmio climático adicional</strong>, não como previsão fechada do IPCA.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 27%">
+<col style="width: 36%">
+<col style="width: 36%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Cenário</th>
+<th style="text-align: right;">Intensidade relativa</th>
+<th style="text-align: right;">Prêmio estimado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Baixo</td>
+<td style="text-align: right;">15% do episódio forte</td>
+<td style="text-align: right;"><strong>1,02 p.p.</strong></td>
+</tr>
+<tr class="even">
+<td>Moderado</td>
+<td style="text-align: right;">30% do episódio forte</td>
+<td style="text-align: right;"><strong>2,04 p.p.</strong></td>
+</tr>
+<tr class="odd">
+<td>Alto</td>
+<td style="text-align: right;">50% do episódio forte</td>
+<td style="text-align: right;"><strong>3,39 p.p.</strong></td>
+</tr>
+<tr class="even">
+<td>Equivalente cheio</td>
+<td style="text-align: right;">100% do episódio forte reescalado</td>
+<td style="text-align: right;"><strong>6,78 p.p.</strong></td>
+</tr>
+</tbody>
+</table>
+<p>O cenário baixo representa um El Niño com transmissão limitada para oferta e preços. O moderado admite pressão em itens sensíveis, sem repetir a força de 2015-2016. O alto é um stress plausível em que clima afeta FLV, leite, feijão, trigo e parte das proteínas.</p>
+<p>O equivalente cheio é apenas uma referência mecânica: aplica integralmente a âncora do BCB ao período probabilístico de 2026. Não é cenário central.</p>
+</section>
+<section id="comparação-com-focus" class="level2">
+<h2 class="anchored" data-anchor-id="comparação-com-focus">Comparação com Focus</h2>
+<p>O Focus foi usado apenas como comparação de mercado. A mediana anual para IPCA Alimentação no domicílio em 2026 passou de 4,44% em 30 de janeiro para 6,35% em 5 de junho.</p>
+<p>Essa revisão não deve ser atribuída integralmente ao El Niño. Ela resume também dados já realizados, câmbio, commodities, safra, dispersão entre analistas e outros choques. Ainda assim, a comparação ajuda a dimensionar a ordem de grandeza: o cenário moderado de prêmio climático, de 2,04 p.p., é próximo da revisão da mediana Focus entre janeiro e junho.</p>
+</section>
+<section id="quais-alimentos-merecem-mais-atenção" class="level2">
+<h2 class="anchored" data-anchor-id="quais-alimentos-merecem-mais-atenção">Quais alimentos merecem mais atenção?</h2>
+<p>O risco não é homogêneo entre alimentos. Ele tende a aparecer primeiro em itens com baixa capacidade de estoque, alta perecibilidade e forte dependência de janela de colheita.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Grupo</th>
+<th>Canal principal</th>
+<th>Risco</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Tomate, batata, cebola e cenoura</td>
+<td>Chuva, calor, perdas e logística em FLV</td>
+<td>Alto</td>
+</tr>
+<tr class="even">
+<td>Leite e derivados</td>
+<td>Pastagem, calor, qualidade do leite e ração</td>
+<td>Alto</td>
+</tr>
+<tr class="odd">
+<td>Feijão, com arroz monitorado</td>
+<td>Safra, regime de chuvas e sensibilidade social</td>
+<td>Médio-alto</td>
+</tr>
+<tr class="even">
+<td>Trigo, massas e panificados</td>
+<td>Clima no Sul, importação, câmbio e farinha</td>
+<td>Médio-alto</td>
+</tr>
+<tr class="odd">
+<td>Ovos, frango e aves</td>
+<td>Milho/soja para ração e estresse térmico</td>
+<td>Médio</td>
+</tr>
+</tbody>
+</table>
+<p>No IPCA observado de janeiro a abril de 2026, alguns desses itens já vinham pressionados: tomate, cenoura, batata, cebola, leite longa vida e feijão carioca. Nos sinais recentes do CEPEA, porém, a pressão não era generalizada: boi gordo e trigo subiram, enquanto milho, arroz, açúcar, frango e suíno recuaram na janela analisada.</p>
+<p>Isso sugere que o risco de 2026 deve ser acompanhado por grupos específicos, e não como um choque uniforme sobre todos os alimentos.</p>
+<p>Trabalho completo pode ser acessado em https://drive.google.com/file/d/1hXLQMfVBm3yJsA0jxvL0f6s7ebMCSkHH/view?usp=sharing</p>
+</section>
+<section id="limitações" class="level2">
+<h2 class="anchored" data-anchor-id="limitações">Limitações</h2>
+<p>Este é um exercício de cenários, não uma previsão fechada de inflação. O VAR do Banco Central não foi reestimado. As probabilidades da NOAA/CPC medem chance de regime El Niño, não intensidade local de chuva ou temperatura. O fator climático usa o observado de janeiro a maio de 2026, mas não projeta mês a mês chuva e temperatura até dezembro.</p>
+<p>Também não entram no cálculo estoques privados, importações, margens de varejo, frete, política comercial, choques sanitários ou substituição de consumo. Por isso, os resultados devem ser lidos como uma régua de magnitude: quanto o El Niño poderia adicionar à inflação de Alimentação no domicílio sob diferentes intensidades de repasse.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Nota
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Fontes:</strong> Banco Central do Brasil, Estudo Especial nº 57/2019; NOAA/CPC, probabilidades ENSO de maio de 2026; Sistema Expectativas de Mercado do BCB; IBGE/SIDRA; NASA POWER; agrobr; CEPEA/ESALQ; CONAB/PROHORT-CEASA.</p>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiada");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiada");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("www\.nucleomapa\.org");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

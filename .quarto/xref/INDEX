@@ -1,37 +1,35 @@
 {
-  "index.qmd": {
-    "index.html": "a1b37bd3"
-  },
-  "artigos.qmd": {
-    "artigos.html": "85588bc9"
-  },
-  "sobre.qmd": {
-    "sobre.html": "ab052988"
-  },
   "artigos/2026-02-distribuicao-renda/index.qmd": {
-    "index.html": "f39c9b05"
+    "index.html": "adb87901"
   },
   "artigos/2026-04-ocupacao-jovens/index.qmd": {
-    "index.html": "c439ed3a"
-  },
-  "pesquisadores.qmd": {
-    "pesquisadores.html": "edbfe085"
+    "index.html": "fbd7875d"
   },
   "artigos/2026-04-saeb-matematica-em/index.qmd": {
-    "index.html": "a8b7f4a7"
+    "index.html": "df3c2e47"
   },
   "artigos/2026-04-saeb-matematica-em/LEIA-ME.md": {
-    "LEIA-ME.html": "6b8f5d5a"
+    "LEIA-ME.html": "171c6a1d"
   },
   "artigos/2026-05-bolsa-familia-perfil/index.qmd": {
-    "index.html": "6deb4be2"
+    "index.html": "8593902c"
   },
-<<<<<<< HEAD
-  "artigos/2026-06-creches-desnutricao/index.qmd": {
-    "index.html": "06d3d118"
-=======
   "artigos/2026-06-cenarios-el-nino-alimentos/index.qmd": {
-    "index.html": "d6205c30"
->>>>>>> f42589040dca76c388fd2eb6197b53423615b3c7
+    "index.html": "ca1adc53"
+  },
+  "artigos/2026-06-creches-desnutricao/index.qmd": {
+    "index.html": "0bd6860d"
+  },
+  "artigos.qmd": {
+    "artigos.html": "1408691e"
+  },
+  "index.qmd": {
+    "index.html": "3f19f78d"
+  },
+  "pesquisadores.qmd": {
+    "pesquisadores.html": "c203a8de"
+  },
+  "sobre.qmd": {
+    "sobre.html": "7cded051"
   }
 }
