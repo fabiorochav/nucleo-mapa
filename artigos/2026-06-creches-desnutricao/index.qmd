@@ -1,6 +1,6 @@
 ---
 title: "Abertura de novas creches municipais reduz a desnutrição infantil?"
-description: "Ausência de evidência não é evidência de ausência. Testamos se a abertura de creches municipais em São Paulo reduz a magreza infantil — e o que aprendemos quando não encontramos efeito."
+description: "Ausência de evidência não é evidência de ausência. Testamos se a abertura de creches municipais em São Paulo reduz a magreza infantil, e o que aprendemos quando não encontramos efeito."
 date: "2026-06-28"
 image: cover.png
 categories: [Educação Infantil, Saúde, Inferência Causal, SISVAN, Dados Públicos]
@@ -299,7 +299,7 @@ ggplot(df_es, aes(x = e, y = att, color = periodo, fill = periodo)) +
 ggsave("cover.png", width = 9, height = 5, dpi = 150, bg = "white")
 ```
 
-Os pontos cinzas (à esquerda da linha pontilhada) são os coeficientes pré-abertura: todos próximos de zero e dentro dos intervalos de confiança. Isso valida empiricamente o pressuposto de tendências paralelas — tratados e controles se comportavam de forma semelhante *antes* da creche chegar.
+Os pontos cinzas (à esquerda da linha pontilhada) são os coeficientes pré-abertura: todos próximos de zero e dentro dos intervalos de confiança. Isso valida empiricamente o pressuposto de tendências paralelas: tratados e controles se comportavam de forma semelhante *antes* da creche chegar.
 
 No pós-abertura (pontos azuis), o padrão que emerge é inconclusivo: leve alta em t = 0 e t = 1, queda em t = 2, depois oscilação. Nenhum coeficiente alcança significância estatística. O efeito médio agregado é de **`r att_val` p.p.** (EP = `r att_se`), `r att_sign`.
 
@@ -307,13 +307,13 @@ No pós-abertura (pontos azuis), o padrão que emerge é inconclusivo: leve alta
 
 ## Por que pode ser que não apareça?
 
-Resultado nulo não é resultado ruim — mas exige interpretação cuidadosa. Há pelo menos quatro razões pelas quais um efeito real poderia não aparecer aqui:
+Resultado nulo não é resultado ruim, mas exige interpretação cuidadosa. Há pelo menos quatro razões pelas quais um efeito real poderia não aparecer aqui:
 
-**Poder estatístico limitado.** Com ~187 municípios nunca tratados como controles, a amostra tem dificuldade de detectar efeitos pequenos. E o efeito da merenda escolar sobre indicadores *agregados* de um município inteiro — diluídos entre crianças matriculadas e não matriculadas — provavelmente é pequeno.
+**Poder estatístico limitado.** Com ~187 municípios nunca tratados como controles, a amostra tem dificuldade de detectar efeitos pequenos. E o efeito da merenda escolar sobre indicadores *agregados* de um município inteiro, diluído entre crianças matriculadas e não matriculadas, provavelmente é pequeno.
 
 **Viés de triagem no curto prazo.** Municípios que abrem creches tendem a expandir a cobertura de atenção básica simultaneamente. Isso aumenta a *detecção* de casos de magreza nos primeiros anos, empurrando o coeficiente para cima em t = 0 e t = 1 antes de qualquer efeito real aparecer.
 
-**Defasagem temporal.** O benefício nutricional da merenda se acumula ao longo do tempo. Crianças precisam de meses ou anos de frequência sistemática para que o efeito apareça em dados de monitoramento. A queda em t = 2 é consistente com esse mecanismo — mas não é robusta o suficiente para afirmarmos isso.
+**Defasagem temporal.** O benefício nutricional da merenda se acumula ao longo do tempo. Crianças precisam de meses ou anos de frequência sistemática para que o efeito apareça em dados de monitoramento. A queda em t = 2 é consistente com esse mecanismo, mas não é robusta o suficiente para afirmarmos isso.
 
 **Qualidade do dado de desfecho.** O SISVAN captura as crianças que foram ao posto de saúde — não todas as crianças. Em municípios menores ou com cobertura de atenção básica mais fraca, o monitoramento é menos completo e mais ruidoso.
 
