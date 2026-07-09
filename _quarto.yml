@@ -18,13 +18,17 @@ website:
       - href: pesquisadores.qmd
         text: Pesquisadores
     right:
+      - icon: linkedin
+        href: "https://www.linkedin.com/company/nucleo-mapa"
+        text: LinkedIn
+        aria-label: "Núcleo MAPA no LinkedIn"
       - href: "mailto:nucleomapa@nucleomapa.org"
         text: Contato
   page-footer:
     background: "#111827"
     left: "© 2026 Núcleo MAPA"
     center: "[Sobre](sobre.qmd) · [Artigos](artigos.qmd) · [Pesquisadores](pesquisadores.qmd)"
-    right: "[nucleomapa@nucleomapa.org](mailto:nucleomapa@nucleomapa.org)"
+    right: "[LinkedIn](https://www.linkedin.com/company/nucleo-mapa) · [nucleomapa@nucleomapa.org](mailto:nucleomapa@nucleomapa.org)"
 
 format:
   html:

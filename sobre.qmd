@@ -88,6 +88,9 @@ Para acessar os perfis dos pesquisadores do Núcleo MAPA.
 <div class="cta-panel">
   <h2>Vamos conversar sobre seu projeto?</h2>
   <p>O Núcleo MAPA está aberto a parcerias acadêmicas, institucionais e projetos colaborativos voltados à produção de diagnósticos, avaliação de políticas públicas e comunicação de evidências.</p>
-  <a href="mailto:nucleomapa@nucleomapa.org" class="btn-mapa">nucleomapa@nucleomapa.org</a>
+  <div class="hero-actions" style="justify-content: center;">
+    <a href="mailto:nucleomapa@nucleomapa.org" class="btn-mapa">nucleomapa@nucleomapa.org</a>
+    <a href="https://www.linkedin.com/company/nucleo-mapa" class="btn-mapa btn-mapa-ghost">Siga no LinkedIn →</a>
+  </div>
 </div>
 ```

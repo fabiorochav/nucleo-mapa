@@ -64,6 +64,7 @@ img { max-width: 100%; border-radius: var(--mapa-radius-sm); }
 }
 .navbar .nav-link[href^="mailto:"]::after { display: none; }
 .navbar .nav-link[href^="mailto:"]:hover { background: var(--mapa-gold-light); }
+.navbar .nav-link i.bi-linkedin { margin-right: 0.35rem; font-size: 0.95rem; vertical-align: -1px; }
 
 #quarto-content { width: min(calc(100% - (2 * var(--mapa-shell-gutter))), var(--mapa-shell-max)); margin-inline: auto; }
 .quarto-container .content, main.content, .page-columns, .column-page, .column-page-left { max-width: none; }
