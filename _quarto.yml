@@ -17,6 +17,14 @@ website:
         text: Artigos
       - href: pesquisadores.qmd
         text: Pesquisadores
+    right:
+      - href: "mailto:nucleomapa@nucleomapa.org"
+        text: Contato
+  page-footer:
+    background: "#111827"
+    left: "© 2026 Núcleo MAPA"
+    center: "[Sobre](sobre.qmd) · [Artigos](artigos.qmd) · [Pesquisadores](pesquisadores.qmd)"
+    right: "[nucleomapa@nucleomapa.org](mailto:nucleomapa@nucleomapa.org)"
 
 format:
   html:
