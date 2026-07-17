@@ -17,8 +17,6 @@ website:
         text: Artigos
       - href: pesquisadores.qmd
         text: Pesquisadores
-      - href: parceiros.qmd
-        text: Parceiros
       - href: midias.qmd
         text: Mídias
     right:
@@ -31,7 +29,7 @@ website:
   page-footer:
     background: "#111827"
     left: "© 2026 Núcleo MAPA"
-    center: "[Sobre](sobre.qmd) · [Artigos](artigos.qmd) · [Pesquisadores](pesquisadores.qmd) · [Parceiros](parceiros.qmd) · [Mídias](midias.qmd)"
+    center: "[Sobre](sobre.qmd) · [Artigos](artigos.qmd) · [Pesquisadores](pesquisadores.qmd) · [Mídias](midias.qmd)"
     right: "[LinkedIn](https://www.linkedin.com/company/nucleo-mapa) · [nucleomapa@nucleomapa.org](mailto:nucleomapa@nucleomapa.org)"
 
 format:
