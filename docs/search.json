@@ -42,11 +42,158 @@
     "text": "Colaborações\n\n  Vamos conversar sobre seu projeto?\n  O Núcleo MAPA está aberto a parcerias acadêmicas, institucionais e projetos colaborativos voltados à produção de diagnósticos, avaliação de políticas públicas e comunicação de evidências.\n  \n    nucleomapa@nucleomapa.org\n    Siga no LinkedIn →"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Núcleo MAPA",
+    "objectID": "parceiros.html",
+    "href": "parceiros.html",
+    "title": "Parceiros",
     "section": "",
-    "text": "Redirecionando\n  Esta página direciona para a seção Sobre.\n  Se o redirecionamento não acontecer automaticamente, use o botão abaixo.\n  Ir para Sobre →"
+    "text": "O Núcleo MAPA colabora com instituições que compartilham o compromisso com rigor metodológico e impacto social."
+  },
+  {
+    "objectID": "parceiros.html#parceiros",
+    "href": "parceiros.html#parceiros",
+    "title": "Parceiros",
+    "section": "Parceiros",
+    "text": "Parceiros\n\n  \n    \n      \n    \n    Instituto Social Espaço Negro (GEN)\n    Visitar site →"
+  },
+  {
+    "objectID": "artigos.html",
+    "href": "artigos.html",
+    "title": "Artigos",
+    "section": "",
+    "text": "Toda análise publicada aqui segue três compromissos.\n  Uso exclusivo de dados públicos e reproduzíveis, aplicação de métodos apropriados à pergunta e comunicação que separa com clareza o que os dados mostram do que ainda é hipótese.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAbertura de novas creches municipais reduz a desnutrição infantil?\n\n\n\nEducação Infantil\n\nSaúde\n\nInferência Causal\n\nSISVAN\n\nDados Públicos\n\n\n\nAusência de evidência não é evidência de ausência. Testamos se a abertura de creches municipais em São Paulo reduz a magreza infantil, e o que aprendemos quando não…\n\n\n\n28 de jun. de 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuanto o El Niño pode pressionar os alimentos em 2026?\n\n\n\ninflação\n\nalimentos\n\nclima\n\nEl Niño\n\nIPCA\n\n\n\nUm exercício de cenários para o IPCA Alimentação no domicílio, usando o estudo do Banco Central sobre clima e inflação de alimentos como referência.\n\n\n\n9 de jun. de 2026\n\n\n\n\n\n\n\n\n\n\n\nMais velho, mais sozinho, mais escolarizado: o novo beneficiário do Bolsa Família\n\n\n\nPNAD\n\nBolsa Família\n\nProteção Social\n\nPobreza\n\n\n\nUma década separa dois perfis distintos de beneficiários. Os dados da PNAD Contínua de 2015 e 2025 mostram que o programa alcança hoje um público diferente.\n\n\n\n31 de mai. de 2026\n\n\n\n\n\n\n\n\n\n\n\nDesempenho no Saeb 2023: um retrato do ensino médio público\n\n\n\nSaeb\n\nEducação\n\nEnsino Médio\n\n\n\nEm todos os estados, a maior parte dos estudantes do ensino médio da rede pública encerra a educação básica com desempenho Abaixo do Básico em Matemática. Em Língua…\n\n\n\n21 de abr. de 2026\n\n\n\n\n\n\n\n\n\n\n\nJovens, CLT e conta própria: uma década de mudança no mercado de trabalho\n\n\n\nPNAD\n\nMercado de Trabalho\n\nJuventude\n\n\n\nNos últimos dez anos, o emprego formal no setor privado perdeu participação entre os jovens ocupados. Mas o que isso significa de fato?\n\n\n\n12 de abr. de 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nTodo mundo ganhou mais - mas não do mesmo jeito\n\n\n\nrenda\n\nPNAD\n\ndistribuição\n\nmercado de trabalho\n\n\n\nDistribuição de renda no Brasil entre 2023 e 2025 com microdados da PNAD Contínua.\n\n\n\n22 de mar. de 2026\n\n\n\n\n\n\nSem itens correspondentes"
+  },
+  {
+    "objectID": "artigos/2026-06-cenarios-el-nino-alimentos/index.html",
+    "href": "artigos/2026-06-cenarios-el-nino-alimentos/index.html",
+    "title": "Quanto o El Niño pode pressionar os alimentos em 2026?",
+    "section": "",
+    "text": "O risco climático voltou para o centro da discussão sobre inflação de alimentos em 2026. A pergunta relevante não é apenas se haverá El Niño, mas qual magnitude de pressão adicional esse fenômeno pode trazer para a inflação de Alimentação no domicílio.\nO recorte importa. O grupo amplo Alimentação e bebidas mistura alimentos consumidos em casa e alimentação fora do domicílio. Esta segunda parte tem uma dinâmica mais próxima de serviços: custo de mão de obra, aluguel, margem, demanda local e custo de menu pesam mais do que choques diretos de safra. Por isso, o exercício olha para IPCA Alimentação no domicílio, onde os canais de clima, oferta agrícola, preços ao produtor, câmbio e commodities aparecem com mais clareza."
+  },
+  {
+    "objectID": "artigos/2026-06-cenarios-el-nino-alimentos/index.html#a-referência-o-estudo-do-banco-central",
+    "href": "artigos/2026-06-cenarios-el-nino-alimentos/index.html#a-referência-o-estudo-do-banco-central",
+    "title": "Quanto o El Niño pode pressionar os alimentos em 2026?",
+    "section": "A referência: o estudo do Banco Central",
+    "text": "A referência: o estudo do Banco Central\nA base quantitativa vem do Estudo Especial nº 57/2019 do Banco Central, “Impactos do clima na inflação de alimentos”. O estudo estimou um modelo VAR trimestral para medir como El Niño e precipitação afetavam a inflação de Alimentação no domicílio.\nHá três janelas diferentes no trabalho do BCB, e elas precisam ser separadas.\n\n\n\n\n\n\n\nJanela\nPapel no estudo\n\n\n\n\n2001T3 a 2019T1\nAmostra usada para estimar o modelo VAR.\n\n\n2019T1\nEpisódio que motivou o estudo: Alimentação no domicílio subiu 4,34%, e cerca de 1,50 p.p. foi atribuído à precipitação atípica.\n\n\n2015T3 a 2016T2\nEpisódio de El Niño forte. O BCB estimou contribuição de cerca de 11,34 p.p. para Alimentação no domicílio.\n\n\n\nO número de 11,34 p.p. é, portanto, uma âncora de um episódio forte. Ele não deve ser lido como previsão automática para 2026."
+  },
+  {
+    "objectID": "artigos/2026-06-cenarios-el-nino-alimentos/index.html#o-que-a-probabilidade-da-noaacpc-significa",
+    "href": "artigos/2026-06-cenarios-el-nino-alimentos/index.html#o-que-a-probabilidade-da-noaacpc-significa",
+    "title": "Quanto o El Niño pode pressionar os alimentos em 2026?",
+    "section": "O que a probabilidade da NOAA/CPC significa",
+    "text": "O que a probabilidade da NOAA/CPC significa\nA NOAA/CPC divulga probabilidades de regime climático: El Niño, neutralidade ou La Niña. Essa probabilidade informa a chance de um trimestre móvel ser classificado como El Niño. Ela não informa diretamente a intensidade física do fenômeno.\nEm termos simples: uma probabilidade de 82% não significa que o El Niño terá 82% da força de um evento forte. Significa que há 82% de chance de aquele trimestre estar em regime El Niño.\nPor isso, o exercício separa três coisas:\n\na âncora histórica do BCB;\na exposição probabilística ao regime El Niño em 2026;\na intensidade de repasse em cada cenário."
+  },
+  {
+    "objectID": "artigos/2026-06-cenarios-el-nino-alimentos/index.html#como-o-prêmio-foi-calculado",
+    "href": "artigos/2026-06-cenarios-el-nino-alimentos/index.html#como-o-prêmio-foi-calculado",
+    "title": "Quanto o El Niño pode pressionar os alimentos em 2026?",
+    "section": "Como o prêmio foi calculado",
+    "text": "Como o prêmio foi calculado\nO exercício não reestima o VAR do BCB. A proposta é mais simples e transparente: pegar a âncora histórica do episódio forte e recalibrá-la para 2026.\nA fórmula geral é:\n\\[\nP_{\\lambda} =\n11{,}34\n\\times\n\\frac{6{,}62}{12}\n\\times\n1{,}0845\n\\times\n\\lambda\n\\]\nOnde:\n\n11,34 p.p. é a contribuição estimada pelo BCB no episódio forte de 2015-2016;\n6,62 é a soma das probabilidades NOAA/CPC de El Niño associadas aos meses de junho a dezembro de 2026;\n12 anualiza a exposição, porque a âncora histórica se refere a uma janela de aproximadamente doze meses;\n1,0845 é o fator de chuva e temperatura observado em janeiro-maio de 2026, comparado com a média dos mesmos meses de 2019 a 2025;\nλ é a intensidade de repasse em relação ao episódio forte.\n\nO fator climático de 1,0845 não é uma inflação adicional. Ele é um multiplicador de severidade local: no início de 2026, chuva e temperatura apareceram 8,45% mais pressionadas do que a média recente, na métrica construída com dados NASA POWER/agrobr."
+  },
+  {
+    "objectID": "artigos/2026-06-cenarios-el-nino-alimentos/index.html#resultados",
+    "href": "artigos/2026-06-cenarios-el-nino-alimentos/index.html#resultados",
+    "title": "Quanto o El Niño pode pressionar os alimentos em 2026?",
+    "section": "Resultados",
+    "text": "Resultados\nO resultado deve ser lido como prêmio climático adicional, não como previsão fechada do IPCA.\n\n\n\n\n\n\n\n\nCenário\nIntensidade relativa\nPrêmio estimado\n\n\n\n\nBaixo\n15% do episódio forte\n1,02 p.p.\n\n\nModerado\n30% do episódio forte\n2,04 p.p.\n\n\nAlto\n50% do episódio forte\n3,39 p.p.\n\n\nEquivalente cheio\n100% do episódio forte reescalado\n6,78 p.p.\n\n\n\nO cenário baixo representa um El Niño com transmissão limitada para oferta e preços. O moderado admite pressão em itens sensíveis, sem repetir a força de 2015-2016. O alto é um stress plausível em que clima afeta FLV, leite, feijão, trigo e parte das proteínas.\nO equivalente cheio é apenas uma referência mecânica: aplica integralmente a âncora do BCB ao período probabilístico de 2026. Não é cenário central."
+  },
+  {
+    "objectID": "artigos/2026-06-cenarios-el-nino-alimentos/index.html#comparação-com-focus",
+    "href": "artigos/2026-06-cenarios-el-nino-alimentos/index.html#comparação-com-focus",
+    "title": "Quanto o El Niño pode pressionar os alimentos em 2026?",
+    "section": "Comparação com Focus",
+    "text": "Comparação com Focus\nO Focus foi usado apenas como comparação de mercado. A mediana anual para IPCA Alimentação no domicílio em 2026 passou de 4,44% em 30 de janeiro para 6,35% em 5 de junho.\nEssa revisão não deve ser atribuída integralmente ao El Niño. Ela resume também dados já realizados, câmbio, commodities, safra, dispersão entre analistas e outros choques. Ainda assim, a comparação ajuda a dimensionar a ordem de grandeza: o cenário moderado de prêmio climático, de 2,04 p.p., é próximo da revisão da mediana Focus entre janeiro e junho."
+  },
+  {
+    "objectID": "artigos/2026-06-cenarios-el-nino-alimentos/index.html#quais-alimentos-merecem-mais-atenção",
+    "href": "artigos/2026-06-cenarios-el-nino-alimentos/index.html#quais-alimentos-merecem-mais-atenção",
+    "title": "Quanto o El Niño pode pressionar os alimentos em 2026?",
+    "section": "Quais alimentos merecem mais atenção?",
+    "text": "Quais alimentos merecem mais atenção?\nO risco não é homogêneo entre alimentos. Ele tende a aparecer primeiro em itens com baixa capacidade de estoque, alta perecibilidade e forte dependência de janela de colheita.\n\n\n\n\n\n\n\n\nGrupo\nCanal principal\nRisco\n\n\n\n\nTomate, batata, cebola e cenoura\nChuva, calor, perdas e logística em FLV\nAlto\n\n\nLeite e derivados\nPastagem, calor, qualidade do leite e ração\nAlto\n\n\nFeijão, com arroz monitorado\nSafra, regime de chuvas e sensibilidade social\nMédio-alto\n\n\nTrigo, massas e panificados\nClima no Sul, importação, câmbio e farinha\nMédio-alto\n\n\nOvos, frango e aves\nMilho/soja para ração e estresse térmico\nMédio\n\n\n\nNo IPCA observado de janeiro a abril de 2026, alguns desses itens já vinham pressionados: tomate, cenoura, batata, cebola, leite longa vida e feijão carioca. Nos sinais recentes do CEPEA, porém, a pressão não era generalizada: boi gordo e trigo subiram, enquanto milho, arroz, açúcar, frango e suíno recuaram na janela analisada.\nIsso sugere que o risco de 2026 deve ser acompanhado por grupos específicos, e não como um choque uniforme sobre todos os alimentos.\nTrabalho completo pode ser acessado em https://drive.google.com/file/d/1hXLQMfVBm3yJsA0jxvL0f6s7ebMCSkHH/view?usp=sharing"
+  },
+  {
+    "objectID": "artigos/2026-06-cenarios-el-nino-alimentos/index.html#limitações",
+    "href": "artigos/2026-06-cenarios-el-nino-alimentos/index.html#limitações",
+    "title": "Quanto o El Niño pode pressionar os alimentos em 2026?",
+    "section": "Limitações",
+    "text": "Limitações\nEste é um exercício de cenários, não uma previsão fechada de inflação. O VAR do Banco Central não foi reestimado. As probabilidades da NOAA/CPC medem chance de regime El Niño, não intensidade local de chuva ou temperatura. O fator climático usa o observado de janeiro a maio de 2026, mas não projeta mês a mês chuva e temperatura até dezembro.\nTambém não entram no cálculo estoques privados, importações, margens de varejo, frete, política comercial, choques sanitários ou substituição de consumo. Por isso, os resultados devem ser lidos como uma régua de magnitude: quanto o El Niño poderia adicionar à inflação de Alimentação no domicílio sob diferentes intensidades de repasse.\n\n\n\n\n\n\nNota\n\n\n\nFontes: Banco Central do Brasil, Estudo Especial nº 57/2019; NOAA/CPC, probabilidades ENSO de maio de 2026; Sistema Expectativas de Mercado do BCB; IBGE/SIDRA; NASA POWER; agrobr; CEPEA/ESALQ; CONAB/PROHORT-CEASA."
+  },
+  {
+    "objectID": "artigos/2026-04-ocupacao-jovens/index.html",
+    "href": "artigos/2026-04-ocupacao-jovens/index.html",
+    "title": "Jovens, CLT e conta própria: uma década de mudança no mercado de trabalho",
+    "section": "",
+    "text": "Nos últimos dez anos, a forma de inserção dos jovens no mercado de trabalho brasileiro passou por mudanças relevantes. Dados da PNAD Contínua indicam que, entre o 1º trimestre de 2015 e o 4º trimestre de 2025, houve redução na participação do emprego formal no setor privado entre os jovens ocupados, ao mesmo tempo em que cresceram o trabalho sem carteira e o trabalho por conta própria."
+  },
+  {
+    "objectID": "artigos/2026-04-ocupacao-jovens/index.html#os-três-vínculos-mais-representativos",
+    "href": "artigos/2026-04-ocupacao-jovens/index.html#os-três-vínculos-mais-representativos",
+    "title": "Jovens, CLT e conta própria: uma década de mudança no mercado de trabalho",
+    "section": "Os três vínculos mais representativos",
+    "text": "Os três vínculos mais representativos\nO gráfico abaixo compara, nos dois períodos, a participação de três posições ocupacionais que concentram a maior parte dos jovens empregados: emprego privado com carteira assinada, emprego privado sem carteira e trabalho por conta própria.\n\n\n\n\n\n\n\n\nFigura 1: Fonte: Microdados PNAD Contínua/IBGE — Elaboração: Fábio Rocha\n\n\n\n\n\nO emprego privado com carteira assinada passou de 51,5% para 48,1%, uma queda de 3,4 pontos percentuais. Já o trabalho por conta própria subiu de 13,6% para 17,2%, e o emprego sem carteira avançou de 18,0% para 21,3%."
+  },
+  {
+    "objectID": "artigos/2026-04-ocupacao-jovens/index.html#o-panorama-completo-das-posições-ocupacionais",
+    "href": "artigos/2026-04-ocupacao-jovens/index.html#o-panorama-completo-das-posições-ocupacionais",
+    "title": "Jovens, CLT e conta própria: uma década de mudança no mercado de trabalho",
+    "section": "O panorama completo das posições ocupacionais",
+    "text": "O panorama completo das posições ocupacionais\nPara além dos três vínculos principais, o gráfico a seguir exibe todas as posições ocupacionais, ordenadas pela magnitude da variação entre os dois períodos.\n\n\n\n\n\n\n\n\nFigura 2: Fonte: Microdados PNAD Contínua/IBGE — Elaboração: Fábio Rocha"
+  },
+  {
+    "objectID": "artigos/2026-04-ocupacao-jovens/index.html#o-que-isso-significa",
+    "href": "artigos/2026-04-ocupacao-jovens/index.html#o-que-isso-significa",
+    "title": "Jovens, CLT e conta própria: uma década de mudança no mercado de trabalho",
+    "section": "O que isso significa?",
+    "text": "O que isso significa?\nEsses números não significam necessariamente que os jovens estejam “escolhendo” sair da CLT. Parte desse movimento pode refletir mudanças na estrutura do mercado de trabalho, dificuldades de acesso ao emprego formal ou a expansão de novas formas de inserção produtiva.\nUma hipótese plausível é que essa recomposição não seja homogênea entre os jovens. O avanço do trabalho por conta própria pode estar associado a jovens com maior capital educacional e familiar, que encontram nesse tipo de ocupação oportunidades ligadas à economia digital ou ao empreendedorismo. Por outro lado, o crescimento do emprego sem carteira pode refletir a permanência, quiçá ampliação, da inserção precária entre jovens em situação de maior vulnerabilidade socioeconômica.\nDesagregar esses movimentos por escolaridade, raça e renda familiar é o próximo passo para entender o que, de fato, está por trás dessa reconfiguração.\n\nDados: PNAD Contínua (IBGE), 1º trimestre de 2015 e 4º trimestre de 2025. Universo: jovens de 15 a 29 anos em situação de ocupação."
+  },
+  {
+    "objectID": "artigos/2026-02-distribuicao-renda/index.html",
+    "href": "artigos/2026-02-distribuicao-renda/index.html",
+    "title": "Todo mundo ganhou mais - mas não do mesmo jeito",
+    "section": "",
+    "text": "A renda média do trabalho cresceu no Brasil entre 2023 e 2025 — e isso é, sim, motivo de comemoração. Mas médias escondem realidades muito distintas ao longo da distribuição. Quem ganhou mais? Quem ficou para trás?\nPara responder, fomos aos microdados da PNAD Contínua e comparamos o rendimento real de todos os trabalhos entre o 1º trimestre de 2023 e o 3º trimestre de 2025. A análise foi feita por quantis da distribuição: p25, p50, p75, p90 e p99.\n\nA curva da desigualdade\nO primeiro gráfico já entrega o recado antes dos números: a distância entre os períodos cresce conforme subimos na distribuição. Nos quantis mais baixos, as duas curvas caminham juntas. No topo, elas se separam com clareza.\n\n\n\n\n\n\n\n\n\n\n\nQuem cresceu mais - em termos relativos?\nQuando abrimos a distribuição por quantis, a heterogeneidade fica evidente:\n\np25 (25% mais pobres): +4,7%\np50 (mediana): +5%\np75: +19,3%\np90 (topo intermediário): +23,1%\np99 (topo extremo): +10,5%\n\nO crescimento foi real — mas fortemente concentrado no topo intermediário da distribuição. A mediana, que representa o trabalhador típico, praticamente não se moveu.\n\n\n\n\n\n\n\n\n\n\n\nE em reais?\nEm valores monetários, a concentração fica ainda mais evidente. O trabalhador no topo da distribuição (p99) ganhou, em média, R$ 2.370 a mais por mês do que ganhava em 2023. O trabalhador na base (p25) ganhou R$ 69. A mediana, R$ 100.\n\n\n\n\n\n\n\n\n\n\n\nO retrato completo\nO gráfico abaixo reúne os níveis de rendimento nos dois períodos para cada quantil, permitindo uma leitura direta da evolução da distribuição.\n\n\n\n\n\n\n\n\n\n\n\nEm resumo\nHouve crescimento real da renda no Brasil entre 2023 e 2025 — e isso importa. Mas o padrão é heterogêneo: a base avançou pouco, a mediana praticamente estacionou, e o topo acelerou de forma expressiva.\nEsse tipo de análise distributiva é essencial para avaliar políticas de renda com mais precisão. Dizer que “a renda cresceu” sem abrir a distribuição é, no mínimo, incompleto.\n\n\n\n\n\n\n\nNota\n\n\n\nNota metodológica: os rendimentos foram deflacionados pelo índice Habitual disponível nos microdados da PNAD Contínua. A comparação utiliza o 1º trimestre de 2023 e o 4º trimestre de 2025. O código completo está disponível no repositório do Núcleo MAPA."
+  },
+  {
+    "objectID": "artigos/2026-04-saeb-matematica-em/index.html",
+    "href": "artigos/2026-04-saeb-matematica-em/index.html",
+    "title": "Desempenho no Saeb 2023: um retrato do ensino médio público",
+    "section": "",
+    "text": "Em 2023, estudantes do ensino médio da rede pública brasileira participaram mais uma vez da Prova Saeb, uma das principais avaliações nacionais de desempenho educacional. Para analisar esses resultados, utilizei a proposta metodológica do pesquisador e professor Francisco Soares, a mesma que embasa o cálculo do Índice de Desenvolvimento da Educação de São Paulo (IDESP). Essa classificação divide os estudantes em quatro níveis de proficiência: Abaixo do Básico (menos de 275 pontos), Básico (entre 275 e 350), Adequado (entre 350 e 400) e Avançado (acima de 400).\nA partir dos microdados do Saeb, elaborei as visualizações abaixo, que mostram a distribuição dos estudantes por estado, de acordo com esses níveis de desempenho.\n\nMatemática\n\n\n\n\n\n\n\n\n\nO que os dados revelam é preocupante: em todos os estados do Brasil, a maior parte dos estudantes está concentrada nos níveis mais baixos. Em muitos casos, mais da metade dos alunos não alcança sequer o nível básico de aprendizado. Em estados como Amazonas, Maranhão, Roraima e Bahia, por exemplo, mais de 70% dos estudantes terminaram o ensino médio com desempenho classificado como “Abaixo do Básico”.\n\n\nLíngua Portuguesa\n\n\n\n\n\n\n\n\n\nEm Língua Portuguesa, o padrão se repete. Maranhão, Amazonas e Roraima voltam a figurar entre os mais críticos, com mais de 60% dos alunos classificados como “Abaixo do Básico”. Chama atenção também a quase ausência de estudantes no nível Avançado - a escala SAEB de LP para o ensino médio raramente ultrapassa os 400 pontos, o que reflete os limites da proficiência alcançada.\n\n\nO que isso significa?\nEsse retrato evidencia o tamanho do desafio que enquanto sociedade enfrentamos para garantir o direito à aprendizagem. O fato de tantos jovens concluírem a educação básica sem domínio dos conteúdos fundamentais de Matemática e Língua Portuguesa compromete não só suas trajetórias acadêmicas futuras, como também sua inserção no mundo do trabalho e sua capacidade de participação cidadã. Ao mesmo tempo, a análise por estado permite enxergar desigualdades regionais marcantes, que precisam ser levadas em conta na formulação de políticas públicas eficazes e equitativas.\n\n\n\n\n\n\n\nNota\n\n\n\nNota: Pelo fato de o Inep não divulgar a dependência administrativa (em cumprimento à LGPD), não foi possível separar as redes em estaduais, federais ou municipais. Os cortes de proficiência adotados seguem a metodologia de Francisco Soares, utilizada no cálculo do IDESP."
+  },
+  {
+    "objectID": "artigos/2026-05-bolsa-familia-perfil/index.html",
+    "href": "artigos/2026-05-bolsa-familia-perfil/index.html",
+    "title": "Mais velho, mais sozinho, mais escolarizado: o novo beneficiário do Bolsa Família",
+    "section": "",
+    "text": "Entre 2015 e 2025, o número de beneficiários do Bolsa Família cresceu expressivamente. Mas não apenas o tamanho do programa mudou: o perfil de quem recebe o benefício também se transformou de forma relevante. A comparação dos microdados da PNAD Contínua revela três movimentos estruturais que merecem atenção."
+  },
+  {
+    "objectID": "artigos/2026-05-bolsa-familia-perfil/index.html#o-programa-envelheceu",
+    "href": "artigos/2026-05-bolsa-familia-perfil/index.html#o-programa-envelheceu",
+    "title": "Mais velho, mais sozinho, mais escolarizado: o novo beneficiário do Bolsa Família",
+    "section": "O programa envelheceu",
+    "text": "O programa envelheceu\nEm 2015, quase metade dos beneficiários (48,4%) tinha entre 30 e 44 anos. Em 2025, essa faixa recuou para 43,3%. No mesmo período, a faixa de 45 a 59 anos passou de 20,7% para 26,2% da composição dos beneficiários.\n\n\n\n\n\n\n\n\nFigura 1: Fonte: PNAD Contínua – 1ª visita (2015 e 2025), IBGE.\n\n\n\n\n\nEsse envelhecimento não é apenas demográfico. A taxa de cobertura do programa entre pessoas desocupadas saltou de 7,3% para 16,3% entre os dois períodos. Entre os fora da força de trabalho — adultos que não estão nem empregados nem procurando emprego — a taxa passou de 8,2% para 10,7%.\n\n\n\n\n\n\n\n\nFigura 2: Fonte: PNAD Contínua – 1ª visita (2015 e 2025), IBGE.\n\n\n\n\n\nUma hipótese consistente com os dados é que o programa passou a alcançar com mais intensidade adultos numa faixa etária que o mercado informal absorve com menos facilidade, mas que ainda não alcança o BPC-LOAS. Os dados não permitem confirmar esse mecanismo diretamente; seria necessário desagregar a cobertura por faixa etária e situação no trabalho simultaneamente. Mas o padrão observado é compatível com essa leitura, e ela tem implicações práticas: esse público exige condicionalidades e serviços complementares distintos dos que foram pensados para famílias com crianças em idade escolar."
+  },
+  {
+    "objectID": "artigos/2026-05-bolsa-familia-perfil/index.html#os-domicílios-ficaram-menores",
+    "href": "artigos/2026-05-bolsa-familia-perfil/index.html#os-domicílios-ficaram-menores",
+    "title": "Mais velho, mais sozinho, mais escolarizado: o novo beneficiário do Bolsa Família",
+    "section": "Os domicílios ficaram menores",
+    "text": "Os domicílios ficaram menores\nA imagem clássica do beneficiário do Bolsa Família — uma família numerosa — não descreve bem o programa em 2025. A proporção de beneficiários em domicílios com cinco pessoas ou mais despencou de 35,1% para 19,9%. Ao mesmo tempo, domicílios de uma pessoa saltaram de 2,0% para 8,1%, e domicílios de duas pessoas passaram de 9,8% para 19,4%.\n\n\n\n\n\n\n\n\nFigura 3: Fonte: PNAD Contínua – 1ª visita (2015 e 2025), IBGE.\n\n\n\n\n\nCombinado com a feminização persistente do programa, dado que cerca de 89% dos beneficiários são mulheres em 2025, e com o envelhecimento observado acima, esse movimento sugere um crescimento relevante de um perfil específico: mulheres adultas, sozinhas ou em domicílios pequenos, fora do mercado de trabalho formal. Verificar essa hipótese com desagregações adicionais é um passo natural e promissor."
+  },
+  {
+    "objectID": "artigos/2026-05-bolsa-familia-perfil/index.html#a-pobreza-escolarizou-se-mas-não-desapareceu",
+    "href": "artigos/2026-05-bolsa-familia-perfil/index.html#a-pobreza-escolarizou-se-mas-não-desapareceu",
+    "title": "Mais velho, mais sozinho, mais escolarizado: o novo beneficiário do Bolsa Família",
+    "section": "A pobreza escolarizou-se, mas não desapareceu",
+    "text": "A pobreza escolarizou-se, mas não desapareceu\nEssa talvez seja a mudança mais estrutural e contra-intuitiva dos últimos dez anos. Em 2015, 59,5% dos beneficiários tinham fundamental incompleto ou menos. Em 2025, essa proporção caiu para 38,9%. O ensino médio, que representava 28% da composição em 2015, passou a representar 45,9%.\n\n\n\n\n\n\n\n\nFigura 4: Fonte: PNAD Contínua – 1ª visita (2015 e 2025), IBGE.\n\n\n\n\n\nÀ primeira vista, isso poderia parecer um sinal positivo: o programa estaria alcançando pessoas com mais escolaridade porque o país ficou mais educado. Mas a taxa de cobertura por nível de instrução oferece uma leitura mais incômoda. Em 2025, pessoas com ensino médio completo têm taxa de cobertura do Bolsa Família (9,0%) superior à de pessoas com fundamental incompleto ou menos (7,0%).\n\n\n\n\n\n\n\n\nFigura 5: Fonte: PNAD Contínua – 1ª visita (2015 e 2025), IBGE.\n\n\n\n\n\nIsso não significa que o programa está mal focalizado. Significa que escolaridade, por si só, não garante saída da pobreza no Brasil atual. O diploma de ensino médio deixou de ser, para uma parcela crescente da população, um passaporte para o mercado formal de trabalho com renda suficiente.\nVale notar que o próprio programa evoluiu para acomodar parte dessa complexidade. A chamada Regra de Proteção prevista na Lei nº 14.601/2023 e atualizada em maio de 2025 permite que beneficiários que passam a ter renda acima do limite de entrada (R$ 218 per capita) continuem recebendo 50% do benefício por até 12 meses. Na prática, isso significa que um beneficiário que consegue emprego formal não perde o auxílio imediatamente: os dois rendimentos coexistem durante um período de transição. Nos dois primeiros meses de 2025, 273 mil beneficiários do Bolsa Família ingressaram no mercado formal de trabalho — um sinal de que essa porta de saída está sendo usada. O programa, portanto, já não opera na lógica binária de dentro ou fora: reconhece que a superação da pobreza é gradual e que renda de trabalho e transferência pública podem coexistir por um tempo."
+  },
+  {
+    "objectID": "artigos/2026-05-bolsa-familia-perfil/index.html#o-que-esses-três-movimentos-têm-em-comum",
+    "href": "artigos/2026-05-bolsa-familia-perfil/index.html#o-que-esses-três-movimentos-têm-em-comum",
+    "title": "Mais velho, mais sozinho, mais escolarizado: o novo beneficiário do Bolsa Família",
+    "section": "O que esses três movimentos têm em comum",
+    "text": "O que esses três movimentos têm em comum\nEnvelhecimento, fragmentação domiciliar e escolarização da pobreza apontam na mesma direção: o Bolsa Família de 2025 não é mais, principalmente, um programa para famílias jovens e numerosas com baixíssima escolaridade. O público do programa se diversificou e, em alguns aspectos, se tornou mais complexo de atender com as condicionalidades tradicionais — centradas em frequência escolar de crianças e acompanhamento pré-natal.\nCompreender quem é o beneficiário de hoje é condição necessária para avaliar se o desenho atual do programa ainda é adequado — e onde ele pode estar deixando lacunas.\n\nNotas metodológicas: Estimativas expandidas a partir dos microdados. Barras de erro nos gráficos representam intervalos de confiança de 95%. Universo: indivíduos que declararam receber o Bolsa Família / Auxílio Brasil na 1ª visita da PNAD Contínua de 2015 e 2025."
   },
   {
     "objectID": "artigos/2026-06-creches-desnutricao/index.html",
@@ -112,144 +259,11 @@
     "text": "O que fica: ausência de evidência não é evidência de ausência\nHá uma distinção importante entre não encontrar evidência de efeito e encontrar evidência de que não há efeito. Nosso resultado é o primeiro caso.\nAs limitações de poder, dados e janela temporal nos impedem de concluir que creches não funcionam para reduzir a desnutrição. O que podemos dizer é que, com os dados disponíveis, o efeito — se existe — é pequeno demais, tardio demais, ou ruidoso demais para ser detectado nessa escala de análise.\nHá também uma segunda reflexão que vale explicitar: esse exercício testa um efeito que a política nunca foi desenhada para produzir. Creches municipais existem para expandir o acesso à educação infantil. Testamos se elas, como subproduto, melhoram a nutrição. Quando políticas são avaliadas por objetivos que não eram os seus, o padrão de evidência necessário para concluir que “funcionou” é naturalmente mais alto — e o padrão para concluir que “não funcionou” deveria ser mais cauteloso.\nO que esse estudo faz, e o que consideramos valioso independentemente do resultado, é demonstrar que é possível formular uma pergunta causal clara, construir um painel a partir de dados públicos e aplicar um método moderno com rigor suficiente para que os resultados sejam interpretáveis.\nO efeito indireto das creches sobre a nutrição infantil merece investigação com amostras maiores — idealmente cobrindo outros estados do Sudeste —, janelas de tempo mais longas e desfechos complementares como crescimento e anemia. Até lá, o resultado que temos diz algo importante: a abertura de uma creche isolada não parece ser suficiente para mover indicadores nutricionais de forma detectável em dois ou três anos. Políticas de saúde infantil precisam de mais do que um equipamento novo — precisam de cobertura, continuidade e integração com a atenção básica.\n\nDados: Censo Escolar (INEP), SISVAN (Ministério da Saúde), Base dos Dados. Período: 2015–2023. Universo: municípios de SP com ao menos 30 acompanhamentos SISVAN/ano. Código disponível mediante solicitação."
   },
   {
-    "objectID": "artigos/2026-05-bolsa-familia-perfil/index.html",
-    "href": "artigos/2026-05-bolsa-familia-perfil/index.html",
-    "title": "Mais velho, mais sozinho, mais escolarizado: o novo beneficiário do Bolsa Família",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Núcleo MAPA",
     "section": "",
-    "text": "Entre 2015 e 2025, o número de beneficiários do Bolsa Família cresceu expressivamente. Mas não apenas o tamanho do programa mudou: o perfil de quem recebe o benefício também se transformou de forma relevante. A comparação dos microdados da PNAD Contínua revela três movimentos estruturais que merecem atenção."
-  },
-  {
-    "objectID": "artigos/2026-05-bolsa-familia-perfil/index.html#o-programa-envelheceu",
-    "href": "artigos/2026-05-bolsa-familia-perfil/index.html#o-programa-envelheceu",
-    "title": "Mais velho, mais sozinho, mais escolarizado: o novo beneficiário do Bolsa Família",
-    "section": "O programa envelheceu",
-    "text": "O programa envelheceu\nEm 2015, quase metade dos beneficiários (48,4%) tinha entre 30 e 44 anos. Em 2025, essa faixa recuou para 43,3%. No mesmo período, a faixa de 45 a 59 anos passou de 20,7% para 26,2% da composição dos beneficiários.\n\n\n\n\n\n\n\n\nFigura 1: Fonte: PNAD Contínua – 1ª visita (2015 e 2025), IBGE.\n\n\n\n\n\nEsse envelhecimento não é apenas demográfico. A taxa de cobertura do programa entre pessoas desocupadas saltou de 7,3% para 16,3% entre os dois períodos. Entre os fora da força de trabalho — adultos que não estão nem empregados nem procurando emprego — a taxa passou de 8,2% para 10,7%.\n\n\n\n\n\n\n\n\nFigura 2: Fonte: PNAD Contínua – 1ª visita (2015 e 2025), IBGE.\n\n\n\n\n\nUma hipótese consistente com os dados é que o programa passou a alcançar com mais intensidade adultos numa faixa etária que o mercado informal absorve com menos facilidade, mas que ainda não alcança o BPC-LOAS. Os dados não permitem confirmar esse mecanismo diretamente; seria necessário desagregar a cobertura por faixa etária e situação no trabalho simultaneamente. Mas o padrão observado é compatível com essa leitura, e ela tem implicações práticas: esse público exige condicionalidades e serviços complementares distintos dos que foram pensados para famílias com crianças em idade escolar."
-  },
-  {
-    "objectID": "artigos/2026-05-bolsa-familia-perfil/index.html#os-domicílios-ficaram-menores",
-    "href": "artigos/2026-05-bolsa-familia-perfil/index.html#os-domicílios-ficaram-menores",
-    "title": "Mais velho, mais sozinho, mais escolarizado: o novo beneficiário do Bolsa Família",
-    "section": "Os domicílios ficaram menores",
-    "text": "Os domicílios ficaram menores\nA imagem clássica do beneficiário do Bolsa Família — uma família numerosa — não descreve bem o programa em 2025. A proporção de beneficiários em domicílios com cinco pessoas ou mais despencou de 35,1% para 19,9%. Ao mesmo tempo, domicílios de uma pessoa saltaram de 2,0% para 8,1%, e domicílios de duas pessoas passaram de 9,8% para 19,4%.\n\n\n\n\n\n\n\n\nFigura 3: Fonte: PNAD Contínua – 1ª visita (2015 e 2025), IBGE.\n\n\n\n\n\nCombinado com a feminização persistente do programa, dado que cerca de 89% dos beneficiários são mulheres em 2025, e com o envelhecimento observado acima, esse movimento sugere um crescimento relevante de um perfil específico: mulheres adultas, sozinhas ou em domicílios pequenos, fora do mercado de trabalho formal. Verificar essa hipótese com desagregações adicionais é um passo natural e promissor."
-  },
-  {
-    "objectID": "artigos/2026-05-bolsa-familia-perfil/index.html#a-pobreza-escolarizou-se-mas-não-desapareceu",
-    "href": "artigos/2026-05-bolsa-familia-perfil/index.html#a-pobreza-escolarizou-se-mas-não-desapareceu",
-    "title": "Mais velho, mais sozinho, mais escolarizado: o novo beneficiário do Bolsa Família",
-    "section": "A pobreza escolarizou-se, mas não desapareceu",
-    "text": "A pobreza escolarizou-se, mas não desapareceu\nEssa talvez seja a mudança mais estrutural e contra-intuitiva dos últimos dez anos. Em 2015, 59,5% dos beneficiários tinham fundamental incompleto ou menos. Em 2025, essa proporção caiu para 38,9%. O ensino médio, que representava 28% da composição em 2015, passou a representar 45,9%.\n\n\n\n\n\n\n\n\nFigura 4: Fonte: PNAD Contínua – 1ª visita (2015 e 2025), IBGE.\n\n\n\n\n\nÀ primeira vista, isso poderia parecer um sinal positivo: o programa estaria alcançando pessoas com mais escolaridade porque o país ficou mais educado. Mas a taxa de cobertura por nível de instrução oferece uma leitura mais incômoda. Em 2025, pessoas com ensino médio completo têm taxa de cobertura do Bolsa Família (9,0%) superior à de pessoas com fundamental incompleto ou menos (7,0%).\n\n\n\n\n\n\n\n\nFigura 5: Fonte: PNAD Contínua – 1ª visita (2015 e 2025), IBGE.\n\n\n\n\n\nIsso não significa que o programa está mal focalizado. Significa que escolaridade, por si só, não garante saída da pobreza no Brasil atual. O diploma de ensino médio deixou de ser, para uma parcela crescente da população, um passaporte para o mercado formal de trabalho com renda suficiente.\nVale notar que o próprio programa evoluiu para acomodar parte dessa complexidade. A chamada Regra de Proteção prevista na Lei nº 14.601/2023 e atualizada em maio de 2025 permite que beneficiários que passam a ter renda acima do limite de entrada (R$ 218 per capita) continuem recebendo 50% do benefício por até 12 meses. Na prática, isso significa que um beneficiário que consegue emprego formal não perde o auxílio imediatamente: os dois rendimentos coexistem durante um período de transição. Nos dois primeiros meses de 2025, 273 mil beneficiários do Bolsa Família ingressaram no mercado formal de trabalho — um sinal de que essa porta de saída está sendo usada. O programa, portanto, já não opera na lógica binária de dentro ou fora: reconhece que a superação da pobreza é gradual e que renda de trabalho e transferência pública podem coexistir por um tempo."
-  },
-  {
-    "objectID": "artigos/2026-05-bolsa-familia-perfil/index.html#o-que-esses-três-movimentos-têm-em-comum",
-    "href": "artigos/2026-05-bolsa-familia-perfil/index.html#o-que-esses-três-movimentos-têm-em-comum",
-    "title": "Mais velho, mais sozinho, mais escolarizado: o novo beneficiário do Bolsa Família",
-    "section": "O que esses três movimentos têm em comum",
-    "text": "O que esses três movimentos têm em comum\nEnvelhecimento, fragmentação domiciliar e escolarização da pobreza apontam na mesma direção: o Bolsa Família de 2025 não é mais, principalmente, um programa para famílias jovens e numerosas com baixíssima escolaridade. O público do programa se diversificou e, em alguns aspectos, se tornou mais complexo de atender com as condicionalidades tradicionais — centradas em frequência escolar de crianças e acompanhamento pré-natal.\nCompreender quem é o beneficiário de hoje é condição necessária para avaliar se o desenho atual do programa ainda é adequado — e onde ele pode estar deixando lacunas.\n\nNotas metodológicas: Estimativas expandidas a partir dos microdados. Barras de erro nos gráficos representam intervalos de confiança de 95%. Universo: indivíduos que declararam receber o Bolsa Família / Auxílio Brasil na 1ª visita da PNAD Contínua de 2015 e 2025."
-  },
-  {
-    "objectID": "artigos/2026-04-saeb-matematica-em/index.html",
-    "href": "artigos/2026-04-saeb-matematica-em/index.html",
-    "title": "Desempenho no Saeb 2023: um retrato do ensino médio público",
-    "section": "",
-    "text": "Em 2023, estudantes do ensino médio da rede pública brasileira participaram mais uma vez da Prova Saeb, uma das principais avaliações nacionais de desempenho educacional. Para analisar esses resultados, utilizei a proposta metodológica do pesquisador e professor Francisco Soares, a mesma que embasa o cálculo do Índice de Desenvolvimento da Educação de São Paulo (IDESP). Essa classificação divide os estudantes em quatro níveis de proficiência: Abaixo do Básico (menos de 275 pontos), Básico (entre 275 e 350), Adequado (entre 350 e 400) e Avançado (acima de 400).\nA partir dos microdados do Saeb, elaborei as visualizações abaixo, que mostram a distribuição dos estudantes por estado, de acordo com esses níveis de desempenho.\n\nMatemática\n\n\n\n\n\n\n\n\n\nO que os dados revelam é preocupante: em todos os estados do Brasil, a maior parte dos estudantes está concentrada nos níveis mais baixos. Em muitos casos, mais da metade dos alunos não alcança sequer o nível básico de aprendizado. Em estados como Amazonas, Maranhão, Roraima e Bahia, por exemplo, mais de 70% dos estudantes terminaram o ensino médio com desempenho classificado como “Abaixo do Básico”.\n\n\nLíngua Portuguesa\n\n\n\n\n\n\n\n\n\nEm Língua Portuguesa, o padrão se repete. Maranhão, Amazonas e Roraima voltam a figurar entre os mais críticos, com mais de 60% dos alunos classificados como “Abaixo do Básico”. Chama atenção também a quase ausência de estudantes no nível Avançado - a escala SAEB de LP para o ensino médio raramente ultrapassa os 400 pontos, o que reflete os limites da proficiência alcançada.\n\n\nO que isso significa?\nEsse retrato evidencia o tamanho do desafio que enquanto sociedade enfrentamos para garantir o direito à aprendizagem. O fato de tantos jovens concluírem a educação básica sem domínio dos conteúdos fundamentais de Matemática e Língua Portuguesa compromete não só suas trajetórias acadêmicas futuras, como também sua inserção no mundo do trabalho e sua capacidade de participação cidadã. Ao mesmo tempo, a análise por estado permite enxergar desigualdades regionais marcantes, que precisam ser levadas em conta na formulação de políticas públicas eficazes e equitativas.\n\n\n\n\n\n\n\nNota\n\n\n\nNota: Pelo fato de o Inep não divulgar a dependência administrativa (em cumprimento à LGPD), não foi possível separar as redes em estaduais, federais ou municipais. Os cortes de proficiência adotados seguem a metodologia de Francisco Soares, utilizada no cálculo do IDESP."
-  },
-  {
-    "objectID": "artigos/2026-02-distribuicao-renda/index.html",
-    "href": "artigos/2026-02-distribuicao-renda/index.html",
-    "title": "Todo mundo ganhou mais - mas não do mesmo jeito",
-    "section": "",
-    "text": "A renda média do trabalho cresceu no Brasil entre 2023 e 2025 — e isso é, sim, motivo de comemoração. Mas médias escondem realidades muito distintas ao longo da distribuição. Quem ganhou mais? Quem ficou para trás?\nPara responder, fomos aos microdados da PNAD Contínua e comparamos o rendimento real de todos os trabalhos entre o 1º trimestre de 2023 e o 3º trimestre de 2025. A análise foi feita por quantis da distribuição: p25, p50, p75, p90 e p99.\n\nA curva da desigualdade\nO primeiro gráfico já entrega o recado antes dos números: a distância entre os períodos cresce conforme subimos na distribuição. Nos quantis mais baixos, as duas curvas caminham juntas. No topo, elas se separam com clareza.\n\n\n\n\n\n\n\n\n\n\n\nQuem cresceu mais - em termos relativos?\nQuando abrimos a distribuição por quantis, a heterogeneidade fica evidente:\n\np25 (25% mais pobres): +4,7%\np50 (mediana): +5%\np75: +19,3%\np90 (topo intermediário): +23,1%\np99 (topo extremo): +10,5%\n\nO crescimento foi real — mas fortemente concentrado no topo intermediário da distribuição. A mediana, que representa o trabalhador típico, praticamente não se moveu.\n\n\n\n\n\n\n\n\n\n\n\nE em reais?\nEm valores monetários, a concentração fica ainda mais evidente. O trabalhador no topo da distribuição (p99) ganhou, em média, R$ 2.370 a mais por mês do que ganhava em 2023. O trabalhador na base (p25) ganhou R$ 69. A mediana, R$ 100.\n\n\n\n\n\n\n\n\n\n\n\nO retrato completo\nO gráfico abaixo reúne os níveis de rendimento nos dois períodos para cada quantil, permitindo uma leitura direta da evolução da distribuição.\n\n\n\n\n\n\n\n\n\n\n\nEm resumo\nHouve crescimento real da renda no Brasil entre 2023 e 2025 — e isso importa. Mas o padrão é heterogêneo: a base avançou pouco, a mediana praticamente estacionou, e o topo acelerou de forma expressiva.\nEsse tipo de análise distributiva é essencial para avaliar políticas de renda com mais precisão. Dizer que “a renda cresceu” sem abrir a distribuição é, no mínimo, incompleto.\n\n\n\n\n\n\n\nNota\n\n\n\nNota metodológica: os rendimentos foram deflacionados pelo índice Habitual disponível nos microdados da PNAD Contínua. A comparação utiliza o 1º trimestre de 2023 e o 4º trimestre de 2025. O código completo está disponível no repositório do Núcleo MAPA."
-  },
-  {
-    "objectID": "artigos/2026-04-ocupacao-jovens/index.html",
-    "href": "artigos/2026-04-ocupacao-jovens/index.html",
-    "title": "Jovens, CLT e conta própria: uma década de mudança no mercado de trabalho",
-    "section": "",
-    "text": "Nos últimos dez anos, a forma de inserção dos jovens no mercado de trabalho brasileiro passou por mudanças relevantes. Dados da PNAD Contínua indicam que, entre o 1º trimestre de 2015 e o 4º trimestre de 2025, houve redução na participação do emprego formal no setor privado entre os jovens ocupados, ao mesmo tempo em que cresceram o trabalho sem carteira e o trabalho por conta própria."
-  },
-  {
-    "objectID": "artigos/2026-04-ocupacao-jovens/index.html#os-três-vínculos-mais-representativos",
-    "href": "artigos/2026-04-ocupacao-jovens/index.html#os-três-vínculos-mais-representativos",
-    "title": "Jovens, CLT e conta própria: uma década de mudança no mercado de trabalho",
-    "section": "Os três vínculos mais representativos",
-    "text": "Os três vínculos mais representativos\nO gráfico abaixo compara, nos dois períodos, a participação de três posições ocupacionais que concentram a maior parte dos jovens empregados: emprego privado com carteira assinada, emprego privado sem carteira e trabalho por conta própria.\n\n\n\n\n\n\n\n\nFigura 1: Fonte: Microdados PNAD Contínua/IBGE — Elaboração: Fábio Rocha\n\n\n\n\n\nO emprego privado com carteira assinada passou de 51,5% para 48,1%, uma queda de 3,4 pontos percentuais. Já o trabalho por conta própria subiu de 13,6% para 17,2%, e o emprego sem carteira avançou de 18,0% para 21,3%."
-  },
-  {
-    "objectID": "artigos/2026-04-ocupacao-jovens/index.html#o-panorama-completo-das-posições-ocupacionais",
-    "href": "artigos/2026-04-ocupacao-jovens/index.html#o-panorama-completo-das-posições-ocupacionais",
-    "title": "Jovens, CLT e conta própria: uma década de mudança no mercado de trabalho",
-    "section": "O panorama completo das posições ocupacionais",
-    "text": "O panorama completo das posições ocupacionais\nPara além dos três vínculos principais, o gráfico a seguir exibe todas as posições ocupacionais, ordenadas pela magnitude da variação entre os dois períodos.\n\n\n\n\n\n\n\n\nFigura 2: Fonte: Microdados PNAD Contínua/IBGE — Elaboração: Fábio Rocha"
-  },
-  {
-    "objectID": "artigos/2026-04-ocupacao-jovens/index.html#o-que-isso-significa",
-    "href": "artigos/2026-04-ocupacao-jovens/index.html#o-que-isso-significa",
-    "title": "Jovens, CLT e conta própria: uma década de mudança no mercado de trabalho",
-    "section": "O que isso significa?",
-    "text": "O que isso significa?\nEsses números não significam necessariamente que os jovens estejam “escolhendo” sair da CLT. Parte desse movimento pode refletir mudanças na estrutura do mercado de trabalho, dificuldades de acesso ao emprego formal ou a expansão de novas formas de inserção produtiva.\nUma hipótese plausível é que essa recomposição não seja homogênea entre os jovens. O avanço do trabalho por conta própria pode estar associado a jovens com maior capital educacional e familiar, que encontram nesse tipo de ocupação oportunidades ligadas à economia digital ou ao empreendedorismo. Por outro lado, o crescimento do emprego sem carteira pode refletir a permanência, quiçá ampliação, da inserção precária entre jovens em situação de maior vulnerabilidade socioeconômica.\nDesagregar esses movimentos por escolaridade, raça e renda familiar é o próximo passo para entender o que, de fato, está por trás dessa reconfiguração.\n\nDados: PNAD Contínua (IBGE), 1º trimestre de 2015 e 4º trimestre de 2025. Universo: jovens de 15 a 29 anos em situação de ocupação."
-  },
-  {
-    "objectID": "artigos/2026-06-cenarios-el-nino-alimentos/index.html",
-    "href": "artigos/2026-06-cenarios-el-nino-alimentos/index.html",
-    "title": "Quanto o El Niño pode pressionar os alimentos em 2026?",
-    "section": "",
-    "text": "O risco climático voltou para o centro da discussão sobre inflação de alimentos em 2026. A pergunta relevante não é apenas se haverá El Niño, mas qual magnitude de pressão adicional esse fenômeno pode trazer para a inflação de Alimentação no domicílio.\nO recorte importa. O grupo amplo Alimentação e bebidas mistura alimentos consumidos em casa e alimentação fora do domicílio. Esta segunda parte tem uma dinâmica mais próxima de serviços: custo de mão de obra, aluguel, margem, demanda local e custo de menu pesam mais do que choques diretos de safra. Por isso, o exercício olha para IPCA Alimentação no domicílio, onde os canais de clima, oferta agrícola, preços ao produtor, câmbio e commodities aparecem com mais clareza."
-  },
-  {
-    "objectID": "artigos/2026-06-cenarios-el-nino-alimentos/index.html#a-referência-o-estudo-do-banco-central",
-    "href": "artigos/2026-06-cenarios-el-nino-alimentos/index.html#a-referência-o-estudo-do-banco-central",
-    "title": "Quanto o El Niño pode pressionar os alimentos em 2026?",
-    "section": "A referência: o estudo do Banco Central",
-    "text": "A referência: o estudo do Banco Central\nA base quantitativa vem do Estudo Especial nº 57/2019 do Banco Central, “Impactos do clima na inflação de alimentos”. O estudo estimou um modelo VAR trimestral para medir como El Niño e precipitação afetavam a inflação de Alimentação no domicílio.\nHá três janelas diferentes no trabalho do BCB, e elas precisam ser separadas.\n\n\n\n\n\n\n\nJanela\nPapel no estudo\n\n\n\n\n2001T3 a 2019T1\nAmostra usada para estimar o modelo VAR.\n\n\n2019T1\nEpisódio que motivou o estudo: Alimentação no domicílio subiu 4,34%, e cerca de 1,50 p.p. foi atribuído à precipitação atípica.\n\n\n2015T3 a 2016T2\nEpisódio de El Niño forte. O BCB estimou contribuição de cerca de 11,34 p.p. para Alimentação no domicílio.\n\n\n\nO número de 11,34 p.p. é, portanto, uma âncora de um episódio forte. Ele não deve ser lido como previsão automática para 2026."
-  },
-  {
-    "objectID": "artigos/2026-06-cenarios-el-nino-alimentos/index.html#o-que-a-probabilidade-da-noaacpc-significa",
-    "href": "artigos/2026-06-cenarios-el-nino-alimentos/index.html#o-que-a-probabilidade-da-noaacpc-significa",
-    "title": "Quanto o El Niño pode pressionar os alimentos em 2026?",
-    "section": "O que a probabilidade da NOAA/CPC significa",
-    "text": "O que a probabilidade da NOAA/CPC significa\nA NOAA/CPC divulga probabilidades de regime climático: El Niño, neutralidade ou La Niña. Essa probabilidade informa a chance de um trimestre móvel ser classificado como El Niño. Ela não informa diretamente a intensidade física do fenômeno.\nEm termos simples: uma probabilidade de 82% não significa que o El Niño terá 82% da força de um evento forte. Significa que há 82% de chance de aquele trimestre estar em regime El Niño.\nPor isso, o exercício separa três coisas:\n\na âncora histórica do BCB;\na exposição probabilística ao regime El Niño em 2026;\na intensidade de repasse em cada cenário."
-  },
-  {
-    "objectID": "artigos/2026-06-cenarios-el-nino-alimentos/index.html#como-o-prêmio-foi-calculado",
-    "href": "artigos/2026-06-cenarios-el-nino-alimentos/index.html#como-o-prêmio-foi-calculado",
-    "title": "Quanto o El Niño pode pressionar os alimentos em 2026?",
-    "section": "Como o prêmio foi calculado",
-    "text": "Como o prêmio foi calculado\nO exercício não reestima o VAR do BCB. A proposta é mais simples e transparente: pegar a âncora histórica do episódio forte e recalibrá-la para 2026.\nA fórmula geral é:\n\\[\nP_{\\lambda} =\n11{,}34\n\\times\n\\frac{6{,}62}{12}\n\\times\n1{,}0845\n\\times\n\\lambda\n\\]\nOnde:\n\n11,34 p.p. é a contribuição estimada pelo BCB no episódio forte de 2015-2016;\n6,62 é a soma das probabilidades NOAA/CPC de El Niño associadas aos meses de junho a dezembro de 2026;\n12 anualiza a exposição, porque a âncora histórica se refere a uma janela de aproximadamente doze meses;\n1,0845 é o fator de chuva e temperatura observado em janeiro-maio de 2026, comparado com a média dos mesmos meses de 2019 a 2025;\nλ é a intensidade de repasse em relação ao episódio forte.\n\nO fator climático de 1,0845 não é uma inflação adicional. Ele é um multiplicador de severidade local: no início de 2026, chuva e temperatura apareceram 8,45% mais pressionadas do que a média recente, na métrica construída com dados NASA POWER/agrobr."
-  },
-  {
-    "objectID": "artigos/2026-06-cenarios-el-nino-alimentos/index.html#resultados",
-    "href": "artigos/2026-06-cenarios-el-nino-alimentos/index.html#resultados",
-    "title": "Quanto o El Niño pode pressionar os alimentos em 2026?",
-    "section": "Resultados",
-    "text": "Resultados\nO resultado deve ser lido como prêmio climático adicional, não como previsão fechada do IPCA.\n\n\n\n\n\n\n\n\nCenário\nIntensidade relativa\nPrêmio estimado\n\n\n\n\nBaixo\n15% do episódio forte\n1,02 p.p.\n\n\nModerado\n30% do episódio forte\n2,04 p.p.\n\n\nAlto\n50% do episódio forte\n3,39 p.p.\n\n\nEquivalente cheio\n100% do episódio forte reescalado\n6,78 p.p.\n\n\n\nO cenário baixo representa um El Niño com transmissão limitada para oferta e preços. O moderado admite pressão em itens sensíveis, sem repetir a força de 2015-2016. O alto é um stress plausível em que clima afeta FLV, leite, feijão, trigo e parte das proteínas.\nO equivalente cheio é apenas uma referência mecânica: aplica integralmente a âncora do BCB ao período probabilístico de 2026. Não é cenário central."
-  },
-  {
-    "objectID": "artigos/2026-06-cenarios-el-nino-alimentos/index.html#comparação-com-focus",
-    "href": "artigos/2026-06-cenarios-el-nino-alimentos/index.html#comparação-com-focus",
-    "title": "Quanto o El Niño pode pressionar os alimentos em 2026?",
-    "section": "Comparação com Focus",
-    "text": "Comparação com Focus\nO Focus foi usado apenas como comparação de mercado. A mediana anual para IPCA Alimentação no domicílio em 2026 passou de 4,44% em 30 de janeiro para 6,35% em 5 de junho.\nEssa revisão não deve ser atribuída integralmente ao El Niño. Ela resume também dados já realizados, câmbio, commodities, safra, dispersão entre analistas e outros choques. Ainda assim, a comparação ajuda a dimensionar a ordem de grandeza: o cenário moderado de prêmio climático, de 2,04 p.p., é próximo da revisão da mediana Focus entre janeiro e junho."
-  },
-  {
-    "objectID": "artigos/2026-06-cenarios-el-nino-alimentos/index.html#quais-alimentos-merecem-mais-atenção",
-    "href": "artigos/2026-06-cenarios-el-nino-alimentos/index.html#quais-alimentos-merecem-mais-atenção",
-    "title": "Quanto o El Niño pode pressionar os alimentos em 2026?",
-    "section": "Quais alimentos merecem mais atenção?",
-    "text": "Quais alimentos merecem mais atenção?\nO risco não é homogêneo entre alimentos. Ele tende a aparecer primeiro em itens com baixa capacidade de estoque, alta perecibilidade e forte dependência de janela de colheita.\n\n\n\n\n\n\n\n\nGrupo\nCanal principal\nRisco\n\n\n\n\nTomate, batata, cebola e cenoura\nChuva, calor, perdas e logística em FLV\nAlto\n\n\nLeite e derivados\nPastagem, calor, qualidade do leite e ração\nAlto\n\n\nFeijão, com arroz monitorado\nSafra, regime de chuvas e sensibilidade social\nMédio-alto\n\n\nTrigo, massas e panificados\nClima no Sul, importação, câmbio e farinha\nMédio-alto\n\n\nOvos, frango e aves\nMilho/soja para ração e estresse térmico\nMédio\n\n\n\nNo IPCA observado de janeiro a abril de 2026, alguns desses itens já vinham pressionados: tomate, cenoura, batata, cebola, leite longa vida e feijão carioca. Nos sinais recentes do CEPEA, porém, a pressão não era generalizada: boi gordo e trigo subiram, enquanto milho, arroz, açúcar, frango e suíno recuaram na janela analisada.\nIsso sugere que o risco de 2026 deve ser acompanhado por grupos específicos, e não como um choque uniforme sobre todos os alimentos.\nTrabalho completo pode ser acessado em https://drive.google.com/file/d/1hXLQMfVBm3yJsA0jxvL0f6s7ebMCSkHH/view?usp=sharing"
-  },
-  {
-    "objectID": "artigos/2026-06-cenarios-el-nino-alimentos/index.html#limitações",
-    "href": "artigos/2026-06-cenarios-el-nino-alimentos/index.html#limitações",
-    "title": "Quanto o El Niño pode pressionar os alimentos em 2026?",
-    "section": "Limitações",
-    "text": "Limitações\nEste é um exercício de cenários, não uma previsão fechada de inflação. O VAR do Banco Central não foi reestimado. As probabilidades da NOAA/CPC medem chance de regime El Niño, não intensidade local de chuva ou temperatura. O fator climático usa o observado de janeiro a maio de 2026, mas não projeta mês a mês chuva e temperatura até dezembro.\nTambém não entram no cálculo estoques privados, importações, margens de varejo, frete, política comercial, choques sanitários ou substituição de consumo. Por isso, os resultados devem ser lidos como uma régua de magnitude: quanto o El Niño poderia adicionar à inflação de Alimentação no domicílio sob diferentes intensidades de repasse.\n\n\n\n\n\n\nNota\n\n\n\nFontes: Banco Central do Brasil, Estudo Especial nº 57/2019; NOAA/CPC, probabilidades ENSO de maio de 2026; Sistema Expectativas de Mercado do BCB; IBGE/SIDRA; NASA POWER; agrobr; CEPEA/ESALQ; CONAB/PROHORT-CEASA."
-  },
-  {
-    "objectID": "artigos.html",
-    "href": "artigos.html",
-    "title": "Artigos",
-    "section": "",
-    "text": "Toda análise publicada aqui segue três compromissos.\n  Uso exclusivo de dados públicos e reproduzíveis, aplicação de métodos apropriados à pergunta e comunicação que separa com clareza o que os dados mostram do que ainda é hipótese.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAbertura de novas creches municipais reduz a desnutrição infantil?\n\n\n\nEducação Infantil\n\nSaúde\n\nInferência Causal\n\nSISVAN\n\nDados Públicos\n\n\n\nAusência de evidência não é evidência de ausência. Testamos se a abertura de creches municipais em São Paulo reduz a magreza infantil, e o que aprendemos quando não…\n\n\n\n28 de jun. de 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuanto o El Niño pode pressionar os alimentos em 2026?\n\n\n\ninflação\n\nalimentos\n\nclima\n\nEl Niño\n\nIPCA\n\n\n\nUm exercício de cenários para o IPCA Alimentação no domicílio, usando o estudo do Banco Central sobre clima e inflação de alimentos como referência.\n\n\n\n9 de jun. de 2026\n\n\n\n\n\n\n\n\n\n\n\nMais velho, mais sozinho, mais escolarizado: o novo beneficiário do Bolsa Família\n\n\n\nPNAD\n\nBolsa Família\n\nProteção Social\n\nPobreza\n\n\n\nUma década separa dois perfis distintos de beneficiários. Os dados da PNAD Contínua de 2015 e 2025 mostram que o programa alcança hoje um público diferente.\n\n\n\n31 de mai. de 2026\n\n\n\n\n\n\n\n\n\n\n\nDesempenho no Saeb 2023: um retrato do ensino médio público\n\n\n\nSaeb\n\nEducação\n\nEnsino Médio\n\n\n\nEm todos os estados, a maior parte dos estudantes do ensino médio da rede pública encerra a educação básica com desempenho Abaixo do Básico em Matemática. Em Língua…\n\n\n\n21 de abr. de 2026\n\n\n\n\n\n\n\n\n\n\n\nJovens, CLT e conta própria: uma década de mudança no mercado de trabalho\n\n\n\nPNAD\n\nMercado de Trabalho\n\nJuventude\n\n\n\nNos últimos dez anos, o emprego formal no setor privado perdeu participação entre os jovens ocupados. Mas o que isso significa de fato?\n\n\n\n12 de abr. de 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nTodo mundo ganhou mais - mas não do mesmo jeito\n\n\n\nrenda\n\nPNAD\n\ndistribuição\n\nmercado de trabalho\n\n\n\nDistribuição de renda no Brasil entre 2023 e 2025 com microdados da PNAD Contínua.\n\n\n\n22 de mar. de 2026\n\n\n\n\n\n\nSem itens correspondentes"
+    "text": "Redirecionando\n  Esta página direciona para a seção Sobre.\n  Se o redirecionamento não acontecer automaticamente, use o botão abaixo.\n  Ir para Sobre →"
   },
   {
     "objectID": "pesquisadores.html",
@@ -264,5 +278,19 @@
     "title": "Pesquisadores",
     "section": "Pesquisadores",
     "text": "Pesquisadores\n\n  \n    \n      \n    \n    \n      Fábio Rocha\n      Economista (UFOP), Mestre em Economia (UFABC) e filósofo (UFOP) com trajetória no setor público e em monitoramento, avaliação e produção de evidências para políticas públicas.\n      \n        Lattes\n        GitHub\n        LinkedIn\n        YouTube\n      \n    \n  \n\n  \n    \n      \n    \n    \n      Caio Sousa\n      Engenheiro de Produção (UFRJ) e Mestre em Economia (UFABC), com experiência no mercado financeiro, possui trajetória em análise de dados, macroeconomia, microeconometria e avaliação de políticas públicas.\n      \n        Lattes\n        GitHub\n        LinkedIn"
+  },
+  {
+    "objectID": "midias.html",
+    "href": "midias.html",
+    "title": "Mídias",
+    "section": "",
+    "text": "Reportagens e artigos que citam ou utilizam pesquisas produzidas por integrantes do Núcleo MAPA."
+  },
+  {
+    "objectID": "midias.html#na-mídia",
+    "href": "midias.html#na-mídia",
+    "title": "Mídias",
+    "section": "Na mídia",
+    "text": "Na mídia\n\n  \n    Folha de S.Paulo\n    O Brasil não vai acabar com a fome da Faria Lima\n    01/01/2026\n    Ler matéria completa →\n  \n\n  \n    Veja Saúde\n    Uma dieta saudável é acessível?\n    13/08/2025\n    Ler matéria completa →\n  \n\n  \n    CNN Brasil\n    Estudo diz que cesta básica ideal para uma pessoa chega a R$ 432 em abril\n    12/05/2025\n    Ler matéria completa →"
   }
 ]

@@ -1,0 +1,40 @@
+---
+title: "Mídias"
+subtitle: "Núcleo MAPA na imprensa"
+page-layout: full
+toc: false
+---
+
+```{=html}
+<div class="intro-panel">
+  <h2>Pesquisas e análises do Núcleo MAPA repercutindo na imprensa.</h2>
+  <p>Reportagens e artigos que citam ou utilizam pesquisas produzidas por integrantes do Núcleo MAPA.</p>
+</div>
+```
+
+## Na mídia
+
+```{=html}
+<div class="artigos-grid">
+  <article class="artigo-card">
+    <span class="artigo-cat">Folha de S.Paulo</span>
+    <h3><a href="https://www1.folha.uol.com.br/blogs/politicas-e-justica/2026/01/o-brasil-nao-vai-acabar-com-a-fome-da-faria-lima.shtml" target="_blank" rel="noopener">O Brasil não vai acabar com a fome da Faria Lima</a></h3>
+    <p class="artigo-desc">01/01/2026</p>
+    <a class="artigo-link" href="https://www1.folha.uol.com.br/blogs/politicas-e-justica/2026/01/o-brasil-nao-vai-acabar-com-a-fome-da-faria-lima.shtml" target="_blank" rel="noopener">Ler matéria completa →</a>
+  </article>
+
+  <article class="artigo-card">
+    <span class="artigo-cat">Veja Saúde</span>
+    <h3><a href="https://veja.abril.com.br/saude/uma-dieta-saudavel-e-acessivel/" target="_blank" rel="noopener">Uma dieta saudável é acessível?</a></h3>
+    <p class="artigo-desc">13/08/2025</p>
+    <a class="artigo-link" href="https://veja.abril.com.br/saude/uma-dieta-saudavel-e-acessivel/" target="_blank" rel="noopener">Ler matéria completa →</a>
+  </article>
+
+  <article class="artigo-card">
+    <span class="artigo-cat">CNN Brasil</span>
+    <h3><a href="https://www.cnnbrasil.com.br/economia/macroeconomia/estudo-diz-que-cesta-basica-ideal-para-uma-pessoa-chega-a-r-432-em-abril/" target="_blank" rel="noopener">Estudo diz que cesta básica ideal para uma pessoa chega a R$ 432 em abril</a></h3>
+    <p class="artigo-desc">12/05/2025</p>
+    <a class="artigo-link" href="https://www.cnnbrasil.com.br/economia/macroeconomia/estudo-diz-que-cesta-basica-ideal-para-uma-pessoa-chega-a-r-432-em-abril/" target="_blank" rel="noopener">Ler matéria completa →</a>
+  </article>
+</div>
+```

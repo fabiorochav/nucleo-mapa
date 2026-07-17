@@ -1,0 +1,27 @@
+---
+title: "Parceiros"
+subtitle: "Organizações que colaboram com o Núcleo MAPA"
+page-layout: full
+toc: false
+---
+
+```{=html}
+<div class="intro-panel">
+  <h2>Construímos evidência em parceria com organizações comprometidas com políticas públicas.</h2>
+  <p>O Núcleo MAPA colabora com instituições que compartilham o compromisso com rigor metodológico e impacto social.</p>
+</div>
+```
+
+## Parceiros
+
+```{=html}
+<div class="partners-grid">
+  <article class="partner-card">
+    <div class="partner-logo">
+      <img src="assests/partners/gen.svg" alt="Instituto Social Espaço Negro (GEN)">
+    </div>
+    <h3 class="partner-name">Instituto Social Espaço Negro (GEN)</h3>
+    <a href="https://grupoespaconegro.org.br/" class="btn-mapa btn-mapa-ghost" target="_blank" rel="noopener">Visitar site →</a>
+  </article>
+</div>
+```

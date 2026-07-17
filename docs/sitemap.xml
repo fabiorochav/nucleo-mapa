@@ -5,27 +5,11 @@
     <lastmod>2026-07-09T23:26:29.414Z</lastmod>
   </url>
   <url>
-    <loc>www.nucleomapa.org/index.html</loc>
-    <lastmod>2026-05-31T19:05:40.788Z</lastmod>
+    <loc>www.nucleomapa.org/parceiros.html</loc>
+    <lastmod>2026-07-13T14:49:05.322Z</lastmod>
   </url>
   <url>
-    <loc>www.nucleomapa.org/artigos/2026-06-creches-desnutricao/index.html</loc>
-    <lastmod>2026-06-28T16:08:55.231Z</lastmod>
-  </url>
-  <url>
-    <loc>www.nucleomapa.org/artigos/2026-05-bolsa-familia-perfil/index.html</loc>
-    <lastmod>2026-05-31T21:20:07.946Z</lastmod>
-  </url>
-  <url>
-    <loc>www.nucleomapa.org/artigos/2026-04-saeb-matematica-em/index.html</loc>
-    <lastmod>2026-05-31T19:05:40.572Z</lastmod>
-  </url>
-  <url>
-    <loc>www.nucleomapa.org/artigos/2026-02-distribuicao-renda/index.html</loc>
-    <lastmod>2026-05-31T19:05:40.572Z</lastmod>
-  </url>
-  <url>
-    <loc>www.nucleomapa.org/artigos/2026-04-ocupacao-jovens/index.html</loc>
+    <loc>www.nucleomapa.org/artigos.html</loc>
     <lastmod>2026-05-31T19:05:40.572Z</lastmod>
   </url>
   <url>
@@ -33,11 +17,35 @@
     <lastmod>2026-06-27T18:08:57.576Z</lastmod>
   </url>
   <url>
-    <loc>www.nucleomapa.org/artigos.html</loc>
+    <loc>www.nucleomapa.org/artigos/2026-04-ocupacao-jovens/index.html</loc>
     <lastmod>2026-05-31T19:05:40.572Z</lastmod>
+  </url>
+  <url>
+    <loc>www.nucleomapa.org/artigos/2026-02-distribuicao-renda/index.html</loc>
+    <lastmod>2026-05-31T19:05:40.572Z</lastmod>
+  </url>
+  <url>
+    <loc>www.nucleomapa.org/artigos/2026-04-saeb-matematica-em/index.html</loc>
+    <lastmod>2026-05-31T19:05:40.572Z</lastmod>
+  </url>
+  <url>
+    <loc>www.nucleomapa.org/artigos/2026-05-bolsa-familia-perfil/index.html</loc>
+    <lastmod>2026-05-31T21:20:07.946Z</lastmod>
+  </url>
+  <url>
+    <loc>www.nucleomapa.org/artigos/2026-06-creches-desnutricao/index.html</loc>
+    <lastmod>2026-06-28T16:08:55.231Z</lastmod>
+  </url>
+  <url>
+    <loc>www.nucleomapa.org/index.html</loc>
+    <lastmod>2026-05-31T19:05:40.788Z</lastmod>
   </url>
   <url>
     <loc>www.nucleomapa.org/pesquisadores.html</loc>
     <lastmod>2026-05-31T21:21:26.942Z</lastmod>
+  </url>
+  <url>
+    <loc>www.nucleomapa.org/midias.html</loc>
+    <lastmod>2026-07-17T13:54:29.628Z</lastmod>
   </url>
 </urlset>
