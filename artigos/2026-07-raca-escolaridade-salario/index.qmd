@@ -1,0 +1,267 @@
+---
+title: "O diploma abre a porta, mas não fecha o hiato racial"
+date: 2026-07-25
+description: "Escolaridade eleva o salário de todo mundo, mas a diferença entre trabalhadores PPI e não-PPI cresce, em vez de diminuir, conforme sobe o nível de instrução. Microdados da RAIS 2025."
+categories: [RAIS, Raça, Escolaridade, Mercado de Trabalho, Desigualdade]
+author: Fábio Rocha e Caio Sousa
+format: html
+lang: pt-BR
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+Em [publicação recente](https://www.linkedin.com/feed/update/urn:li:activity:7470444862090235904/), mostramos que o retorno educacional no mercado formal brasileiro se concentra na metade superior da distribuição: até o ensino superior completo, as curvas salariais por escolaridade andam próximas. Só no topo elas se separam com clareza. Depois, [olhamos se o regime de contratação (CLT ou estatutário) alterava esse padrão, e alterava bastante](https://www.linkedin.com/feed/update/urn:li:ugcPost:7474150235276017664/).
+
+Uma vez que os microdados da Rais são bastante ricos, resolvemos expandir mais a analise e perguntar: esse retorno educacional é igual para todo mundo, independente da cor? 
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+library(tidyverse)
+library(showtext)
+library(ggrepel)
+
+font_add_google("Ubuntu", "ubuntu")
+showtext_auto()
+
+percentis_raca     <- readRDS("data/percentis_raca.rds")
+labels_raca        <- readRDS("data/labels_raca.rds")
+percentis_ppi      <- readRDS("data/percentis_ppi.rds")
+labels_ppi         <- readRDS("data/labels_ppi.rds")
+percentis_educ_ppi <- readRDS("data/percentis_educ_ppi.rds")
+medianas_educ_ppi  <- readRDS("data/medianas_educ_ppi.rds")
+
+cores_raca <- c(
+  "Branca"   = "#4A90D9",
+  "Preta"    = "#2C3E50",
+  "Parda"    = "#E86B3A",
+  "Amarela"  = "#F1C40F",
+  "Indígena" = "#27AE60"
+)
+
+cores_ppi <- c("Não-PPI" = "#4A90D9", "PPI" = "#E86B3A")
+```
+
+### A diferença já aparece antes de olhar escolaridade
+
+O primeiro corte é só por raça/cor, sem controlar por nada, isto é, comparando apenas individuos de cor diferente independente da escolaridade e outras características. Branca e Amarela têm medianas próximas e mais altas (R$ 3.027 e R$ 3.111); Preta, Parda e Indígena têm medianas próximas entre si e mais baixas (R$ 2.426, R$ 2.355 e R$ 2.423). A diferença aparece desde a base da distribuição e se abre ainda mais no topo.
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| fig-width: 9
+#| fig-height: 6
+
+ggplot(percentis_raca, aes(x = percentil, y = salario, color = raca_cor)) +
+  geom_vline(xintercept = 50, linetype = "dashed", color = "gray60", linewidth = 0.5) +
+  annotate(
+    "text", x = 51, y = max(percentis_raca$salario) * 0.92,
+    label = "50% (mediana)", hjust = 0.9, color = "gray50", family = "ubuntu"
+  ) +
+  geom_line(linewidth = 1., alpha = 0.95) +
+  geom_text_repel(
+    data = labels_raca, aes(label = label),
+    hjust = -0.15, size = 7, lineheight = .5, family = "ubuntu",
+    direction = "y", segment.color = "gray70", segment.size = 0.5,
+    box.padding = .5, min.segment.length = 2
+  ) +
+  scale_color_manual(values = cores_raca, guide = "none") +
+  scale_y_continuous(
+    labels = scales::label_dollar(prefix = "R$ ", big.mark = ".", decimal.mark = ",")
+  ) +
+  scale_x_continuous(breaks = seq(0, 100, 25), expand = expansion(mult = c(0.01, 0.32))) +
+  labs(
+    title    = "Distribuição salarial por raça/cor",
+    subtitle = "Percentil da remuneração média — vínculos ativos, RAIS 2025",
+    x = "Percentil", y = NULL,
+    caption = "RAIS 2025 via Base dos Dados — elaboração: Fábio Rocha"
+  ) +
+  theme_minimal(base_family = "ubuntu", base_size = 24) +
+  theme(
+    plot.title = element_text(face = "bold", margin = margin(t = 40, b = 5)),
+    plot.subtitle = element_text(color = "gray40", margin = margin(b = 12, t=5)),
+    plot.caption = element_text(color = "gray60"),
+    panel.grid.minor = element_blank(),
+    panel.grid.major.x = element_blank(),
+    panel.grid.major.y = element_line(color = "gray92", linewidth = 0.4),
+    axis.text = element_text(color = "gray40")
+  )
+```
+
+### PPI e não-PPI
+
+Para tornar a leitura mais direta, agregamos as cinco categorias em dois grupos: **PPI** (Pretos, Pardos e Indígenas, categoria usada em políticas de ação afirmativa) e **Não-PPI** (Brancos e Amarelos). Na mediana, um trabalhador não-PPI ganha R$ 3.028 contra R$ 2.366 de um trabalhador PPI, uma diferença de 28%. Dito de outro modo: o trabalhador PPI típico ganha cerca de 78 centavos para cada real do trabalhador não-PPI típico.
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| fig-width: 9
+#| fig-height: 5
+
+ggplot(percentis_ppi, aes(x = percentil, y = salario, color = ppi)) +
+  geom_vline(xintercept = 50, linetype = "dashed", color = "gray60", linewidth = 0.5) +
+  annotate(
+    "text", x = 51, y = max(percentis_ppi$salario)*0.5,
+    label = "50% (mediana)", hjust = 0, color = "gray50", family = "ubuntu"
+  ) +
+  geom_line(linewidth = 1., alpha = 0.95) +
+  geom_text(
+    data = labels_ppi, aes(label = label),
+    hjust = -0.05, size = 7, vjust=1, lineheight = 0.9, family = "ubuntu"
+  ) +
+  scale_color_manual(values = cores_ppi, guide = "none") +
+  scale_y_continuous(
+    labels = scales::label_dollar(prefix = "R$ ", big.mark = ".", decimal.mark = ",")
+  ) +
+  scale_x_continuous(breaks = seq(0, 100, 25), expand = expansion(mult = c(0.01, 0.30))) +
+  labs(
+    title    = "Distribuição salarial: PPI vs. Não-PPI",
+    subtitle = "Percentil da remuneração média — vínculos ativos, RAIS 2025",
+    x = "Percentil", y = NULL,
+    caption = "RAIS 2025 via Base dos Dados — elaboração: Fábio Rocha"
+  ) +
+  theme_minimal(base_family = "ubuntu", base_size = 24) +
+  theme(
+    plot.title = element_text(face = "bold"),
+    plot.subtitle = element_text(color = "gray40", margin = margin(b = 12)),
+    plot.caption = element_text(color = "gray60"),
+    panel.grid.minor = element_blank(),
+    panel.grid.major.x = element_blank(),
+    panel.grid.major.y = element_line(color = "gray92", linewidth = 0.4),
+    axis.text = element_text(color = "gray40")
+  )
+```
+
+### O hiato não desaparece com o diploma: ele aumenta
+
+Aqui está o ponto central deste texto. Cruzando raça com escolaridade, o hiato entre PPI e não-PPI não encolhe conforme sobe o nível de instrução: ele cresce, tanto em reais quanto, na maior parte dos níveis, em termos percentuais:
+
+| Escolaridade | Não-PPI | PPI | Diferença | Diferença (%) |
+|---|---:|---:|---:|---:|
+| Fundamental completo | R$ 2.481 | R$ 2.200 | R$ 281 | 13% |
+| Médio completo | R$ 2.458 | R$ 2.160 | R$ 298 | 14% |
+| Superior completo | R$ 5.602 | R$ 4.332 | R$ 1.270 | 29% |
+| Mestrado | R$ 9.567 | R$ 8.150 | R$ 1.417 | 17% |
+| Doutorado | R$ 15.422 | R$ 11.745 | R$ 3.677 | 31% |
+
+: Mediana salarial por escolaridade, PPI vs. Não-PPI {#tbl-mediana-ppi}
+
+Em reais, a diferença salta de R$ 281 entre quem tem apenas o fundamental completo para R$ 3.677 entre doutores, treze vezes maior. Em termos percentuais, o hiato mais que dobra entre a educação básica (13-14%) e o topo da escolaridade (29-31%), com o salto mais expressivo ocorrendo exatamente na passagem para o ensino superior completo.
+
+A tabela de medianas já mostra o padrão geral, mas esconde a dispersão dentro de cada grupo. A tabela abaixo detalha a mesma comparação em três pontos da distribuição, dentro de cada nível de escolaridade: o primeiro quartil (P25), a mediana (P50) e o terceiro quartil (P75).
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+library(gt)
+
+quartis_tab <- percentis_educ_ppi |>
+  filter(percentil %in% c(25, 50, 75)) |>
+  select(escolaridade, ppi, percentil, salario) |>
+  pivot_wider(names_from = ppi, values_from = salario) |>
+  mutate(
+    diferenca     = `Não-PPI` - PPI,
+    diferenca_pct = diferenca / PPI
+  ) |>
+  arrange(escolaridade, percentil) |>
+  transmute(
+    Escolaridade    = escolaridade,
+    Quartil         = recode(as.character(percentil),
+                              "25" = "P25", "50" = "P50 (mediana)", "75" = "P75"),
+    `Não-PPI`       = scales::dollar(`Não-PPI`, prefix = "R$ ", big.mark = ".", decimal.mark = ","),
+    PPI             = scales::dollar(PPI, prefix = "R$ ", big.mark = ".", decimal.mark = ","),
+    Diferença       = scales::dollar(diferenca, prefix = "R$ ", big.mark = ".", decimal.mark = ","),
+    `Diferença (%)` = diferenca_pct
+  )
+
+quartis_tab |>
+  gt() |>
+  fmt_percent(columns = `Diferença (%)`, decimals = 0) |>
+  data_color(
+    columns = `Diferença (%)`,
+    colors = scales::col_numeric(
+      palette = c("#27AE60", "#F1C40F", "#E74C3C"),
+      domain  = range(quartis_tab$`Diferença (%)`)
+    )
+  ) |>
+  cols_align(align = "right", columns = c(`Não-PPI`, PPI, Diferença, `Diferença (%)`)) |>
+  tab_source_note(source_note = "RAIS 2025 via Base dos Dados — elaboração: Fábio Rocha") |>
+  tab_options(
+    table.font.names        = "inherit",
+    table.font.size         = px(15),
+    source_notes.font.size  = px(12),
+    column_labels.font.weight = "bold",
+    data_row.padding        = px(6)
+  )
+```
+
+Um padrão chama atenção: em quase todos os níveis de escolaridade, o hiato racial cresce conforme subimos na distribuição salarial dentro do próprio grupo, do P25 ao P75. No doutorado, porém, o movimento se inverte: o hiato cai de 40% no P25 para 24% no P75. Isso não significa que a desigualdade desapareça no topo, 24% ainda é um hiato maior que o observado no P25 de quase todos os outros níveis de escolaridade. O que muda é a direção do movimento dentro do próprio grupo de doutores, e esse comportamento não se repete em nenhum outro nível de instrução.
+
+O gráfico abaixo volta a olhar a distribuição completa, painel por painel, e ajuda a visualizar esse comportamento particular do doutorado ao lado dos demais níveis.
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| fig-width: 9
+#| fig-height: 7
+
+ggplot(percentis_educ_ppi, aes(x = percentil, y = salario, color = ppi)) +
+  geom_vline(xintercept = 50, linetype = "dashed", color = "gray75", linewidth = 0.4) +
+  geom_line(linewidth = 1., alpha = 0.9) +
+  geom_text(
+    data = medianas_educ_ppi,
+    aes(x = 50, y = mediana, label = label, color = ppi, vjust = vjust_val),
+    hjust = 0.20, size = 5.5, family = "ubuntu", fontface = "bold",
+    inherit.aes = FALSE, show.legend = FALSE
+  ) +
+  facet_wrap(~escolaridade, ncol = 3, scales = "free_y") +
+  scale_color_manual(values = cores_ppi, name = NULL) +
+  scale_y_continuous(
+    labels = scales::label_dollar(prefix = "R$ ", big.mark = ".", decimal.mark = ",")
+  ) +
+  scale_x_continuous(breaks = c(0, 25, 50, 75, 100)) +
+  labs(
+    title    = "Distribuição salarial por escolaridade: PPI vs. Não-PPI",
+    subtitle = "Percentil da remuneração média — vínculos ativos, RAIS 2025. \nValores no centro correspondem à mediana.",
+    x = "Percentil", y = NULL,
+    caption = "RAIS 2025 via Base dos Dados — elaboração: Fábio Rocha"
+  ) +
+  theme_minimal(base_family = "ubuntu", base_size = 24) +
+  theme(
+    plot.title = element_text(face = "bold"),
+    plot.subtitle = element_text(color = "gray40", margin = margin(b = 12)),
+    plot.caption = element_text(color = "gray60"),
+    strip.text = element_text(face = "bold", color = "gray30"),
+    panel.grid.minor = element_blank(),
+    panel.grid.major.x = element_blank(),
+    panel.grid.major.y = element_line(color = "gray92", linewidth = 0.4),
+    axis.text = element_text(color = "gray40"),
+    legend.position = "inside",
+    legend.position.inside = c(0.83, 0.25),
+    legend.background = element_blank(),
+    legend.key = element_blank()
+  )
+```
+
+### Em resumo
+
+Em geral já é conhecido que a educação melhora os ganhos futuros dos indivíduos. O que os microdados da RAIS 2025 - talvez nenhum pouco inédito - acrescentam agora é que ela não fecha a distância entre trabalhadores PPI e não-PPI no mercado formal; pelo contrário, na maior parte da trajetória educacional, essa distância aumenta. Um diploma de ensino superior ou uma pós-graduação melhora a posição de qualquer trabalhador, mas melhora mais a de um trabalhador não-PPI do que a de um trabalhador PPI com o mesmo nível de instrução.
+
+Isso importa para o debate sobre política educacional e mercado de trabalho: tratar a educação como equalizador racial automático é, no mínimo, incompleto. O hiato que sobra depois de controlar por escolaridade é hiato que não se explica por credencial. É preciso olhar para dentro da ocupação, do setor, da trajetória de carreira, para normas sociais e cultura institucional das empresas para entender de onde ele vem.
+
+---
+
+::: {.callout-note}
+**Nota metodológica:** dados da RAIS 2025 via Base dos Dados, vínculos ativos em 31/12 com remuneração média positiva. A variável `raca_cor` foi decodificada a partir do dicionário oficial da própria Base dos Dados. PPI agrega as categorias Preta, Parda e Indígena; Não-PPI agrega Branca e Amarela, seguindo a classificação usada em políticas de ação afirmativa. Este texto dá sequência à linha de trabalho sobre raça e mercado de trabalho já explorada em outras análises do Núcleo MAPA. 
+:::
+
+---
