@@ -2,7 +2,7 @@
 title: "Artigos"
 subtitle: "Microeconometria Aplicada a Políticas e Avaliação"
 listing:
-  contents: artigos
+  contents: artigos/**/index.qmd
   sort: "date desc"
   type: grid
   categories: true
