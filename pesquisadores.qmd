@@ -38,7 +38,7 @@ toc: false
     </div>
     <div class="researcher-body">
       <h3 class="researcher-name">Caio Sousa</h3>
-      <p class="researcher-bio">Engenheiro de Produção (UFRJ) e Mestre em Economia (UFABC), com experiência no mercado financeiro, possui trajetória em análise de dados, macroeconomia, microeconometria e avaliação de políticas públicas.</p>
+      <p class="researcher-bio">Engenheiro de Produção (UFRJ) e Mestre em Economia (UFABC), com experiência no mercado financeiro, possui trajetória em análise de dados, macroeconomia, microeconometria e avaliação de políticas públicas. Atualmente atua como consultor temporário do Banco Interamericano de Desenvolvimento (BID).</p>
       <div class="researcher-links">
         <a href="http://lattes.cnpq.br/6328582749499772">Lattes</a>
         <a href="https://github.com/caiosousareis">GitHub</a>
