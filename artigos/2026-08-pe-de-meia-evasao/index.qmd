@@ -1,0 +1,460 @@
+---
+title: "A frequência no ensino médio deu um salto em 2025: quanto disso é Pé-de-Meia?"
+date: 2026-08-29
+description: "A frequência líquida no ensino médio saltou em 2025 e o motivo financeiro da evasão despencou. Seis recortes da PNAD Contínua mostram o que mudou de trajetória depois do Pé-de-Meia."
+categories: [PNAD, Educação, Ensino Médio, Pé-de-Meia, Juventude, Avaliação de Políticas]
+author: Fábio Rocha e Caio Sousa
+image: cover.png
+format: html
+lang: pt-BR
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r}
+#| label: setup
+#| include: false
+
+library(tidyverse)
+library(showtext)
+library(scales)
+library(ggrepel)
+
+font_add_google("Ubuntu", "Ubuntu")
+showtext_auto()
+
+ano_pe_de_meia <- 2024
+
+# ── Paleta e tema Núcleo MAPA (mesma identidade dos slides do Projeto
+#    Somamos e da série Pé-de-Meia) ────────────────────────────────────────
+COR_DARKGREEN <- "#1B5E3B"; COR_MIDGREEN <- "#2E7D52"
+COR_GOLD      <- "#C8A415"; COR_GOLDLT   <- "#F0C842"
+COR_AMBER     <- "#E07B1A"; COR_PURPLE   <- "#4A2D8A"
+COR_RED       <- "#A32020"
+COR_DARKGRAY  <- "#374151"; COR_MIDGRAY  <- "#9CA3AF"; COR_LIGHTGRAY <- "#E8EEE8"
+COR_EVENTO    <- COR_AMBER
+
+paleta_motivo <- c(
+  "Precisa trabalhar" = COR_GOLD,
+  "Não tem escola na localidade, vaga, o curso de interesse ou o turno desejado" = COR_MIDGRAY,
+  "Falta de dinheiro para pagar as despesas (mensalidade, transporte, material escolar etc)" = COR_AMBER,
+  "Por ter que cuidar dos afazeres domésticos ou de criança, adolescente, idoso ou pessoa com necessidades especiais" = COR_PURPLE,
+  "Problemas de saúde permanente" = COR_RED,
+  "Não tem interesse" = COR_MIDGREEN,
+  "Outro motivo" = COR_DARKGRAY
+)
+paleta_regiao <- c(
+  "Brasil" = COR_DARKGREEN, "Nordeste" = COR_AMBER, "Sul" = COR_GOLD,
+  "Sudeste" = COR_PURPLE, "Centro-Oeste" = COR_MIDGREEN, "Norte" = COR_RED
+)
+paleta_renda <- c(
+  "Até 1/4 SM (elegível)"   = COR_RED,
+  "1/4 a 1/2 SM (elegível)" = COR_GOLDLT,
+  "1/2 a 1 SM"              = COR_PURPLE,
+  "1 a 2 SM"                = COR_MIDGREEN,
+  "Acima de 2 SM"          = COR_MIDGRAY
+)
+paleta_faixa <- c("15-17" = COR_GOLD, "18-24" = COR_AMBER, "25-29" = COR_PURPLE)
+
+tema_mapa <- function(base_size = 22) {
+  theme_minimal(base_size = base_size, base_family = "Ubuntu") +
+    theme(
+      plot.title       = element_text(face = "bold", color = COR_DARKGREEN, size = rel(1.05)),
+      plot.subtitle    = element_text(color = COR_DARKGRAY, size = rel(0.7), margin = margin(b = 10)),
+      plot.caption     = element_text(color = COR_MIDGRAY, size = rel(0.6), hjust = 0),
+      axis.title       = element_text(color = COR_DARKGRAY),
+      axis.text        = element_text(color = COR_DARKGRAY),
+      panel.grid.major = element_line(color = COR_LIGHTGRAY, linewidth = 0.3),
+      panel.grid.minor = element_blank(),
+      legend.title     = element_text(face = "bold", color = COR_DARKGRAY, size = rel(0.62)),
+      legend.text      = element_text(color = COR_DARKGRAY, size = rel(0.58))
+    )
+}
+
+# ── Bases já tratadas (geradas por preparar_dados.R) ───────────────────────
+arquivos <- c(
+  "data/freq_liquida_7141.csv",
+  "data/motivo_nao_freq_7220.csv",
+  "data/composicao_renda_15_17.csv",
+  "data/mediana_renda_motivo_15_17.csv",
+  "data/variacao_renda_15_17.csv",
+  "data/estimativa_faixa_etaria_2024_2025.csv"
+)
+faltando <- arquivos[!file.exists(arquivos)]
+if (length(faltando) > 0) {
+  stop("Arquivos não encontrados: ", paste(faltando, collapse = ", "),
+       "\nRode preparar_dados.R primeiro (a partir da pasta do artigo).")
+}
+
+freq_liquida   <- read_csv("data/freq_liquida_7141.csv", show_col_types = FALSE)
+motivo_7220    <- read_csv("data/motivo_nao_freq_7220.csv", show_col_types = FALSE)
+composicao     <- read_csv("data/composicao_renda_15_17.csv", show_col_types = FALSE)
+mediana_renda  <- read_csv("data/mediana_renda_motivo_15_17.csv", show_col_types = FALSE)
+variacao_renda <- read_csv("data/variacao_renda_15_17.csv", show_col_types = FALSE)
+est_faixa      <- read_csv("data/estimativa_faixa_etaria_2024_2025.csv", show_col_types = FALSE)
+
+niveis_regiao <- c("Brasil", "Nordeste", "Sul", "Sudeste", "Centro-Oeste", "Norte")
+niveis_renda  <- names(paleta_renda)
+anos_7220     <- sort(unique(motivo_7220$ano))
+
+fmt_pct <- function(x, acc = 1) percent(x, accuracy = acc, decimal.mark = ",")
+fmt_mil <- function(x) label_number(big.mark = ".", decimal.mark = ",")(x)
+
+# ── Números citados no texto ─────────────────────────────────────────────
+comp_w <- composicao |>
+  select(ano, faixa_renda_detalhada, participacao_pct) |>
+  pivot_wider(names_from = faixa_renda_detalhada, values_from = participacao_pct)
+
+elegivel_2019 <- comp_w$`Até 1/4 SM (elegível)`[comp_w$ano == 2019] +
+                 comp_w$`1/4 a 1/2 SM (elegível)`[comp_w$ano == 2019]
+elegivel_2025 <- comp_w$`Até 1/4 SM (elegível)`[comp_w$ano == 2025] +
+                 comp_w$`1/4 a 1/2 SM (elegível)`[comp_w$ano == 2025]
+comp_eleg2_2425 <- comp_w$`1/4 a 1/2 SM (elegível)`[comp_w$ano == 2024] -
+                   comp_w$`1/4 a 1/2 SM (elegível)`[comp_w$ano == 2025]
+
+pt_brasil <- motivo_7220 |>
+  filter(localidade == "Brasil", motivo == "Precisa trabalhar") |>
+  select(ano, valor) |> deframe()
+
+dinheiro_brasil <- motivo_7220 |>
+  filter(localidade == "Brasil",
+         motivo == "Falta de dinheiro para pagar as despesas (mensalidade, transporte, material escolar etc)") |>
+  select(ano, valor) |> deframe()
+
+liq_brasil <- freq_liquida |>
+  filter(localidade == "Brasil") |> select(ano, taxa) |> deframe()
+
+med_pt_2019 <- mediana_renda$mediana_renda_pc[mediana_renda$grupo_motivo == "Precisa trabalhar" & mediana_renda$ano == 2019]
+med_pt_2025 <- mediana_renda$mediana_renda_pc[mediana_renda$grupo_motivo == "Precisa trabalhar" & mediana_renda$ano == 2025]
+
+var_eleg_24_25 <- variacao_renda |>
+  filter(faixa_renda == "Até 1/2 SM (elegível)", periodo == "2025-2024")
+
+# Variação 2024->2025 de "Precisa trabalhar" por Grande Região (Tabela 7220)
+pt_reg_var <- motivo_7220 |>
+  filter(motivo == "Precisa trabalhar", localidade != "Brasil", ano %in% c(2024, 2025)) |>
+  select(localidade, ano, valor) |>
+  pivot_wider(names_from = ano, values_from = valor) |>
+  mutate(dif = `2025` - `2024`, dif_pct = dif / `2024`) |>
+  arrange(dif)
+gv <- function(reg, col) pt_reg_var[[col]][pt_reg_var$localidade == reg]
+
+# Variação 2024->2025 de "Precisa trabalhar" por faixa etária (microdados)
+dados_var_faixa <- est_faixa |>
+  select(Regiao, faixa_etaria, ano, total_mil, total_mil_se) |>
+  pivot_wider(names_from = ano, values_from = c(total_mil, total_mil_se)) |>
+  mutate(
+    variacao_mil    = total_mil_2025 - total_mil_2024,
+    se_variacao_mil = sqrt(total_mil_se_2025^2 + total_mil_se_2024^2),
+    pseudo_z        = variacao_mil / se_variacao_mil,
+    Regiao          = factor(Regiao, levels = niveis_regiao),
+    faixa_etaria    = factor(faixa_etaria, levels = c("15-17", "18-24", "25-29"))
+  )
+var_faixa_br <- dados_var_faixa |>
+  filter(Regiao == "Brasil") |>
+  select(faixa_etaria, variacao_mil) |>
+  deframe()
+
+# Variação 2024->2025 da taxa de frequência líquida por Grande Região (Tabela 7141)
+liq_reg_var <- freq_liquida |>
+  filter(ano %in% c(2024, 2025)) |>
+  pivot_wider(names_from = ano, values_from = taxa) |>
+  mutate(dif = `2025` - `2024`) |>
+  arrange(desc(dif))
+gl <- function(reg) liq_reg_var$dif[liq_reg_var$localidade == reg]
+```
+
+Entre 2024 e 2025, a taxa de frequência escolar líquida no ensino médio teve o maior salto anual de toda a série da PNAD Contínua, e "falta de dinheiro" como motivo de evasão despencou. No meio desse intervalo está o lançamento do **Pé-de-Meia**, o programa federal de transferência de renda condicionada para estudantes de baixa renda do ensino médio. Quanto desse movimento tem a ver com o programa?
+
+Este texto não responde a essa pergunta no sentido causal. Isso exigiria isolar o efeito do Pé-de-Meia de tudo o mais que mudou no período. O que fazemos é mais modesto, e útil do mesmo jeito: um acompanhamento de resultados. Passado o primeiro ciclo completo do programa, a PNAD Contínua de 2025 já permite verificar se os indicadores de evasão que o Pé-de-Meia deveria mover se moveram, e em que direção. Reunimos seis recortes, quatro da série do SIDRA (tabelas 7141 e 7220) e dois dos microdados da própria PNADC, e refazemos o enredo um gráfico de cada vez.
+
+### A teoria da mudança do programa
+
+Criado pela Lei nº 14.818/2024 e operado pelo MEC em parceria com o FNDE e a Caixa, o Pé-de-Meia atende estudantes de 14 a 24 anos matriculados no ensino médio regular da rede pública cujas famílias estão no CadÚnico com renda per capita de até meio salário mínimo (estudantes da EJA de 19 a 24 anos entram com regras próprias). O benefício entra como uma poupança com quatro partes:
+
+- o **incentivo-matrícula**, um valor anual pago só por efetivar a matrícula;
+- o **incentivo-frequência**, pago em parcelas mensais ao longo do ano letivo e condicionado a pelo menos 80% de presença;
+- o **incentivo-conclusão**, depositado a cada ano concluído mas só sacável quando o estudante termina o ensino médio;
+- um **incentivo adicional** para quem faz o Enem na 3ª série.
+
+Somados, os quatro chegam a cerca de R\$ 9 mil ao longo dos três anos.
+
+A lógica é simples. Para o adolescente de baixa renda, o custo de continuar estudando concorre com a renda que ele traria trabalhando, ou com a necessidade de cuidar da casa e de familiares. Ao transferir renda condicionada a matrícula, presença e progressão, o programa reduz esse custo de oportunidade. Em tese, deveria elevar a matrícula e a rematrícula, segurar o abandono no meio do ano letivo, aumentar a conclusão na idade certa e, sobretudo, enfraquecer "precisa trabalhar" e "falta de dinheiro" como motivos de não frequência. O efeito seria maior onde a transferência pesa mais no orçamento da família e onde a frequência partia de patamares mais baixos, como no Norte e no Nordeste. Motivos que não passam por dinheiro nem por trabalho, como desinteresse ou problema de saúde permanente, não são alvo central dessa lógica; se mudarem, é por outra razão.
+
+### 1. A composição de quem está fora da escola está mudando
+
+Entre os adolescentes de 15 a 17 anos que não frequentam escola, a fatia dos dois estratos elegíveis ao Pé-de-Meia (renda domiciliar per capita de até 1/4 de salário mínimo e de 1/4 a 1/2) encolheu de cerca de `r fmt_pct(elegivel_2019)` do grupo em 2019 para `r fmt_pct(elegivel_2025)` em 2025. A faixa mais pobre, "até 1/4 SM", vem perdendo espaço desde 2019; a novidade de 2025 está na faixa "1/4 a 1/2 SM", que sozinha perde cerca de `r sprintf("%.0f", comp_eleg2_2425 * 100)` pontos percentuais de participação em um ano. Enquanto isso, as faixas não elegíveis ("1/2 a 1 SM" e "1 a 2 SM") sobem sem parar e passam a concentrar a maior parte do grupo fora da escola.
+
+Ou seja: quem está fora da escola é, cada vez menos, o mais pobre, justamente o grupo que o benefício alcança.
+
+```{r}
+#| label: fig-composicao
+#| fig-cap: "Fonte: PNAD Contínua, 2º tri (microdados) via PNADcIBGE + survey/srvyr. Elaboração: Núcleo MAPA."
+#| fig-width: 9
+#| fig-height: 5.5
+
+dados_composicao <- composicao |>
+  mutate(faixa_renda_detalhada = factor(faixa_renda_detalhada, levels = niveis_renda))
+
+rotulos_composicao <- dados_composicao |>
+  filter(ano == max(ano)) |>
+  mutate(rotulo = paste0(faixa_renda_detalhada, " (",
+                         percent(participacao_pct, accuracy = 0.1, decimal.mark = ","), ")"))
+
+ggplot(dados_composicao,
+       aes(x = ano, y = participacao_pct,
+           color = faixa_renda_detalhada, group = faixa_renda_detalhada)) +
+  geom_vline(xintercept = ano_pe_de_meia, linetype = "dashed",
+             color = COR_EVENTO, linewidth = 0.7) +
+  geom_line(linewidth = 1.2) +
+  geom_point(size = 2.6) +
+  geom_text_repel(
+    data = rotulos_composicao, aes(label = rotulo),
+    hjust = 0, nudge_x = 0.3, direction = "y", box.padding = 0.05,
+    segment.size = 0.3, segment.color = COR_MIDGRAY,
+    size = 5, family = "Ubuntu", show.legend = FALSE
+  ) +
+  scale_color_manual(values = paleta_renda, guide = "none") +
+  scale_x_continuous(breaks = sort(unique(composicao$ano)),
+                     expand = expansion(mult = c(0.02, 0.35))) +
+  scale_y_continuous(labels = label_percent()) +
+  labs(
+    title = "Composição por renda do grupo 15-17 que não frequenta escola",
+    subtitle = "Participação de cada faixa de renda no total (todos os motivos). Linha tracejada: início do Pé-de-Meia",
+    x = "Ano", y = "Participação (%)"
+  ) +
+  tema_mapa()
+```
+
+### 2. O motivo "falta de dinheiro" recua rápido
+
+Tomando 2019 como base para cada motivo, "falta de dinheiro para pagar as despesas" é o que mais recua no Brasil, disparado: de `r fmt_mil(dinheiro_brasil["2019"])` mil pessoas em 2019 para `r fmt_mil(dinheiro_brasil["2025"])` mil em 2025, uma queda acumulada de `r fmt_pct(1 - dinheiro_brasil["2025"]/dinheiro_brasil["2019"])`. E o recuo fica mais forte depois de 2024.
+
+É o mecanismo que o Pé-de-Meia deveria mover: renda condicionada à matrícula atinge direto o motivo financeiro.
+
+```{r}
+#| label: fig-variacao-motivos
+#| fig-cap: "Fonte: IBGE/PNAD Contínua, Tabela 7220 (SIDRA). Elaboração: Núcleo MAPA."
+#| fig-width: 9
+#| fig-height: 6.5
+
+dados_brasil <- motivo_7220 |>
+  filter(localidade == "Brasil") |>
+  mutate(destaque = if_else(motivo == "Precisa trabalhar",
+                            "Precisa trabalhar", "Demais motivos")) |>
+  arrange(motivo, ano) |>
+  group_by(motivo) |>
+  mutate(variacao_pct = valor / valor[ano == min(ano)] - 1) |>
+  ungroup()
+
+ggplot(dados_brasil,
+       aes(x = ano, y = variacao_pct, group = motivo, color = motivo)) +
+  geom_hline(yintercept = 0, color = COR_DARKGRAY, linewidth = 0.4) +
+  geom_vline(xintercept = ano_pe_de_meia, linetype = "dashed",
+             color = COR_EVENTO, linewidth = 0.7) +
+  geom_line(aes(linewidth = destaque, alpha = destaque)) +
+  geom_point(aes(alpha = destaque), size = 1.8) +
+  annotate("text", x = ano_pe_de_meia, y = max(dados_brasil$variacao_pct) * 1.02,
+           label = "Início do Pé-de-Meia", color = COR_EVENTO,
+           hjust = -0.05, vjust = 1, size = 4.5, family = "Ubuntu", fontface = "italic") +
+  scale_linewidth_manual(values = c("Precisa trabalhar" = 1.8, "Demais motivos" = 0.6), guide = "none") +
+  scale_alpha_manual(values = c("Precisa trabalhar" = 1, "Demais motivos" = 0.45), guide = "none") +
+  scale_x_continuous(breaks = anos_7220) +
+  scale_y_continuous(labels = label_percent(accuracy = 1)) +
+  scale_color_manual(values = paleta_motivo) +
+  labs(
+    title = "Variação % acumulada de cada motivo desde 2019 - Brasil",
+    subtitle = "Ano-base 2019 = 0%. Compara a intensidade da mudança, não o volume absoluto",
+    x = "Ano", y = "Variação % acumulada desde 2019", color = "Motivo"
+  ) +
+  tema_mapa() +
+  theme(
+    legend.position = "inside",
+    legend.position.inside = c(0.42, 0.20),
+    legend.key.size = unit(0.7, "lines")
+  ) +
+  guides(color = guide_legend(ncol = 1, override.aes = list(linewidth = 1.2, alpha = 1)))
+```
+
+### 3. "Precisa trabalhar" cai, mas de forma mais gradual
+
+"Precisa trabalhar" é o motivo de maior peso absoluto e outro alvo direto do programa. Já vinha caindo desde 2019, de `r fmt_mil(pt_brasil["2019"])` mil para `r fmt_mil(pt_brasil["2023"])` mil em 2023, numa tendência estrutural provavelmente ligada ao mercado de trabalho e ao encolhimento demográfico da coorte jovem. Entre 2023 e 2024 a série quase estaciona (`r fmt_mil(pt_brasil["2024"])` mil). Só de 2024 para 2025 ela volta a cair com força, para `r fmt_mil(pt_brasil["2025"])` mil.
+
+```{r}
+#| label: fig-motivos-brasil
+#| fig-cap: "Fonte: IBGE/PNAD Contínua, Tabela 7220 (SIDRA). Elaboração: Núcleo MAPA."
+#| fig-width: 9
+#| fig-height: 6.5
+
+ggplot(dados_brasil,
+       aes(x = ano, y = valor, group = motivo, color = motivo)) +
+  geom_vline(xintercept = ano_pe_de_meia, linetype = "dashed",
+             color = COR_EVENTO, linewidth = 0.7) +
+  geom_line(aes(linewidth = destaque, alpha = destaque)) +
+  geom_point(aes(alpha = destaque), size = 1.8) +
+  annotate("text", x = ano_pe_de_meia, y = max(dados_brasil$valor) * 1.02,
+           label = "Início do Pé-de-Meia", color = COR_EVENTO,
+           hjust = -0.05, vjust = 1, size = 4.5, family = "Ubuntu", fontface = "italic") +
+  scale_linewidth_manual(values = c("Precisa trabalhar" = 1.8, "Demais motivos" = 0.6), guide = "none") +
+  scale_alpha_manual(values = c("Precisa trabalhar" = 1, "Demais motivos" = 0.45), guide = "none") +
+  scale_x_continuous(breaks = anos_7220) +
+  scale_y_continuous(labels = label_number(big.mark = ".", decimal.mark = ","),
+                     expand = expansion(mult = c(0.32, 0.05))) +
+  scale_color_manual(values = paleta_motivo) +
+  labs(
+    title = "Evolução do motivo de não frequência escolar (15 a 29 anos) - Brasil",
+    subtitle = "Linha destacada: 'Precisa trabalhar' | Linha tracejada: início do Pé-de-Meia (2024)",
+    x = "Ano", y = "Mil pessoas", color = "Motivo"
+  ) +
+  tema_mapa() +
+  theme(
+    legend.position = "inside",
+    legend.position.inside = c(0.42, 0.16),
+    legend.key.size = unit(0.6, "lines")
+  ) +
+  guides(color = guide_legend(ncol = 1, override.aes = list(linewidth = 1.2, alpha = 1)))
+```
+
+Por Grande Região, a inflexão entre 2024 e 2025 aparece em quase todas, com intensidade desigual. As quedas maiores estão no Sul (cerca de `r fmt_mil(abs(gv("Sul", "dif")))` mil pessoas, ou `r fmt_pct(abs(gv("Sul", "dif_pct")))`) e no Nordeste (`r fmt_mil(abs(gv("Nordeste", "dif")))` mil). No Sudeste, que reúne o maior número absoluto de adolescentes nessa situação, o recuo é modesto; no Norte e no Centro-Oeste o movimento é pequeno. Não é uniforme, mas está espalhado por mais de uma região.
+
+```{r}
+#| label: fig-pt-regiao
+#| fig-cap: "Fonte: IBGE/PNAD Contínua, Tabela 7220 (SIDRA). Elaboração: Núcleo MAPA."
+#| fig-width: 9
+#| fig-height: 6
+
+dados_regiao_pt <- motivo_7220 |>
+  filter(motivo == "Precisa trabalhar", localidade != "Brasil")
+
+rotulos_regiao_pt <- dados_regiao_pt |> filter(ano == max(ano))
+
+ggplot(dados_regiao_pt,
+       aes(x = ano, y = valor, group = localidade, color = localidade)) +
+  geom_vline(xintercept = ano_pe_de_meia, linetype = "dashed",
+             color = COR_EVENTO, linewidth = 0.7) +
+  geom_line(linewidth = 0.9) +
+  geom_point(size = 1.8) +
+  annotate("text", x = ano_pe_de_meia, y = max(dados_regiao_pt$valor) * 1.02,
+           label = "Início do Pé-de-Meia", color = COR_EVENTO,
+           hjust = -0.05, vjust = 1, size = 4.5, family = "Ubuntu", fontface = "italic") +
+  geom_text_repel(
+    data = rotulos_regiao_pt, aes(label = localidade),
+    hjust = 0, nudge_x = 0.3, direction = "y", box.padding = 0.05,
+    segment.size = 0.3, segment.color = COR_MIDGRAY,
+    size = 5, family = "Ubuntu", show.legend = FALSE
+  ) +
+  scale_x_continuous(breaks = anos_7220, expand = expansion(mult = c(0.02, 0.18))) +
+  scale_y_continuous(labels = label_number(big.mark = ".", decimal.mark = ",")) +
+  scale_color_manual(values = paleta_regiao, guide = "none") +
+  labs(
+    title = "Evolução de 'Precisa trabalhar' como motivo de não frequência escolar",
+    subtitle = "Grandes Regiões (2019-2025)",
+    x = "Ano", y = "Mil pessoas"
+  ) +
+  tema_mapa()
+```
+
+A tabela 7220 junta uma faixa etária larga, de 15 a 29 anos. Como o Pé-de-Meia alcança estudantes de até 24 anos, vale ver se o recuo se distribui por idade do jeito que a elegibilidade faria esperar. Os microdados da PNAD Contínua permitem abrir a variação de 2024 para 2025 por faixa etária e região.
+
+```{r}
+#| label: fig-var-faixa
+#| fig-cap: "Fonte: PNAD Contínua, 2º tri (microdados) via PNADcIBGE + survey/srvyr. Elaboração: Núcleo MAPA."
+#| fig-width: 9
+#| fig-height: 6.5
+
+ggplot(dados_var_faixa, aes(x = faixa_etaria, y = variacao_mil, fill = faixa_etaria)) +
+  geom_col(width = 0.6) +
+  geom_errorbar(
+    aes(ymin = variacao_mil - se_variacao_mil, ymax = variacao_mil + se_variacao_mil),
+    width = 0.2, linewidth = 0.5, color = COR_DARKGRAY
+  ) +
+  geom_hline(yintercept = 0, color = COR_DARKGRAY, linewidth = 0.4) +
+  facet_wrap(~Regiao, scales = "free_y") +
+  scale_fill_manual(values = paleta_faixa, guide = "none") +
+  scale_y_continuous(labels = label_number(big.mark = ".", decimal.mark = ",")) +
+  labs(
+    title = "Variação de 'Precisa trabalhar' entre 2024 e 2025, por faixa etária",
+    subtitle = "Mil pessoas. Barra de erro: ±1 erro padrão da diferença (aproximação, supõe anos independentes)",
+    x = "Faixa etária", y = "Variação (mil pessoas)"
+  ) +
+  tema_mapa() +
+  theme(panel.grid.major.x = element_blank())
+```
+
+O gráfico tem duas leituras. A primeira: entre os 15 a 17 anos, o grupo mais exposto ao programa, a variação de 2024 para 2025 é pequena em todas as regiões, e nenhuma é estatisticamente robusta. As barras de erro são grandes em relação ao tamanho da mudança. Isso não é evidência contra o programa. Em 2024 o Pé-de-Meia já estava pagando, então, dentro dessa janela de dois anos, não existe um "antes" sem tratamento para comparar. O teste limpo precisa de um ano-base anterior a 2024, como no recorte por renda da seção 1.
+
+A segunda: as quedas se concentram nas faixas de 18 a 24 e 25 a 29 anos. No Brasil, a de 18 a 24 perde cerca de `r fmt_mil(round(abs(var_faixa_br["18-24"])))` mil pessoas que citam "precisa trabalhar". A de 25 a 29, inteiramente fora da cobertura do programa, perde `r fmt_mil(round(abs(var_faixa_br["25-29"])))` mil, magnitude parecida. O padrão por idade não acompanha o limite de 24 anos. Boa parte do recuo agregado de "precisa trabalhar" é a tendência estrutural de fundo (mercado de trabalho, coorte jovem menor), não um efeito concentrado no público do benefício.
+
+O mesmo aparece quando se cruza idade com renda. Entre os adolescentes de 15 a 17 anos elegíveis (renda per capita até 1/2 SM) que citam "precisa trabalhar", a mudança de 2024 para 2025 fica em `r fmt_mil(round(var_eleg_24_25$variacao_mil, 1))` mil pessoas, com erro padrão de `r fmt_mil(round(var_eleg_24_25$se_variacao_mil, 1))`: de novo, indistinguível de zero. No caso de "precisa trabalhar", o mais provável é que o programa reforce uma tendência que já existia, em vez de criar um efeito do zero.
+
+### 4. A frequência líquida no ensino médio acelera após 2024
+
+A trajetória da taxa ajustada de frequência escolar líquida de 15 a 17 anos no ensino médio dá a medida desse salto. Ela ficou quase estável no Brasil entre 2022 e 2024, entre `r sprintf("%.0f", min(liq_brasil[c("2022","2023","2024")]))`% e `r sprintf("%.0f", max(liq_brasil[c("2022","2023","2024")]))`%, e então sobe para `r sub("\\.", ",", sprintf("%.1f", liq_brasil["2025"]))`% em 2025: a maior variação de um ano para o outro na série desde 2016. O salto pós-2024 aparece em todas as regiões; o Sul e o Centro-Oeste sobem mais, e o Nordeste, que vinha de um dos patamares mais baixos, sobe `r sub("\\.", ",", sprintf("%.1f", gl("Nordeste")))` pontos. O Norte segue como a região de menor frequência líquida.
+
+```{r}
+#| label: fig-freq-liquida
+#| fig-cap: "Fonte: IBGE/PNAD Contínua Anual, Tabela 7141 (SIDRA). Elaboração: Núcleo MAPA."
+#| fig-width: 9
+#| fig-height: 6
+
+dados_liquida <- freq_liquida |>
+  mutate(
+    localidade = factor(localidade, levels = niveis_regiao),
+    destaque   = if_else(localidade == "Brasil", "Brasil", "Regiões")
+  )
+anos_liquida <- sort(unique(dados_liquida$ano))
+rotulos_liquida <- dados_liquida |>
+  filter(ano == max(ano)) |>
+  mutate(negrito = if_else(localidade == "Brasil", "bold", "plain"))
+
+ggplot(dados_liquida,
+       aes(x = ano, y = taxa, color = localidade, group = localidade)) +
+  geom_vline(xintercept = ano_pe_de_meia, linetype = "dashed",
+             color = COR_EVENTO, linewidth = 0.7) +
+  geom_line(aes(linewidth = destaque, alpha = destaque)) +
+  geom_point(aes(alpha = destaque), size = 1.8) +
+  annotate("text", x = ano_pe_de_meia, y = max(dados_liquida$taxa) * 1.01,
+           label = "Início do Pé-de-Meia", color = COR_EVENTO,
+           hjust = -0.05, vjust = 1, size = 4.5, family = "Ubuntu", fontface = "italic") +
+  geom_text_repel(
+    data = rotulos_liquida, aes(label = localidade, fontface = negrito),
+    hjust = 0, nudge_x = 0.3, direction = "y", box.padding = 0.05,
+    segment.size = 0.3, segment.color = COR_MIDGRAY,
+    size = 5, family = "Ubuntu", show.legend = FALSE
+  ) +
+  scale_linewidth_manual(values = c("Brasil" = 2, "Regiões" = 1), guide = "none") +
+  scale_alpha_manual(values = c("Brasil" = 1, "Regiões" = 0.75), guide = "none") +
+  scale_x_continuous(breaks = anos_liquida, expand = expansion(mult = c(0.02, 0.18))) +
+  scale_y_continuous(labels = label_number(suffix = "%", decimal.mark = ",")) +
+  scale_color_manual(values = paleta_regiao, guide = "none") +
+  labs(
+    title = "Taxa ajustada de frequência escolar líquida (15 a 17 anos, ensino médio)",
+    subtitle = "Brasil e Grandes Regiões, 2016-2025. Linha tracejada: início do Pé-de-Meia (2024)",
+    x = "Ano", y = "Taxa ajustada de frequência líquida (%)"
+  ) +
+  tema_mapa()
+
+ggsave("cover.png", width = 9, height = 6, dpi = 150, bg = "white")
+```
+
+### Juntando as pontas
+
+Juntos, os seis gráficos contam a mesma história. A partir de 2024, o motivo financeiro deixou de empurrar os adolescentes mais pobres para fora da escola com a mesma força, e a frequência líquida no ensino médio deu um salto que apareceu em todas as regiões, inclusive as mais pobres, que são as mais dependentes do programa. Ao mesmo tempo, quem continua fora da escola passou a ser, cada vez mais, gente de renda acima da linha de elegibilidade.
+
+Um ponto pede cautela e ainda não foi investigado a fundo: a queda de "precisa trabalhar" se concentrou mais no público de 18 a 29 anos do que entre os adolescentes de 15 a 17. Isso não acompanha o desenho do programa. Os elegíveis ao Pé-de-Meia são um grupo bem delimitado: renda domiciliar per capita de até meio salário mínimo no CadÚnico e idade de 14 a 24 anos. Entre os 15 a 17, e entre os mais pobres, o recuo é quase nulo; a faixa de 18 a 29 inclui quem já passou dos 24 e não pode receber o benefício. Boa parte desse movimento fica, portanto, no campo da tendência estrutural.
+
+Um número dos microdados completa o quadro: a renda domiciliar per capita mediana de quem cita "precisa trabalhar" entre os 15 a 17 anos subiu de R\$ `r fmt_mil(med_pt_2019)` em 2019 para R\$ `r fmt_mil(med_pt_2025)` em 2025. Quem ainda aponta o trabalho como motivo para não estudar tende, cada vez mais, a vir de uma família acima do corte de renda do programa.
+
+### Por que isto é monitoramento, e não avaliação de impacto
+
+A coincidência de datas entre a quebra de tendência e o início do Pé-de-Meia é sugestiva, mas não separa o efeito do programa dos outros choques do período: o mercado de trabalho, políticas educacionais estaduais, mudanças na composição amostral da PNADC e a própria tendência de queda que já vinha de 2019. Parte dos indicadores aqui também não está no centro da teoria da mudança do programa; são resultados vizinhos, que ele pode afetar, mas cujo movimento tem mais de uma causa possível.
+
+Para virar estimativa de efeito, o desenho natural seria uma diferença-em-diferenças: os estratos de renda não elegíveis (por exemplo "1/2 a 1 SM") como grupo de controle, os elegíveis (até 1/2 SM) como grupo tratado, e 2024 como o corte. O primeiro gráfico do texto já mostra parte desse contraste, com as trajetórias de elegíveis e não elegíveis se afastando ao longo da série e um pouco mais depois de 2024. Fazer a conta com rigor, porém, exige checar tendências paralelas antes de 2024, tratar a elegibilidade por renda como o que ela é (uma *proxy*, já que a PNADC não enxerga o CadÚnico) e levar a sério os choques concorrentes. É o próximo passo desta linha de trabalho.
+
+---
+
+::: {.callout-note}
+**Nota metodológica.** As tabelas 7141 (taxa ajustada de frequência escolar líquida) e 7220 (motivo de não frequência escolar, 15 a 29 anos) vêm do SIDRA/IBGE. Os recortes por faixa de renda per capita (VDI5009) e por faixa etária para o motivo "precisa trabalhar" vêm dos microdados da PNAD Contínua, 2º trimestre, processados com `PNADcIBGE` + `survey`/`srvyr`; cada ano tem seu próprio desenho amostral, sem empilhar microdados de períodos diferentes. "Elegível" aqui é uma aproximação pelo corte de renda do Pé-de-Meia (até 1/2 salário mínimo per capita), não elegibilidade confirmada via CadÚnico. As bases já tratadas e o script que as gera (`preparar_dados.R`) acompanham o código deste artigo.
+:::
