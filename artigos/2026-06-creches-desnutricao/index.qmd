@@ -29,7 +29,7 @@ library(scales)
 library(showtext)
 
 # ── Verifica dependências ──────────────────────────────────────
-arquivos_necessarios <- c("cs_desnut.rds", "desc_artigo.rds", "geo_mapa.rds")
+arquivos_necessarios <- c("cs_desnut.rds", "desc_artigo.rds", "geo_mapa.rds", "painel_did_sisvan_sp.rds")
 faltando <- arquivos_necessarios[!file.exists(arquivos_necessarios)]
 
 if (length(faltando) > 0) {
@@ -50,7 +50,7 @@ total_acomp <- desc_obj$total_acomp
 total_acomp_fmt <- format(round(total_acomp / 1e6, 1), decimal.mark = ",")
 
 # ── Painel ────────────────────────────────────────────────────
-PAINEL_PATH <- "C:/Users/rocha/Documents/Acessados/Pessoal/exercicios-papers/analise_desnutricao/painel_did_sisvan_sp.rds"
+PAINEL_PATH <- "painel_did_sisvan_sp.rds"   # fica na pasta do artigo, ao lado dos demais .rds
 painel_did  <- readRDS(PAINEL_PATH)
 
 # ── Tema visual padronizado ────────────────────────────────────
