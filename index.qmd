@@ -140,6 +140,46 @@ Engenheiro de Produção (UFRJ) e Mestre em Economia (UFABC), com experiência n
 :::
 :::
 
+::: {#trabalhos .mapa-section}
+::: {.container}
+## Trabalhos publicados
+
+<!-- Fontes: páginas dos próprios trabalhos (títulos e autores conforme constam nelas). Itens com TODO: não consegui ler a página (acesso bloqueado); preencher título, autores e evento. -->
+<div class="mapa-works">
+<article class="mapa-work">
+<div class="mapa-eyebrow">Anais · BRSA 2026</div>
+<h3><a href="https://brsa.org.br/wp-content/uploads/Anais/2026/548971.pdf" target="_blank" rel="noopener">Crianças, circuitos de compra e participação dos ultraprocessados no gasto alimentar</a></h3>
+<p class="mapa-work-authors">Caio Sousa dos Reis Silva e Fábio Rocha · UFABC</p>
+</article>
+<article class="mapa-work">
+<div class="mapa-eyebrow">Anais · BRSA 2026</div>
+<h3><a href="https://brsa.org.br/wp-content/uploads/Anais/2026/548970.pdf" target="_blank" rel="noopener">Zoneamento orientado ao transporte e atividade econômica formal: evidências dos eixos de transformação urbana de São Paulo</a></h3>
+<p class="mapa-work-authors">Caio Sousa dos Reis Silva e Fábio Rocha · UFABC</p>
+</article>
+<article class="mapa-work">
+<div class="mapa-eyebrow">Seminário INCT Combate à Fome · FSP-USP · março de 2026</div>
+<h3><a href="https://inct-combate-a-fome.fsp.usp.br/wp-content/uploads/2026/09/20260527-Anais-INCT.pdf#page=126" target="_blank" rel="noopener">Transferências de renda e saúde ao nascer: evidências do Bolsa Família no Brasil</a></h3>
+<p class="mapa-work-authors">Fábio Rocha <!-- TODO: conferir coautores; o índice dos anais lista só o autor correspondente --></p>
+</article>
+<article class="mapa-work">
+<div class="mapa-eyebrow">TODO: evento · ANPEC 2026</div>
+<h3><a href="https://www.anpec.org.br/encontro/2026/submissao/files_I/i5-cdd88d5bc68553b1b58d4bc716023f47.pdf" target="_blank" rel="noopener">TODO: título do trabalho</a></h3>
+<p class="mapa-work-authors">TODO: autores</p>
+</article>
+<article class="mapa-work">
+<div class="mapa-eyebrow">TODO: tipo · SSRN</div>
+<h3><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7541619" target="_blank" rel="noopener">TODO: título do trabalho</a></h3>
+<p class="mapa-work-authors">TODO: autores</p>
+</article>
+<article class="mapa-work">
+<div class="mapa-eyebrow">TODO: tipo · Biblioteca da UFABC</div>
+<h3><a href="https://biblioteca.ufabc.edu.br/TerminalWeb/acervo/detalhe/154407" target="_blank" rel="noopener">TODO: título do trabalho</a></h3>
+<p class="mapa-work-authors">TODO: autores</p>
+</article>
+</div>
+:::
+:::
+
 <!-- Newsletter: OMITIDA de propósito. Só entra se houver serviço de envio (ex.: Buttondown, Mailchimp) — decisão pendente. -->
 
 ::: {.mapa-section .mapa-band}
