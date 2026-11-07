@@ -340,3 +340,20 @@ img { max-width: 100%; }
 
 // Foco visível também nos itens do menu (o Bootstrap zera o outline em .nav-link:focus)
 .navbar .nav-link:focus-visible, .navbar-brand:focus-visible { outline: 3px solid $mapa-green; outline-offset: 3px; }
+
+
+// ---------- Parceiros (parceiros.qmd) e Trabalhos publicados (home) ----------
+.mapa-partners { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin: 16px 0 40px; }
+.mapa-partner { display: flex; flex-direction: column; border-top: 1px solid $mapa-rule; padding-top: 20px; }
+.mapa-partner h3 { font-size: 1.35rem; margin: 0 0 8px; }
+.mapa-partner p { margin: 0 0 4px; }
+.mapa-partner .mapa-link-label { margin-top: auto; padding-top: 12px; }
+
+.mapa-works { border-bottom: 1px solid $mapa-rule; margin-top: 16px; }
+.mapa-work { border-top: 1px solid $mapa-rule; padding: 20px 0; }
+.mapa-work h3 { margin: 6px 0 4px; font-size: 1.3rem; font-weight: 400; line-height: 1.2; color: $mapa-ink; }
+.mapa-work h3 a { color: $mapa-ink; }
+.mapa-work h3 a:hover, .mapa-work h3 a:focus-visible { color: $mapa-green; text-decoration: underline; }
+.mapa-work-authors { margin: 0; color: $mapa-muted; font-size: 0.9rem; }
+
+@media (max-width: 991px) { .mapa-partners { grid-template-columns: 1fr; } }

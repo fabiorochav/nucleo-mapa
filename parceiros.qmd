@@ -1,0 +1,39 @@
+---
+title: "Parceiros"
+subtitle: "Organizações com as quais o Núcleo MAPA colabora"
+page-layout: full
+toc: false
+---
+
+```{=html}
+<div class="intro-panel">
+  <h2>Parcerias para produzir, avaliar e comunicar evidências.</h2>
+  <p>O Núcleo MAPA está aberto a parcerias acadêmicas, institucionais e projetos colaborativos. Se a sua organização quer propor uma colaboração, escreva para <a href="mailto:nucleomapa@nucleomapa.org">nucleomapa@nucleomapa.org</a>.</p>
+</div>
+```
+
+## Quem está com a gente
+
+<!-- Descrições: resumidas dos próprios sites das organizações (consulta em 07/11/2026). TODO: confirmar com cada organização que pode ser citada como parceira/cliente e se prefere outro texto ou logo. -->
+
+```{=html}
+<div class="mapa-partners">
+  <article class="mapa-partner">
+    <h3>GEN — Instituto Social Espaço Negro</h3>
+    <p>“Think-and-Do Tank” que combina pesquisa e ação prática, com foco em Economia da Reparação, equidade racial, desigualdade estrutural e impacto social.</p>
+    <a class="mapa-link-label" href="https://www.grupoespaconegro.org.br/" target="_blank" rel="noopener">grupoespaconegro.org.br →</a>
+  </article>
+
+  <article class="mapa-partner">
+    <h3>Childhood Brasil</h3>
+    <p>Organização sem fins lucrativos criada em 1999, por iniciativa da Rainha Silvia da Suécia, dedicada à prevenção do abuso e da exploração sexual de crianças e adolescentes.</p>
+    <a class="mapa-link-label" href="https://www.childhood.org.br/" target="_blank" rel="noopener">childhood.org.br →</a>
+  </article>
+
+  <article class="mapa-partner">
+    <h3>Afya</h3>
+    <p>Organização que combina educação em saúde e healthtechs: graduação (incluindo Medicina), pós-graduação, educação médica continuada e soluções digitais para a prática médica.</p>
+    <a class="mapa-link-label" href="https://institucional.afya.com.br/" target="_blank" rel="noopener">institucional.afya.com.br →</a>
+  </article>
+</div>
+```
