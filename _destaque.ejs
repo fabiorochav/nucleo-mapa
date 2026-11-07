@@ -1,0 +1,24 @@
+<%
+// Artigo em destaque da home.
+// Regra: o primeiro artigo (ordenados por data desc) com `destaque: true` no front matter;
+// se nenhum tiver o campo, usa o mais recente. Nada escrito à mão.
+const itens = items.filter(function (i) { return i.draft !== true; });
+const marcado = itens.find(function (i) { return i.destaque === true || i.destaque === "true"; });
+const f = marcado || itens[0];
+if (f) {
+  const capa = f.image ? f.image : "img/capa-padrao.png";
+  const cats = Array.isArray(f.categories) ? f.categories : [];
+%>
+```{=html}
+<a class="mapa-featured" href="<%- f.path %>">
+  <div class="mapa-eyebrow mapa-eyebrow-muted">Em destaque</div>
+  <img src="<%- capa %>" alt="Gráfico principal do artigo: <%= f.title %>" loading="eager">
+  <% if (cats.length) { %>
+  <div class="mapa-eyebrow"><%= cats.slice(0, 3).join(" · ") %></div>
+  <% } %>
+  <h2><%= f.title %></h2>
+  <% if (f.description) { %><p><%= f.description %></p><% } %>
+  <% if (f.date) { %><small><%= f.date %></small><% } %>
+</a>
+```
+<% } %>

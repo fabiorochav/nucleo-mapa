@@ -10,6 +10,7 @@ website:
   title: "Núcleo MAPA"
   favicon: assests/favicon/favicon.svg
   navbar:
+    title: 'Núcleo MAPA<span class="mapa-wordmark-sub">Microeconometria Aplicada a Políticas e Avaliação</span>'
     left:
       - href: sobre.qmd
         text: Sobre
@@ -20,21 +21,17 @@ website:
       - href: midias.qmd
         text: Mídias
     right:
-      - icon: linkedin
-        href: "https://www.linkedin.com/company/nucleo-mapa"
-        text: LinkedIn
-        aria-label: "Núcleo MAPA no LinkedIn"
       - href: "mailto:nucleomapa@nucleomapa.org"
         text: Contato
   page-footer:
-    background: "#111827"
     left: "© 2026 Núcleo MAPA"
     center: "[Sobre](sobre.qmd) · [Artigos](artigos.qmd) · [Pesquisadores](pesquisadores.qmd) · [Mídias](midias.qmd)"
     right: "[LinkedIn](https://www.linkedin.com/company/nucleo-mapa) · [nucleomapa@nucleomapa.org](mailto:nucleomapa@nucleomapa.org)"
 
 format:
   html:
-    theme: cosmo
-    css: styles.css
+    theme:
+      - cosmo
+      - tema-mapa.scss
     toc: true
     lang: pt-BR
