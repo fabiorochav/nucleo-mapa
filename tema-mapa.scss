@@ -1,0 +1,342 @@
+/*-- scss:defaults --*/
+
+// Fontes: wordmark e rótulos em Montserrat; texto e títulos em serifa leve (Newsreader)
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,600;1,6..72,300&display=swap');
+
+// Paleta (extraída do deck do Caio)
+$mapa-green: #0A5232;   // acento único: subtítulos, numerais, botões, links
+$mapa-ink:   #2b2b2b;   // títulos
+$mapa-body:  #3a3a3a;   // texto corrido
+$mapa-muted: #666666;   // datas, notas
+$mapa-tint:  #EEF5F1;   // faixas de fundo
+$mapa-rule:  #A9CABD;   // filetes finos
+
+$font-family-sans-serif: 'Montserrat', system-ui, sans-serif;
+$font-family-base: 'Newsreader', Georgia, serif;
+$headings-font-family: 'Newsreader', Georgia, serif;
+$headings-font-weight: 300;
+$headings-color: $mapa-ink;
+
+$body-bg: #ffffff;
+$body-color: $mapa-body;
+$font-size-root: 19px;
+$line-height-base: 1.55;
+
+$link-color: $mapa-green;
+$link-decoration: none;
+$link-hover-decoration: underline;
+
+$navbar-bg: #ffffff;
+$navbar-fg: $mapa-ink;
+$navbar-hl: $mapa-green;
+$footer-bg: #ffffff;
+$footer-fg: $mapa-muted;
+
+/*-- scss:rules --*/
+
+// ---------- Navegação ----------
+.navbar {
+  border-bottom: 1px solid $mapa-rule;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+.navbar-brand, .navbar .navbar-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 1.5rem;
+  letter-spacing: -0.01em;
+  color: $mapa-green !important;
+}
+.navbar .nav-link {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 0.75rem;
+  color: $mapa-ink;
+}
+.navbar .nav-link:hover { color: $mapa-green; }
+
+// ---------- Tipografia ----------
+h1, h2, h3, h4 { letter-spacing: -0.005em; }
+h3, h4 { font-weight: 600; color: $mapa-green; }
+blockquote, .blockquote {
+  border-left: 0;
+  padding-left: 0;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 1.9rem;
+  line-height: 1.25;
+  color: $mapa-ink;
+  margin: 0 0 16px;
+}
+
+// ---------- Blocos reutilizáveis da home ----------
+.mapa-section {
+  padding: 72px 0;
+  border-top: 1px solid $mapa-rule;
+}
+.mapa-band { background: $mapa-tint; }
+
+.mapa-eyebrow {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: $mapa-green;
+}
+
+.mapa-hero h1 {
+  font-weight: 300;
+  font-size: clamp(2.3rem, 5vw, 3.6rem);
+  line-height: 1.05;
+  margin: 0.8rem 0 1.2rem;
+}
+.mapa-hero h1 em { font-style: normal; color: $mapa-green; }
+
+// Botões
+.mapa-btn, .mapa-btn:hover {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 0 24px;
+  margin: 0 12px 12px 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-decoration: none;
+  border: 1px solid $mapa-green;
+  color: $mapa-green;
+}
+.mapa-btn-solid, .mapa-btn-solid:hover { background: $mapa-green; color: #ffffff; }
+
+// Lista numerada com filetes (compromissos, entregas)
+.mapa-steps { border-bottom: 1px solid $mapa-rule; }
+.mapa-step {
+  display: flex;
+  gap: 24px;
+  padding: 20px 0;
+  border-top: 1px solid $mapa-rule;
+}
+.mapa-step .n { flex: 0 0 48px; font-weight: 600; font-size: 1.15rem; color: $mapa-green; }
+.mapa-step .t { font-weight: 600; font-size: 1.15rem; color: $mapa-green; }
+
+// Cartão do artigo em destaque
+.mapa-featured {
+  display: block;
+  padding: 24px;
+  border: 1px solid $mapa-rule;
+  text-decoration: none;
+  color: $mapa-body;
+}
+.mapa-featured:hover { text-decoration: none; border-color: $mapa-green; }
+
+// ---------- Listagem de artigos (listing do Quarto, type: grid) ----------
+// (removido: ocultar .quarto-listing-category escondia o filtro de categorias de artigos.qmd, que usa `categories: true`)
+.quarto-grid-item.card {
+  border: 0;
+  border-top: 1px solid $mapa-rule;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.quarto-grid-item .card-img-top {
+  aspect-ratio: 16 / 9;
+  object-fit: contain;     // não corta o gráfico de capa
+  background: $mapa-tint;
+  border-radius: 0;
+}
+.quarto-grid-item .listing-categories .listing-category {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $mapa-green;
+  background: transparent;
+  border: 0;
+  padding: 0 8px 0 0;
+}
+.quarto-grid-item .listing-title {
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 1.2;
+  color: $mapa-ink;
+}
+.quarto-grid-item .listing-date { font-size: 0.8rem; color: $mapa-muted; }
+
+// ---------- Rodapé ----------
+.nav-footer { border-top: 1px solid $mapa-rule; font-size: 0.8rem; }
+.nav-footer a { color: $mapa-green; font-family: 'Montserrat', sans-serif; font-weight: 500; }
+
+// Foco visível (acessibilidade)
+a:focus-visible, button:focus-visible, input:focus-visible {
+  outline: 3px solid $mapa-green;
+  outline-offset: 3px;
+}
+
+
+// =====================================================================
+// Acréscimos da integração (branch redesign-home)
+// =====================================================================
+
+html { scroll-padding-top: 88px; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+img { max-width: 100%; }
+
+// ---------- Wordmark com subtítulo ----------
+.navbar-brand .navbar-title, .navbar-title { line-height: 1.1; }
+.navbar-title .mapa-wordmark-sub {
+  display: block;
+  margin-top: 3px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 0.5rem;
+  letter-spacing: 0.04em;
+  color: $mapa-green;
+}
+
+// ---------- Menu: item ativo e botão Contato (contornado) ----------
+.navbar .nav-link.active, .navbar .nav-link:focus-visible { color: $mapa-green; }
+.navbar .nav-link.active { border-bottom: 2px solid $mapa-green; }
+.navbar .nav-link[href^="mailto:"] {
+  margin-left: 12px;
+  padding: 8px 20px;
+  border: 1px solid $mapa-green;
+  color: $mapa-green;
+  font-weight: 700;
+  border-radius: 0;
+}
+.navbar .nav-link[href^="mailto:"]:hover,
+.navbar .nav-link[href^="mailto:"]:focus-visible { background: $mapa-green; color: #ffffff; text-decoration: none; }
+.navbar-toggler { border-color: $mapa-rule; }
+
+// ---------- Home: cartão em destaque, links e rótulos ----------
+.mapa-eyebrow-muted { color: #555555; }
+.mapa-featured img {
+  display: block;
+  width: 100%;
+  height: auto;           // gráficos de capa não são cortados no destaque
+  object-fit: contain;
+  background: $mapa-tint;
+  margin: 16px 0;
+  border-radius: 0;
+}
+.mapa-featured h2 { font-size: 1.6rem; font-weight: 400; margin: 8px 0; }
+.mapa-featured p { margin: 0 0 8px; }
+.mapa-featured small { color: $mapa-muted; }
+.mapa-link-label, .mapa-link-label:hover {
+  display: inline-block;
+  margin-top: 24px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+.mapa-links, .mapa-links > p { display: flex; flex-wrap: wrap; gap: 8px 24px; margin: 0; }
+.mapa-links a { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.75rem; }
+.mapa-section h2 { border-bottom: 0; padding-bottom: 0; font-weight: 300; font-size: clamp(1.7rem, 3.2vw, 2.3rem); line-height: 1.15; margin-top: 0; }
+.mapa-section h2 em { font-style: normal; color: $mapa-green; }
+.mapa-section h3 { font-size: 1.35rem; margin-top: 0; }
+.mapa-band .mapa-step { border-top-color: $mapa-rule; }
+.mapa-eyebrow a { color: inherit; }
+
+// ---------- Compatibilidade: páginas existentes (sobre, artigos, pesquisadores, mídias) ----------
+// O HTML dessas páginas não muda; só o visual. Mesmos tokens, sem sombra, sem cantos arredondados, sem gradiente.
+:root { --mapa-gold-light: #{$mapa-green}; }   // alias legado: sobre.qmd usa essa variável num style inline
+.section-kicker, .section-kicker-light {
+  font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.65rem;
+  letter-spacing: 0.14em; text-transform: uppercase; color: $mapa-green !important; margin-bottom: 0.5rem;
+}
+.intro-panel {
+  padding: 40px 0; margin: 0 0 40px;
+  border-top: 1px solid $mapa-rule; border-bottom: 1px solid $mapa-rule;
+}
+.intro-panel h2 { font-weight: 300; font-size: clamp(1.7rem, 3.2vw, 2.3rem); line-height: 1.15; margin: 0 0 0.6rem; }
+.intro-panel p { max-width: 68ch; }
+.intro-panel-dark { background: $mapa-tint; padding-left: 24px; padding-right: 24px; }
+
+.btn-mapa, .btn-mapa:hover {
+  display: inline-flex; align-items: center; justify-content: center; min-height: 48px;
+  padding: 0 24px; margin: 12px 12px 0 0; border: 1px solid $mapa-green; border-radius: 0;
+  font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.75rem; text-decoration: none;
+  background: $mapa-green; color: #ffffff !important;
+}
+.btn-mapa-ghost, .btn-mapa-ghost:hover { background: transparent !important; color: $mapa-green !important; }
+.hero-actions { display: flex; flex-wrap: wrap; }
+
+.cards-feature { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin: 24px 0 40px; }
+.card-feature { border-top: 1px solid $mapa-rule; padding-top: 20px; }
+.card-feature-icon { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.8rem; color: $mapa-green; margin-bottom: 8px; }
+.card-feature h3 { font-size: 1.15rem; }
+
+.quote-panel {
+  display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; align-items: center;
+  background: $mapa-tint; padding: 40px 32px; margin: 24px 0 40px;
+}
+.quote-box p { font-style: italic; font-weight: 300; font-size: 1.5rem; line-height: 1.25; color: $mapa-ink; margin: 0 0 8px; }
+.quote-box span { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; color: $mapa-green; }
+
+.cta-panel { text-align: center; background: $mapa-tint; padding: 56px 24px; margin: 24px 0 32px; }
+.cta-panel h2 { margin-top: 0; font-weight: 300; }
+.cta-panel p { max-width: 56ch; margin: 0 auto 16px; }
+
+.artigos-grid, .researchers-grid { display: grid; gap: 24px; }
+.artigos-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); margin: 16px 0 40px; }
+.artigo-card, .researcher-card { background: transparent; border: 0; border-top: 1px solid $mapa-rule; border-radius: 0; box-shadow: none; padding: 20px 0; }
+.artigo-card { display: flex; flex-direction: column; gap: 8px; }
+.artigo-cat {
+  display: inline-block; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.65rem;
+  letter-spacing: 0.14em; text-transform: uppercase; color: $mapa-green !important; background: transparent; padding: 0;
+}
+.artigo-card h3 { margin: 0; font-size: 1.3rem; font-weight: 400; color: $mapa-ink; }
+.artigo-card h3 a { color: $mapa-ink; }
+.artigo-desc { color: $mapa-muted; margin: 0; }
+.artigo-link { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.75rem; }
+
+.researchers-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 16px; }
+.researcher-card { display: flex; flex-direction: column; gap: 16px; }
+.researcher-photo { width: 8rem; height: 8rem; background: $mapa-tint; border: 1px solid $mapa-rule; border-radius: 0; overflow: hidden; }
+.researcher-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; border-radius: 0; }
+.researcher-body { display: flex; flex-direction: column; gap: 12px; }
+.researcher-name { margin: 0; font-size: 1.35rem; }
+.researcher-bio { margin: 0; }
+.researcher-links { display: flex; flex-wrap: wrap; gap: 8px 24px; }
+.researcher-links a { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.75rem; }
+
+#TOC { border: 0; box-shadow: none; border-radius: 0; }
+
+@media (max-width: 991px) {
+  .cards-feature, .artigos-grid, .researchers-grid, .quote-panel { grid-template-columns: 1fr; }
+  .mapa-section { padding: 48px 0; }
+  .navbar .nav-link[href^="mailto:"] { margin: 8px 0 0; display: inline-block; }
+}
+
+// ---------- Grade (o Bootstrap do Quarto não inclui .row/.col-*; versão mínima só para a home) ----------
+.mapa-section .container { max-width: 1320px; margin: 0 auto; padding: 0 24px; }
+.mapa-section .row { display: grid; grid-template-columns: minmax(0, 1fr); gap: 32px; }
+.mapa-section .row > * { min-width: 0; }
+.mapa-section .align-items-center { align-items: center; }
+@media (min-width: 768px) {
+  .mapa-section .row { grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: 48px; }
+  .mapa-section .row > * { grid-column: 1 / -1; }
+  .mapa-section .col-md-4 { grid-column: span 4; }
+  .mapa-section .col-md-6 { grid-column: span 6; }
+}
+@media (min-width: 992px) {
+  .mapa-section .col-lg-4 { grid-column: span 4; }
+  .mapa-section .col-lg-6 { grid-column: span 6; }
+  .mapa-section .col-lg-8 { grid-column: span 8; }
+}
+
+// ---------- Wordmark no celular: quebra em duas linhas em vez de truncar ----------
+.navbar-brand-container { max-width: none; overflow: visible; }
+.navbar-brand { white-space: normal; overflow: visible; text-overflow: clip; max-width: calc(100vw - 170px); }
+.navbar-brand .navbar-title { white-space: normal; overflow: visible; text-overflow: clip; display: inline-block; }
+
+// O Quarto aplica `#quarto-content > * { padding-top: 14px }` (especificidade de id); restaura o respiro das seções da home.
+#quarto-content > .mapa-section { padding-top: 72px; }
+@media (max-width: 991px) { #quarto-content > .mapa-section { padding-top: 48px; } }
+
+.intro-panel h2, .cta-panel h2 { border-bottom: 0; padding-bottom: 0; }
+
+// Foco visível também nos itens do menu (o Bootstrap zera o outline em .nav-link:focus)
+.navbar .nav-link:focus-visible, .navbar-brand:focus-visible { outline: 3px solid $mapa-green; outline-offset: 3px; }

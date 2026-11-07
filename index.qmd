@@ -1,16 +1,155 @@
 ---
-title: "Núcleo MAPA"
-subtitle: "Microeconometria Aplicada a Políticas e Avaliação"
-page-layout: full
+pagetitle: "Microeconometria Aplicada a Políticas e Avaliação"
+page-layout: custom
+title-block-banner: false
 toc: false
+listing:
+  - id: destaque-home
+    contents: artigos/**/index.qmd
+    template: _destaque.ejs
+    sort: "date desc"
+    fields: [title, date, description, image, categories, destaque]
+    date-format: "D [de] MMMM [de] YYYY"
+  - id: artigos-recentes
+    contents: artigos/**/index.qmd
+    type: grid
+    grid-columns: 3
+    max-items: 6
+    sort: "date desc"
+    fields: [image, categories, title, date]
+    date-format: "D [de] MMMM [de] YYYY"
+    image-placeholder: img/capa-padrao.png
+    image-height: 180px
 ---
 
-```{=html}
-<meta http-equiv="refresh" content="0; url=sobre.html">
-<div class="intro-panel">
-  <p class="section-kicker">Redirecionando</p>
-  <h2>Esta página direciona para a seção Sobre.</h2>
-  <p>Se o redirecionamento não acontecer automaticamente, use o botão abaixo.</p>
-  <a href="sobre.html" class="btn-mapa">Ir para Sobre →</a>
+::: {.mapa-hero .mapa-section style="border-top:0"}
+::: {.container}
+::: {.row .align-items-center}
+
+::: {.col-lg-6}
+<div class="mapa-eyebrow">Núcleo de pesquisa aplicada e consultoria</div>
+
+# Chegamos pela política pública. Hoje, *medimos o que nela funciona.*
+
+Microeconometria aplicada a políticas públicas e avaliação: diagnósticos e estudos com microdados para quem formula, implementa e financia políticas públicas.
+
+<a class="mapa-btn mapa-btn-solid" href="#publicacoes">Ver artigos</a>
+<a class="mapa-btn" href="#pesquisadores">Conhecer a equipe →</a>
+:::
+
+::: {.col-lg-6}
+<!-- Gerado pelo listing `destaque-home` (_destaque.ejs): artigo com `destaque: true` ou, na falta, o mais recente. -->
+::: {#destaque-home}
+:::
+:::
+
+:::
+:::
+:::
+
+::: {.mapa-section}
+::: {.container}
+::: {.row}
+::: {.col-lg-4}
+## Toda análise publicada aqui segue três compromissos.
+:::
+::: {.col-lg-8}
+::: {.mapa-steps}
+<div class="mapa-step"><div class="n">01</div><div><div class="t">Dados públicos e reproduzíveis</div>Uso exclusivo de dados públicos e reproduzíveis.</div></div>
+<div class="mapa-step"><div class="n">02</div><div><div class="t">Métodos apropriados à pergunta</div>Aplicação de métodos apropriados à pergunta, não o contrário.</div></div>
+<div class="mapa-step"><div class="n">03</div><div><div class="t">Comunicação honesta sobre os limites</div>Comunicação que separa com clareza o que os dados mostram do que ainda é hipótese.</div></div>
+:::
+:::
+:::
+:::
+:::
+
+::: {#publicacoes .mapa-section}
+::: {.container}
+## Publicações recentes
+
+::: {#artigos-recentes}
+:::
+
+[Ver todos os artigos →](artigos.qmd){.mapa-link-label}
+:::
+:::
+
+::: {#sobre .mapa-section .mapa-band}
+::: {.container}
+## Diagnosticar. Avaliar. *Comunicar.*
+
+O rigor, para nós, não é um atributo retórico. É um procedimento.
+
+::: {.row}
+::: {.col-md-4}
+<div class="mapa-step"><div class="n">01</div><div><div class="t">Diagnósticos</div>Leitura empírica de problemas públicos a partir de microdados e bases administrativas.</div></div>
+:::
+::: {.col-md-4}
+<div class="mapa-step"><div class="n">02</div><div><div class="t">Avaliação de políticas</div>Desenho de avaliação, identificação de mecanismos e explicitação de limites inferenciais.</div></div>
+:::
+::: {.col-md-4}
+<div class="mapa-step"><div class="n">03</div><div><div class="t">Comunicação de evidências</div>Resultados tecnicamente sólidos e publicamente legíveis, sem opacidade metodológica.</div></div>
+:::
+:::
+
+[Saiba mais sobre o Núcleo →](sobre.qmd){.mapa-link-label}
+:::
+:::
+
+::: {.mapa-section}
+::: {.container}
+> "Boa análise não é a que impressiona pelo jargão, mas a que sustenta inferências plausíveis, explicita limites e melhora a qualidade da decisão."
+
+<div class="mapa-eyebrow">— Núcleo MAPA</div>
+:::
+:::
+
+<!-- Pesquisadores: textos e links copiados literalmente de pesquisadores.qmd. -->
+::: {#pesquisadores .mapa-section}
+::: {.container}
+## Pesquisadores
+
+::: {.row}
+::: {.col-md-6}
+### Fábio Rocha
+
+Economista (UFOP), Mestre em Economia (UFABC) e filósofo (UFOP) com trajetória no setor público e em monitoramento, avaliação e produção de evidências para políticas públicas.
+
+<div class="mapa-links">
+<a href="http://lattes.cnpq.br/1956089489809622">Lattes</a>
+<a href="https://github.com/fabiorochav">GitHub</a>
+<a href="https://www.linkedin.com/in/fábio-rocha">LinkedIn</a>
+<a href="https://www.youtube.com/@RochaDatainR">YouTube</a>
 </div>
-```
+:::
+::: {.col-md-6}
+### Caio Sousa
+
+Engenheiro de Produção (UFRJ) e Mestre em Economia (UFABC), com experiência no mercado financeiro, possui trajetória em análise de dados, macroeconomia, microeconometria e avaliação de políticas públicas. Atualmente atua como consultor temporário do Banco Interamericano de Desenvolvimento (BID).
+
+<div class="mapa-links">
+<a href="http://lattes.cnpq.br/6328582749499772">Lattes</a>
+<a href="https://github.com/caiosousareis">GitHub</a>
+<a href="https://www.linkedin.com/in/caiosousareis/">LinkedIn</a>
+</div>
+:::
+:::
+
+[Ver página da equipe →](pesquisadores.qmd){.mapa-link-label}
+:::
+:::
+
+<!-- Newsletter: OMITIDA de propósito. Só entra se houver serviço de envio (ex.: Buttondown, Mailchimp) — decisão pendente. -->
+
+::: {.mapa-section .mapa-band}
+::: {.container}
+## Vamos conversar sobre seu projeto?
+
+O Núcleo MAPA está aberto a parcerias acadêmicas, institucionais e projetos colaborativos voltados à produção de diagnósticos, avaliação de políticas públicas e comunicação de evidências.
+
+<!-- TODO: confirmar com o Fábio o e-mail de contato (valor abaixo veio do _quarto.yml/sobre.qmd atuais) -->
+<a class="mapa-btn mapa-btn-solid" href="mailto:nucleomapa@nucleomapa.org">nucleomapa@nucleomapa.org</a>
+<a class="mapa-btn" href="https://www.linkedin.com/company/nucleo-mapa">Siga no LinkedIn →</a>
+:::
+:::

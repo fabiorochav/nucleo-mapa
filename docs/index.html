@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Núcleo MAPA</title>
+<title>Microeconometria Aplicada a Políticas e Avaliação – Núcleo MAPA</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -34,6 +34,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./assests/favicon/favicon.svg" rel="icon" type="image/svg+xml">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -43,7 +45,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-51d78c99941e9a640875bd6bf603574e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-c4e0323c8faf7b4c2880d32ab432fe3f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -71,12 +73,97 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Procurar"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-destaque-home .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
 
-<link rel="stylesheet" href="styles.css">
+    const options = {
+      valueNames: ['listing-title','listing-date','listing-description','listing-image','listing-categories','listing-destaque',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
+      
+      searchColumns: ["listing-project","listing-website","listing-format","listing-engines","listing-language","listing-title","listing-date","listing-description","listing-categories","listing-author","listing-image","listing-path","listing-outputHref","listing-date-modified","listing-filename","listing-file-modified","listing-reading-time","listing-word-count","listing-execute","listing-lang"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-destaque-home'] = new List('listing-destaque-home', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-artigos-recentes .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-image','listing-categories','listing-title','listing-date',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-artigos-recentes'] = new List('listing-artigos-recentes', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -84,7 +171,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Núcleo MAPA</span>
+    <span class="navbar-title">Núcleo MAPA<span class="mapa-wordmark-sub">Microeconometria Aplicada a Políticas e Avaliação</span></span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Procurar"></div>
@@ -112,11 +199,6 @@ ul.task-list li input[type="checkbox"] {
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="https://www.linkedin.com/company/nucleo-mapa"> <i class="bi bi-linkedin" role="img" aria-label="Núcleo MAPA no LinkedIn">
-</i> 
-<span class="menu-text">LinkedIn</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="mailto:nucleomapa@nucleomapa.org"> 
 <span class="menu-text">Contato</span></a>
   </li>  
@@ -128,44 +210,374 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-layout-custom page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Núcleo MAPA</h1>
-<p class="subtitle lead">Microeconometria Aplicada a Políticas e Avaliação</p>
+
+
+
+<div class="mapa-hero mapa-section" style="border-top:0">
+<div class="container">
+<div class="row align-items-center">
+<div class="col-lg-6">
+<div class="mapa-eyebrow">
+Núcleo de pesquisa aplicada e consultoria
+</div>
+<section id="chegamos-pela-política-pública.-hoje-medimos-o-que-nela-funciona." class="level1">
+<h1>Chegamos pela política pública. Hoje, <em>medimos o que nela funciona.</em></h1>
+<p>Microeconometria aplicada a políticas públicas e avaliação: diagnósticos e estudos com microdados para quem formula, implementa e financia políticas públicas.</p>
+<p><a class="mapa-btn mapa-btn-solid" href="#publicacoes">Ver artigos</a> <a class="mapa-btn" href="#pesquisadores">Conhecer a equipe →</a></p>
+</section>
+</div>
+<div class="col-lg-6">
+<!-- Gerado pelo listing `destaque-home` (_destaque.ejs): artigo com `destaque: true` ou, na falta, o mais recente. -->
+<div id="listing-destaque-home" class="quarto-listing quarto-listing-container-custom">
+<a class="mapa-featured" href="./artigos/2026-08-pe-de-meia-evasao/index.html">
+  <div class="mapa-eyebrow mapa-eyebrow-muted">Em destaque</div>
+  <img src="./artigos/2026-08-pe-de-meia-evasao/cover.png" alt="Gráfico principal do artigo: A frequência no ensino médio deu um salto em 2025: quanto disso é Pé-de-Meia?" loading="eager">
+  
+  <div class="mapa-eyebrow">PNAD · Educação · Ensino Médio</div>
+  
+  <h2>A frequência no ensino médio deu um salto em 2025: quanto disso é Pé-de-Meia?</h2>
+  <p>A frequência líquida no ensino médio saltou em 2025 e o motivo financeiro da evasão despencou. Seis recortes da PNAD Contínua mostram o que mudou de trajetória depois do Pé-de-Meia.</p>
+  <small>29 de agosto de 2026</small>
+</a>
+<div class="listing-no-matching d-none">Sem itens correspondentes</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mapa-section">
+<div class="container">
+<div class="row">
+<section id="toda-análise-publicada-aqui-segue-três-compromissos." class="level2 col-lg-4">
+<h2 data-anchor-id="toda-análise-publicada-aqui-segue-três-compromissos.">Toda análise publicada aqui segue três compromissos.</h2>
+</section>
+<div class="col-lg-8">
+<div class="mapa-steps">
+<div class="mapa-step">
+<div class="n">
+01
+</div>
+<div>
+<div class="t">
+Dados públicos e reproduzíveis
+</div>
+Uso exclusivo de dados públicos e reproduzíveis.
+</div>
+</div>
+<div class="mapa-step">
+<div class="n">
+02
+</div>
+<div>
+<div class="t">
+Métodos apropriados à pergunta
+</div>
+Aplicação de métodos apropriados à pergunta, não o contrário.
+</div>
+</div>
+<div class="mapa-step">
+<div class="n">
+03
+</div>
+<div>
+<div class="t">
+Comunicação honesta sobre os limites
+</div>
+Comunicação que separa com clareza o que os dados mostram do que ainda é hipótese.
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="publicacoes" class="mapa-section">
+<section id="publicações-recentes" class="level2 container">
+<h2 data-anchor-id="publicações-recentes">Publicações recentes</h2>
+<div id="listing-artigos-recentes" class="quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-categories="UE5BRCUyQ0VkdWNhJUMzJUE3JUMzJUEzbyUyQ0Vuc2lubyUyME0lQzMlQTlkaW8lMkNQJUMzJUE5LWRlLU1laWElMkNKdXZlbnR1ZGUlMkNBdmFsaWElQzMlQTclQzMlQTNvJTIwZGUlMjBQb2wlQzMlQUR0aWNhcw==" data-listing-date-sort="1787972400000" data-listing-file-modified-sort="1788114406875" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="23" data-listing-word-count-sort="4541">
+<a href="./artigos/2026-08-pe-de-meia-evasao/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./artigos/2026-08-pe-de-meia-evasao/cover.png" class="thumbnail-image card-img" style="height: 180px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+A frequência no ensino médio deu um salto em 2025: quanto disso é Pé-de-Meia?
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('UE5BRA=='); return false;">PNAD</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('RWR1Y2ElQzMlQTclQzMlQTNv'); return false;">Educação</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('RW5zaW5vJTIwTSVDMyVBOWRpbw=='); return false;">Ensino Médio</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('UCVDMyVBOS1kZS1NZWlh'); return false;">Pé-de-Meia</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('SnV2ZW50dWRl'); return false;">Juventude</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('QXZhbGlhJUMzJUE3JUMzJUEzbyUyMGRlJTIwUG9sJUMzJUFEdGljYXM='); return false;">Avaliação de Políticas</div>
+
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+29 de agosto de 2026
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="1" data-categories="UkFJUyUyQ1JhJUMzJUE3YSUyQ0VzY29sYXJpZGFkZSUyQ01lcmNhZG8lMjBkZSUyMFRyYWJhbGhvJTJDRGVzaWd1YWxkYWRl" data-listing-date-sort="1784948400000" data-listing-file-modified-sort="1784937030813" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2131">
+<a href="./artigos/2026-07-raca-escolaridade-salario/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img loading='lazy' src="artigos\2026-07-raca-escolaridade-salario\index_files\figure-html\unnamed-chunk-2-1.png" style="height: 180px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+O diploma abre a porta, mas não fecha o hiato racial
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('UkFJUw=='); return false;">RAIS</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('UmElQzMlQTdh'); return false;">Raça</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('RXNjb2xhcmlkYWRl'); return false;">Escolaridade</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('TWVyY2FkbyUyMGRlJTIwVHJhYmFsaG8='); return false;">Mercado de Trabalho</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('RGVzaWd1YWxkYWRl'); return false;">Desigualdade</div>
+
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+25 de julho de 2026
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="2" data-categories="RWR1Y2ElQzMlQTclQzMlQTNvJTIwSW5mYW50aWwlMkNTYSVDMyVCQWRlJTJDSW5mZXIlQzMlQUFuY2lhJTIwQ2F1c2FsJTJDU0lTVkFOJTJDRGFkb3MlMjBQJUMzJUJBYmxpY29z" data-listing-date-sort="1782615600000" data-listing-file-modified-sort="1794074180738" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="15" data-listing-word-count-sort="2846">
+<a href="./artigos/2026-06-creches-desnutricao/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./artigos/2026-06-creches-desnutricao/cover.png" class="thumbnail-image card-img" style="height: 180px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Abertura de novas creches municipais reduz a desnutrição infantil?
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('RWR1Y2ElQzMlQTclQzMlQTNvJTIwSW5mYW50aWw='); return false;">Educação Infantil</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('U2ElQzMlQkFkZQ=='); return false;">Saúde</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('SW5mZXIlQzMlQUFuY2lhJTIwQ2F1c2Fs'); return false;">Inferência Causal</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('U0lTVkFO'); return false;">SISVAN</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('RGFkb3MlMjBQJUMzJUJBYmxpY29z'); return false;">Dados Públicos</div>
+
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+28 de junho de 2026
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="3" data-categories="aW5mbGElQzMlQTclQzMlQTNvJTJDYWxpbWVudG9zJTJDY2xpbWElMkNFbCUyME5pJUMzJUIxbyUyQ0lQQ0E=" data-listing-date-sort="1780974000000" data-listing-file-modified-sort="1782583737576" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1063">
+<a href="./artigos/2026-06-cenarios-el-nino-alimentos/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./artigos/2026-06-cenarios-el-nino-alimentos/premio-el-nino-2026.png" class="thumbnail-image card-img" style="height: 180px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Quanto o El Niño pode pressionar os alimentos em 2026?
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('aW5mbGElQzMlQTclQzMlQTNv'); return false;">inflação</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('YWxpbWVudG9z'); return false;">alimentos</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Y2xpbWE='); return false;">clima</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('RWwlMjBOaSVDMyVCMW8='); return false;">El Niño</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('SVBDQQ=='); return false;">IPCA</div>
+
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+9 de junho de 2026
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="4" data-categories="UE5BRCUyQ0JvbHNhJTIwRmFtJUMzJUFEbGlhJTJDUHJvdGUlQzMlQTclQzMlQTNvJTIwU29jaWFsJTJDUG9icmV6YQ==" data-listing-date-sort="1780196400000" data-listing-file-modified-sort="1780262407946" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2186">
+<a href="./artigos/2026-05-bolsa-familia-perfil/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img loading='lazy' src="artigos\2026-05-bolsa-familia-perfil\index_files\figure-html\fig-faixa-etaria-1.png" style="height: 180px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Mais velho, mais sozinho, mais escolarizado: o novo beneficiário do Bolsa Família
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('UE5BRA=='); return false;">PNAD</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Qm9sc2ElMjBGYW0lQzMlQURsaWE='); return false;">Bolsa Família</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('UHJvdGUlQzMlQTclQzMlQTNvJTIwU29jaWFs'); return false;">Proteção Social</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('UG9icmV6YQ=='); return false;">Pobreza</div>
+
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+31 de maio de 2026
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="5" data-categories="U2FlYiUyQ0VkdWNhJUMzJUE3JUMzJUEzbyUyQ0Vuc2lubyUyME0lQzMlQTlkaW8=" data-listing-date-sort="1776740400000" data-listing-file-modified-sort="1780254340572" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="946">
+<a href="./artigos/2026-04-saeb-matematica-em/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img loading='lazy' src="artigos\2026-04-saeb-matematica-em\index_files\figure-html\unnamed-chunk-2-1.png" style="height: 180px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Desempenho no Saeb 2023: um retrato do ensino médio público
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('U2FlYg=='); return false;">Saeb</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('RWR1Y2ElQzMlQTclQzMlQTNv'); return false;">Educação</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('RW5zaW5vJTIwTSVDMyVBOWRpbw=='); return false;">Ensino Médio</div>
+
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+21 de abril de 2026
+</div>
+</div>
+</div>
+</div></a>
+</div>
+</div>
+<div class="listing-no-matching d-none">Sem itens correspondentes</div>
+</div>
+<p><a href="./artigos.html" class="mapa-link-label">Ver todos os artigos →</a></p>
+</section>
+</div>
+<div id="sobre" class="mapa-section mapa-band">
+<section id="diagnosticar.-avaliar.-comunicar." class="level2 container">
+<h2 data-anchor-id="diagnosticar.-avaliar.-comunicar.">Diagnosticar. Avaliar. <em>Comunicar.</em></h2>
+<p>O rigor, para nós, não é um atributo retórico. É um procedimento.</p>
+<div class="row">
+<div class="col-md-4">
+<div class="mapa-step">
+<div class="n">
+01
+</div>
+<div>
+<div class="t">
+Diagnósticos
+</div>
+Leitura empírica de problemas públicos a partir de microdados e bases administrativas.
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="mapa-step">
+<div class="n">
+02
+</div>
+<div>
+<div class="t">
+Avaliação de políticas
+</div>
+Desenho de avaliação, identificação de mecanismos e explicitação de limites inferenciais.
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="mapa-step">
+<div class="n">
+03
+</div>
+<div>
+<div class="t">
+Comunicação de evidências
+</div>
+Resultados tecnicamente sólidos e publicamente legíveis, sem opacidade metodológica.
+</div>
+</div>
+</div>
+</div>
+<p><a href="./sobre.html" class="mapa-link-label">Saiba mais sobre o Núcleo →</a></p>
+</section>
+</div>
+<div class="mapa-section">
+<div class="container">
+<blockquote class="blockquote">
+<p>“Boa análise não é a que impressiona pelo jargão, mas a que sustenta inferências plausíveis, explicita limites e melhora a qualidade da decisão.”</p>
+</blockquote>
+<div class="mapa-eyebrow">
+— Núcleo MAPA
+</div>
+</div>
+</div>
+<!-- Pesquisadores: textos e links copiados literalmente de pesquisadores.qmd. -->
+<div id="pesquisadores" class="mapa-section">
+<section id="pesquisadores" class="level2 container">
+<h2 data-anchor-id="pesquisadores">Pesquisadores</h2>
+<div class="row">
+<section id="fábio-rocha" class="level3 col-md-6">
+<h3 data-anchor-id="fábio-rocha">Fábio Rocha</h3>
+<p>Economista (UFOP), Mestre em Economia (UFABC) e filósofo (UFOP) com trajetória no setor público e em monitoramento, avaliação e produção de evidências para políticas públicas.</p>
+<div class="mapa-links">
+<p><a href="http://lattes.cnpq.br/1956089489809622">Lattes</a> <a href="https://github.com/fabiorochav">GitHub</a> <a href="https://www.linkedin.com/in/fábio-rocha">LinkedIn</a> <a href="https://www.youtube.com/@RochaDatainR">YouTube</a></p>
+</div>
+</section>
+<section id="caio-sousa" class="level3 col-md-6">
+<h3 data-anchor-id="caio-sousa">Caio Sousa</h3>
+<p>Engenheiro de Produção (UFRJ) e Mestre em Economia (UFABC), com experiência no mercado financeiro, possui trajetória em análise de dados, macroeconomia, microeconometria e avaliação de políticas públicas. Atualmente atua como consultor temporário do Banco Interamericano de Desenvolvimento (BID).</p>
+<div class="mapa-links">
+<p><a href="http://lattes.cnpq.br/6328582749499772">Lattes</a> <a href="https://github.com/caiosousareis">GitHub</a> <a href="https://www.linkedin.com/in/caiosousareis/">LinkedIn</a></p>
+</div>
+</section>
+</div>
+<p><a href="./pesquisadores.html" class="mapa-link-label">Ver página da equipe →</a></p>
+</section>
+</div>
+<!-- Newsletter: OMITIDA de propósito. Só entra se houver serviço de envio (ex.: Buttondown, Mailchimp) — decisão pendente. -->
+<div class="mapa-section mapa-band">
+<section id="vamos-conversar-sobre-seu-projeto" class="level2 container">
+<h2 data-anchor-id="vamos-conversar-sobre-seu-projeto">Vamos conversar sobre seu projeto?</h2>
+<p>O Núcleo MAPA está aberto a parcerias acadêmicas, institucionais e projetos colaborativos voltados à produção de diagnósticos, avaliação de políticas públicas e comunicação de evidências.</p>
+<!-- TODO: confirmar com o Fábio o e-mail de contato (valor abaixo veio do _quarto.yml/sobre.qmd atuais) -->
+<p><a class="mapa-btn mapa-btn-solid" href="mailto:nucleomapa@nucleomapa.org">nucleomapa@nucleomapa.org</a> <a class="mapa-btn" href="https://www.linkedin.com/company/nucleo-mapa">Siga no LinkedIn →</a></p>
+</section>
 </div>
 
 
 
-<div class="quarto-title-meta column-page">
-
-    
-  
-    
-  </div>
-  
 
 
-</header>
-
-
-<meta http-equiv="refresh" content="0; url=sobre.html">
-<div class="intro-panel">
-  <p class="section-kicker">Redirecionando</p>
-  <h2 class="anchored">Esta página direciona para a seção Sobre.</h2>
-  <p>Se o redirecionamento não acontecer automaticamente, use o botão abaixo.</p>
-  <a href="sobre.html" class="btn-mapa">Ir para Sobre →</a>
-</div>
-
-
-
-</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
